@@ -2,11 +2,7 @@
     "title":"",
     "subTitle":"我是一名大学生，分享生活所见所闻所感",
     "avatarUrl":"https://avatars.githubusercontent.com/u/209873457?s=400&u=46d61754a72dbd7485f38d4088cb75ed186946d5&v=4",
-    "GMEEK_VERSION":"v2.25"
-}
-{
+    "GMEEK_VERSION":"last"
   "footer": "<script async src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_site_pv' style='display:none'>你是第 <span id='busuanzi_value_site_pv'></span> 位访客</span>"
-}
-{
-  "bodyend": "<style>::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:#888;border-radius:3px}::-webkit-scrollbar-track{background:#f1f1f1;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#555}#readProgress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#667eea,#764ba2);z-index:9999;transition:width .1s ease}</style><div id='readProgress'></div><script>window.addEventListener('scroll',function(){var e=document.getElementById('readProgress'),t=document.documentElement.scrollHeight-window.innerHeight,n=window.scrollY/t*100;e.style.width=n+'%'},{passive:true});</script>"
+"bodyend": "<style>::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:#888;border-radius:3px}::-webkit-scrollbar-track{background:#f1f1f1;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#555}#readProgress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#667eea,#764ba2);z-index:9999;transition:width .1s ease}</style><div id='readProgress'></div><script>window.addEventListener('scroll',function(){var e=document.getElementById('readProgress'),t=document.documentElement.scrollHeight-window.innerHeight,n=window.scrollY/t*100;e.style.width=n+'%'},{passive:true});</script>"
 }
