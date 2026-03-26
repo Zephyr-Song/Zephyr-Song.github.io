@@ -23,9 +23,9 @@ jobs:
 
       - name: Get config.json
         run: |
-          echo "====== check config.json file ======"
+          echo "====== check config.json ======"
           cat config.json
-          echo "====== check config.json end  ======"
+          echo "====== check config.json end ======"
           sudo apt-get install jq
 
       - name: Set up Python
@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: 3.8
 
-   - name: Clone source code
+      - name: Clone source code
         run: |
           GMEEK_VERSION=$(jq -r ".footer.GMEEK_VERSION // \"last\"" config.json)
           echo "GMEEK_VERSION=$GMEEK_VERSION"
