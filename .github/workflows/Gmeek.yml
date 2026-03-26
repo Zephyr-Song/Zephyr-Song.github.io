@@ -23,9 +23,9 @@ jobs:
 
       - name: Get config.json
         run: |
-          echo "====== check config.json ======"
+          echo "====== check config.josn file ======"
           cat config.json
-          echo "====== check config.json end ======"
+          echo "====== check config.josn end  ======"
           sudo apt-get install jq
 
       - name: Set up Python
@@ -35,18 +35,11 @@ jobs:
 
       - name: Clone source code
         run: |
-          GMEEK_VERSION=$(jq -r ".footer.GMEEK_VERSION // \"last\"" config.json)
-          echo "GMEEK_VERSION=$GMEEK_VERSION"
+          GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
           cd /opt/Gmeek/
-          if [ "$GMEEK_VERSION" == "last" ]; then
-            git fetch --tags
-            lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
-            echo "Latest tag: $lastTag"
-            git checkout $lastTag
-          else
-            git checkout $GMEEK_VERSION
-          fi;
+          lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ $GMEEK_VERSION == 'last' ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;
 
       - name: Install dependencies
         run: |
@@ -57,19 +50,17 @@ jobs:
         run: |
           cp -r ./* /opt/Gmeek/
           cd /opt/Gmeek/
-          ISSUE_NUM='${{ github.event.issue.number }}'
-          if [ "$ISSUE_NUM" == "" ] || [ "$ISSUE_NUM" == "null" ]; then ISSUE_NUM=""; fi
-          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number "$ISSUE_NUM"
+          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
           cp -a /opt/Gmeek/docs ${{ github.workspace }} 
           cp -a /opt/Gmeek/backup ${{ github.workspace }} 
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }} 
           
-      - name: Update html
+      - name: update html
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"
           git config --local user.name "${{ github.repository_owner }}"
           git add .
-          git commit -a -m 'auto update by Gmeek action' || echo "nothing to commit"
+          git commit -a -m '🎉auto update by Gmeek action' || echo "nothing to commit"
           git push || echo "nothing to push"
           sleep 3
           
