@@ -33,14 +33,20 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Clone source code
+   - name: Clone source code
         run: |
-          GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
-          git clone  https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
+          GMEEK_VERSION=$(jq -r ".footer.GMEEK_VERSION // \"last\"" config.json)
+          echo "GMEEK_VERSION=$GMEEK_VERSION"
+          git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
           cd /opt/Gmeek/
-          git fetch --tags
-          lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
-          if [ "$GMEEK_VERSION" == "last" ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;
+          if [ "$GMEEK_VERSION" == "last" ]; then
+            git fetch --tags
+            lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+            echo "Latest tag: $lastTag"
+            git checkout $lastTag
+          else
+            git checkout $GMEEK_VERSION
+          fi;
 
       - name: Install dependencies
         run: |
