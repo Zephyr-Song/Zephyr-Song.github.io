@@ -87,7 +87,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>那时的雨，是缠在江南街头化不开的冷，细密地砸在伞面上，沙沙地裹着两人仅存的暖意。伞下的距离很近，近到能听见彼此的呼吸，可马路对面的邮筒，却成了此生跨不过的鸿沟。你让樱子去寄那封信，她笑着应下，轻盈地走进雨幕，白裙在湿冷的风里翻飞，像一只即将振翅的蝴蝶，柔软、美好，也脆弱得不堪一击。<br>
 绿灯亮起又熄灭，刺耳的刹车声撕碎了雨的静谧，刺眼的车灯撞碎了温柔的身影。不过一瞬，那只蝴蝶便重重坠落在冰冷的柏油路上，翅膀折断，生机散尽。你站在原地，伞从手中滑落，雨水瞬间浇透全身，却远不及心口的寒意刺骨。没有嘶吼，没有痛哭，只有极致的空白，眼睁睁看着挚爱被命运夺走，连一句道别都来不及说，这种无力的绝望，比任何哭喊都更戳心。<br>
 全文最残忍的温柔，藏在最后那封信的秘密里 —— 那是樱子要嫁给你的告白。本是奔赴幸福的脚步，却踏入了死亡的深渊；本是即将兑现的甜蜜，却成了阴阳两隔的遗憾。雨还在下，冲刷着路面，也冲刷着残存的温度，蝴蝶陨落了，可那份爱与思念，却在这场冷雨里凝成了永恒。<br>
-这是我读过最好的微型小说，作者用极致克制的文字，写尽了生命的猝然无常与爱情的易碎。没有华丽的修饰，只用身临其境的场景与猝不及防的离别，让悲痛顺着雨丝渗入心底。原来最深刻的悲伤从不是声嘶力竭，而是万物依旧，唯独你不在，那只永远的蝴蝶，从此只活在无尽的思念与悔恨里，成为一生都无法愈合的伤疤。</p></div>
+作者用极致克制的文字，写尽了生命的猝然无常与爱情的易碎。没有华丽的修饰，只用身临其境的场景与猝不及防的离别，让悲痛顺着雨丝渗入心底。原来最深刻的悲伤从不是声嘶力竭，而是万物依旧，唯独你不在，那只永远的蝴蝶，从此只活在无尽的思念与悔恨里，成为一生都无法愈合的伤疤。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -146,7 +146,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 
 function openComments(){
