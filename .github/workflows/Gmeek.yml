@@ -55,6 +55,13 @@ jobs:
           cp -a /opt/Gmeek/backup ${{ github.workspace }} 
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }} 
           
+      - name: Copy custom plugins into docs
+        run: |
+          if [ -d "plugins" ]; then
+            cp -r plugins docs/
+            echo "plugins copied to docs/"
+          fi
+
       - name: update html
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"
