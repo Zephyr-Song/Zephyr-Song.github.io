@@ -330,7 +330,10 @@
       cb(HARDCODED_LYRICS[songId]);
       return;
     }
-    cb('[00:00.00]暂无歌词')\n\n    function buildLyrics(text) {
+    cb('[00:00.00]暂无歌词');
+  }
+
+  function buildLyrics(text) {
     lyricsData = parseLRC(text);
     if (!lyricsData.length) {
       lyricsInner.innerHTML = '<div class="gmp-lrc" style="color:#999;">暂无歌词</div>';
