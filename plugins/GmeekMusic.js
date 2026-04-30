@@ -8,7 +8,7 @@
   var playerConfig = {
     server: 'netease',  // netease, tencent, kugou, xiami, baidu
     type: 'playlist',   // song, playlist, album, artist, search
-    id: '7451549746'   // 歌单ID
+    id: '2829883282'   // 歌单ID
   };
 
   // 初始化播放器
