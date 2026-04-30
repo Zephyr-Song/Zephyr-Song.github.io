@@ -310,13 +310,13 @@
     return result.sort(function (a, b) { return a.time - b.time; });
   }
 
-  // ---- Fetch lyrics ----
+  // ---- Fetch lyrics (网易云官方API) ----
   function fetchLyric(songId, cb) {
     if (!songId) { cb(''); return; }
-    var url = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
+    var url = 'https://music.163.com/api/song/lyric?id=' + encodeURIComponent(songId) + '&lv=1&kv=1&tv=-1';
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
-    xhr.timeout = 6000;
+    xhr.timeout = 8000;
     xhr.onload = function () {
       if (xhr.status === 200) {
         try {
