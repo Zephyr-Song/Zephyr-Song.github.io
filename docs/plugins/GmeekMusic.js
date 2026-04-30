@@ -9,7 +9,7 @@
   'use strict';
 
   // ========== 配置区 ==========
-  var NETEASE_PLAYLIST_ID = '2829883282'; // 网易云歌单 ID，留空则使用硬编码歌单
+  var NETEASE_PLAYLIST_ID = ''; // 网易云歌单 ID，留空则使用硬编码歌单
   var API_BASE = 'https://api.i-meto.com/meting/api';
   // ==============================
 
