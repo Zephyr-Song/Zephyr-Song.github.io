@@ -307,31 +307,75 @@
   }
 
   // ---- Fetch Lyrics ----
+  // Try multiple lyric API sources
   function fetchLyric(songId, callback) {
     if (!songId) { callback(''); return; }
-    var url = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
-    console.log('[GmeekMusic] Fetching lyrics:', url);
+    console.log('[GmeekMusic] Fetching lyrics for songId:', songId);
+
+    // Source 1: Meting API
+    var url1 = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.timeout = 5000;
+    xhr.open('GET', url1, true);
+    xhr.timeout = 6000;
+
     xhr.onload = function () {
-      console.log('[GmeekMusic] Lyric response status:', xhr.status);
+      console.log('[GmeekMusic] Lyric API1 status:', xhr.status);
       if (xhr.status === 200) {
         try {
           var data = JSON.parse(xhr.responseText);
-          console.log('[GmeekMusic] Lyric data:', data);
+          // Meting API may return { lrc: { lyric: '...' } }
           var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
-          if (!lrc && data && data.nolyric) { lrc = '[00:00.0]暂无歌词'; }
-          console.log('[GmeekMusic] Lyric text length:', lrc.length);
-          callback(lrc || '');
-          return;
-        } catch (e) { console.error('[GmeekMusic] Lyric parse error:', e); }
+          if (lrc) { callback(lrc); return; }
+          // Try alternative field names
+          lrc = data.lyric || data.lrc || '';
+          if (lrc) { callback(lrc); return; }
+        } catch (e) { console.error('[GmeekMusic] Lyric API1 parse error:', e); }
       }
-      callback('');
+      // Fallback: try NetEase official API via a public CORS proxy
+      fetchLyricFallback(songId, callback);
     };
-    xhr.onerror = function () { console.error('[GmeekMusic] Lyric request failed'); callback(''); };
-    xhr.ontimeout = function () { console.error('[GmeekMusic] Lyric request timeout'); callback(''); };
+    xhr.onerror = function () {
+      console.error('[GmeekMusic] Lyric API1 failed, trying fallback...');
+      fetchLyricFallback(songId, callback);
+    };
+    xhr.ontimeout = function () {
+      console.error('[GmeekMusic] Lyric API1 timeout, trying fallback...');
+      fetchLyricFallback(songId, callback);
+    };
     xhr.send();
+  }
+
+  function fetchLyricFallback(songId, callback) {
+    // Source 2: Use a CORS-friendly Netease API proxy
+    // Multiple public proxies as fallback chain
+    var proxies = [
+      'https://neteasecloudmusicapi-fcow.vercel.app',
+      'https://ncm-api.zekdot.com',
+      'https://music-api.greedyai.com'
+    ];
+    var tryProxy = function (index) {
+      if (index >= proxies.length) { callback(''); return; }
+      var url = proxies[index] + '/lyric?id=' + encodeURIComponent(songId);
+      console.log('[GmeekMusic] Trying proxy ' + index + ':', url);
+      var xhr2 = new XMLHttpRequest();
+      xhr2.open('GET', url, true);
+      xhr2.timeout = 5000;
+      xhr2.onload = function () {
+        if (xhr2.status === 200) {
+          try {
+            var data = JSON.parse(xhr2.responseText);
+            var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
+            if (!lrc) lrc = (data && data.lyric) ? data.lyric : '';
+            if (lrc) { console.log('[GmeekMusic] Lyric from proxy ' + index + ' OK, length:', lrc.length); callback(lrc); return; }
+          } catch (e) { console.error('[GmeekMusic] Proxy ' + index + ' parse error:', e); }
+        }
+        tryProxy(index + 1);
+      };
+      xhr2.onerror = function () { tryProxy(index + 1); };
+      xhr2.ontimeout = function () { tryProxy(index + 1); };
+      xhr2.send();
+    };
+    tryProxy(0);
   }
 
   // ---- Build Lyrics Panel ----
