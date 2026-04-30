@@ -1,5 +1,4 @@
-// Gmeek 音乐播放器插件 — CSP 安全版
-// 直接内嵌歌单，不用 MetingJS，不依赖 eval/CDN
+// Gmeek 音乐播放器 — 右侧悬浮
 (function() {
   'use strict';
 
@@ -16,9 +15,7 @@
     {name:"几分",artist:"雷泷Raylong, 曲甲, 唐康宁",url:"https://music.163.com/song/media/outer/url?id=2156910268.mp3"}
   ];
 
-  function initPlayer() {
-    if (document.getElementById('gmeek-ap')) return;
-
+  function init() {
     // 加载 APlayer CSS
     var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -26,31 +23,29 @@
     document.head.appendChild(link);
 
     // 创建播放器容器
-    var container = document.createElement('div');
-    container.id = 'gmeek-ap';
-    container.className = 'aplayer';
-    document.body.appendChild(container);
+    var div = document.createElement('div');
+    div.id = 'gmeek-ap';
+    document.body.appendChild(div);
 
-    // 加载 APlayer.js
-    var apScript = document.createElement('script');
-    apScript.src = '/plugins/lib/APlayer.min.js';
-    apScript.onload = function() {
-      var ap = new APlayer({
+    // 加载 APlayer.js 并初始化
+    var s = document.createElement('script');
+    s.src = '/plugins/lib/APlayer.min.js';
+    s.onload = function() {
+      new APlayer({
         element: document.getElementById('gmeek-ap'),
-        narrow: false,
+        fixed: true,
         autoplay: false,
         showlrc: false,
         theme: '#1db969',
-        music: songs
+        audio: songs
       });
-      window._gmeekAP = ap;
     };
-    document.head.appendChild(apScript);
+    document.head.appendChild(s);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPlayer);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initPlayer();
+    init();
   }
 })();
