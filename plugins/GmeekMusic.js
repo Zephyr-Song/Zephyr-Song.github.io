@@ -14,9 +14,9 @@
   // ==============================
 
   var HARDCODED_SONGS = [
-    { name: '河流', artist: '马赫mood, 杜逸风', url: 'https://music.163.com/song/media/outer/url?id=1984760613.mp3' },
-    { name: '冷冷的夏', artist: '王芷蕾', url: 'https://music.163.com/song/media/outer/url?id=301422.mp3' },
-    { name: '旅行家的忠诚', artist: '黄旭, 艾热 AIR', url: 'https://music.163.com/song/media/outer/url?id=2079429439.mp3' },
+    { name: '河流', artist: '马赫mood, 杜逸风', url: 'https://music.163.com/song/media/outer/url?id=1984760613.mp3', id: '1984760613' },
+    { name: '冷冷的夏', artist: '王芷蕾', url: 'https://music.163.com/song/media/outer/url?id=301422.mp3', id: '301422' },
+    { name: '旅行家的忠诚', artist: '黄旭, 艾热 AIR', url: 'https://music.163.com/song/media/outer/url?id=2079429439.mp3', id: '2079429439' },
     { name: '外面冷 Coldest Night', artist: '艾福杰尼', url: 'https://music.163.com/song/media/outer/url?id=1982964017.mp3' },
     { name: '空山灵雨 feat.旅行团', artist: '新裤子, 旅行团乐队', url: 'https://music.163.com/song/media/outer/url?id=2712645752.mp3' },
     { name: '雨后的哲学家', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2649850191.mp3' },
@@ -117,6 +117,29 @@
     '.gmp-playing-icon{color:#1db969;flex-shrink:0;}',
     '.gmp-playing-icon svg{width:12px;height:12px;display:block;animation:gmp-pulse 0.8s ease-in-out infinite alternate;}',
     '@keyframes gmp-pulse{from{opacity:0.6;}to{opacity:1;}}',
+    '',
+    '/* ---- Lyrics Panel ---- */',
+    '#gmp-lyrics-btn{',
+      'background:none;border:none;cursor:pointer;color:#888;padding:4px;',
+      'position:absolute;right:12px;top:10px;transition:color 0.2s;',
+    '}',
+    '#gmp-lyrics-btn:hover{color:#1db969;}',
+    '#gmp-lyrics-btn svg{width:18px;height:18px;display:block;}',
+    '#gmp-lyrics-panel{',
+      'max-height:0;overflow:hidden;transition:max-height 0.3s ease;',
+      'text-align:center;font-size:13px;line-height:2;',
+      'color:#666;cursor:default;',
+    '}',
+    '#gmp-lyrics-panel.open{max-height:200px;overflow-y:auto;}',
+    '#gmp-lyrics-panel::-webkit-scrollbar{width:3px;}',
+    '#gmp-lyrics-panel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px;}',
+    '.gmp-lyric-line{',
+      'padding:2px 8px;border-radius:3px;transition:color 0.2s,font-size 0.2s;',
+      'cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+    '}',
+    '.gmp-lyric-line:hover{color:#aaa;}',
+    '.gmp-lyric-line.active{color:#1db969;font-size:15px;font-weight:600;}',
+    '.gmp-lyric-line.passive{color:#444;}',
     '@keyframes gmp-hint{0%{opacity:0;transform:translateX(20px);}10%{opacity:1;transform:none;}80%{opacity:1;}100%{opacity:0;}}'
   ].join('');
 
@@ -141,6 +164,9 @@
           '<div id="gmp-title">华语私人雷达</div>' +
           '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
+        '<button id="gmp-lyrics-btn" title="歌词">' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
+        '</button>' +
       '</div>' +
       '<div id="gmp-ctrl">' +
         '<button class="gmp-btn" id="gmp-prev" title="上一首"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6V6zm3.5 6 8.5 6V6l-8.5 6z"/></svg></button>' +
@@ -155,6 +181,7 @@
         '<span id="gmp-vol-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg></span>' +
         '<div id="gmp-vol-bar-wrap"><div id="gmp-vol-bar"></div></div>' +
       '</div>' +
+      '<div id="gmp-lyrics-panel"></div>' +
       '<div id="gmp-list"></div>' +
     '</div>';
 
@@ -198,6 +225,7 @@
           if (data && data.data && data.data.length > 0) {
             var songs = data.data.map(function (s) {
               return {
+                id: String(s.id || ''),
                 name: s.name || '未知歌曲',
                 artist: s.artist || '未知歌手',
                 url: s.url || 'https://music.163.com/song/media/outer/url?id=' + s.id + '.mp3'
@@ -249,6 +277,111 @@
     return div.innerHTML;
   }
 
+  // ---- LRC Lyrics Parser ----
+  function parseLRC(lrcText) {
+    if (!lrcText) return [];
+    var lines = lrcText.split('\n');
+    var result = [];
+    var timeRe = /\[(\d+):(\d+)(?:[.\:](\d+))?\]/;
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      // Handle multiple timestamps on one line: [mm:ss.xx][mm:ss.xx]text
+      var firstBracket = line.indexOf(']');
+      if (firstBracket === -1) continue;
+      var text = line.substring(line.lastIndexOf(']') + 1).trim();
+      if (!text) continue;
+      // Extract all timestamps in this line
+      var tsRe = /\[(\d+):(\d+)(?:[.\:](\d+))?\]/g;
+      var match;
+      while ((match = tsRe.exec(line)) !== null) {
+        var min = parseInt(match[1], 10);
+        var sec = parseInt(match[2], 10);
+        var ms = match[3] ? parseInt(match[3].substring(0, 2), 10) : 0;
+        var time = min * 60 + sec + ms / 100;
+        result.push({ time: time, text: text });
+      }
+    }
+    result.sort(function (a, b) { return a.time - b.time; });
+    return result;
+  }
+
+  // ---- Fetch Lyrics ----
+  function fetchLyric(songId, callback) {
+    var url = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        try {
+          var data = JSON.parse(xhr.responseText);
+          var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
+          if (!lrc && data && data.nolyric) lrc = '[00:00.0]暂无歌词';
+          callback(lrc || '');
+          return;
+        } catch (e) { /* ignore */ }
+      }
+      callback('');
+    };
+    xhr.onerror = function () { callback(''); };
+    xhr.send();
+  }
+
+  // ---- Build Lyrics Panel ----
+  var lyricsData = [];
+  var lyricsPanelEl = null;
+  var lyricLines = [];
+
+  function buildLyricsPanel(lrcText) {
+    lyricsPanelEl = document.getElementById('gmp-lyrics-panel');
+    lyricsData = parseLRC(lrcText);
+    if (lyricsData.length === 0) {
+      lyricsPanelEl.innerHTML = '<div class="gmp-lyric-line" style="color:#444;">暂无歌词</div>';
+      return;
+    }
+    var html = '';
+    for (var i = 0; i < lyricsData.length; i++) {
+      html += '<div class="gmp-lyric-line" data-i="' + i + '">' + escapeHtml(lyricsData[i].text) + '</div>';
+    }
+    lyricsPanelEl.innerHTML = html;
+    lyricLines = lyricsPanelEl.querySelectorAll('.gmp-lyric-line');
+    // Click to seek
+    for (var j = 0; j < lyricLines.length; j++) {
+      (function (idx) {
+        lyricLines[j].addEventListener('click', function () {
+          if (audio.duration && lyricsData[idx]) {
+            audio.currentTime = lyricsData[idx].time;
+          }
+        });
+      })(j);
+    }
+  }
+
+  function updateLyricsHighlight() {
+    if (!lyricsData.length || !lyricsPanelEl) return;
+    var currentTime = audio.currentTime || 0;
+    var activeIdx = -1;
+    for (var i = lyricsData.length - 1; i >= 0; i--) {
+      if (currentTime >= lyricsData[i].time) {
+        activeIdx = i;
+        break;
+      }
+    }
+    for (var j = 0; j < lyricLines.length; j++) {
+      lyricLines[j].classList.remove('active', 'passive');
+      if (j === activeIdx) {
+        lyricLines[j].classList.add('active');
+        // Scroll to center
+        var container = lyricsPanelEl;
+        var lineEl = lyricLines[j];
+        var scrollTop = lineEl.offsetTop - container.clientHeight / 2 + lineEl.clientHeight / 2;
+        container.scrollTop = scrollTop;
+      } else if (j < activeIdx) {
+        lyricLines[j].classList.add('passive');
+      }
+    }
+  }
+
   // ---- Play Song ----
   function playSong(idx) {
     if (idx < 0 || idx >= songList.length) return;
@@ -261,6 +394,19 @@
     barEl.style.width = '0%';
     timeEl.textContent = '0:00';
     updateListHighlight();
+    // Fetch lyrics
+    var songId = s.id || '';
+    if (!songId && s.url) {
+      var m = s.url.match(/id=(\d+)/);
+      if (m) songId = m[1];
+    }
+    if (songId) {
+      fetchLyric(songId, function (lrcText) {
+        buildLyricsPanel(lrcText);
+      });
+    } else {
+      buildLyricsPanel('');
+    }
     var promise = audio.play();
     if (promise) {
       promise.catch(function () { /* user interaction required */ });
@@ -315,6 +461,8 @@
     var m = Math.floor(audio.currentTime / 60);
     var s = Math.floor(audio.currentTime % 60);
     timeEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    // Lyrics sync
+    updateLyricsHighlight();
   });
 
   audio.addEventListener('ended', function () {
@@ -394,6 +542,23 @@
     volBar.style.width = (audio.volume * 100) + '%';
     if (muted && pct > 0) { muted = false; }
   });
+
+  // ---- Lyrics Panel Toggle ----
+  (function () {
+    var lyricsBtn = document.getElementById('gmp-lyrics-btn');
+    var panel = document.getElementById('gmp-lyrics-panel');
+    var listEl = document.getElementById('gmp-list');
+    var open = false;
+    lyricsBtn.addEventListener('click', function () {
+      open = !open;
+      if (open) {
+        panel.classList.add('open');
+        listEl.classList.remove('open');
+      } else {
+        panel.classList.remove('open');
+      }
+    });
+  })();
 
   // ---- Toggle body (fixed: was toggling list, now toggles body + list) ----
   var panelOpen = false;
