@@ -327,13 +327,51 @@
     timeEl.textContent = 'Error';
   });
 
-  // ---- Seek ----
-  document.getElementById('gmp-bar-wrap').addEventListener('click', function (e) {
-    if (!audio.duration) return;
-    var rect = this.getBoundingClientRect();
-    var pct = (e.clientX - rect.left) / rect.width;
-    audio.currentTime = pct * audio.duration;
-  });
+  // ---- Seek (click + drag) ----
+  (function () {
+    var barWrap = document.getElementById('gmp-bar-wrap');
+    var seeking = false;
+
+    function seekTo(e) {
+      if (!audio.duration) return;
+      var rect = barWrap.getBoundingClientRect();
+      var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      audio.currentTime = pct * audio.duration;
+      barEl.style.width = (pct * 100) + '%';
+      var m = Math.floor(audio.currentTime / 60);
+      var s = Math.floor(audio.currentTime % 60);
+      timeEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    barWrap.addEventListener('mousedown', function (e) {
+      seeking = true;
+      seekTo(e);
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', function (e) {
+      if (seeking) { seekTo(e); }
+    });
+
+    document.addEventListener('mouseup', function () {
+      seeking = false;
+    });
+
+    // Touch support for mobile
+    barWrap.addEventListener('touchstart', function (e) {
+      seeking = true;
+      seekTo(e.touches[0]);
+      e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', function (e) {
+      if (seeking) { seekTo(e.touches[0]); }
+    });
+
+    document.addEventListener('touchend', function () {
+      seeking = false;
+    });
+  })();
 
   // ---- Volume ----
   volIcon.addEventListener('click', function () {
