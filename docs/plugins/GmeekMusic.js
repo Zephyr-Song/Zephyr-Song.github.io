@@ -1,8 +1,6 @@
 /**
- * Gmeek Music Player v4 — 纯 HTML5 Audio + 可配置网易歌单
- * 支持两种模式：
- *   1. 填写 NETEASE_PLAYLIST_ID 则自动从 Meting API 拉取歌单
- *   2. 否则使用下方 HARDCODED_SONGS 硬编码歌单
+ * Gmeek Music Player v5 — APlayer 经典风格
+ * 纯 HTML5 Audio + 可配置网易歌单
  * 无任何 eval/new Function，完全兼容 GitHub Pages CSP
  */
 (function () {
@@ -26,95 +24,108 @@
     { name: 'Focus', artist: 'Sick Individuals', url: 'https://music.163.com/song/media/outer/url?id=468878947.mp3', id: '468878947' }
   ];
 
-  // ---- Styles ----
+  // ---- Styles (APlayer 经典风格) ----
   var css = [
     '#gmeek-player{',
-      'position:fixed;right:0;bottom:0;width:320px;z-index:10004;',
-      'font-family:-apple-system,BlinkMacSystemFont,sans-serif;',
-      'box-shadow:-2px 0 12px rgba(0,0,0,0.4);',
-      'overflow:visible;',
+      'position:fixed;right:15px;bottom:15px;z-index:10004;',
+      'font-family:Arial,Helvetica,sans-serif;',
     '}',
-    '#gmp-toggle{',
-      'display:flex;align-items:center;justify-content:center;gap:6px;',
-      'width:100%;height:36px;',
-      'background:rgba(0,0,0,0.85);border:none;cursor:pointer;',
-      'color:#1db969;font-size:14px;font-weight:600;letter-spacing:1px;',
-      'border-radius:4px 4px 0 0;padding:0 12px;',
-    '}',
-    '#gmp-toggle svg{margin-right:4px;flex-shrink:0;}',
     '#gmp-body{',
-      'background:rgba(18,18,18,0.92);',
-      'backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);',
-      'padding:12px;display:none;',
+      'width:340px;background:#fff;',
+      'border-radius:6px;',
+      'box-shadow:0 2px 10px rgba(0,0,0,0.1);',
+      'overflow:hidden;',
+      'transition:all 0.3s ease;',
     '}',
-    '#gmp-body.show{display:block;}',
-    '#gmp-header{display:flex;align-items:center;gap:12px;margin-bottom:10px;position:relative;}',
+    '#gmp-header{display:flex;align-items:center;padding:14px;position:relative;background:#f9f9f9;border-radius:6px 6px 0 0;}',
     '#gmp-cover{',
-      'width:48px;height:48px;',
-      'background:linear-gradient(135deg,#1db969,#194d2c);',
-      'border-radius:6px;flex-shrink:0;',
+      'width:42px;height:42px;',
+      'background:linear-gradient(135deg,#5dd877,#28a745);',
+      'border-radius:4px;flex-shrink:0;',
       'display:flex;align-items:center;justify-content:center;',
     '}',
-    '#gmp-cover svg{width:24px;height:24px;}',
-    '#gmp-info{flex:1;min-width:0;}',
-    '#gmp-title{color:#fff;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px;}',
-    '#gmp-artist{color:#888;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
-    '#gmp-ctrl{display:flex;align-items:center;gap:16px;margin-bottom:10px;}',
-    '.gmp-btn{background:none;border:none;cursor:pointer;padding:4px;color:#aaa;transition:color 0.2s;}',
-    '.gmp-btn:hover{color:#fff;}',
-    '.gmp-btn svg{width:20px;height:20px;display:block;}',
-    '#gmp-progress-wrap{display:flex;align-items:center;gap:8px;margin-bottom:10px;}',
-    '#gmp-time{color:#666;font-size:10px;font-variant-numeric:tabular-nums;min-width:36px;text-align:center;}',
-    '#gmp-bar-wrap{flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;cursor:pointer;position:relative;}',
-    '#gmp-bar{height:100%;background:#1db969;border-radius:2px;width:0%;transition:width 0.3s;}',
-    '#gmp-vol-wrap{display:flex;align-items:center;gap:8px;}',
-    '#gmp-vol-icon{cursor:pointer;color:#aaa;}',
-    '#gmp-vol-icon:hover{color:#fff;}',
-    '#gmp-vol-icon svg{width:16px;height:16px;display:block;}',
-    '#gmp-vol-bar-wrap{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;cursor:pointer;position:relative;}',
-    '#gmp-vol-bar{height:100%;background:#555;border-radius:2px;width:70%;}',
+    '#gmp-cover.playing{animation:cover-rotate 20s linear infinite;}',
+    '@keyframes cover-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}',
+    '#gmp-cover svg{width:22px;height:22px;color:#fff;}',
+    '#gmp-info{flex:1;margin-left:12px;min-width:0;}',
+    '#gmp-title{color:#333;font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
+    '#gmp-artist{color:#999;font-size:12px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
+    '#gmp-lyrics-btn{',
+      'position:absolute;right:14px;top:14px;',
+      'background:none;border:none;cursor:pointer;color:#999;padding:0;',
+    '}',
+    '#gmp-lyrics-btn:hover{color:#28a745;}',
+    '#gmp-lyrics-btn svg{width:18px;height:18px;}',
+    '#gmp-ctrl{',
+      'display:flex;align-items:center;justify-content:center;',
+      'padding:10px 14px;background:#fff;',
+    '}',
+    '.gmp-btn{background:none;border:none;cursor:pointer;padding:8px;color:#666;transition:color 0.2s;}',
+    '.gmp-btn:hover{color:#28a745;}',
+    '.gmp-btn svg{width:22px;height:22px;display:block;}',
+    '#gmp-progress-wrap{display:flex;align-items:center;padding:0 14px 10px;background:#fff;}',
+    '#gmp-time{color:#999;font-size:11px;min-width:40px;font-variant-numeric:tabular-nums;}',
+    '#gmp-bar-wrap{flex:1;height:2px;background:#eee;border-radius:1px;cursor:pointer;position:relative;margin:0 8px;}',
+    '#gmp-bar{height:100%;background:#28a745;border-radius:1px;width:0%;position:relative;}',
+    '#gmp-bar::after{content:"";position:absolute;right:-5px;top:-4px;width:10px;height:10px;background:#28a745;border-radius:50%;opacity:0;transition:opacity 0.2s;}',
+    '#gmp-bar-wrap:hover #gmp-bar::after{opacity:1;}',
+    '#gmp-vol-wrap{display:flex;align-items:center;padding:0 14px 12px;background:#fff;}',
+    '#gmp-vol-icon{cursor:pointer;color:#999;}',
+    '#gmp-vol-icon:hover{color:#28a745;}',
+    '#gmp-vol-icon svg{width:16px;height:16px;}',
+    '#gmp-vol-bar-wrap{flex:1;height:2px;background:#eee;border-radius:1px;cursor:pointer;margin-left:8px;}',
+    '#gmp-vol-bar{height:100%;background:#28a745;border-radius:1px;width:70%;}',
     '#gmp-list{',
       'max-height:0;overflow-y:auto;',
+      'background:#fafafa;',
       'transition:max-height 0.3s ease;',
     '}',
-    '#gmp-list.open{max-height:260px;}',
+    '#gmp-list.open{max-height:240px;border-top:1px solid #eee;}',
     '#gmp-list::-webkit-scrollbar{width:4px;}',
-    '#gmp-list::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:2px;}',
-    '.gmp-item{display:flex;align-items:center;gap:8px;padding:6px 4px;cursor:pointer;border-radius:4px;transition:background 0.15s;}',
-    '.gmp-item:hover{background:rgba(255,255,255,0.06);}',
-    '.gmp-item.playing{background:rgba(29,185,84,0.15);}',
-    '.gmp-item-num{color:#444;font-size:10px;min-width:18px;text-align:right;font-variant-numeric:tabular-nums;}',
-    '.gmp-item.playing .gmp-item-num{color:#1db969;}',
+    '#gmp-list::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}',
+    '.gmp-item{display:flex;align-items:center;gap:10px;padding:8px 14px;cursor:pointer;border-left:3px solid transparent;transition:all 0.15s;}',
+    '.gmp-item:hover{background:#f0f0f0;}',
+    '.gmp-item.playing{background:#e8f5e9;border-left-color:#28a745;}',
+    '.gmp-item-num{color:#ccc;font-size:12px;min-width:20px;}',
+    '.gmp-item.playing .gmp-item-num{color:#28a745;}',
     '.gmp-item-info{flex:1;min-width:0;}',
-    '.gmp-item-name{color:#ccc;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
-    '.gmp-item.playing .gmp-item-name{color:#fff;}',
-    '.gmp-item-artist{color:#555;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
-    '.gmp-playing-icon{color:#1db969;flex-shrink:0;}',
-    '.gmp-playing-icon svg{width:12px;height:12px;display:block;animation:gmp-pulse 0.8s ease-in-out infinite alternate;}',
-    '@keyframes gmp-pulse{from{opacity:0.6;}to{opacity:1;}}',
+    '.gmp-item-name{color:#333;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
+    '.gmp-item.playing .gmp-item-name{color:#28a745;font-weight:500;}',
+    '.gmp-item-artist{color:#999;font-size:11px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
+    '.gmp-playing-icon{color:#28a745;flex-shrink:0;}',
+    '.gmp-playing-icon svg{width:12px;height:12px;animation:gmp-pulse 0.8s ease-in-out infinite alternate;}',
+    '@keyframes gmp-pulse{from{opacity:0.5;}to{opacity:1;}}',
+    '',
+    '/* ---- Toggle Button (mini switcher) ---- */',
+    '#gmp-toggle{',
+      'position:absolute;left:-28px;top:50%;transform:translateY(-50%);',
+      'width:28px;height:28px;border-radius:50%;',
+      'background:linear-gradient(135deg,#5dd877,#28a745);',
+      'border:none;cursor:pointer;',
+      'display:flex;align-items:center;justify-content:center;',
+      'box-shadow:-2px 0 8px rgba(40,167,69,0.3);',
+    '}',
+    '#gmp-toggle svg{width:14px;height:14px;color:#fff;transition:transform 0.3s;}',
+    '#gmp-toggle:hover{box-shadow:-2px 0 12px rgba(40,167,69,0.5);}',
+    '#gmp-toggle.collapsed svg{transform:rotate(180deg);}',
     '',
     '/* ---- Lyrics Panel ---- */',
-    '#gmp-lyrics-btn{',
-      'background:none;border:none;cursor:pointer;color:#888;padding:4px;',
-      'position:absolute;right:12px;top:10px;transition:color 0.2s;',
-    '}',
-    '#gmp-lyrics-btn:hover{color:#1db969;}',
-    '#gmp-lyrics-btn svg{width:18px;height:18px;display:block;}',
     '#gmp-lyrics-panel{',
       'max-height:0;overflow:hidden;transition:max-height 0.3s ease;',
-      'text-align:center;font-size:13px;line-height:2;',
-      'color:#666;cursor:default;',
+      'text-align:center;font-size:13px;line-height:2.2;',
+      'color:#666;background:#fafafa;',
     '}',
-    '#gmp-lyrics-panel.open{max-height:200px;overflow-y:auto;}',
+    '#gmp-lyrics-panel.open{max-height:200px;overflow-y:auto;border-top:1px solid #eee;}',
     '#gmp-lyrics-panel::-webkit-scrollbar{width:3px;}',
-    '#gmp-lyrics-panel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px;}',
-    '.gmp-lyric-line{',
-      'padding:2px 8px;border-radius:3px;transition:color 0.2s,font-size 0.2s;',
-      'cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+    '#gmp-lyrics-panel::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}',
+    '.gmp-lyric-line{padding:2px 12px;cursor:pointer;transition:all 0.2s;}',
+    '.gmp-lyric-line:hover{color:#333;}',
+    '.gmp-lyric-line.active{color:#28a745;font-size:15px;font-weight:500;}',
+    '.gmp-lyric-line.passive{color:#ccc;}',
+    '@media(max-width:480px){',
+      '#gmp-body{width:calc(100vw - 80px);}',
+      '#gmeek-player{right:10px;bottom:10px;}',
     '}',
-    '.gmp-lyric-line:hover{color:#aaa;}',
-    '.gmp-lyric-line.active{color:#1db969;font-size:15px;font-weight:600;}',
-    '.gmp-lyric-line.passive{color:#444;}',
     '@keyframes gmp-hint{0%{opacity:0;transform:translateX(20px);}10%{opacity:1;transform:none;}80%{opacity:1;}100%{opacity:0;}}'
   ].join('');
 
@@ -128,13 +139,12 @@
   container.id = 'gmeek-player';
 
   container.innerHTML =
-    '<button id="gmp-toggle">' +
-      '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>' +
-      '<span id="gmp-toggle-text">🎵 Music</span>' +
-    '</button>' +
     '<div id="gmp-body">' +
+      '<button id="gmp-toggle" title="展开/收起">' +
+        '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>' +
+      '</button>' +
       '<div id="gmp-header">' +
-        '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="white"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
+        '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
           '<div id="gmp-title">Music</div>' +
           '<div id="gmp-artist">点击播放</div>' +
@@ -151,9 +161,10 @@
       '<div id="gmp-progress-wrap">' +
         '<span id="gmp-time">0:00</span>' +
         '<div id="gmp-bar-wrap"><div id="gmp-bar"></div></div>' +
+        '<span id="gmp-time-end">0:00</span>' +
       '</div>' +
       '<div id="gmp-vol-wrap">' +
-        '<span id="gmp-vol-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg></span>' +
+        '<span id="gmp-vol-icon" title="静音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></span>' +
         '<div id="gmp-vol-bar-wrap"><div id="gmp-vol-bar"></div></div>' +
       '</div>' +
       '<div id="gmp-lyrics-panel"></div>' +
@@ -168,12 +179,13 @@
   var artistEl = document.getElementById('gmp-artist');
   var playBtn = document.getElementById('gmp-play');
   var timeEl = document.getElementById('gmp-time');
+  var timeEndEl = document.getElementById('gmp-time-end');
   var barEl = document.getElementById('gmp-bar');
   var volBar = document.getElementById('gmp-vol-bar');
   var listEl = document.getElementById('gmp-list');
   var toggleBtn = document.getElementById('gmp-toggle');
   var volIcon = document.getElementById('gmp-vol-icon');
-  var toggleText = document.getElementById('gmp-toggle-text');
+  var coverEl = document.getElementById('gmp-cover');
 
   // ---- Audio Engine ----
   var audio = new Audio();
@@ -211,7 +223,6 @@
           }
         } catch (e) { /* ignore */ }
       }
-      // fallback
       callback(HARDCODED_SONGS);
     };
     xhr.onerror = function () {
@@ -257,16 +268,13 @@
     if (!lrcText) return [];
     var lines = lrcText.split('\n');
     var result = [];
-    var timeRe = /\[(\d+):(\d+)(?:[.\:](\d+))?\]/;
     for (var i = 0; i < lines.length; i++) {
       var line = lines[i].trim();
       if (!line) continue;
-      // Handle multiple timestamps on one line: [mm:ss.xx][mm:ss.xx]text
       var firstBracket = line.indexOf(']');
       if (firstBracket === -1) continue;
       var text = line.substring(line.lastIndexOf(']') + 1).trim();
       if (!text) continue;
-      // Extract all timestamps in this line
       var tsRe = /\[(\d+):(\d+)(?:[.\:](\d+))?\]/g;
       var match;
       while ((match = tsRe.exec(line)) !== null) {
@@ -282,56 +290,37 @@
   }
 
   // ---- Fetch Lyrics ----
-  // Try multiple lyric API sources
   function fetchLyric(songId, callback) {
     if (!songId) { callback(''); return; }
-    console.log('[GmeekMusic] Fetching lyrics for songId:', songId);
-
-    // Source 1: Meting API
     var url1 = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url1, true);
     xhr.timeout = 6000;
-
     xhr.onload = function () {
-      console.log('[GmeekMusic] Lyric API1 status:', xhr.status);
       if (xhr.status === 200) {
         try {
           var data = JSON.parse(xhr.responseText);
-          // Meting API may return { lrc: { lyric: '...' } }
           var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
           if (lrc) { callback(lrc); return; }
-          // Try alternative field names
           lrc = data.lyric || data.lrc || '';
           if (lrc) { callback(lrc); return; }
-        } catch (e) { console.error('[GmeekMusic] Lyric API1 parse error:', e); }
+        } catch (e) { }
       }
-      // Fallback: try NetEase official API via a public CORS proxy
       fetchLyricFallback(songId, callback);
     };
-    xhr.onerror = function () {
-      console.error('[GmeekMusic] Lyric API1 failed, trying fallback...');
-      fetchLyricFallback(songId, callback);
-    };
-    xhr.ontimeout = function () {
-      console.error('[GmeekMusic] Lyric API1 timeout, trying fallback...');
-      fetchLyricFallback(songId, callback);
-    };
+    xhr.onerror = function () { fetchLyricFallback(songId, callback); };
+    xhr.ontimeout = function () { fetchLyricFallback(songId, callback); };
     xhr.send();
   }
 
   function fetchLyricFallback(songId, callback) {
-    // Source 2: Use a CORS-friendly Netease API proxy
-    // Multiple public proxies as fallback chain
     var proxies = [
       'https://neteasecloudmusicapi-fcow.vercel.app',
-      'https://ncm-api.zekdot.com',
-      'https://music-api.greedyai.com'
+      'https://ncm-api.zekdot.com'
     ];
     var tryProxy = function (index) {
       if (index >= proxies.length) { callback(''); return; }
       var url = proxies[index] + '/lyric?id=' + encodeURIComponent(songId);
-      console.log('[GmeekMusic] Trying proxy ' + index + ':', url);
       var xhr2 = new XMLHttpRequest();
       xhr2.open('GET', url, true);
       xhr2.timeout = 5000;
@@ -341,8 +330,8 @@
             var data = JSON.parse(xhr2.responseText);
             var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
             if (!lrc) lrc = (data && data.lyric) ? data.lyric : '';
-            if (lrc) { console.log('[GmeekMusic] Lyric from proxy ' + index + ' OK, length:', lrc.length); callback(lrc); return; }
-          } catch (e) { console.error('[GmeekMusic] Proxy ' + index + ' parse error:', e); }
+            if (lrc) { callback(lrc); return; }
+          } catch (e) { }
         }
         tryProxy(index + 1);
       };
@@ -371,7 +360,6 @@
     }
     lyricsPanelEl.innerHTML = html;
     lyricLines = lyricsPanelEl.querySelectorAll('.gmp-lyric-line');
-    // Click to seek
     for (var j = 0; j < lyricLines.length; j++) {
       (function (idx) {
         lyricLines[j].addEventListener('click', function () {
@@ -397,7 +385,6 @@
       lyricLines[j].classList.remove('active', 'passive');
       if (j === activeIdx) {
         lyricLines[j].classList.add('active');
-        // Scroll to center
         var container = lyricsPanelEl;
         var lineEl = lyricLines[j];
         var scrollTop = lineEl.offsetTop - container.clientHeight / 2 + lineEl.clientHeight / 2;
@@ -419,8 +406,8 @@
     artistEl.textContent = s.artist;
     barEl.style.width = '0%';
     timeEl.textContent = '0:00';
+    timeEndEl.textContent = '0:00';
     updateListHighlight();
-    // Fetch lyrics
     var songId = s.id || '';
     if (!songId && s.url) {
       var m = s.url.match(/id=(\d+)/);
@@ -435,10 +422,11 @@
     }
     var promise = audio.play();
     if (promise) {
-      promise.catch(function () { /* user interaction required */ });
+      promise.catch(function () { });
     }
     playing = true;
     updatePlayIcon();
+    coverEl.classList.add('playing');
   }
 
   function updateListHighlight() {
@@ -455,6 +443,11 @@
     playBtn.innerHTML = playing
       ? '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>'
       : '<svg id="gmp-icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>';
+    if (playing) {
+      coverEl.classList.add('playing');
+    } else {
+      coverEl.classList.remove('playing');
+    }
   }
 
   // ---- Controls ----
@@ -480,6 +473,12 @@
   });
 
   // ---- Progress ----
+  audio.addEventListener('loadedmetadata', function () {
+    var m = Math.floor(audio.duration / 60);
+    var s = Math.floor(audio.duration % 60);
+    timeEndEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+  });
+
   audio.addEventListener('timeupdate', function () {
     if (!audio.duration) return;
     var pct = (audio.currentTime / audio.duration) * 100;
@@ -487,7 +486,6 @@
     var m = Math.floor(audio.currentTime / 60);
     var s = Math.floor(audio.currentTime % 60);
     timeEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
-    // Lyrics sync
     updateLyricsHighlight();
   });
 
@@ -501,7 +499,7 @@
     timeEl.textContent = 'Error';
   });
 
-  // ---- Seek (click + drag) ----
+  // ---- Seek ----
   (function () {
     var barWrap = document.getElementById('gmp-bar-wrap');
     var seeking = false;
@@ -531,7 +529,6 @@
       seeking = false;
     });
 
-    // Touch support for mobile
     barWrap.addEventListener('touchstart', function (e) {
       seeking = true;
       seekTo(e.touches[0]);
@@ -573,7 +570,6 @@
   (function () {
     var lyricsBtn = document.getElementById('gmp-lyrics-btn');
     var panel = document.getElementById('gmp-lyrics-panel');
-    var listEl = document.getElementById('gmp-list');
     var open = false;
     lyricsBtn.addEventListener('click', function () {
       open = !open;
@@ -586,18 +582,29 @@
     });
   })();
 
-  // ---- Toggle body (fixed: was toggling list, now toggles body + list) ----
-  var panelOpen = false;
-  toggleBtn.addEventListener('click', function () {
-    panelOpen = !panelOpen;
-    if (panelOpen) {
-      bodyEl.classList.add('show');
+  // ---- Toggle list (click header to show/hide playlist) ----
+  var listOpen = false;
+  document.getElementById('gmp-header').addEventListener('click', function (e) {
+    if (e.target.closest('#gmp-lyrics-btn')) return;
+    listOpen = !listOpen;
+    if (listOpen) {
       listEl.classList.add('open');
-      toggleText.textContent = '收起播放器';
+      document.getElementById('gmp-lyrics-panel').classList.remove('open');
     } else {
-      bodyEl.classList.remove('show');
       listEl.classList.remove('open');
-      toggleText.textContent = '🎵 Music';
+    }
+  });
+
+  // ---- Toggle button (expand/collapse player) ----
+  var playerExpanded = true;
+  toggleBtn.addEventListener('click', function () {
+    playerExpanded = !playerExpanded;
+    if (playerExpanded) {
+      bodyEl.style.display = '';
+      toggleBtn.classList.remove('collapsed');
+    } else {
+      bodyEl.style.display = 'none';
+      toggleBtn.classList.add('collapsed');
     }
   });
 
@@ -610,8 +617,8 @@
 
   // Auto-show hint
   var hint = document.createElement('div');
-  hint.style.cssText = 'position:fixed;bottom:160px;right:10px;background:rgba(29,185,84,0.9);color:#fff;padding:8px 12px;border-radius:6px;font-size:12px;z-index:10005;pointer-events:none;animation:gmp-hint 4s ease forwards;';
-  hint.textContent = '🎵 音乐播放器已就绪，点击展开';
+  hint.style.cssText = 'position:fixed;bottom:60px;right:60px;background:rgba(40,167,69,0.9);color:#fff;padding:8px 12px;border-radius:6px;font-size:12px;z-index:10005;pointer-events:none;animation:gmp-hint 4s ease forwards;';
+  hint.textContent = '🎵 音乐播放器已就绪';
   document.body.appendChild(hint);
   setTimeout(function () {
     if (hint.parentNode) hint.parentNode.removeChild(hint);
