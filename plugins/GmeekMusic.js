@@ -1,8 +1,7 @@
-// Gmeek 音乐播放器 — 右侧悬浮（CSS 内嵌版，彻底绕过 CSP）
+// Gmeek 音乐播放器 — 右侧悬浮（35首歌 + 修复 CSS + 调试日志）
 (function() {
   'use strict';
 
-  // 35 首华语私人雷达完整歌单（正确 ID: 2829883282）
   var songs = [
     {name:"河流",artist:"马赫mood, 杜逸风",url:"https://music.163.com/song/media/outer/url?id=1984760613.mp3"},
     {name:"冷冷的夏",artist:"王芷蕾",url:"https://music.163.com/song/media/outer/url?id=301422.mp3"},
@@ -14,57 +13,53 @@
     {name:"你我经历的一刻",artist:"ZaZaZsu咂咂苏",url:"https://music.163.com/song/media/outer/url?id=2655065698.mp3"},
     {name:"若把你",artist:"Kirsty刘瑾睿",url:"https://music.163.com/song/media/outer/url?id=865632948.mp3"},
     {name:"几分",artist:"雷泷Raylong, 曲甲, 唐康宁",url:"https://music.163.com/song/media/outer/url?id=2156910268.mp3"},
-    {name:"我好像在哪里见过你",artist:"薛之谦",url:"https://music.163.com/song/media/outer/url?id=41631627.mp3"},
-    {name:"浪费",artist:"林宥嘉",url:"https://music.163.com/song/media/outer/url?id=27808150.mp3"},
-    {name:"水星记",artist:"郭顶",url:"https://music.163.com/song/media/outer/url?id=436514124.mp3"},
-    {name:"说好的幸福呢",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=108655.mp3"},
-    {name:"修炼爱情",artist:"林俊杰",url:"https://music.163.com/song/media/outer/url?id=27538354.mp3"},
-    {name:"天后",artist:"陈势安",url:"https://music.163.com/song/media/outer/url?id=25906122.mp3"},
-    {name:"你就不要想起我",artist:"田馥甄",url:"https://music.163.com/song/media/outer/url?id=29718411.mp3"},
-    {name:"走马",artist:"陈粒",url:"https://music.163.com/song/media/outer/url?id=29848114.mp3"},
-    {name:"奇妙能力歌",artist:"陈粒",url:"https://music.163.com/song/media/outer/url?id=29748311.mp3"},
-    {name:"理想三旬",artist:"陈鸿宇",url:"https://music.163.com/song/media/outer/url?id=406769676.mp3"},
-    {name:"七里香",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=186001.mp3"},
-    {name:"彩虹",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=188063.mp3"},
-    {name:"不能说的秘密",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=185882.mp3"},
-    {name:"明明就",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=22820567.mp3"},
-    {name:"等你下课",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=552110566.mp3"},
-    {name:"mojito",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=1463881076.mp3"},
-    {name:"说好不哭",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=1397634491.mp3"},
-    {name:"夜曲",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=185878.mp3"},
-    {name:"青花瓷",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=185991.mp3"},
-    {name:"晴天",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=186102.mp3"},
-    {name:"稻香",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=186015.mp3"},
-    {name:"告白气球",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=411316295.mp3"},
-    {name:"以父之名",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=185873.mp3"},
-    {name:"算什么男人",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=29703533.mp3"},
-    {name:"安静",artist:"周杰伦",url:"https://music.163.com/song/media/outer/url?id=185880.mp3"}
+    {name:"便利店之夜",artist:"便利店之夜",url:"https://music.163.com/song/media/outer/url?id=3326327476.mp3"},
+    {name:"玛丽莲",artist:"玛丽莲",url:"https://music.163.com/song/media/outer/url?id=2709842957.mp3"},
+    {name:"总有一天你会出现在我身边",artist:"棱镜乐队",url:"https://music.163.com/song/media/outer/url?id=1303027499.mp3"},
+    {name:"森林巴士",artist:"温妮莎",url:"https://music.163.com/song/media/outer/url?id=1496093993.mp3"},
+    {name:"你很OK！迈出下一步吧！",artist:"你很OK",url:"https://music.163.com/song/media/outer/url?id=1458708777.mp3"},
+    {name:"枪口红",artist:"张碧晨",url:"https://music.163.com/song/media/outer/url?id=3319370284.mp3"},
+    {name:"殊色",artist:"黄子韬",url:"https://music.163.com/song/media/outer/url?id=2004150068.mp3"},
+    {name:"爱在阳光空气中",artist:"孙燕姿",url:"https://music.163.com/song/media/outer/url?id=4871758.mp3"},
+    {name:"归途",artist:"林俊杰",url:"https://music.163.com/song/media/outer/url?id=1347914841.mp3"},
+    {name:"蔓延",artist:"许巍",url:"https://music.163.com/song/media/outer/url?id=306888.mp3"},
+    {name:"绽放爱",artist:"张碧晨",url:"https://music.163.com/song/media/outer/url?id=430208627.mp3"},
+    {name:"花",artist:"程璧",url:"https://music.163.com/song/media/outer/url?id=2754658627.mp3"},
+    {name:"月光",artist:"邢天卓",url:"https://music.163.com/song/media/outer/url?id=25641044.mp3"},
+    {name:"青山故人",artist:"暗杠",url:"https://music.163.com/song/media/outer/url?id=1310963552.mp3"},
+    {name:"渡红尘",artist:"蔡恩雨",url:"https://music.163.com/song/media/outer/url?id=2754264700.mp3"},
+    {name:"马上出发",artist:"马上出发",url:"https://music.163.com/song/media/outer/url?id=3343529136.mp3"},
+    {name:"召唤",artist:"林俊杰",url:"https://music.163.com/song/media/outer/url?id=2744769015.mp3"},
+    {name:"吻你吻上太空",artist:"王OK",url:"https://music.163.com/song/media/outer/url?id=2707033683.mp3"},
+    {name:"阳光下的星星",artist:"金海心",url:"https://music.163.com/song/media/outer/url?id=1353159923.mp3"},
+    {name:"绝对占有 相对自由",artist:"薛之谦",url:"https://music.163.com/song/media/outer/url?id=2749430424.mp3"},
+    {name:"吹灭小山河",artist:"国风堂/西瓜JUN",url:"https://music.163.com/song/media/outer/url?id=1412559986.mp3"},
+    {name:"绝对占有，相对自由",artist:"田馥甄",url:"https://music.163.com/song/media/outer/url?id=29431061.mp3"},
+    {name:"五百二十赫兹",artist:"汪苏泷",url:"https://music.163.com/song/media/outer/url?id=1948572170.mp3"},
+    {name:"未完结的爱",artist:"林俊杰",url:"https://music.163.com/song/media/outer/url?id=2695903727.mp3"},
+    {name:"带我走",artist:"杨丞琳",url:"https://music.163.com/song/media/outer/url?id=5243408.mp3"}
   ];
 
-  // 内嵌 CSS：右侧悬浮 + 高优先级覆盖（绕过 link 加载的 CSP 限制）
+  // 内嵌 CSS：右侧悬浮，强制覆盖所有冲突样式
   var css = [
-    '.aplayer,.aplayer .aplayer-icon-back,.aplayer .aplayer-icon-play,',
-    '.aplayer .aplayer-icon-forward,.aplayer .aplayer-icon-menu,',
-    '.aplayer .aplayer-lrc-current{background:#121212}',
-    '.aplayer,.aplayer .aplayer-lrc{background:rgba(0,0,0,.4)}',
+    '.aplayer,.aplayer .aplayer-lrc{background:rgba(0,0,0,.75)}',
     '.aplayer .aplayer-lrc p{color:#fff}',
     '.aplayer .aplayer-lrc-current{color:#1db969}',
-    '.aplayer.aplayer-fixed,.aplayer.aplayer-fixed .aplayer-body,',
-    '.aplayer.aplayer-fixed .aplayer-lrc{display:block!important;',
+    '.aplayer-info{display:block!important;visibility:visible!important;opacity:1!important}',
+    '.aplayer.aplayer-fixed,.aplayer.aplayer-fixed .aplayer-body{',
+    'display:block!important;visibility:visible!important;',
     'position:fixed!important;bottom:0!important;left:auto!important;right:0!important;',
-    'z-index:10004!important}',
+    'width:320px!important;z-index:10004!important}',
     '.aplayer.aplayer-fixed .aplayer-lrc{right:0!important;left:auto!important;bottom:52px!important}',
-    '.aplayer,.aplayer.aplayer-narrow .aplayer-body{left:auto!important;right:0!important;width:320px!important}',
+    '.aplayer,.aplayer.aplayer-narrow .aplayer-body{left:auto!important;right:0!important}',
     '.aplayer.aplayer-fixed .aplayer-body{width:320px!important}',
-    '.aplayer.aplayer-fixed .aplayer-info{-webkit-transform:scaleX(1)!important;',
-    'transform:scaleX(1)!important;-webkit-transform-origin:100% 0!important;',
-    'transform-origin:100% 0!important}'
+    '.aplayer .aplayer-info{-webkit-transform:scaleX(1)!important;transform:scaleX(1)!important}'
   ].join('');
+
   var style = document.createElement('style');
   style.textContent = css;
   document.head.appendChild(style);
 
-  // 创建播放器容器
   var div = document.createElement('div');
   div.id = 'gmeek-ap';
   document.body.appendChild(div);
@@ -72,15 +67,22 @@
   function init() {
     var s = document.createElement('script');
     s.src = '/plugins/lib/APlayer.min.js';
+    s.onerror = function() { console.error('[GmeekMusic] APlayer.min.js load failed'); };
     s.onload = function() {
-      var ap = new APlayer({
-        element: document.getElementById('gmeek-ap'),
-        fixed: true,
-        autoplay: false,
-        showlrc: false,
-        theme: '#1db969',
-        audio: songs
-      });
+      console.log('[GmeekMusic] APlayer loaded, songs:', songs.length);
+      try {
+        var ap = new APlayer({
+          element: document.getElementById('gmeek-ap'),
+          fixed: true,
+          autoplay: false,
+          showlrc: false,
+          theme: '#1db969',
+          audio: songs
+        });
+        console.log('[GmeekMusic] APlayer init OK');
+      } catch(e) {
+        console.error('[GmeekMusic] APlayer init error:', e);
+      }
     };
     document.head.appendChild(s);
   }
