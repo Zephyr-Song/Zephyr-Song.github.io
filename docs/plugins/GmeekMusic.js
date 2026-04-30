@@ -310,25 +310,36 @@
     return result.sort(function (a, b) { return a.time - b.time; });
   }
 
-  // ---- Fetch lyrics (网易云官方API) ----
+  // ---- Fetch lyrics (网易云官方API + CORS代理) ----
   function fetchLyric(songId, cb) {
     if (!songId) { cb(''); return; }
-    var url = 'https://music.163.com/api/song/lyric?id=' + encodeURIComponent(songId) + '&lv=1&kv=1&tv=-1';
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.timeout = 8000;
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        try {
-          var d = JSON.parse(xhr.responseText);
-          var lrc = (d && d.lrc && d.lrc.lyric) ? d.lrc.lyric : '';
-          if (lrc) { cb(lrc); return; }
-        } catch (e) { }
-      }
-      cb('');
-    };
-    xhr.onerror = xhr.ontimeout = function () { cb(''); };
-    xhr.send();
+    // 使用 CORS 代理
+    var corsProxies = [
+      'https://corsproxy.io/?',
+      'https://api.allorigins.win/raw?url=',
+    ];
+    var targetUrl = 'https://music.163.com/api/song/lyric?id=' + encodeURIComponent(songId) + '&lv=1&kv=1&tv=-1';
+    
+    function tryProxy(idx) {
+      if (idx >= corsProxies.length) { cb(''); return; }
+      var url = corsProxies[idx] + encodeURIComponent(targetUrl);
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.timeout = 10000;
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          try {
+            var d = JSON.parse(xhr.responseText);
+            var lrc = (d && d.lrc && d.lrc.lyric) ? d.lrc.lyric : '';
+            if (lrc) { cb(lrc); return; }
+          } catch (e) { console.log('[GmeekMusic] Parse error:', e); }
+        }
+        tryProxy(idx + 1);
+      };
+      xhr.onerror = xhr.ontimeout = function () { tryProxy(idx + 1); };
+      xhr.send();
+    }
+    tryProxy(0);
   }
 
   function buildLyrics(text) {
