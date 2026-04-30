@@ -17,38 +17,38 @@
     { name: '河流', artist: '马赫mood, 杜逸风', url: 'https://music.163.com/song/media/outer/url?id=1984760613.mp3', id: '1984760613' },
     { name: '冷冷的夏', artist: '王芷蕾', url: 'https://music.163.com/song/media/outer/url?id=301422.mp3', id: '301422' },
     { name: '旅行家的忠诚', artist: '黄旭, 艾热 AIR', url: 'https://music.163.com/song/media/outer/url?id=2079429439.mp3', id: '2079429439' },
-    { name: '外面冷 Coldest Night', artist: '艾福杰尼', url: 'https://music.163.com/song/media/outer/url?id=1982964017.mp3' },
-    { name: '空山灵雨 feat.旅行团', artist: '新裤子, 旅行团乐队', url: 'https://music.163.com/song/media/outer/url?id=2712645752.mp3' },
-    { name: '雨后的哲学家', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2649850191.mp3' },
-    { name: '过春天', artist: '谭维维', url: 'https://music.163.com/song/media/outer/url?id=1346093339.mp3' },
-    { name: '你我经历的一刻', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2655065698.mp3' },
-    { name: '若把你', artist: 'Kirsty刘瑾睿', url: 'https://music.163.com/song/media/outer/url?id=865632948.mp3' },
-    { name: '几分', artist: '雷泷Raylong, 曲甲, 唐康宁', url: 'https://music.163.com/song/media/outer/url?id=2156910268.mp3' },
-    { name: '便利店之夜', artist: '便利店之夜', url: 'https://music.163.com/song/media/outer/url?id=3326327476.mp3' },
-    { name: '玛丽莲', artist: '玛丽莲', url: 'https://music.163.com/song/media/outer/url?id=2709842957.mp3' },
-    { name: '总有一天你会出现在我身边', artist: '棱镜乐队', url: 'https://music.163.com/song/media/outer/url?id=1303027499.mp3' },
-    { name: '森林巴士', artist: '温妮莎', url: 'https://music.163.com/song/media/outer/url?id=1496093993.mp3' },
-    { name: '你很OK！迈出下一步吧！', artist: '你很OK', url: 'https://music.163.com/song/media/outer/url?id=1458708777.mp3' },
-    { name: '枪口红', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=3319370284.mp3' },
-    { name: '殊色', artist: '黄子韬', url: 'https://music.163.com/song/media/outer/url?id=2004150068.mp3' },
-    { name: '爱在阳光空气中', artist: '孙燕姿', url: 'https://music.163.com/song/media/outer/url?id=4871758.mp3' },
-    { name: '归途', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=1347914841.mp3' },
-    { name: '蔓延', artist: '许巍', url: 'https://music.163.com/song/media/outer/url?id=306888.mp3' },
-    { name: '绽放爱', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=430208627.mp3' },
-    { name: '花', artist: '程璧', url: 'https://music.163.com/song/media/outer/url?id=2754658627.mp3' },
-    { name: '月光', artist: '邢天卓', url: 'https://music.163.com/song/media/outer/url?id=25641044.mp3' },
-    { name: '青山故人', artist: '暗杠', url: 'https://music.163.com/song/media/outer/url?id=1310963552.mp3' },
-    { name: '渡红尘', artist: '蔡恩雨', url: 'https://music.163.com/song/media/outer/url?id=2754264700.mp3' },
-    { name: '马上出发', artist: '马上出发', url: 'https://music.163.com/song/media/outer/url?id=3343529136.mp3' },
-    { name: '召唤', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2744769015.mp3' },
-    { name: '吻你吻上太空', artist: '王OK', url: 'https://music.163.com/song/media/outer/url?id=2707033683.mp3' },
-    { name: '阳光下的星星', artist: '金海心', url: 'https://music.163.com/song/media/outer/url?id=1353159923.mp3' },
-    { name: '绝对占有 相对自由', artist: '薛之谦', url: 'https://music.163.com/song/media/outer/url?id=2749430424.mp3' },
-    { name: '吹灭小山河', artist: '国风堂/西瓜JUN', url: 'https://music.163.com/song/media/outer/url?id=1412559986.mp3' },
-    { name: '绝对占有，相对自由', artist: '田馥甄', url: 'https://music.163.com/song/media/outer/url?id=29431061.mp3' },
-    { name: '五百二十赫兹', artist: '汪苏泷', url: 'https://music.163.com/song/media/outer/url?id=1948572170.mp3' },
-    { name: '未完结的爱', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2695903727.mp3' },
-    { name: '带我走', artist: '杨丞琳', url: 'https://music.163.com/song/media/outer/url?id=5243408.mp3' }
+    { name: '外面冷 Coldest Night', artist: '艾福杰尼', url: 'https://music.163.com/song/media/outer/url?id=1982964017.mp3', id: '1982964017' },
+    { name: '空山灵雨 feat.旅行团', artist: '新裤子, 旅行团乐队', url: 'https://music.163.com/song/media/outer/url?id=2712645752.mp3', id: '2712645752' },
+    { name: '雨后的哲学家', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2649850191.mp3', id: '2649850191' },
+    { name: '过春天', artist: '谭维维', url: 'https://music.163.com/song/media/outer/url?id=1346093339.mp3', id: '1346093339' },
+    { name: '你我经历的一刻', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2655065698.mp3', id: '2655065698' },
+    { name: '若把你', artist: 'Kirsty刘瑾睿', url: 'https://music.163.com/song/media/outer/url?id=865632948.mp3', id: '865632948' },
+    { name: '几分', artist: '雷泷Raylong, 曲甲, 唐康宁', url: 'https://music.163.com/song/media/outer/url?id=2156910268.mp3', id: '2156910268' },
+    { name: '便利店之夜', artist: '便利店之夜', url: 'https://music.163.com/song/media/outer/url?id=3326327476.mp3', id: '3326327476' },
+    { name: '玛丽莲', artist: '玛丽莲', url: 'https://music.163.com/song/media/outer/url?id=2709842957.mp3', id: '2709842957' },
+    { name: '总有一天你会出现在我身边', artist: '棱镜乐队', url: 'https://music.163.com/song/media/outer/url?id=1303027499.mp3', id: '1303027499' },
+    { name: '森林巴士', artist: '温妮莎', url: 'https://music.163.com/song/media/outer/url?id=1496093993.mp3', id: '1496093993' },
+    { name: '你很OK！迈出下一步吧！', artist: '你很OK', url: 'https://music.163.com/song/media/outer/url?id=1458708777.mp3', id: '1458708777' },
+    { name: '枪口红', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=3319370284.mp3', id: '3319370284' },
+    { name: '殊色', artist: '黄子韬', url: 'https://music.163.com/song/media/outer/url?id=2004150068.mp3', id: '2004150068' },
+    { name: '爱在阳光空气中', artist: '孙燕姿', url: 'https://music.163.com/song/media/outer/url?id=4871758.mp3', id: '4871758' },
+    { name: '归途', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=1347914841.mp3', id: '1347914841' },
+    { name: '蔓延', artist: '许巍', url: 'https://music.163.com/song/media/outer/url?id=306888.mp3', id: '306888' },
+    { name: '绽放爱', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=430208627.mp3', id: '430208627' },
+    { name: '花', artist: '程璧', url: 'https://music.163.com/song/media/outer/url?id=2754658627.mp3', id: '2754658627' },
+    { name: '月光', artist: '邢天卓', url: 'https://music.163.com/song/media/outer/url?id=25641044.mp3', id: '25641044' },
+    { name: '青山故人', artist: '暗杠', url: 'https://music.163.com/song/media/outer/url?id=1310963552.mp3', id: '1310963552' },
+    { name: '渡红尘', artist: '蔡恩雨', url: 'https://music.163.com/song/media/outer/url?id=2754264700.mp3', id: '2754264700' },
+    { name: '马上出发', artist: '马上出发', url: 'https://music.163.com/song/media/outer/url?id=3343529136.mp3', id: '3343529136' },
+    { name: '召唤', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2744769015.mp3', id: '2744769015' },
+    { name: '吻你吻上太空', artist: '王OK', url: 'https://music.163.com/song/media/outer/url?id=2707033683.mp3', id: '2707033683' },
+    { name: '阳光下的星星', artist: '金海心', url: 'https://music.163.com/song/media/outer/url?id=1353159923.mp3', id: '1353159923' },
+    { name: '绝对占有 相对自由', artist: '薛之谦', url: 'https://music.163.com/song/media/outer/url?id=2749430424.mp3', id: '2749430424' },
+    { name: '吹灭小山河', artist: '国风堂/西瓜JUN', url: 'https://music.163.com/song/media/outer/url?id=1412559986.mp3', id: '1412559986' },
+    { name: '绝对占有，相对自由', artist: '田馥甄', url: 'https://music.163.com/song/media/outer/url?id=29431061.mp3', id: '29431061' },
+    { name: '五百二十赫兹', artist: '汪苏泷', url: 'https://music.163.com/song/media/outer/url?id=1948572170.mp3', id: '1948572170' },
+    { name: '未完结的爱', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2695903727.mp3', id: '2695903727' },
+    { name: '带我走', artist: '杨丞琳', url: 'https://music.163.com/song/media/outer/url?id=5243408.mp3', id: '5243408' }
   ];
 
   // ---- Styles ----
@@ -73,7 +73,7 @@
       'padding:12px;display:none;',
     '}',
     '#gmp-body.show{display:block;}',
-    '#gmp-header{display:flex;align-items:center;gap:12px;margin-bottom:10px;}',
+    '#gmp-header{display:flex;align-items:center;gap:12px;margin-bottom:10px;position:relative;}',
     '#gmp-cover{',
       'width:48px;height:48px;',
       'background:linear-gradient(135deg,#1db969,#194d2c);',
@@ -308,22 +308,29 @@
 
   // ---- Fetch Lyrics ----
   function fetchLyric(songId, callback) {
+    if (!songId) { callback(''); return; }
     var url = API_BASE + '?server=netease&type=lyric&id=' + encodeURIComponent(songId);
+    console.log('[GmeekMusic] Fetching lyrics:', url);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
+    xhr.timeout = 5000;
     xhr.onload = function () {
+      console.log('[GmeekMusic] Lyric response status:', xhr.status);
       if (xhr.status === 200) {
         try {
           var data = JSON.parse(xhr.responseText);
+          console.log('[GmeekMusic] Lyric data:', data);
           var lrc = (data && data.lrc && data.lrc.lyric) ? data.lrc.lyric : '';
-          if (!lrc && data && data.nolyric) lrc = '[00:00.0]暂无歌词';
+          if (!lrc && data && data.nolyric) { lrc = '[00:00.0]暂无歌词'; }
+          console.log('[GmeekMusic] Lyric text length:', lrc.length);
           callback(lrc || '');
           return;
-        } catch (e) { /* ignore */ }
+        } catch (e) { console.error('[GmeekMusic] Lyric parse error:', e); }
       }
       callback('');
     };
-    xhr.onerror = function () { callback(''); };
+    xhr.onerror = function () { console.error('[GmeekMusic] Lyric request failed'); callback(''); };
+    xhr.ontimeout = function () { console.error('[GmeekMusic] Lyric request timeout'); callback(''); };
     xhr.send();
   }
 
