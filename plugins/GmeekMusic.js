@@ -14,41 +14,16 @@
   // ==============================
 
   var HARDCODED_SONGS = [
-    { name: '河流', artist: '马赫mood, 杜逸风', url: 'https://music.163.com/song/media/outer/url?id=1984760613.mp3', id: '1984760613' },
-    { name: '冷冷的夏', artist: '王芷蕾', url: 'https://music.163.com/song/media/outer/url?id=301422.mp3', id: '301422' },
-    { name: '旅行家的忠诚', artist: '黄旭, 艾热 AIR', url: 'https://music.163.com/song/media/outer/url?id=2079429439.mp3', id: '2079429439' },
-    { name: '外面冷 Coldest Night', artist: '艾福杰尼', url: 'https://music.163.com/song/media/outer/url?id=1982964017.mp3', id: '1982964017' },
-    { name: '空山灵雨 feat.旅行团', artist: '新裤子, 旅行团乐队', url: 'https://music.163.com/song/media/outer/url?id=2712645752.mp3', id: '2712645752' },
-    { name: '雨后的哲学家', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2649850191.mp3', id: '2649850191' },
-    { name: '过春天', artist: '谭维维', url: 'https://music.163.com/song/media/outer/url?id=1346093339.mp3', id: '1346093339' },
-    { name: '你我经历的一刻', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2655065698.mp3', id: '2655065698' },
-    { name: '若把你', artist: 'Kirsty刘瑾睿', url: 'https://music.163.com/song/media/outer/url?id=865632948.mp3', id: '865632948' },
-    { name: '几分', artist: '雷泷Raylong, 曲甲, 唐康宁', url: 'https://music.163.com/song/media/outer/url?id=2156910268.mp3', id: '2156910268' },
-    { name: '便利店之夜', artist: '便利店之夜', url: 'https://music.163.com/song/media/outer/url?id=3326327476.mp3', id: '3326327476' },
-    { name: '玛丽莲', artist: '玛丽莲', url: 'https://music.163.com/song/media/outer/url?id=2709842957.mp3', id: '2709842957' },
-    { name: '总有一天你会出现在我身边', artist: '棱镜乐队', url: 'https://music.163.com/song/media/outer/url?id=1303027499.mp3', id: '1303027499' },
-    { name: '森林巴士', artist: '温妮莎', url: 'https://music.163.com/song/media/outer/url?id=1496093993.mp3', id: '1496093993' },
-    { name: '你很OK！迈出下一步吧！', artist: '你很OK', url: 'https://music.163.com/song/media/outer/url?id=1458708777.mp3', id: '1458708777' },
-    { name: '枪口红', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=3319370284.mp3', id: '3319370284' },
-    { name: '殊色', artist: '黄子韬', url: 'https://music.163.com/song/media/outer/url?id=2004150068.mp3', id: '2004150068' },
-    { name: '爱在阳光空气中', artist: '孙燕姿', url: 'https://music.163.com/song/media/outer/url?id=4871758.mp3', id: '4871758' },
-    { name: '归途', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=1347914841.mp3', id: '1347914841' },
-    { name: '蔓延', artist: '许巍', url: 'https://music.163.com/song/media/outer/url?id=306888.mp3', id: '306888' },
-    { name: '绽放爱', artist: '张碧晨', url: 'https://music.163.com/song/media/outer/url?id=430208627.mp3', id: '430208627' },
-    { name: '花', artist: '程璧', url: 'https://music.163.com/song/media/outer/url?id=2754658627.mp3', id: '2754658627' },
-    { name: '月光', artist: '邢天卓', url: 'https://music.163.com/song/media/outer/url?id=25641044.mp3', id: '25641044' },
-    { name: '青山故人', artist: '暗杠', url: 'https://music.163.com/song/media/outer/url?id=1310963552.mp3', id: '1310963552' },
-    { name: '渡红尘', artist: '蔡恩雨', url: 'https://music.163.com/song/media/outer/url?id=2754264700.mp3', id: '2754264700' },
-    { name: '马上出发', artist: '马上出发', url: 'https://music.163.com/song/media/outer/url?id=3343529136.mp3', id: '3343529136' },
-    { name: '召唤', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2744769015.mp3', id: '2744769015' },
-    { name: '吻你吻上太空', artist: '王OK', url: 'https://music.163.com/song/media/outer/url?id=2707033683.mp3', id: '2707033683' },
-    { name: '阳光下的星星', artist: '金海心', url: 'https://music.163.com/song/media/outer/url?id=1353159923.mp3', id: '1353159923' },
-    { name: '绝对占有 相对自由', artist: '薛之谦', url: 'https://music.163.com/song/media/outer/url?id=2749430424.mp3', id: '2749430424' },
-    { name: '吹灭小山河', artist: '国风堂/西瓜JUN', url: 'https://music.163.com/song/media/outer/url?id=1412559986.mp3', id: '1412559986' },
-    { name: '绝对占有，相对自由', artist: '田馥甄', url: 'https://music.163.com/song/media/outer/url?id=29431061.mp3', id: '29431061' },
-    { name: '五百二十赫兹', artist: '汪苏泷', url: 'https://music.163.com/song/media/outer/url?id=1948572170.mp3', id: '1948572170' },
-    { name: '未完结的爱', artist: '林俊杰', url: 'https://music.163.com/song/media/outer/url?id=2695903727.mp3', id: '2695903727' },
-    { name: '带我走', artist: '杨丞琳', url: 'https://music.163.com/song/media/outer/url?id=5243408.mp3', id: '5243408' }
+    { name: 'her (feat. Annika Wells)', artist: 'JVKE, Annika Wells', url: 'https://music.163.com/song/media/outer/url?id=3317235944.mp3', id: '3317235944' },
+    { name: 'this is what forever feels like', artist: 'JVKE, Nick Jonas', url: 'https://music.163.com/song/media/outer/url?id=2626680545.mp3', id: '2626680545' },
+    { name: 'Rush', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1990208030.mp3', id: '1990208030' },
+    { name: "Won't Look Back", artist: 'Geowulf', url: 'https://music.163.com/song/media/outer/url?id=482386197.mp3', id: '482386197' },
+    { name: 'Other Side', artist: 'PLAZA', url: 'https://music.163.com/song/media/outer/url?id=2093480642.mp3', id: '2093480642' },
+    { name: 'Medieval', artist: 'FINNEAS', url: 'https://music.163.com/song/media/outer/url?id=1887215867.mp3', id: '1887215867' },
+    { name: '巴适 (Bāshì)', artist: 'BikaBreezy, Jaytrue', url: 'https://music.163.com/song/media/outer/url?id=3346256265.mp3', id: '3346256265' },
+    { name: 'Feel Good', artist: 'Polo & Pan', url: 'https://music.163.com/song/media/outer/url?id=1456602234.mp3', id: '1456602234' },
+    { name: 'Swept Away', artist: 'Buddha Bar, Anna Naklab', url: 'https://music.163.com/song/media/outer/url?id=28798881.mp3', id: '28798881' },
+    { name: 'Focus', artist: 'Sick Individuals', url: 'https://music.163.com/song/media/outer/url?id=468878947.mp3', id: '468878947' }
   ];
 
   // ---- Styles ----
@@ -155,13 +130,13 @@
   container.innerHTML =
     '<button id="gmp-toggle">' +
       '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>' +
-      '<span id="gmp-toggle-text">华语私人雷达</span>' +
+      '<span id="gmp-toggle-text">🎵 Music</span>' +
     '</button>' +
     '<div id="gmp-body">' +
       '<div id="gmp-header">' +
         '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="white"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
-          '<div id="gmp-title">华语私人雷达</div>' +
+          '<div id="gmp-title">Music</div>' +
           '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
@@ -622,7 +597,7 @@
     } else {
       bodyEl.classList.remove('show');
       listEl.classList.remove('open');
-      toggleText.textContent = '华语私人雷达';
+      toggleText.textContent = '🎵 Music';
     }
   });
 
@@ -636,7 +611,7 @@
   // Auto-show hint
   var hint = document.createElement('div');
   hint.style.cssText = 'position:fixed;bottom:160px;right:10px;background:rgba(29,185,84,0.9);color:#fff;padding:8px 12px;border-radius:6px;font-size:12px;z-index:10005;pointer-events:none;animation:gmp-hint 4s ease forwards;';
-  hint.textContent = '🎵 华语私人雷达 已就绪，点击展开';
+  hint.textContent = '🎵 音乐播放器已就绪，点击展开';
   document.body.appendChild(hint);
   setTimeout(function () {
     if (hint.parentNode) hint.parentNode.removeChild(hint);
