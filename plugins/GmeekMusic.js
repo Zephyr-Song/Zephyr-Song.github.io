@@ -1,10 +1,12 @@
 /**
- * Gmeek Music Player v6 — 完全复刻 APlayer fixed mini 风格
+ * Gmeek Music Player v7 — 完全复刻 APlayer fixed mini 风格
  * 纯 HTML5 Audio + 底部歌词显示
  * 无任何 eval/new Function，完全兼容 GitHub Pages CSP
  */
 (function () {
   'use strict';
+
+  function initPlayer() {
 
   // ========== 配置区 ==========
   var NETEASE_PLAYLIST_ID = ''; // 网易云歌单 ID，留空则使用硬编码歌单
@@ -492,5 +494,14 @@
     buildList();
     console.log('[GmeekMusic] Loaded', songs.length, 'songs');
   });
+
+  } // end initPlayer()
+
+  // 确保 DOM 加载完成后再初始化播放器
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPlayer);
+  } else {
+    initPlayer();
+  }
 
 })();
