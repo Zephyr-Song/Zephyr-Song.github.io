@@ -310,19 +310,19 @@
     return result.sort(function (a, b) { return a.time - b.time; });
   }
 
-  // ---- Fetch lyrics (网易云官方API + CORS代理) ----
+  // ---- Fetch lyrics (使用公共网易云音乐API) ----
   function fetchLyric(songId, cb) {
     if (!songId) { cb(''); return; }
-    // 使用 CORS 代理
-    var corsProxies = [
-      'https://corsproxy.io/?',
-      'https://api.allorigins.win/raw?url=',
+    // 公共网易云 API 服务（自带 CORS 支持）
+    var apiUrls = [
+      'https://netease-cloud-music-api-five-roan-60.vercel.app/lyric?id=',
+      'https://neteasecloudmusicapi-fcow.vercel.app/lyric?id=',
+      'https://ncm-api.zekdot.com/api/lyric?id=',
     ];
-    var targetUrl = 'https://music.163.com/api/song/lyric?id=' + encodeURIComponent(songId) + '&lv=1&kv=1&tv=-1';
     
-    function tryProxy(idx) {
-      if (idx >= corsProxies.length) { cb(''); return; }
-      var url = corsProxies[idx] + encodeURIComponent(targetUrl);
+    function tryApi(idx) {
+      if (idx >= apiUrls.length) { cb(''); return; }
+      var url = apiUrls[idx] + encodeURIComponent(songId);
       var xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
       xhr.timeout = 10000;
@@ -330,16 +330,19 @@
         if (xhr.status === 200) {
           try {
             var d = JSON.parse(xhr.responseText);
-            var lrc = (d && d.lrc && d.lrc.lyric) ? d.lrc.lyric : '';
+            // 不同API返回格式略有不同
+            var lrc = (d.lrc && d.lrc.lyric) ? d.lrc.lyric :
+                      (d.lyric ? d.lyric : '');
             if (lrc) { cb(lrc); return; }
           } catch (e) { console.log('[GmeekMusic] Parse error:', e); }
         }
-        tryProxy(idx + 1);
+        console.log('[GmeekMusic] API ' + idx + ' failed, trying next...');
+        tryApi(idx + 1);
       };
-      xhr.onerror = xhr.ontimeout = function () { tryProxy(idx + 1); };
+      xhr.onerror = xhr.ontimeout = function () { tryApi(idx + 1); };
       xhr.send();
     }
-    tryProxy(0);
+    tryApi(0);
   }
 
   function buildLyrics(text) {
