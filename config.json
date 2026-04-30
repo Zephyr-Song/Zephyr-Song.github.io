@@ -4,6 +4,6 @@
     "avatarUrl":"https://avatars.githubusercontent.com/u/209873457?s=400&u=46d61754a72dbd7485f38d4088cb75ed186946d5&v=4",
     "GMEEK_VERSION":"last",
     "startSite":"03/16/2026",
-    "indexScript":"<script src=\"/plugins/GmeekBSZ.js\"></script>",
-    "script":"<script src=\"/plugins/GmeekBSZ.js\"></script>"
+    "indexScript":"<script src=\"/plugins/GmeekBSZ.js\"></script><script src=\"/plugins/GmeekMusic.js\"></script>",
+    "script":"<script src=\"/plugins/GmeekBSZ.js\"></script><script src=\"/plugins/GmeekMusic.js\"></script>"
 }
