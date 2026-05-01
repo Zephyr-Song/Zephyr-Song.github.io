@@ -1,108 +1,85 @@
 /**
- * Gmeek Music Player v7 — 完全复刻 APlayer fixed mini 风格
- * 纯 HTML5 Audio + 底部歌词显示
- * 无任何 eval/new Function，完全兼容 GitHub Pages CSP
+ * Gmeek Music Player v8 — 华语私人雷达歌单 + 悬浮歌词
+ * 纯 HTML5 Audio，无 eval/new Function，兼容 GitHub Pages CSP
+ * 歌单: 网易云 2829883282 (华语私人雷达)
  */
 (function () {
   'use strict';
 
   function initPlayer() {
 
-  // ========== 配置区 ==========
-  var NETEASE_PLAYLIST_ID = ''; // 网易云歌单 ID，留空则使用硬编码歌单
-  var API_BASE = 'https://api.i-meto.com/meting/api';
-  // ==============================
-
   var HARDCODED_SONGS = [
-    { name: 'her (feat. Annika Wells)', artist: 'JVKE, Annika Wells', url: 'https://music.163.com/song/media/outer/url?id=3317235944.mp3', id: '3317235944' },
-    { name: 'this is what forever feels like', artist: 'JVKE, Nick Jonas', url: 'https://music.163.com/song/media/outer/url?id=2626680545.mp3', id: '2626680545' },
-    { name: 'Rush', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1990208030.mp3', id: '1990208030' },
-    { name: "Won't Look Back", artist: 'Geowulf', url: 'https://music.163.com/song/media/outer/url?id=482386197.mp3', id: '482386197' },
-    { name: 'Other Side', artist: 'PLAZA', url: 'https://music.163.com/song/media/outer/url?id=2093480642.mp3', id: '2093480642' },
-    { name: 'Medieval', artist: 'FINNEAS', url: 'https://music.163.com/song/media/outer/url?id=1887215867.mp3', id: '1887215867' },
-    { name: '巴适 (Bāshì)', artist: 'BikaBreezy, Jaytrue', url: 'https://music.163.com/song/media/outer/url?id=3346256265.mp3', id: '3346256265' },
-    { name: 'Feel Good', artist: 'Polo & Pan', url: 'https://music.163.com/song/media/outer/url?id=1456602234.mp3', id: '1456602234' },
-    { name: 'Swept Away', artist: 'Buddha Bar, Anna Naklab', url: 'https://music.163.com/song/media/outer/url?id=28798881.mp3', id: '28798881' },
-    { name: 'Focus', artist: 'Sick Individuals', url: 'https://music.163.com/song/media/outer/url?id=468878947.mp3', id: '468878947' }
+    { name: '河流', artist: '马赫mood', url: 'https://music.163.com/song/media/outer/url?id=1984760613.mp3', id: '1984760613' },
+    { name: '旅行家的忠诚', artist: '黄旭', url: 'https://music.163.com/song/media/outer/url?id=2079429439.mp3', id: '2079429439' },
+    { name: '外面冷 Coldest Night', artist: '艾福杰尼', url: 'https://music.163.com/song/media/outer/url?id=1982964017.mp3', id: '1982964017' },
+    { name: '空山灵雨 feat.旅行团', artist: '新裤子', url: 'https://music.163.com/song/media/outer/url?id=2712645752.mp3', id: '2712645752' },
+    { name: '浪漫鬼', artist: 'DANNY K', url: 'https://music.163.com/song/media/outer/url?id=2111060878.mp3', id: '2111060878' },
+    { name: '雨后的哲学家', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2649850191.mp3', id: '2649850191' },
+    { name: '过春天', artist: '谭维维', url: 'https://music.163.com/song/media/outer/url?id=1346093339.mp3', id: '1346093339' },
+    { name: '你我经历的一刻', artist: 'ZaZaZsu咂咂苏', url: 'https://music.163.com/song/media/outer/url?id=2655065698.mp3', id: '2655065698' },
+    { name: '若把你', artist: 'Kirsty刘瑾睿', url: 'https://music.163.com/song/media/outer/url?id=865632948.mp3', id: '865632948' },
+    { name: '几分', artist: '雷泷Raylong', url: 'https://music.163.com/song/media/outer/url?id=2156910268.mp3', id: '2156910268' }
   ];
 
-  // ---- APlayer 风格 CSS ----
+  var HARDCODED_LYRICS = {
+    '2079429439': "[00:00.00] 作词 : 艾热 AIR/黄旭\n[00:00.05] 作曲 : 艾热 AIR/黄旭\n[00:00.24]黄旭：\n[00:00.42]好像是糊里糊涂坐上远航的飞机\n[00:03.57]也不知道哪一站会落地\n[00:06.15]这样继续漫无目的没有归期\n[00:08.40]身边消失的朋友也不绝络绎\n[00:11.13]我见识过鼎盛的繁华沦为废墟\n[00:13.65]空虚的昼夜交替只留恋醉意\n[00:16.26]人一次又一次被欲望利用威逼\n[00:18.57]和追求最简单的快乐保持对立\n[00:35.67]I got loyalty loyalty 但不来自DNA\n[00:38.37]已经记不清陪客人喝的第几杯\n[00:40.92]这里乌烟瘴气来了就为买个醉\n[00:43.20]老板给我涨了工资客人大方给小费\n[00:45.78]已经第十三个年头在酒吧驻唱\n[00:48.24]来这儿讨生活的属我来事嗓门最亮\n[00:50.73]眼看三十要出头了也想讨个婆娘\n[00:53.22]身边几个哥们穷 日子过的多像\n[00:55.98]空闲了一起躲在十几平的出租屋\n[00:58.62]龙敲beat我作曲布布卷本大的书\n[01:01.14]人穷志不短 过的悠哉悠哉\n[01:03.33]我们早晚走得起别墅旁有山有海\n[01:05.97]I got loyalty loyalty 特别是对她\n[01:08.43]我用一个月的工资送她长裙碎花\n[01:10.83]她哄睡酒醉后的我扫干净玻璃碎渣\n[01:13.47]只要有她陪的地方地下室也像家\n[01:15.96]艾热AIR：\n[01:17.52]我像个旅行家 天南地北到处飞\n[01:19.50]听遍言不由衷的话\n[01:21.99]明天会更好吗\n[01:23.52]我也不知道但至少暂时还能表达\n[01:26.79]半山腰快过了我们快登顶\n[01:29.16]笑谈自大的我们装云淡风轻\n[01:31.80]可能受够了 总是紧绷咬牙\n[01:34.89]所以现在只要…\n[01:36.27]黄旭：\n[01:36.27]酒醉激励豪言壮志发了许多誓\n[01:38.61]酒醒现状落差太大抱怨许多次\n[01:41.10]我说是 朋友劝我别再搞作词\n[01:43.68]奶奶发着高烧 在冬夜里过世\n[01:46.20]她的最后一滴泪 对我打击太大\n[01:48.78]想到摇篮里的笑 安慰且有点害怕\n[01:51.36]如果天使降临是恩赐是实属意外\n[01:53.88]继续rap会让我翻身还是继续负债\n[01:56.40]暂时我也无能为力\n[01:58.68]打开微博看看哪些平台最近办比赛\n[02:01.50]混不出头没脸回去\n[02:03.42]一起玩的朋友上电视 我混得像乞丐\n[02:06.45]火起来的都是bullsh*t\n[02:08.64]又羡慕又酸小屁孩爱听的歌真奇怪\n[02:11.61]背上包又去狩猎\n[02:13.50]为了她和她的生活费又漂泊几礼拜\n[02:26.55]我像个旅行家 天南地北到处飞\n[02:28.29]听遍言不由衷的话\n[02:30.27]明天会更好吗\n[02:32.76]我也不知道但至少暂时还能表达\n[02:37.20]半山腰快过了我们快登顶\n[02:39.96]笑谈自大的我们装云淡风轻\n[02:42.54]可能受够了 总是紧绷咬牙\n[02:45.57]现在一步一个脚丫\n[02:47.28]我擅长文字堆叠 垒起来的高度\n[02:50.40]像在徒手爬高山\n[02:51.90]时来运转像飞碟\n[02:53.94]过去称兄道弟的如今笑着说不敢高攀\n[02:57.09]我当他们谈吐诙谐\n[02:58.86]小小选秀歌手又不是什么权贵高官\n[03:02.10]那些苦日子刚终结\n[03:04.35]52层落地窗边 私教陪我练高翻\n[03:07.08]跑不完的媒体通告假笑到麻木\n[03:09.66]陌生城市香水味和酒都不明来路\n[03:12.21]最近远亲旧友总找我讲生活难处\n[03:14.76]偶遇赞助山旁落满灰的匡威帆布\n[03:17.13]我看了好久 像曾经对她目不转睛\n[03:19.71]阔别了好久 除了数字外久违的暖心\n[03:22.20]我像个伞兵 被新高度压迫的好晕\n[03:24.87]于是我把Loyal刻在新的现场返听\n[03:31.35]当故事刚到一半\n[03:33.09]当故事刚写一半\n[03:41.43]当故事刚读一半\n[03:46.50]别着急着说遗憾\n",
+    '1982964017': "[00:22.20]When I give you my broken heart in the coldest night please hold it tight\n[00:32.68]If you lie to me babe I just might let a falling dice decide my whole life\n[00:43.56]When I give you my broken heart in the coldest night please hold it tight\n[00:54.45]If you lie to me babe I just might let a falling dice decide my whole life\n[01:05.16]如果要放弃就请一起放弃彻底\n[01:07.68]理解有上亿种方法看是什么目的\n[01:10.32]让我们肉体剥离去放肆也算保护你\n[01:13.06]也说过怕我被骗当我们在一起沐浴\n[01:15.80]抱怨声音太大盖过兑现\n[01:18.48]本能的去顾虑不知道危险\n[01:21.18]Girl你明明爱的就很明显\n[01:23.96]谎言是善意还是你会演\n[01:27.04]你说过太多时间维护野心从没考虑你\n[01:29.76]日以继夜银行卡里只是那些破数据\n[01:32.44]我们都是某种蝼蚁维护着某种默契\n[01:35.20]也尽量不去过度关注你也习惯了过滤\n[01:37.90]这束光若隐又若现而我又拖延又拖延\n[01:40.49]感受到失去耐心的你慢慢对我的冷眼\n[01:43.35]可每首歌都有你影子我亲手来设计\n[01:46.11]Baby我最大野心是你其他没意义\n[01:48.69]Will I go easy will I go hard\n[01:51.21]I think we both should keep the best part\n[01:53.92]如何被你吸引\n[01:55.57]How we getting started\n[01:56.68]Love is so strong so strong\n[01:59.39]Will I go easy will I go hard\n[02:02.13]I think we both should keep the best part\n[02:04.88]如何被你吸引\n[02:06.26]How we getting started\n[02:07.56]I thought we were go along go along\n[02:11.04]When I give you my broken heart in the coldest night please hold it tight\n[02:21.61]If you lie to me babe I just might let a falling dice decide my whole life\n[02:32.86]Saturday night is cold outside\n[02:35.30]人们都是彼此 新欢与旧爱\n[02:38.24]杂乱无章交织或者空白\n[02:40.68]这就是种游戏还可以重来\n[02:43.67]Saturday night is cold outside\n[02:46.32]也许那边火热也许灯没开\n[02:48.92]也许都有想过一切都回来\n[02:51.59]这就是种游戏还可以重来\n[02:54.54]Saturday night is cold outside\n[02:57.28]It's cold outside\n[03:02.83]It's cold outside\n[03:05.51]Saturday night is cold outside\n[03:10.94]It's cold outside\n[03:13.67]It's cold outside\n[03:19.09]Journey makes you cry\n[03:23.57]Journey makes you cry\n[03:27.48]When I give you my broken heart in the coldest night please hold it tight\n",
+    '2712645752': "[00:22.43]年轻的你 还在叹息 为何不向荒野走去\n[00:30.15]空空行囊 空的心灵 空时光怕无人同行\n[00:37.91]像一只郊外的狐狸 孤独中欢愉\n[00:44.78]走入深深 山谷 忽然下起 空山的灵雨\n[00:52.92]打湿的外衣 又开始想你\n[01:00.99]回想和你 在这城中陋室 倾听着风雨\n[01:08.46]人间在下雨 迷乱的诗意\n[01:34.83]年轻的你 还在叹息 为何不向荒野走去\n[01:41.86]空空行囊 空的心灵 空时光怕无人同行\n[01:49.81]像一只郊外的狐狸 孤独中欢愉\n[01:56.83]走入深深 山谷 忽然下起 空山的灵雨\n[02:04.61]打湿的外衣 又开始想你\n[02:12.59]回想和你 在这城中陋室 倾听着风雨\n[02:20.75]人间在下雨 迷乱的诗意\n[02:28.42]一直在下雨\n[02:37.24]一直在想你\n[02:41.00]不停的想你\n",
+    '2111060878': "[00:05.52] DANNY K:\n[00:05.70]别理所应当从得到你的微信号\n[00:07.92]到请你喝一杯再慢慢开始对我笑\n[00:10.56]无法戒掉你就像那些rapper要吃药\n[00:12.84]你的笑容温暖得像太阳直射在赤道\n[00:15.57]突然想起你我的念头应该想到哪里\n[00:18.09]如果我是富翁 take my love don't take my money\n[00:20.58]但我像个游荡的鬼魂 so kiss me honey\n[00:22.89]没能抓住你的灵魂只能算我粗心大意\n[00:25.56]周夏影 Sino:\n[00:26.04]Don't be afraid anymore\n[00:26.94]再聊下去就不浪漫了\n[00:29.91]马路上的街灯闪了下 就能吓到她\n[00:32.88]停电的夜我不想回家\n[00:35.37]Don't be afraid anymore\n[00:36.87]再聊下去就到夜半了\n[00:39.87]风摇树陌生的号码 不停的拨打\n[00:42.60]停电的夜她不想回家\n[00:44.88] FEEEleven：\n[00:45.09]过着你看不见也融不进的life style\n[00:47.13]别以为鬼只会出现在没路灯的拐角\n[00:49.98]让雨停住是我为你披的外套\n[00:52.11]当你穿上你姐的高跟偷偷去逛live house\n[00:55.02]丢你一个人过七夕你的man no patience\n[00:57.45]喝到妆花了我能给你变出镜子\n[00:59.85]如果你注意到了我 plz show me some love\n[01:02.49]不要恐惧 like we always live in the dark\n[01:04.89]鼠尾草：\n[01:05.10]可你看不见我 我只不过是串电波\n[01:07.38]别再去研究照片 我们前世早就见过\n[01:09.84]1936年在西班牙你给了我一次回眸\n[01:12.57]来到2023那就换我把你护在背后\n[01:15.12]我随手为你点燃魔仙堡的烛火\n[01:17.34]把森林修成爱你的形状我不是胡说\n[01:19.86]每一个最阴间的夜晚我都陪着你去度过\n[01:22.56]快点打开收音机浪漫鬼有情话诉说\n[01:25.50]今天是我100岁生日\n[01:27.39]你是这场派对的特别来宾\n[01:29.61]我有吃不完的面包虫 孟婆汤无限量供应\n[01:33.18]一起干杯普天同庆\n[01:35.34]或许我有些丑陋 但我可以为你卖命\n[01:40.32]我有一千万冥币 来满足你的拜金\n[01:42.84]我是一个坚定的唯物主义者\n[01:44.88]没人能主宰我的爱情\n[01:45.72]周夏影 Sino：\n[01:46.05]Girl u be my lover\n[01:46.53]最漂浮的舞步\n[01:47.79]是我在你身边反复踢踏行走\n[01:51.48]你就像你回家的巴士上播的love song\n[01:54.39]我没听够\n[01:56.52]电视机里画面总是在闪\n[01:59.58]是我的情书变成电波\n[02:02.19]漆黑的夜伤感巷子的尽头 浪漫鬼inside\n[02:05.34] EINK:\n[02:05.43]微风抚过你的眉宇顺着鼻梁滑向侧脸\n[02:07.65]我们把这一段时间称作夏天\n[02:09.87]我想要带你把那漫山遍野踏遍\n[02:12.24]尽管苦难难以下咽\n[02:13.68]但还是不难发现\n[02:14.82]我们的故事能够诠释什么是爱\n[02:17.04]你的笔触含羞但我的表达直白\n[02:19.41]太关心不分昼夜 欢欣还是抽噎\n[02:22.20]我在脑海已经陪你到老有乐队在奏乐\n",
+    '2649850191': "[00:31.39]她夜观天象 决定重新出发\n[00:38.59]不再猜大雨 会不会落下\n[00:46.31]路有多滑 已经听了很多家\n[00:54.15]大家都劝她 不要轻易潇洒\n[01:01.49]雨后的哲学家 总学不会挣扎\n[01:09.18]无论谁在牵挂 银河早已替她回答\n[01:18.16]心有多远 世界就有多爱她\n[01:25.60]再多大雨落下 还是钟意潇洒\n[01:46.29]她头发一甩 决定重新出发\n[01:53.77]不再问良辰和吉日 怎么搭\n[02:01.36]那些说法 不是她的兵法\n[02:08.79]没什么万一 能把她留下\n[02:16.56]雨后的哲学家 总学不会挣扎\n[02:23.89]无论谁在牵挂 银河早已替她回答\n[02:33.13]心有多远 世界就有多爱她\n[02:40.58]再多大雨落下 还是钟意潇洒\n[03:01.99]那么多的应该 白白让人等待\n[03:09.12]再远的星辰大海 都会经过未来\n[03:16.45]雨后的哲学家 总学不会挣扎\n[03:24.05]无论谁在牵挂 银河早已替她回答\n[03:33.07]心有多远 世界就有多爱她\n[03:40.49]再多大雨落下 她只钟意潇洒\n[03:48.20]这雨说下就下 还是钟意潇洒\n",
+    '1346093339': "[00:35.92]春天 夏天 秋天 冬天\n[00:42.08]她的方向是 过去再回来\n[00:48.24]黑天 白天 晴天 雨天\n[00:54.42]停不住的脚步 向前 向前\n[01:00.84]她总会烦恼 总会忧伤 叹口气说 算了吧\n[01:07.37]亲爱的 何时才会学着 放下一些\n[01:13.80]她也会开心 也会欢笑 藏着心事 说还好吧\n[01:20.38]亲爱的 谁能陪你 过春天\n[01:26.96]亲爱的 嘿呀 嘿呀\n[01:33.34]亲爱的 嘿呀 嘿呀\n[02:13.21]一天 一天 一天 长大\n[02:19.57]好像看得见下一站\n[02:26.05]走着 走着 不知 不觉\n[02:31.81]有什么正在疯狂的蔓延\n[02:38.97]让那些眼花缭乱繁华 都变成一场春风\n[02:45.36]不知山高水浅的孩子 就任性又自由\n[02:51.84]来陪我一起走进人群 看看世事的艰难\n[02:58.11]我们朝着春天去 好吗\n[03:04.78]亲爱的 陪我一起 去看梦里不融化的雪吧\n[03:10.86]亲爱的 陪我一起学着 不顾一切\n[03:17.29]亲爱的 陪我一起 让我靠在影子里落泪吧\n[03:23.63]亲爱的 陪我一起 过春天\n[03:30.16]亲爱的 我们一起 去看梦里不融化的雪吧\n[03:36.53]亲爱的 青春可能单薄 转眼如烟\n[03:43.12]亲爱的 即便如此 让我们牵手向着那里走吧\n[03:49.57]亲爱的 我们一起 过春天\n",
+    '865632948': "[00:18.840]落叶无归根 单丝不成线\n[00:27.710]无所寄托 亦无心流浪\n[00:36.570]你把红豆赠我不如写我一首歌\n[00:44.240]落款你的名字 工整又好看\n[00:52.470]若把你比作歌 你便是那高山流水\n[01:02.150]佳人伴舞 天地伴舞 绝弦的美\n[01:10.190]若把你比作歌 歌写的我缠绵悱恻\n[01:19.920]恒顺众生 迁走我魂 绝弦的美\n[01:47.660]落叶无归根 单丝不成线\n[01:56.540]有嘴无心 亦有才无命\n[02:05.410]不一起看星星 星星它亮有什么用\n[02:13.240]你我矢志不渝 举案又齐眉\n[02:21.360]若把你比作歌 你便是那高山流水\n[02:31.000]佳人伴舞 天地伴舞 绝弦的美\n[02:39.210]若把你比作歌 歌写的我缠绵悱恻\n[02:48.700]恒顺众生 迁走我魂 绝弦的美\n[02:57.740]恒顺众生 迁走我魂 绝弦的美\n",
+    '2156910268': "[00:10.120]曲甲：\n[00:10.460]我想你也没把话讲的多么真诚\n[00:13.490]对于有多爱我你说还没那么深\n[00:16.140]只是可惜我当时太当真\n[00:19.120]对待这份感情没有适当的诚恳\n[00:21.880]如果我有上帝视角如果我有魔法\n[00:24.960]理解你的要强理解各有各的活法\n[00:27.740]理解你的要求其实也没过分\n[00:30.450]成长生活需要摩擦\n[00:33.230]雷泷：\n[00:33.230]我的又多了几分 你的又没了几分\n[00:35.930]再给我多一点时间多一点忍耐\n[00:39.170]是怎么就变成最亲密的敌人\n[00:41.910]到最后聊天记录什么都剩不下来\n[00:44.990]我的又多了几分 你的又没了几分\n[00:47.570]为什么你的伤口好的比我要快\n[00:50.600]我的又没了几分 你也许多了几分\n[00:53.320]我想我需要分泌更多的内啡肽\n[00:56.330]有时候我的真心话听起来就像理由\n[00:59.300]我想闭上嘴巴因为你比看起来更棘手\n[01:02.119]就戳吧戳点窟窿 把糟心留到以后\n[01:04.959]像看不见的一把匕首 钻泥巴的泥鳅\n[01:07.849]钻进了我的以后 钻进了我的虚构\n[01:10.590]钻进了那个从来就没存在过的宇宙\n[01:13.489]你说你已经收拾好了不会遗漏\n[01:16.319]带走我的时间和钱 去那颗没有我的地球\n[01:20.620]唐康宁：\n[01:20.620]我把自己关起来 对着夜幕发呆\n[01:26.040]忽然什么都没有 放下回忆成全你离开\n[01:30.549]侃侃而谈变成惴惴不安\n[01:33.430]崩塌之前其实早有预感\n[01:37.769]同床共枕过的亲密关系不用计较偿还\n[01:42.140]let it go 也许思念会愈来愈远\n[01:47.760]放开手 这即兴的爱还是画上句点\n[01:53.410]曲甲：\n[01:53.410]我的又多了几分 你的又没了几分\n[01:56.040]再给我多一点时间多一点忍耐\n[01:59.190]是怎么就变成最亲密的敌人\n[02:01.730]到最后聊天记录什么都剩不下来\n[02:04.909]雷泷：\n[02:04.909]我的又多了几分 你的又没了几分\n[02:08.069]为什么你的伤口好的比我要快\n[02:10.650]我的又没了几分 你也许多了几分\n[02:13.169]我想我需要分泌更多的内啡肽\n[02:16.229]曲甲：\n[02:16.229]我想你也没把话讲的多么真诚\n[02:19.250]对于有多爱我你说还没那么深\n[02:21.830]只是可惜我当时太当真\n[02:24.870]对待这份感情没有适当的诚恳\n[02:27.479]为何刚好我和你一起落下\n[02:31.289]两片树叶交替着旋转疯狂的热吻\n[02:34.009]等到落地时早就不记事变成传闻\n"
+  };
+
+  // ---- CSS ----
   var css = [
     /* 右下角固定定位 */
-    '#gmeek-player{',
-      'position:fixed;right:24px;bottom:24px;z-index:10004;',
-      'font-family:Arial,Helvetica,sans-serif;',
-    '}',
-    
+    '#gmeek-player{position:fixed;right:24px;bottom:24px;z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
+
     /* 播放器主体 */
-    '#gmp-body{',
-      'width:320px;background:#fff;',
-      'border-radius:12px;',
-      'box-shadow:0 8px 32px rgba(0,0,0,0.18);',
-      'overflow:hidden;',
-      'transition:all 0.3s ease;',
-      'display:none;',
-    '}',
+    '#gmp-body{width:320px;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;transition:all 0.3s ease;display:none;}',
     '#gmp-body.show{display:block;}',
-    
+
     /* 顶部信息区 */
-    '#gmp-header{',
-      'position:relative;',
-      'padding:14px 14px 10px;',
-      'background:#fff;',
-    '}',
-    
+    '#gmp-header{position:relative;padding:14px 14px 10px;background:#fff;cursor:pointer;}',
+
     /* 封面图 */
-    '#gmp-cover{',
-      'position:absolute;left:14px;top:14px;',
-      'width:46px;height:46px;',
-      'background:linear-gradient(135deg,#8fb3a9,#7a9e96);',
-      'border-radius:6px;',
-      'display:flex;align-items:center;justify-content:center;',
-      'overflow:hidden;',
-    '}',
+    '#gmp-cover{position:absolute;left:14px;top:14px;width:46px;height:46px;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;}',
     '#gmp-cover.playing{animation:ap-cover-rotate 20s linear infinite;}',
     '@keyframes ap-cover-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}',
     '#gmp-cover svg{width:20px;height:20px;color:#fff;}',
     '#gmp-cover img{width:100%;height:100%;object-fit:cover;}',
-    
+
     /* 歌曲信息 */
     '#gmp-info{margin-left:60px;min-height:46px;display:flex;flex-direction:column;justify-content:center;}',
     '#gmp-title{color:#333;font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4;}',
     '#gmp-artist{color:#999;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4;margin-top:2px;}',
-    
+
     /* 歌词按钮 */
-    '#gmp-lyrics-btn{',
-      'position:absolute;right:14px;top:50%;transform:translateY(-50%);',
-      'background:none;border:none;cursor:pointer;color:#999;padding:4px;',
-      'transition:color 0.2s;',
-    '}',
+    '#gmp-lyrics-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#999;padding:4px;transition:color 0.2s;}',
     '#gmp-lyrics-btn:hover{color:#8fb3a9;}',
     '#gmp-lyrics-btn svg{width:16px;height:16px;}',
     '#gmp-lyrics-btn.active{color:#8fb3a9;}',
-    
-    /* 歌词面板（在信息区下方） */
-    '#gmp-lyrics{',
-      'max-height:0;overflow:hidden;',
-      'transition:max-height 0.3s ease;',
-      'background:#fafafa;',
-    '}',
-    '#gmp-lyrics.open{max-height:80px;overflow-y:auto;border-top:1px solid #eee;}',
-    '#gmp-lyrics::-webkit-scrollbar{width:4px;}',
-    '#gmp-lyrics::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}',
-    '#gmp-lyrics-inner{padding:8px 14px;text-align:center;font-size:13px;line-height:1.8;}',
+
+    /* 悬浮歌词面板 */
+    '#gmp-lyrics-float{position:absolute;bottom:100%;left:0;right:0;margin-bottom:8px;background:rgba(255,255,255,0.97);border-radius:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.12);max-height:240px;overflow-y:auto;display:none;backdrop-filter:blur(8px);}',
+    '#gmp-lyrics-float.show{display:block;}',
+    '#gmp-lyrics-float::-webkit-scrollbar{width:4px;}',
+    '#gmp-lyrics-float::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}',
+    '#gmp-lyrics-inner{padding:12px 14px;text-align:center;font-size:13px;line-height:2;}',
     '.gmp-lrc{color:#666;cursor:pointer;transition:all 0.2s;padding:2px 0;}',
     '.gmp-lrc:hover{color:#333;}',
-    '.gmp-lrc.active{color:#8fb3a9;font-weight:500;}',
+    '.gmp-lrc.active{color:#8fb3a9;font-weight:500;font-size:14px;}',
     '.gmp-lrc.passive{color:#ccc;}',
-    
+
     /* 进度条区域 */
     '#gmp-progress{padding:0 14px 8px;}',
     '#gmp-bar-wrap{height:2px;background:#eee;border-radius:1px;cursor:pointer;position:relative;}',
     '#gmp-bar{height:100%;background:#8fb3a9;border-radius:1px;width:0%;position:relative;}',
     '#gmp-bar::after{content:"";position:absolute;right:-6px;top:-5px;width:12px;height:12px;background:#8fb3a9;border-radius:50%;opacity:0;transition:opacity 0.2s;box-shadow:0 0 4px rgba(143,179,169,0.4);}',
     '#gmp-bar-wrap:hover #gmp-bar::after{opacity:1;}',
-    
+
     /* 控制区 */
     '#gmp-controls{display:flex;align-items:center;padding:0 14px 10px;background:#fff;}',
     '#gmp-time{color:#999;font-size:11px;font-variant-numeric:tabular-nums;min-width:40px;}',
@@ -111,7 +88,7 @@
     '.gmp-btn:hover{color:#8fb3a9;}',
     '.gmp-btn svg{width:18px;height:18px;display:block;}',
     '.gmp-btn.play-btn svg{width:22px;height:22px;}',
-    
+
     /* 音量 */
     '#gmp-vol{display:flex;align-items:center;margin-left:auto;}',
     '#gmp-vol-icon{cursor:pointer;color:#999;transition:color 0.2s;}',
@@ -119,14 +96,9 @@
     '#gmp-vol-icon svg{width:16px;height:16px;}',
     '#gmp-vol-bar-wrap{width:60px;height:2px;background:#eee;border-radius:1px;margin-left:6px;cursor:pointer;}',
     '#gmp-vol-bar{height:100%;background:#8fb3a9;border-radius:1px;width:70%;}',
-    
+
     /* 歌单列表 */
-    '#gmp-list{',
-      'max-height:0;overflow-y:auto;',
-      'transition:max-height 0.3s ease;',
-      'background:#fafafa;',
-      'border-radius:0 0 12px 12px;',
-    '}',
+    '#gmp-list{max-height:0;overflow-y:auto;transition:max-height 0.3s ease;background:#fafafa;border-radius:0 0 12px 12px;}',
     '#gmp-list.open{max-height:200px;border-top:1px solid #eee;}',
     '#gmp-list::-webkit-scrollbar{width:4px;}',
     '#gmp-list::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}',
@@ -139,26 +111,15 @@
     '.gmp-item-name{color:#333;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
     '.gmp-item.playing .gmp-item-name{color:#8fb3a9;font-weight:500;}',
     '.gmp-item-artist{color:#999;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
-    
+
     /* Mini 切换按钮 */
-    '#gmp-mini{',
-      'position:absolute;left:-28px;top:50%;transform:translateY(-50%);',
-      'width:28px;height:28px;border-radius:50%;',
-      'background:linear-gradient(135deg,#8fb3a9,#7a9e96);',
-      'border:none;cursor:pointer;',
-      'display:flex;align-items:center;justify-content:center;',
-      'box-shadow:-2px 0 8px rgba(143,179,169,0.4);',
-      'transition:all 0.2s;',
-    '}',
+    '#gmp-mini{position:absolute;left:-28px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
     '#gmp-mini:hover{box-shadow:-2px 0 12px rgba(143,179,169,0.6);transform:translateY(-50%) scale(1.05);}',
     '#gmp-mini svg{width:14px;height:14px;color:#fff;transition:transform 0.3s;}',
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
-    
+
     /* 移动端响应 */
-    '@media(max-width:480px){',
-      '#gmeek-player{right:8px;bottom:16px;}',
-      '#gmp-body{width:calc(100vw - 52px);}',
-    '}',
+    '@media(max-width:480px){#gmeek-player{right:8px;bottom:16px;}#gmp-body{width:calc(100vw - 52px);}}',
   ].join('');
 
   // ---- Inject Styles ----
@@ -175,17 +136,17 @@
       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>' +
     '</div>' +
     '<div id="gmp-body">' +
+      '<div id="gmp-lyrics-float"><div id="gmp-lyrics-inner"></div></div>' +
       '<div id="gmp-header">' +
         '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
-          '<div id="gmp-title">Music</div>' +
+          '<div id="gmp-title">华语私人雷达</div>' +
           '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
         '</button>' +
       '</div>' +
-      '<div id="gmp-lyrics"><div id="gmp-lyrics-inner"></div></div>' +
       '<div id="gmp-progress"><div id="gmp-bar-wrap"><div id="gmp-bar"></div></div></div>' +
       '<div id="gmp-controls">' +
         '<span id="gmp-time">0:00</span>' +
@@ -219,7 +180,7 @@
   var volIcon = document.getElementById('gmp-vol-icon');
   var listEl = document.getElementById('gmp-list');
   var lyricsBtn = document.getElementById('gmp-lyrics-btn');
-  var lyricsEl = document.getElementById('gmp-lyrics');
+  var lyricsFloat = document.getElementById('gmp-lyrics-float');
   var lyricsInner = document.getElementById('gmp-lyrics-inner');
 
   // ---- State ----
@@ -233,39 +194,7 @@
   var lyricsData = [];
   var lyricLines = [];
   var playerOpen = false;
-
-  // ---- Fetch playlist ----
-  function fetchPlaylist(callback) {
-    if (!NETEASE_PLAYLIST_ID) {
-      callback(HARDCODED_SONGS);
-      return;
-    }
-    var url = API_BASE + '?server=netease&type=playlist&id=' + encodeURIComponent(NETEASE_PLAYLIST_ID) + '&r=' + Math.random();
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        try {
-          var data = JSON.parse(xhr.responseText);
-          if (data && data.data && data.data.length > 0) {
-            callback(data.data.map(function (s) {
-              return {
-                id: String(s.id || ''),
-                name: s.name || '未知歌曲',
-                artist: s.artist || '未知歌手',
-                url: s.url || 'https://music.163.com/song/media/outer/url?id=' + s.id + '.mp3',
-                pic: s.pic || ''
-              };
-            }));
-            return;
-          }
-        } catch (e) { }
-      }
-      callback(HARDCODED_SONGS);
-    };
-    xhr.onerror = function () { callback(HARDCODED_SONGS); };
-    xhr.send();
-  }
+  var lyricsOpen = false;
 
   // ---- Build playlist ----
   function buildList() {
@@ -312,20 +241,7 @@
     return result.sort(function (a, b) { return a.time - b.time; });
   }
 
-  // ---- Fetch lyrics (硬编码歌词) ----
-  var HARDCODED_LYRICS = {
-    '3317235944': "[00:00.000] 作词 : JVKE/ZVC\n[00:01.000] 作曲 : JVKE/ZVC\n[00:06.296]Hold me close\n[00:08.445]Look me dead in my eyes\n[00:09.711]Dead in my eyes\n[00:11.742]Till the day that I die\n[00:13.228]Dead inside\n[00:15.162]I just wanna feel alive\n[00:16.371]With you, I'm alive\n[00:18.479]With you, I'm alive\n[00:19.654]Fell in love, but it left me lonely\n[00:22.891]Tried to trust, but it burned me slowly\n[00:26.826]I didn't know what I was looking for\n[00:30.325]Till I found her\n[00:38.026]I found her\n[00:44.876]Without her\n[00:46.924]I'm a mess, there was nothing 'bout that love that made sense, I was stressed\n[00:51.219]Till I found her\n[00:56.387]\n[00:59.734]Found me lonely, lost, and only\n[01:03.046]One step away from just giving up slowly\n[01:06.411]I was a mess, I was afraid\n[01:07.825]I'd be the girl who just put up her walls no one could break\n[01:12.120]Till I found him\n[01:13.637]Running through the wild with 1/2 of a heart\n[01:16.265]Made me a whole one out of the parts\n[01:19.629]Suddenly, it's like I'm healed\n[01:21.227]Didn't know the love was real\n[01:23.078]Until I could\n[01:26.218]\n[01:26.370]Hold you close (Hold me close)\n[01:28.512]Look me dead in my eyes\n[01:29.646]Dead in my\n[01:31.952]Till the day that I die\n[01:33.003]Dead inside\n[01:35.259]I just wanna feel alive\n[01:36.538]With you, I'm alive\n[01:38.736]With you, I'm a—\n[01:39.710]Fell in love, but it left me lonely\n[01:42.869]Tried to trust, but it burned me slowly\n[01:46.813]I didn't know what I was looking for\n[01:50.363]Till I found her\n[01:57.983]I found her\n[02:04.498]Without her\n[02:06.790]I'm a mess, there was nothing 'bout that love that made sense, I was stressed\n[02:11.024]Till I found her\n[02:17.147]\n[02:17.261]And without her\n[02:20.598]I'm a mess, there was nothing 'bout that love that made sense, I was stressed\n[02:24.300]Till I found her\n[02:30.710]Till I found her\n[02:38.165]Ooh\n",
-    '2626680545': "[00:00.000] 作词 : ZVC/Nick Jonas/JVKE/Andrew Fortier/Kevin Jonas/Joe Jonas\n[00:01.000] 作曲 : ZVC/Nick Jonas/JVKE/Andrew Fortier/Kevin Jonas/Joe Jonas\n[00:04.022] Seventeen\n[00:05.993] I had my first heartbreak and it was terrible\n[00:08.519] And I pray that it won't happen again\n[00:10.448] But then again I hope it does\n[00:12.215] Because I wanna fall in love\n[00:13.800] Without the part where we give up\n[00:15.530] I wonder if this still exists\n[00:17.183] I hope it does\n[00:18.296]\n[00:18.330] I wonder what it's like\n[00:20.714] How it feels to be loved by someone who'll never leave\n[00:24.344] I wanna know if you wanna be growing old with me\n[00:27.690]\n[00:27.713] Until were\n[00:28.796] Seventy\n[00:32.202] Dancing with me\n[00:35.049] Just passing the time\n[00:37.865] With you right by my side\n[00:41.357] Just stay with me\n[00:44.238] Promise you'll never leave\n[00:48.176] I wanna love you for the rest of my life\n[00:53.526] Until were seventy\n[00:57.118]\n[01:03.654] Baby I'm so into you\n[01:05.416] I've lived a thousand lives\n[01:07.034] Can't go a single night\n[01:08.619] Without you\n[01:09.855] You're more than a feeling\n[01:12.584] I think I'm ready for the real thing, yeah\n[01:15.737] And I want that love\n[01:17.025] That typa love\n[01:18.091] That's steady\n[01:18.988] Them kitchen hugs\n[01:20.183] Sentimental stuff\n[01:21.346] You get me\n[01:22.083] Everything I want and need (Everything I want and need)\n[01:25.165] I find it here with you and me, yeah\n[01:28.629]\n[01:29.214] I wonder what it's like\n[01:31.397] How it feels to be loved by someone who'll never leave\n[01:35.220] I wanna know if you wanna be growing old with me\n[01:38.460]\n[01:38.624] Until were\n[01:39.558] Seventy\n[01:43.059] Dancing with me\n[01:45.923] Just passing the time\n[01:48.613] With you right by my side\n[01:52.204] Just stay with me\n[01:55.126] Promise you'll never leave\n[01:59.082] I wanna love you for the rest of my life\n[02:04.468] Until were seventy, oooh\n[02:11.943]\n[02:12.182] I wanna love you for the rest of my life\n[02:17.228] Until were seventy\n[02:20.989] Promise you'll never leave\n[02:24.976] I wanna love you for the rest of my life\n[02:30.111] Until were seventy\n",
-    '1990208030': "[00:00.00]暂无歌词\n",
-    '482386197': "[00:00.00] 作词 : Star Kendrick, Toma Banjanin\n[00:01.00] 作曲 : Toma Banjanin/Star Kendrick\n[00:39.25]Time on my own I used to love\n[00:50.86]Kept it like a teenage secret crush\n[01:03.16]Now time alone's my living hell\n[01:14.43]Claimed it as if it was yours to own\n[01:23.38]Throw the water on the fire\n[01:26.84]This time, I'm too tired\n[01:29.52]Draw the horse before the cart\n[01:32.70]Took back my broken heart\n[01:35.40]Finally found your bottom line\n[01:38.69]You always change your mind\n[01:41.39]Find some peace in your parade\n[01:44.35]Kindly let me walk away\n[01:51.27]I won't look back\n[02:02.39]My restless sleep was once my own\n[02:13.52]Somehow you've been cast the major role\n[02:26.05]Can't help the tears that come at dawn\n[02:37.20]This time they won't stop me from movin' on\n[02:46.46]Throw the water on the fire\n[02:49.83]This time, I'm too tired\n[02:52.54]Draw the horse before the cart\n[02:55.81]Took back my broken heart\n[02:58.47]Finally found your bottom line\n[03:01.73]You always change your mind\n[03:04.33]Find some peace in your parade\n[03:07.23]Kindly let me walk away\n[03:14.31]I won't look back\n[03:25.66]I won't look back\n[03:33.06]My last relapse\n[03:39.23]I won't look back\n[03:44.82]My last relapse\n[03:50.69]I won't look back\n[03:56.51]My last relapse\n[04:02.83]I won't look back\n[04:08.21]My last relapse\n[04:14.26]I won't look back\n[04:19.46]I won't look back\n",
-    '2093480642': "[00:00.000] 作曲 : Evan Miles/Dom Dias\n[00:11.232] The other side, yeah\n[00:19.864] Oh yeah, let's go\n[00:24.396]\n[00:25.476] They always told me I should leave her alone\n[00:31.516] The type of woman use your love and be gone\n[00:37.476] Word on the street is that she's heard about me\n[00:43.496] They said I'll see\n[00:46.247]\n[00:46.456] Whatever she wants\n[00:49.736] She can get\n[00:52.247] If you don't believe me\n[00:55.697] You haven't met her yet\n[00:58.257] Started with one look\n[01:02.219] In her deep brown eyes\n[01:05.429] Woulda lived a thousand lives\n[01:09.152] Just to get\n[01:10.891]\n[01:11.071] My hands on you\n[01:17.011] I fell into\n[01:23.195] This spell you do\n[01:29.067] Girl I'm right behind\n[01:31.770] See what's on the other side\n[01:37.345]\n[01:37.734] She looked at me like I was nothing but prey\n[01:43.565] My mind said leave her but my body betrayed\n[01:49.494] To think my baby's all alone in our bed\n[01:54.465] I said I was wrong, I know\n[01:58.196]\n[01:58.356] Whatever she wants\n[02:01.896] She can get\n[02:04.196] If you don't believe me\n[02:07.807] You haven't met her yet\n[02:10.208] Started with one look\n[02:14.208] In her deep brown eyes\n[02:17.370] By the time I realized\n[02:21.206] Girl I had\n[02:23.056]\n[02:23.216] My hands on you\n[02:27.319] (I don't care what they say)\n[02:29.107] I fell into\n[02:33.120] (I would risk it all tonight)\n[02:35.036] This spell you do\n[02:39.321] (Somethin' about ya)\n[02:40.906] Girl I'm right behind\n[02:43.766] Don't care if I don't survive\n[02:48.029]\n[02:48.218] Give it up, all to me\n[02:50.240] Give it up, give it all, all to me (Give it up)\n[02:54.006] And we touch and we love, all to me (That's right)\n[02:56.629] Give it up, get it down, all (Oh, yeah)\n[03:00.209] Beat it up, over me\n[03:02.751] Beat it up, let it cum, over me\n[03:05.141] Girl I'm right behind\n[03:07.611] See what's on the other side\n",
-    '1887215867': "[00:00.000] 作词 : FINNEAS\n[00:00.011] 作曲 : FINNEAS\n[00:00.022]It feels a little medieval if you ask me\n[00:04.283]Like I'm watchin' a sequel I've already seen\n[00:08.459]I could tell you what happens to the new king\n[00:12.704]When he goes out of fashion\n[00:15.255]\n[00:16.740]I want my money back now-ow\n[00:21.001]I've been in the wrong crowd-owd\n[00:24.940]I'd never say it out loud-oud\n[00:29.175]But I've hated every word that comes out of your mouth\n[00:33.249]What should we fight about this time?\n[00:37.383]What will you write about this time?\n[00:41.555]What does it matter if you're not fine?\n[00:45.696]You should've kept that shit offline\n[00:49.188]\n[00:49.908]It feels a little medieval if you ask me\n[00:54.423]Like I'm watchin' a sequel I've already seen\n[00:58.415]I could tell you what happens to the new king\n[01:02.694]When he goes out of fashion\n[01:06.683]It feels a little medieval kissin' the ring\n[01:10.966]In a gothic cathedral, have you ever seen\n[01:15.499]What really happens to people like me\n[01:19.413]When we go out of fashion?\n[01:22.490]\n[01:23.391]They're gonna tear you from your pedestal, it's almost inevitable\n[01:28.441]I'm not bein' cynical, it's so unoriginal\n[01:32.322]If you get political, they'll make you a criminal\n[01:36.490]It's all a bit biblical\n[01:40.058]Don't put your camera down\n[01:44.144]You don't go to heaven in a crown\n[01:48.222]It's not worth the money bringin' me back from the dead\n[01:56.742]I never said it would be any fun\n[02:01.084]You never should've trusted anyone\n[02:06.106]They'll love you til' they know you're done\n[02:09.449]And then it's off with his head\n[02:13.331]\n[02:13.484]It feels a little medieval if you ask me\n[02:17.895]Like I'm watchin' a sequel I've already seen\n[02:21.880]I could tell you what happens to the new king\n[02:26.203]When he goes out of fashion\n[02:30.051]It feels a little medieval kissin' the ring\n[02:34.446]In a gothic cathedral, have you ever seen\n[02:39.004]What really happens to people like me\n[02:42.830]When we go out of fashion?\n",
-    '3346256265': "[00:00.00] 作词Lyricist : BikaBreezy/Jaytrue/Nikita\n[00:01.00] 作曲Composer : BikaBreezy/Jaytrue/Nikita\n[00:02.00] 编曲Arranger : MossW友友\n[00:03.00] 混音Mixing Engineer : Nikita\n[00:04.00] 母带Mastering Engineer : Nikita\n[00:05.00] 出品方Production Company : NorthGate Music\n[00:06.00] OP : NorthGate Music\n[00:07.00] SP : 秀动发行ShowstartRelease\n[00:17.71]City makes my body move\n[00:21.43]Creating vibe, breaking rules\n[00:25.70]Aaah-ah-eh\n[00:32.08]Everyday I wake up with my mindful thoughts\n[00:34.33]Not wasting time I got a better plan\n[00:36.66]Your body is so motivational\n[00:38.27]I just wanna work it out to make you laugh\n[00:40.24]Locked up\n[00:41.49]On my shot\n[00:42.49]Now you can see me a shining star\n[00:44.05]Wop wop\n[00:45.25]More guap\n[00:46.61]Without a pain, you can't reach the top\n[00:47.91]we dey active\n[00:49.73]body dey move so attractive\n[00:51.49]我感觉巴适\n[00:52.97]她感觉巴适\n[00:55.15]we dey active\n[00:57.76]body dey move so attractive\n[00:59.86]我感觉巴适\n[01:01.31]她感觉巴适\n[01:18.68]巴巴\n[01:28.35]巴巴\n[01:36.07]出门别忘涂防晒\n[01:37.70]Light dey glow for my line\n[01:39.51]所有烦恼 leave behind\n[01:41.03]上天保佑我们来财\n[01:43.69]她扭动着她的腰\n[01:45.41]像雕刻般一样完美\n[01:47.41]节奏在跳动\n[01:49.53]Every show, we redefine\n[01:51.63]我相信这不是运气\n[01:54.41]No fit stop my melody\n[01:56.75]我的旋律无人能敌\n[01:58.44]Now we dey live reality\n[02:00.67]reality\n[02:08.28]we dey active\n[02:09.81]body dey move so attractive\n[02:11.44]我感觉巴适\n[02:13.46]她感觉巴适\n[02:15.77]we dey active\n[02:17.66]body dey move so attractive\n[02:19.69]我感觉巴适\n[02:21.65]她感觉巴适\n[02:24.06]巴巴\n[02:32.65]巴巴\n",
-    '1456602234': "[00:00.000] 作词 : Paul Armand-Delille/Alexandre Grynszpan\n[00:01.000] 作曲 : Paul Armand-Delille/Alexandre Grynszpan\n[00:21.893] Feeling the spring, crisp morning light\n[00:25.029] Tingle you get, love at first sight\n[00:27.396] Moment of grace just feels so right\n[00:30.049] People you love, worth every fight\n[00:32.623] Wanna rejoice, beauty of life\n[00:34.999] Embrace the game, natural smile\n[00:37.314] Breathing in deep, clocked in with style\n[00:40.035] Sometimes you just wanna\n[00:42.241] Feel good, feel good (You know I like to)\n[00:44.632] Feel good, feel good (Oh why won't we)\n[00:47.093] Feel good, feel good (It's high time you)\n[00:49.385] Feel good, feel good (Don't you wanna)\n[00:51.919] Feel good, feel good (It's so good to)\n[00:54.514] Feel good, feel good (We could really)\n[00:56.871] Feel good, feel good (I love it when you)\n[00:59.519] Feel good, feel good (Hit it)\n[01:21.862] One for the fam, two for the team\n[01:24.840] Three for the gift, love supreme\n[01:27.363] Stay on the point, got self-esteem\n[01:29.903] Doing my thing, feeling pristine\n[01:32.412] Under the stars, young evergreen\n[01:34.979] Long summer nights, living the dream\n[01:37.388] Keeping it fresh, avoiding routine\n[01:39.845] Sometimes you just wanna\n[01:42.292] Feel good, feel good (You know I like to)\n[01:44.667] Feel good, feel good (Oh why won't we)\n[01:46.992] Feel good, feel good (It's high time you)\n[01:49.349] Feel good, feel good (Don't you wanna)\n[01:51.775] Feel good, feel good (It's so good to)\n[01:54.446] Feel good, feel good (We could really)\n[01:57.102] Feel good, feel good (I love it when you)\n[01:59.568] Feel good, feel good (Hit it)\n[02:21.897] Feels\n[02:22.658] (feel good, feel good)\n[02:24.347] So\n[02:25.741] (feel good, feel good)\n[02:27.571] Good\n[02:28.835] (feel good, feel good)\n[02:29.870] (feel good, feel good)\n[02:31.565] Feels so good to me\n[02:32.882] (feel good, feel good)\n[02:34.126] So\n[02:35.642] (feel good, feel good)\n[02:36.700] Good\n[02:37.903] (feel good, feel good)\n[02:39.216] (feel good, feel good)\n[02:41.245] Hit it\n[02:45.171] Every single day\n[02:49.712] We can find a way\n[02:54.392] We'll never go astray\n[02:57.063] We are here to play\n[03:04.117] Every night and day\n[03:07.921] The love will come our way\n[03:13.276] Nothing else we say\n[03:16.256] Can fade away\n",
-    '28798881': "[00:17]You are on with your life\n[00:19]Not behind\n[00:21]Behind the scenes on the street\n[00:29]This shadow is broken\n[00:30]Swept away\n[00:31]Swept away\n[00:33]Swept away\n[02:23]You are on with your life\n[02:25]Not behind\n[02:27]Behind the scenes on the street\n[02:30]This shadow is broken\n[02:54]Downstairs, the animals are dancing\n[04:04]You are on with your life\n[04:06]Not behind\n[04:09]Behind the scenes on the street\n[04:17]This shadow is broken\n[04:19]Swept away\n[04:19]Swept away\n[04:21]Swept away\n[04:27]Inviting some people\n[04:31]Cheap trick\n[04:35]Aligning your back\n[04:37]It's all to, to see\n[04:43]Trust your body and your head\n",
-    '468878947': "[00:07.43] Foucus\n[00:21.37] Raise your hands up in the...\n[01:00.05] Raise your hands up\n[01:03.78] Focus! Raise your hands up\n[01:07.88] And focus! Raise your hands up\n[01:11.22] Focus! And raise your hands up\n[01:15.85] Raise your hands up in the air\n[01:31.10] Raise your hands up in the air...air... x2\n[01:38.50] Raise your hands up in the air...air...air... x2\n[01:45.83] Raise your hands up in the...\n[02:03.36] Raise your hands up...\n[02:10.51] Raise your...\n[02:15.82] Raise your hands up in the...\n[02:46.01] Raise your hands uo in the air...air...x2\n[02:54.39] Focus\n",
-  };
-
+  // ---- Fetch lyrics (硬编码) ----
   function fetchLyric(songId, cb) {
     if (!songId) { cb(''); return; }
     if (HARDCODED_LYRICS[songId]) {
@@ -357,7 +273,7 @@
   }
 
   function updateLyrics() {
-    if (!lyricsData.length) return;
+    if (!lyricsData.length || !lyricsOpen) return;
     var t = audio.currentTime || 0;
     var active = -1;
     for (var i = lyricsData.length - 1; i >= 0; i--) {
@@ -367,8 +283,8 @@
       lyricLines[j].classList.remove('active', 'passive');
       if (j === active) {
         lyricLines[j].classList.add('active');
-        var st = lyricLines[j].offsetTop - lyricsEl.clientHeight / 2 + lyricLines[j].clientHeight / 2;
-        lyricsEl.scrollTop = st;
+        var st = lyricLines[j].offsetTop - lyricsFloat.clientHeight / 2 + lyricLines[j].clientHeight / 2;
+        lyricsFloat.scrollTop = st;
       } else if (j < active) {
         lyricLines[j].classList.add('passive');
       }
@@ -386,15 +302,15 @@
     artistEl.textContent = s.artist;
     barEl.style.width = '0%';
     timeEl.textContent = '0:00';
-    
+
     // Update list highlight
     listEl.querySelectorAll('.gmp-item').forEach(function (item, i) {
       item.classList.toggle('playing', i === idx);
     });
-    
+
     // Fetch lyrics
     fetchLyric(s.id || '', buildLyrics);
-    
+
     // Play
     audio.play().catch(function () { });
     playing = true;
@@ -476,28 +392,33 @@
     miniBtn.title = playerOpen ? '收起播放器' : '展开播放器';
   });
 
-  // ---- Toggle lyrics ----
-  lyricsBtn.addEventListener('click', function () {
-    lyricsEl.classList.toggle('open');
-    lyricsBtn.classList.toggle('active', lyricsEl.classList.contains('open'));
+  // ---- Toggle floating lyrics ----
+  lyricsBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    lyricsOpen = !lyricsOpen;
+    lyricsFloat.classList.toggle('show', lyricsOpen);
+    lyricsBtn.classList.toggle('active', lyricsOpen);
   });
 
   // ---- Toggle list (click header) ----
   document.getElementById('gmp-header').addEventListener('click', function (e) {
     if (e.target.closest('#gmp-lyrics-btn')) return;
     listEl.classList.toggle('open');
+    // Close lyrics when opening list
+    if (listEl.classList.contains('open')) {
+      lyricsOpen = false;
+      lyricsFloat.classList.remove('show');
+      lyricsBtn.classList.remove('active');
+    }
   });
 
   // ---- Init ----
-  fetchPlaylist(function (songs) {
-    songList = songs;
-    buildList();
-    console.log('[GmeekMusic] Loaded', songs.length, 'songs');
-  });
+  songList = HARDCODED_SONGS;
+  buildList();
+  console.log('[GmeekMusic] Loaded', songList.length, 'songs');
 
   } // end initPlayer()
 
-  // 确保 DOM 加载完成后再初始化播放器
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPlayer);
   } else {
