@@ -1942,8 +1942,8 @@
 
   // ---- CSS ----
   var css = [
-    /* 右侧中间固定定位 */
-    '#gmeek-player{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
+    /* 右侧固定定位（偏下） */
+    '#gmeek-player{position:fixed;right:24px;top:55%;transform:translateY(-50%);z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
 
     /* 播放器主体 */
     '#gmp-body{width:320px;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;transition:all 0.3s ease;display:none;}',
@@ -1969,8 +1969,11 @@
     '#gmp-list-btn:hover,#gmp-lyrics-btn:hover{color:#8fb3a9;}',
     '#gmp-list-btn svg,#gmp-lyrics-btn svg{width:16px;height:16px;}',
     '#gmp-list-btn.active,#gmp-lyrics-btn.active{color:#8fb3a9;}',
-    '#gmp-list-btn{right:38px;}',
-    '#gmp-lyrics-btn{right:14px;}',
+    '#gmp-list-btn{right:90px;}',
+    '#gmp-lyrics-btn{right:52px;}',
+    '#gmp-close-btn{position:absolute;top:4px;right:14px;background:none;border:none;cursor:pointer;color:#999;padding:4px;transition:color 0.2s;}',
+    '#gmp-close-btn:hover{color:#666;}',
+    '#gmp-close-btn svg{width:16px;height:16px;}',
 
     /* 悬浮歌词面板 */
     '#gmp-lyrics-float{position:absolute;bottom:100%;left:0;right:0;margin-bottom:8px;background:rgba(255,255,255,0.97);border-radius:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.12);max-height:240px;overflow-y:auto;display:none;backdrop-filter:blur(8px);}',
@@ -2029,7 +2032,7 @@
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
 
     /* 移动端响应 */
-    '@media(max-width:480px){#gmeek-player{right:8px;top:50%;transform:translateY(-50%);}#gmp-body{width:calc(100vw - 52px);}}',
+    '@media(max-width:480px){#gmeek-player{right:8px;top:55%;transform:translateY(-50%);}#gmp-body{width:calc(100vw - 52px);}}',
   ].join('');
 
   // ---- Inject Styles ----
@@ -2058,6 +2061,9 @@
         '</button>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
+        '</button>' +
+        '<button id="gmp-close-btn" title="收起">' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
         '</button>' +
       '</div>' +
       '<div id="gmp-progress"><div id="gmp-bar-wrap"><div id="gmp-bar"></div></div></div>' +
@@ -2329,6 +2335,20 @@
   // ---- Click header (no longer toggles list) ----
   document.getElementById('gmp-header').addEventListener('click', function (e) {
     if (e.target.closest('#gmp-lyrics-btn') || e.target.closest('#gmp-list-btn')) return;
+    // 点击 header 收起播放器
+    playerOpen = false;
+    bodyEl.classList.remove('show');
+    miniBtn.classList.add('collapsed');
+    miniBtn.title = '展开播放器';
+  });
+
+  // ---- Close button ----
+  document.getElementById('gmp-close-btn').addEventListener('click', function (e) {
+    e.stopPropagation();
+    playerOpen = false;
+    bodyEl.classList.remove('show');
+    miniBtn.classList.add('collapsed');
+    miniBtn.title = '展开播放器';
   });
 
   // ---- Init ----
