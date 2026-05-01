@@ -113,9 +113,9 @@
     '.gmp-item-artist{color:#999;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
 
     /* Mini 切换按钮 */
-    '#gmp-mini{position:absolute;left:-28px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
+    '#gmp-mini{position:absolute;left:-38px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
     '#gmp-mini:hover{box-shadow:-2px 0 12px rgba(143,179,169,0.6);transform:translateY(-50%) scale(1.05);}',
-    '#gmp-mini svg{width:14px;height:14px;color:#fff;transition:transform 0.3s;}',
+    '#gmp-mini svg{width:20px;height:20px;color:#fff;transition:transform 0.3s;}',
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
 
     /* 移动端响应 */
@@ -133,7 +133,7 @@
 
   container.innerHTML =
     '<div id="gmp-mini" title="展开播放器">' +
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>' +
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>' +
     '</div>' +
     '<div id="gmp-body">' +
       '<div id="gmp-lyrics-float"><div id="gmp-lyrics-inner"></div></div>' +
@@ -144,7 +144,7 @@
           '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
-          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
         '</button>' +
       '</div>' +
       '<div id="gmp-progress"><div id="gmp-bar-wrap"><div id="gmp-bar"></div></div></div>' +
