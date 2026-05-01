@@ -1943,7 +1943,7 @@
   // ---- CSS ----
   var css = [
     /* 右下角固定定位 */
-    '#gmeek-player{position:fixed;right:24px;bottom:24px;z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
+    '#gmeek-player{position:fixed;left:24px;top:120px;z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
 
     /* 播放器主体 */
     '#gmp-body{width:320px;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;transition:all 0.3s ease;display:none;}',
@@ -2029,7 +2029,7 @@
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
 
     /* 移动端响应 */
-    '@media(max-width:480px){#gmeek-player{right:8px;bottom:16px;}#gmp-body{width:calc(100vw - 52px);}}',
+    '@media(max-width:480px){#gmeek-player{left:8px;top:120px;}#gmp-body{width:calc(100vw - 52px);}}',
   ].join('');
 
   // ---- Inject Styles ----
