@@ -2213,9 +2213,14 @@
       item.classList.toggle('playing', i === idx);
     });
 
-    // Clear lyrics (no hardcoded lyrics for new playlist)
-    lyricsInner.innerHTML = '<div class="gmp-lrc" style="color:#999;">暂无歌词</div>';
-    lyricsData = [];
+    // Load lyrics from HARDCODED_LYRICS
+    var lrc = HARDCODED_LYRICS[s.id];
+    if (lrc) {
+      buildLyrics(lrc);
+    } else {
+      lyricsInner.innerHTML = '<div class="gmp-lrc" style="color:#999;">暂无歌词</div>';
+      lyricsData = [];
+    }
 
     // Play
     audio.play().catch(function () { });
