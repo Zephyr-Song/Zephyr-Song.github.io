@@ -1,7 +1,7 @@
 /**
- * Gmeek Music Player v9 - 35首歌单 + 每首封面图
+ * Gmeek Music Player v10 - 华语私人雷达歌单
  * 纯 HTML5 Audio, 无 eval/new Function, 兼容 GitHub Pages CSP
- * 歌单: 网易云 2829816518 (私人雷达)
+ * 歌单: 网易云 2829883282 (华语私人雷达)
  */
 (function () {
   'use strict';
@@ -9,41 +9,41 @@
   function initPlayer() {
 
   var HARDCODED_SONGS = [
-    { name: 'her (feat. Annika Wells)', artist: 'JVKE/Annika Wells', url: 'https://music.163.com/song/media/outer/url?id=3317235944.mp3', cover: 'https://p2.music.126.net/KJIXaBfUQv7nmnnJCSPiqA==/109951172273049443.jpg', id: '3317235944' },
-    { name: 'this is what forever feels like', artist: 'JVKE/Nick Jonas', url: 'https://music.163.com/song/media/outer/url?id=2626680545.mp3', cover: 'https://p2.music.126.net/eJA1NzXbOWokvs6yi2ttJg==/109951169956527578.jpg', id: '2626680545' },
-    { name: 'Rush', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1990208030.mp3', cover: 'https://p2.music.126.net/y6RIRDMrpKwekRF4CkfUGw==/109951167975291823.jpg', id: '1990208030' },
-    { name: "Won't Look Back", artist: 'Geowulf', url: 'https://music.163.com/song/media/outer/url?id=482386197.mp3', cover: 'https://p2.music.126.net/11ZxgSWVXuJLJOg3SlAAXg==/109951163409413347.jpg', id: '482386197' },
-    { name: 'Bloody Samaritan', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1862884117.mp3', cover: 'https://p2.music.126.net/OrWPWJNAXCUNa79X0xD_Wg==/109951168618792235.jpg', id: '1862884117' },
-    { name: 'Other Side', artist: 'PLAZA', url: 'https://music.163.com/song/media/outer/url?id=2093480642.mp3', cover: 'https://p2.music.126.net/oUU_Tw9FTjZSMZ7HHu6_VQ==/109951169004973551.jpg', id: '2093480642' },
-    { name: 'Medieval', artist: 'FINNEAS', url: 'https://music.163.com/song/media/outer/url?id=1887215867.mp3', cover: 'https://p2.music.126.net/RFxgjunlII7caFc5XFCetQ==/109951167923009398.jpg', id: '1887215867' },
-    { name: 'Empire State Of Mind (Feat. Alicia Keys)', artist: 'JAY-Z', url: 'https://music.163.com/song/media/outer/url?id=5103610.mp3', cover: 'https://p2.music.126.net/iV2Fe8OfVFsDoxt82FXAUg==/2532175279105513.jpg', id: '5103610' },
-    { name: 'Billboard', artist: 'Jonas Blue/陈梓童', url: 'https://music.163.com/song/media/outer/url?id=1409157146.mp3', cover: 'https://p2.music.126.net/PaWg8EMJitPZzG9Dl54ljA==/109951164544621349.jpg', id: '1409157146' },
-    { name: 'Freak Me', artist: 'Silk', url: 'https://music.163.com/song/media/outer/url?id=406072619.mp3', cover: 'https://p2.music.126.net/DIit3NPDp9nkF-U2-KKaGg==/3276544661546205.jpg', id: '406072619' },
-    { name: 'What to Do', artist: 'Buddha Bar', url: 'https://music.163.com/song/media/outer/url?id=28798879.mp3', cover: 'https://p2.music.126.net/c10aknadyrJsk2PgKxXIwg==/5895581348442627.jpg', id: '28798879' },
-    { name: 'Real Fake (Remix)', artist: 'Migos', url: 'https://music.163.com/song/media/outer/url?id=3332143952.mp3', cover: 'https://p2.music.126.net/yuJYD00QUbWRxvYwN0eTNg==/109951172483717933.jpg', id: '3332143952' },
-    { name: 'Swept Away', artist: 'Buddha Bar/Anna Naklab', url: 'https://music.163.com/song/media/outer/url?id=28798881.mp3', cover: 'https://p2.music.126.net/c10aknadyrJsk2PgKxXIwg==/5895581348442627.jpg', id: '28798881' },
-    { name: 'control', artist: 'Shura', url: 'https://music.163.com/song/media/outer/url?id=1344609215.mp3', cover: 'https://p2.music.126.net/PrOe_0e8G4QJpUwkZU4beg==/109951164109253820.jpg', id: '1344609215' },
-    { name: 'Breath Away', artist: 'Duffy', url: 'https://music.163.com/song/media/outer/url?id=17368871.mp3', cover: 'https://p2.music.126.net/s4uKXpw8lcIDyFHxAsHLYg==/109951169237259283.jpg', id: '17368871' },
-    { name: "AKA... What a Life!", artist: "Noel Gallagher's High Flying Birds", url: 'https://music.163.com/song/media/outer/url?id=27971879.mp3', cover: 'https://p2.music.126.net/1vc2AYyYBjQ8BY78joBDMw==/6665239488611808.jpg', id: '27971879' },
-    { name: '云中加冕The Crown In The Clouds', artist: '江上青山JasonYama', url: 'https://music.163.com/song/media/outer/url?id=2084376965.mp3', cover: 'https://p2.music.126.net/Y2dAMDGKRFC4JGzDolJaGQ==/109951168933322029.jpg', id: '2084376965' },
-    { name: 'What Does It Mean to You', artist: 'Carpetman', url: 'https://music.163.com/song/media/outer/url?id=2643514137.mp3', cover: 'https://p2.music.126.net/IzACfhjYrFJC3IRz-7Cf0A==/109951170121359445.jpg', id: '2643514137' },
-    { name: 'Little Bit Better', artist: 'Caleb Hearn/ROSIE', url: 'https://music.163.com/song/media/outer/url?id=2122825009.mp3', cover: 'https://p2.music.126.net/-FbZQ3-XGtOR_gZTDlKE0w==/109951169315119570.jpg', id: '2122825009' },
-    { name: 'I Still Want Your Love (feat. Jinnie)', artist: 'Sam Ock/Jinnie', url: 'https://music.163.com/song/media/outer/url?id=1979192239.mp3', cover: 'https://p2.music.126.net/iWgsGVhmR9Xtoo64DnZiCA==/109951167852411976.jpg', id: '1979192239' },
-    { name: 'Every Summertime', artist: 'NIKI', url: 'https://music.163.com/song/media/outer/url?id=2149062755.mp3', cover: 'https://p2.music.126.net/pnxyZHscvnvycqaDcTz9SA==/109951169527798285.jpg', id: '2149062755' },
-    { name: 'airplane mode', artist: 'limbo', url: 'https://music.163.com/song/media/outer/url?id=1322132356.mp3', cover: 'https://p2.music.126.net/YcpeNdOncvCvcSrSbTL1lg==/109951163640131408.jpg', id: '1322132356' },
-    { name: 'Say Goodbye', artist: 'LODONI', url: 'https://music.163.com/song/media/outer/url?id=2059084604.mp3', cover: 'https://p2.music.126.net/iMlioJMh4guMubsXfFkEPg==/109951168701784147.jpg', id: '2059084604' },
-    { name: 'Home (feat. Hikaru Utada)', artist: 'Charlie Puth/宇多田ヒカル', url: 'https://music.163.com/song/media/outer/url?id=3356494231.mp3', cover: 'https://p2.music.126.net/c2G0FTms0rBDSOhwgVR_DA==/109951172848276304.jpg', id: '3356494231' },
-    { name: 'Nope your too late i already died', artist: 'wifiskeleton', url: 'https://music.163.com/song/media/outer/url?id=2638616976.mp3', cover: 'https://p2.music.126.net/AGu0IzFGYtOl4FyClLr8zQ==/109951170064566307.jpg', id: '2638616976' },
-    { name: 'The Other Side Of Paradise', artist: 'Glass Animals', url: 'https://music.163.com/song/media/outer/url?id=2668934341.mp3', cover: 'https://p2.music.126.net/d4p6xGUMSD5nHkCOoQWR1Q==/109951170419210505.jpg', id: '2668934341' },
-    { name: 'Paris in the Rain', artist: 'Lauv', url: 'https://music.163.com/song/media/outer/url?id=518904648.mp3', cover: 'https://p2.music.126.net/4Xf4fRbDc2N30rShLT_irQ==/18251893021647481.jpg', id: '518904648' },
-    { name: '2 soon', artist: 'keshi', url: 'https://music.163.com/song/media/outer/url?id=1303019276.mp3', cover: 'https://p2.music.126.net/xB31iMXB9XwzStrPQzcrdw==/109951168789057630.jpg', id: '1303019276' },
-    { name: 'Nothing On You', artist: 'B.o.B/Bruno Mars', url: 'https://music.163.com/song/media/outer/url?id=5100769.mp3', cover: 'https://p2.music.126.net/LpNeJdD3VtiThH5uIi62Hg==/1698745464926789.jpg', id: '5100769' },
-    { name: 'phone kisses +', artist: 'suhmeduh', url: 'https://music.163.com/song/media/outer/url?id=3343637146.mp3', cover: 'https://p2.music.126.net/ZhY2QhNO3zY-9ID7Tfsfig==/109951172651476790.jpg', id: '3343637146' },
-    { name: 'Off The Hook', artist: 'Jeff Jarvis', url: 'https://music.163.com/song/media/outer/url?id=2673161004.mp3', cover: 'https://p2.music.126.net/4gbH3_RAl-QoImhVHanrVQ==/109951171332135140.jpg', id: '2673161004' },
-    { name: 'I Love You 3000', artist: 'Stephanie Poetri', url: 'https://music.163.com/song/media/outer/url?id=1374446646.mp3', cover: 'https://p2.music.126.net/9RNRp5dkqfgUu8CLEfEwlQ==/109951170496839853.jpg', id: '1374446646' },
-    { name: 'Duvet', artist: 'B\u00f4a', url: 'https://music.163.com/song/media/outer/url?id=2025068890.mp3', cover: 'https://p2.music.126.net/U2yOmD0b2obHE0FBpBWEbQ==/109951168400421481.jpg', id: '2025068890' },
-    { name: 'intentions', artist: 'Starfall', url: 'https://music.163.com/song/media/outer/url?id=2149780504.mp3', cover: 'https://p2.music.126.net/u8aU_s-CUvytJlgrkFwRLA==/109951169533927512.jpg', id: '2149780504' },
-    { name: 'Dark', artist: 'mixed matches', url: 'https://music.163.com/song/media/outer/url?id=1407789513.mp3', cover: 'https://p2.music.126.net/41cYmse7QDlb-G9_0aN4hA==/109951168881039362.jpg', id: '1407789513' }
+    { name: "河流", artist: "马赫mood/杜逸风 Firewind SoKu", url: "https://music.163.com/song/media/outer/url?id=1984760613.mp3", cover: "http://p4.music.126.net/5ErjBLJU9mWMwHNBQy1m-Q==/109951167911889678.jpg", id: "1984760613" },
+    { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "http://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
+    { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "http://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
+    { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "http://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
+    { name: "浪漫鬼", artist: "DANNY K/周夏影/FEEEleven/鼠尾草/EINK", url: "https://music.163.com/song/media/outer/url?id=2111060878.mp3", cover: "http://p3.music.126.net/B4BYcZRspbnXGbEEGqsgvw==/109951169200961924.jpg", id: "2111060878" },
+    { name: "雨后的哲学家", artist: "ZaZaZsu咂咂苏", url: "https://music.163.com/song/media/outer/url?id=2649850191.mp3", cover: "http://p4.music.126.net/mcywVZFTWOiB92rH5fM8LA==/109951170242389679.jpg", id: "2649850191" },
+    { name: "过春天", artist: "谭维维", url: "https://music.163.com/song/media/outer/url?id=1346093339.mp3", cover: "http://p3.music.126.net/R0zGFUOIUdm0JQK9oS71ZQ==/109951163927210402.jpg", id: "1346093339" },
+    { name: "你我经历的一刻 (原名：百年长河不过是你和我在经历着的一刻)", artist: "ZaZaZsu咂咂苏", url: "https://music.163.com/song/media/outer/url?id=2655065698.mp3", cover: "http://p4.music.126.net/mcywVZFTWOiB92rH5fM8LA==/109951170242389679.jpg", id: "2655065698" },
+    { name: "若把你", artist: "Kirsty刘瑾睿", url: "https://music.163.com/song/media/outer/url?id=865632948.mp3", cover: "http://p4.music.126.net/M877M2-VhWZiLPVFORf9iQ==/109951163401482434.jpg", id: "865632948" },
+    { name: "几分", artist: "雷泷Raylong/曲甲/唐康宁", url: "https://music.163.com/song/media/outer/url?id=2156910268.mp3", cover: "http://p3.music.126.net/YWKXvgtSxP_M3h4VdBZxtQ==/109951169598064133.jpg", id: "2156910268" },
+    { name: "便利店之夜", artist: "FEEEleven/RHYM/MacDiego迪椰果", url: "https://music.163.com/song/media/outer/url?id=3326327476.mp3", cover: "http://p4.music.126.net/uhc-EzCFe7n_chQmieibtA==/109951172402172299.jpg", id: "3326327476" },
+    { name: "总有一天你会出现在我身边", artist: "棱镜乐队", url: "https://music.163.com/song/media/outer/url?id=1303027499.mp3", cover: "http://p4.music.126.net/RfUHXkanpxImcaGqFNWBeA==/109951163598901405.jpg", id: "1303027499" },
+    { name: "你很OK！迈出下一步吧！", artist: "桃子假象", url: "https://music.163.com/song/media/outer/url?id=1458708777.mp3", cover: "http://p3.music.126.net/XG_Zfv0Ks0ky0d71vOX_Zg==/109951165095756047.jpg", id: "1458708777" },
+    { name: "拜访", artist: "柯以敏", url: "https://music.163.com/song/media/outer/url?id=253072.mp3", cover: "http://p4.music.126.net/zVothmAgxUaGB04RLg1oYA==/109951165628226099.jpg", id: "253072" },
+    { name: "枪口红", artist: "wweimm微米", url: "https://music.163.com/song/media/outer/url?id=3319370284.mp3", cover: "http://p3.music.126.net/zROywgbNrgdJjEeYZFgqWg==/109951172308957923.jpg", id: "3319370284" },
+    { name: "蔓延", artist: "许美静", url: "https://music.163.com/song/media/outer/url?id=306888.mp3", cover: "http://p3.music.126.net/PF9-caaD8U8d2HSTwno3aQ==/109951167320292853.jpg", id: "306888" },
+    { name: "换位思考", artist: "傲七爷（江偌绮）", url: "https://music.163.com/song/media/outer/url?id=3324439039.mp3", cover: "http://p3.music.126.net/UN4VEC7tRBre4XKMDHXcNg==/109951172378867302.jpg", id: "3324439039" },
+    { name: "寻泷", artist: "李琦/Helen Hong", url: "https://music.163.com/song/media/outer/url?id=1998977040.mp3", cover: "http://p3.music.126.net/E4unpP7JqvWUe3_Kp4GANA==/109951168065290565.jpg", id: "1998977040" },
+    { name: "花", artist: "傲七爷（江偌绮）", url: "https://music.163.com/song/media/outer/url?id=2754658627.mp3", cover: "http://p4.music.126.net/bwrfcvdeE-iFp3lEu-tI3Q==/109951172139241839.jpg", id: "2754658627" },
+    { name: "月光", artist: "魏晨", url: "https://music.163.com/song/media/outer/url?id=25641044.mp3", cover: "http://p3.music.126.net/kAtgpS8eJkozgnzK3-Nf5A==/109951163077018064.jpg", id: "25641044" },
+    { name: "马上出发", artist: "魏晨", url: "https://music.163.com/song/media/outer/url?id=3343529136.mp3", cover: "http://p3.music.126.net/vLuIzQ3b8bvONjxfs4Tviw==/109951172650292784.jpg", id: "3343529136" },
+    { name: "奔赴远方时的心理活动", artist: "王瑞淇/七乐团SEVENBAND", url: "https://music.163.com/song/media/outer/url?id=2611273229.mp3", cover: "http://p4.music.126.net/VRxjWWOxLDN-yyHluMG8yw==/109951169815569785.jpg", id: "2611273229" },
+    { name: "召唤", artist: "韩红", url: "https://music.163.com/song/media/outer/url?id=2744769015.mp3", cover: "http://p3.music.126.net/v3Rtx3bV39to4--PC7QaqA==/109951171994734534.jpg", id: "2744769015" },
+    { name: "吻你吻上太空", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2707033683.mp3", cover: "http://p4.music.126.net/p4U0-Y5rtkKfDmQegHXpVQ==/109951172068954764.jpg", id: "2707033683" },
+    { name: "阳光下的星星", artist: "金海心", url: "https://music.163.com/song/media/outer/url?id=1353159923.mp3", cover: "http://p4.music.126.net/Y1wKsh4KET4u8UD2A2CE5w==/109951163940418508.jpg", id: "1353159923" },
+    { name: "绝对占有 相对自由", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=2749430424.mp3", cover: "http://p4.music.126.net/jeWHIkiTkBglJKxte7p6JA==/109951172059186762.jpg", id: "2749430424" },
+    { name: "绝对占有，相对自由", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=29431061.mp3", cover: "http://p4.music.126.net/lN2jt4Vkqw3zzIjc2JjyCw==/2532175280981641.jpg", id: "29431061" },
+    { name: "吹灭小山河", artist: "国风堂/司南", url: "https://music.163.com/song/media/outer/url?id=1412559986.mp3", cover: "http://p4.music.126.net/taWBQliW8wLh_pqXElAeww==/109951164923015271.jpg", id: "1412559986" },
+    { name: "五百二十赫兹", artist: "Capper", url: "https://music.163.com/song/media/outer/url?id=1948572170.mp3", cover: "http://p4.music.126.net/peHjsnZRas_ETuici04LwQ==/109951167437121908.jpg", id: "1948572170" },
+    { name: "未完结的爱", artist: "Zkaaai", url: "https://music.163.com/song/media/outer/url?id=2695903727.mp3", cover: "http://p3.music.126.net/cDZnXGWvnGMZ00ub-USj0Q==/109951170731363312.jpg", id: "2695903727" },
+    { name: "带我走", artist: "杨丞琳", url: "https://music.163.com/song/media/outer/url?id=5243408.mp3", cover: "http://p4.music.126.net/fGzZNQ6q5kfTqmIuSmr4UQ==/91259465122682.jpg", id: "5243408" },
+    { name: "今生戴花 世世漂亮", artist: "浅影阿", url: "https://music.163.com/song/media/outer/url?id=2144073361.mp3", cover: "http://p3.music.126.net/eTK0Mq_t-UGp19YtklTfmg==/109951171898301750.jpg", id: "2144073361" },
+    { name: "荒漠上行走", artist: "亚森", url: "https://music.163.com/song/media/outer/url?id=2041212293.mp3", cover: "http://p3.music.126.net/oGRDfE2efqQPGCVFM9J__w==/109951168599981287.jpg", id: "2041212293" },
+    { name: "浪漫爱", artist: "刘瑞琦", url: "https://music.163.com/song/media/outer/url?id=1475737616.mp3", cover: "http://p4.music.126.net/aVNSavZbTMw6OLzBn6lRlQ==/109951165284913239.jpg", id: "1475737616" },
+    { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "http://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" }
   ];
 
   var HARDCODED_LYRICS = {
