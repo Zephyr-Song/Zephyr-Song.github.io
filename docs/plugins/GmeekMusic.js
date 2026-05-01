@@ -2023,7 +2023,7 @@
     '.gmp-item-artist{color:#999;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
 
     /* Mini 切换按钮 */
-    '#gmp-mini{position:absolute;left:-38px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
+    '#gmp-mini{position:absolute;left:-38px;top:8px;transform:translateY(0);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
     '#gmp-mini:hover{box-shadow:-2px 0 12px rgba(143,179,169,0.6);transform:translateY(-50%) scale(1.05);}',
     '#gmp-mini svg{width:20px;height:20px;color:#fff;transition:transform 0.3s;}',
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
