@@ -1965,10 +1965,12 @@
     '#gmp-artist{color:#999;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4;margin-top:2px;}',
 
     /* 歌词按钮 */
-    '#gmp-lyrics-btn{position:absolute;right:14px;top:4px;transform:none;background:none;border:none;cursor:pointer;color:#999;padding:4px;transition:color 0.2s;}',
-    '#gmp-lyrics-btn:hover{color:#8fb3a9;}',
-    '#gmp-lyrics-btn svg{width:16px;height:16px;}',
-    '#gmp-lyrics-btn.active{color:#8fb3a9;}',
+    '#gmp-list-btn,#gmp-lyrics-btn{position:absolute;top:4px;transform:none;background:none;border:none;cursor:pointer;color:#999;padding:4px;transition:color 0.2s;}',
+    '#gmp-list-btn:hover,#gmp-lyrics-btn:hover{color:#8fb3a9;}',
+    '#gmp-list-btn svg,#gmp-lyrics-btn svg{width:16px;height:16px;}',
+    '#gmp-list-btn.active,#gmp-lyrics-btn.active{color:#8fb3a9;}',
+    '#gmp-list-btn{right:38px;}',
+    '#gmp-lyrics-btn{right:14px;}',
 
     /* 悬浮歌词面板 */
     '#gmp-lyrics-float{position:absolute;bottom:100%;left:0;right:0;margin-bottom:8px;background:rgba(255,255,255,0.97);border-radius:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.12);max-height:240px;overflow-y:auto;display:none;backdrop-filter:blur(8px);}',
@@ -2051,6 +2053,9 @@
           '<div id="gmp-title">私人雷达</div>' +
           '<div id="gmp-artist">35首 · 点击播放</div>' +
         '</div>' +
+        '<button id="gmp-list-btn" title="歌单">' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>' +
+        '</button>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
         '</button>' +
@@ -2087,6 +2092,7 @@
   var volBarWrap = document.getElementById('gmp-vol-bar-wrap');
   var volIcon = document.getElementById('gmp-vol-icon');
   var listEl = document.getElementById('gmp-list');
+  var listBtn = document.getElementById('gmp-list-btn');
   var lyricsBtn = document.getElementById('gmp-lyrics-btn');
   var lyricsFloat = document.getElementById('gmp-lyrics-float');
   var lyricsInner = document.getElementById('gmp-lyrics-inner');
@@ -2311,10 +2317,18 @@
     lyricsBtn.classList.toggle('active', lyricsOpen);
   });
 
-  // ---- Toggle list (click header) ----
+  // ---- Toggle playlist ----
+  var listOpen = false;
+  listBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    listOpen = !listOpen;
+    listEl.classList.toggle('open', listOpen);
+    listBtn.classList.toggle('active', listOpen);
+  });
+
+  // ---- Click header (no longer toggles list) ----
   document.getElementById('gmp-header').addEventListener('click', function (e) {
-    if (e.target.closest('#gmp-lyrics-btn')) return;
-    listEl.classList.toggle('open');
+    if (e.target.closest('#gmp-lyrics-btn') || e.target.closest('#gmp-list-btn')) return;
   });
 
   // ---- Init ----
