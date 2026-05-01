@@ -1,7 +1,7 @@
 /**
- * Gmeek Music Player v9 - 35首歌�?+ 每首封面�?
- * �?HTML5 Audio, �?eval/new Function, 兼容 GitHub Pages CSP
- * 歌单: 网易�?2829816518 (私人雷达)
+ * Gmeek Music Player v9 - 35首歌单 + 每首封面图
+ * 纯 HTML5 Audio, 无 eval/new Function, 兼容 GitHub Pages CSP
+ * 歌单: 网易云 2829816518 (私人雷达)
  */
 (function () {
   'use strict';
@@ -17,7 +17,7 @@
     { name: 'Other Side', artist: 'PLAZA', url: 'https://music.163.com/song/media/outer/url?id=2093480642.mp3', cover: 'https://p2.music.126.net/oUU_Tw9FTjZSMZ7HHu6_VQ==/109951169004973551.jpg', id: '2093480642' },
     { name: 'Medieval', artist: 'FINNEAS', url: 'https://music.163.com/song/media/outer/url?id=1887215867.mp3', cover: 'https://p2.music.126.net/RFxgjunlII7caFc5XFCetQ==/109951167923009398.jpg', id: '1887215867' },
     { name: 'Empire State Of Mind (Feat. Alicia Keys)', artist: 'JAY-Z', url: 'https://music.163.com/song/media/outer/url?id=5103610.mp3', cover: 'https://p2.music.126.net/iV2Fe8OfVFsDoxt82FXAUg==/2532175279105513.jpg', id: '5103610' },
-    { name: 'Billboard', artist: 'Jonas Blue/陈梓�?, url: 'https://music.163.com/song/media/outer/url?id=1409157146.mp3', cover: 'https://p2.music.126.net/PaWg8EMJitPZzG9Dl54ljA==/109951164544621349.jpg', id: '1409157146' },
+    { name: 'Billboard', artist: 'Jonas Blue/陈梓童', url: 'https://music.163.com/song/media/outer/url?id=1409157146.mp3', cover: 'https://p2.music.126.net/PaWg8EMJitPZzG9Dl54ljA==/109951164544621349.jpg', id: '1409157146' },
     { name: 'Freak Me', artist: 'Silk', url: 'https://music.163.com/song/media/outer/url?id=406072619.mp3', cover: 'https://p2.music.126.net/DIit3NPDp9nkF-U2-KKaGg==/3276544661546205.jpg', id: '406072619' },
     { name: 'What to Do', artist: 'Buddha Bar', url: 'https://music.163.com/song/media/outer/url?id=28798879.mp3', cover: 'https://p2.music.126.net/c10aknadyrJsk2PgKxXIwg==/5895581348442627.jpg', id: '28798879' },
     { name: 'Real Fake (Remix)', artist: 'Migos', url: 'https://music.163.com/song/media/outer/url?id=3332143952.mp3', cover: 'https://p2.music.126.net/yuJYD00QUbWRxvYwN0eTNg==/109951172483717933.jpg', id: '3332143952' },
@@ -154,8 +154,8 @@
 [00:43.69]Say  wat  up  to  Ty  Ty  still  sipping  Malta
 [00:45.30]Sitting  courtside  Knicks  and  Nets  give  me  high  fives
 [00:46.75]N-gga  i  be  spiked  out  i  can  trip  a  referee
-[00:48.54]Tell  by  my  attitude  that  I  most  definitely  from �?
-[00:55.19]（Alicia  Keys�?
+[00:48.54]Tell  by  my  attitude  that  I  most  definitely  from …
+[00:55.19]（Alicia  Keys）
 [00:55.69]In New  York
 [00:56.12]concrete jungle  where  dreams  are  made  of
 [01:01.57]There's  nothing  you  can't  do
@@ -163,7 +163,7 @@
 [01:09.46]These  streets  will  make  you  feel  brand  new
 [01:12.98]The  lights  will  inspire  you
 [01:16.00]Let's  here  it  for  New  York  New  York  New  York
-[01:22.85]（Jay-Z�?
+[01:22.85]（Jay-Z）
 [01:23.05]I  made  you  hot  n-gga
 [01:24.55]Catch  me  at  the  X  with  OG  at  a  Yankee  game
 [01:26.79]Sh-t  i  made  the  yankee  hat  more  famous  than  a  yankee  can
@@ -184,8 +184,8 @@
 [01:57.70]Labor  day  parade  rest  in  peace  Bob  Marley
 [01:59.75]Statue  of  Liberty  long  live  the  World  trade
 [02:01.73]Long  live  the  king  yo
-[02:06.86]I'm  from  the  empire  state  thats �?
-[02:09.14]（Alicia  Keys�?
+[02:06.86]I'm  from  the  empire  state  thats …
+[02:09.14]（Alicia  Keys）
 [02:09.77]In New  York
 [02:10.27]concrete jungle where  dreams  are  made  of
 [02:12.66]There's  nothing  you  can't  do
@@ -193,7 +193,7 @@
 [02:21.45]These  streets  will  make  you  feel  brand  new
 [02:24.93]The  lights  will  inspire  you
 [02:27.97]Let's  here  it  for  New  York  New  York  New  York
-[02:34.94]（Jay-Z�?
+[02:34.94]（Jay-Z）
 [02:35.21]Lights  is  blinding
 [02:35.85]Girls  need  blinders
 [02:37.63]So  they  can  step  out  of  bounds  quick
@@ -213,7 +213,7 @@
 [03:10.03]Ball  players  rap  stars  addicted  to  the  limelight
 [03:12.36]Empty  in  May  got  you  feeling  like  a  champion
 [03:16.16]The  city  never  sleeps  better  slip  you  a  Ambien
-[03:18.73]（Alicia  Keys�?
+[03:18.73]（Alicia  Keys）
 [03:19.57]In New  York
 [03:20.05]concrete jungle  where  dreams  are  made  of
 [03:25.84]There's  nothing  you  can't  do
@@ -221,7 +221,7 @@
 [03:33.31]These  streets  will  make  you  feel  brand  new
 [03:36.89]The  lights  will  inspire  you
 [03:39.94]Let's  here  it  for  New  York  New  York  New  York
-[03:43.85]（Alicia  Keys�?
+[03:43.85]（Alicia  Keys）
 [03:47.73]One  hand  in  the  air  for  the  big  city
 [03:50.09]Street  lights  big  dreams  all  looking  pretty
 [03:52.78]No  place  in  the  World  that  can  compare
@@ -515,8 +515,8 @@
 [01:00.820]Fake love in a ****ed up hotel
 [01:03.610]Can't believe how far he fell
 [01:06.340]You weak on the floor so you call her cell
-[01:09.130]“How you been�?
-[01:10.460]“How you doing�?
+[01:09.130]“How you been”
+[01:10.460]“How you doing”
 [01:11.940]You been good
 [01:13.340]I been drinking
 [01:14.530]Way too much
@@ -697,64 +697,64 @@
     '1374446646': `[by:琬锥]
 [00:02.31]亲爱的，请牵住我
 [00:04.32]请你成为我一生的伴侣
-[00:07.33]因为你是我的那位钢铁�?
-[00:09.59]因为我可以爱你三千遍，永不停�?
-[00:12.85]亲爱的，请抓住机�?
-[00:14.85]因为我不想再止步于此�?
-[00:18.37]我要我们像好莱坞电影里演的那�?
-[00:23.38]我看见你站在�?
+[00:07.33]因为你是我的那位钢铁侠
+[00:09.59]因为我可以爱你三千遍，永不停下
+[00:12.85]亲爱的，请抓住机会
+[00:14.85]因为我不想再止步于此了
+[00:18.37]我要我们像好莱坞电影里演的那样
+[00:23.38]我看见你站在那
 [00:26.47]披着绿巨人浩克的外衣
 [00:28.73]但我能想到的却是
 [00:31.74]你能把要给我的戒指藏��哪里
 [00:34.01]毕竟我猜你是想向我开口的
 [00:36.52]我虽然害怕那个瞬间转瞬就不见
-[00:39.28]但从你眼里我看到了不会消逝的一�?
-[00:41.79]那就让我惊喜�?
-[00:44.58]身边的朋友都告诉我他们知�?
-[00:49.59]你在计划着向我单膝跪地的那一�?
+[00:39.28]但从你眼里我看到了不会消逝的一切
+[00:41.79]那就让我惊喜吧
+[00:44.58]身边的朋友都告诉我他们知道
+[00:49.59]你在计划着向我单膝跪地的那一天
 [00:55.11]但我希望那一天的到来是出乎意料的
 [01:00.38]所以请你确保我不会找到任何线索
-[01:04.39]在那一天到来之�?
+[01:04.39]在那一天到来之前
 [01:05.88]亲爱的，就牵起我的手
 [01:08.14]我想要一生都有你陪伴
 [01:11.40]因为你就是我的钢铁侠
 [01:13.40]因为我爱你，远不止三千遍
-[01:16.67]亲爱的，就抓住这个机�?
-[01:18.92]让一切变得不�?
+[01:16.67]亲爱的，就抓住这个机会
+[01:18.92]让一切变得不同
 [01:22.18]让好莱坞电影里的剧情成真
 [01:27.40]此刻我们正吃着晚餐
-[01:29.92]我想说你赢得了我陪你吃一辈子晚餐的机�?
-[01:32.42]从你的笑容中我看�?
-[01:35.18]你在思考，在怎样的走道上等待我缓缓向你走�?
+[01:29.92]我想说你赢得了我陪你吃一辈子晚餐的机会
+[01:32.42]从你的笑容中我看出
+[01:35.18]你在思考，在怎样的走道上等待我缓缓向你走去
 [01:37.94]你的手伸向了口袋
 [01:40.70]我就快控制不住自己了
-[01:43.21]假设你现在就要开�?
-[01:45.72]那我的点头应允一定来得更�?
+[01:43.21]假设你现在就要开口
+[01:45.72]那我的点头应允一定来得更快
 [01:48.79]现在我的朋友们都在告诉我
-[01:53.80]你在计划着向我求婚�?
-[01:58.57]所以我再也按捺不住想你，想这件�?
+[01:53.80]你在计划着向我求婚了
+[01:58.57]所以我再也按捺不住想你，想这件事
 [02:04.34]想所有所有可能有关的线索
 [02:08.60]于是，现在我想问
-[02:10.36]亲爱的，你愿意牵起我的手�?
+[02:10.36]亲爱的，你愿意牵起我的手吗
 [02:12.37]我想要你成为我的丈夫
-[02:15.24]因为你就是为我开辟宇宙的钢铁�?
-[02:17.38]而我将爱你直至宇宙终�?
+[02:15.24]因为你就是为我开辟宇宙的钢铁侠
+[02:17.38]而我将爱你直至宇宙终结
 [02:20.90]亲爱的，你愿意抓住这次机会吗
-[02:22.90]让我这一次梦想实�?
-[02:26.16]让我成为好莱坞电影里属于你的女主�?
-[02:33.44]请不要有任何意外出现�?
-[02:38.66]我不希望有任何意外出�?
-[02:42.17]亲爱的，这次你牵住我�?
+[02:22.90]让我这一次梦想实现
+[02:26.16]让我成为好莱坞电影里属于你的女主角
+[02:33.44]请不要有任何意外出现啊
+[02:38.66]我不希望有任何意外出现
+[02:42.17]亲爱的，这次你牵住我了
 [02:44.43]我想让你成为我相伴一生的伴侣
 [02:47.44]因为你是我的英雄
 [02:49.44]我会一直爱你，与你一同守护我们的世界
-[02:52.70]亲爱的，这次你抓住我�?
-[02:54.71]等着我们的就是崭新的生活�?
+[02:52.70]亲爱的，这次你抓住我了
+[02:54.71]等着我们的就是崭新的生活了
 [02:58.22]一切都将从好莱坞电影的银幕上落下，于现实里展开
-[03:05.27]请别有任何压�?
+[03:05.27]请别有任何压力
 [03:10.54]什么都不用担心
-[03:15.81]无论将会发生什�?
-[03:21.38]我一直都在，直到宇宙毁灭又重�?
+[03:15.81]无论将会发生什么
+[03:21.38]我一直都在，直到宇宙毁灭又重来
 `,
     '1407789513': `[00:00.00] 作词 : Ed Barrios
 [00:01.00] 作曲 : Ed Barrios
@@ -829,23 +829,23 @@
 [02:24.44] It's dark
 [02:26.05] For me
 `,
-    '1409157146': `[00:00.000] 作词 : 陈梓�?黄子�?Guy James Robin/Madison Love/Samuel Roman
+    '1409157146': `[00:00.000] 作词 : 陈梓童/黄子源/Guy James Robin/Madison Love/Samuel Roman
 [00:01.000] 作曲 : Madison Love/Guy James Robin/Samuel Roman
 [00:02.000] 编曲 : Jonas Blue
-[00:03.000] 制作�?: Jonas Blue/Dark Heart
+[00:03.000] 制作人 : Jonas Blue/Dark Heart
 [00:09.868]你向世界宣告
 [00:11.937]我们多好
-[00:14.280]又让我挂上假�?
+[00:14.280]又让我挂上假笑
 [00:16.510]每张合照
 [00:18.262]
-[00:18.806]你却像一场感�?
+[00:18.806]你却像一场感冒
 [00:21.037]太难治好
 [00:23.335]越来越甩不掉
 [00:25.648]越抓越牢
 [00:27.597]
 [00:28.182]我拜托你快走开 别来烦我
 [00:30.384]不要再消费彼此暧昧过
-[00:32.682]停止你不得安宁的放�?
+[00:32.682]停止你不得安宁的放送
 [00:36.083]It's so weird
 [00:37.148]
 [00:37.448]I see you like a billboard, painted in the sky
@@ -860,19 +860,19 @@
 [01:00.390]My mind, my mind
 [01:02.950]You're still living here in my mind
 [01:05.328]
-[01:05.517]我们曾经约定�?
-[01:07.174]让彼此快�?
-[01:09.555]你得到你想要�?
-[01:11.844]却忽略了�?
+[01:05.517]我们曾经约定过
+[01:07.174]让彼此快乐
+[01:09.555]你得到你想要的
+[01:11.844]却忽略了我
 [01:14.176]
-[01:14.357]你说你不想要�?
-[01:16.417]你还在乎�?
-[01:18.699]如果只是怕寂�?
-[01:21.200]不要一错再�?
+[01:14.357]你说你不想要走
+[01:16.417]你还在乎我
+[01:18.699]如果只是怕寂寞
+[01:21.200]不要一错再错
 [01:22.843]
 [01:23.117]我拜托你快走开 别来烦我
 [01:25.808]不要再消费彼此暧昧过
-[01:28.039]停止你不得安宁的放�?
+[01:28.039]停止你不得安宁的放送
 [01:31.474]It's so weird
 [01:32.407]
 [01:32.670]I see you like a billboard, painted in the sky
@@ -1091,65 +1091,65 @@
 [00:10.309]
 [00:12.166]
 [00:14.560]
-[00:20.079]我是懂她�?她从不多言�?
+[00:20.079]我是懂她的 她从不多言语
 [00:22.742]但她体内的那股野性正渐渐苏醒
-[00:24.863]闺蜜们也不喜欢早出晚归的生活�?
+[00:24.863]闺蜜们也不喜欢早出晚归的生活啊
 [00:27.254]但为了能生活得更好点 我们别无选择
-[00:29.909]这事儿还没完�?他们还想找我们茬
+[00:29.909]这事儿还没完呢 他们还想找我们茬
 [00:32.039]就算他们加足马力 依旧追不上火力全开的我
 [00:34.421]我不会把自己装成白莲圣母
 [00:36.812]你也没必要���装去爱慕我们
-[00:40.004]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能�?
-[00:42.656]向“钱”看�?一心扑在利润上
+[00:40.004]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能量
+[00:42.656]向“钱”看齐 一心扑在利润上
 [00:44.789]让你如同Poco Lee般翩翩起舞（Poco Lee：尼日利亚著名舞者）
-[00:47.179]花花绿绿的钞�?如同新鲜的西兰花
-[00:49.297]一步一个脚�?无视贱婢们在后面嚼舌�?
-[00:52.228]权当是我的幻想罢�?
+[00:47.179]花花绿绿的钞票 如同新鲜的西兰花
+[00:49.297]一步一个脚印 无视贱婢们在后面嚼舌根
+[00:52.228]权当是我的幻想罢了
 [00:54.346]他们都在等着看我出糗
-[00:57.535]但我岂能这么容易满足他们�?
-[00:58.870]我现在一切安�?0负面新闻
+[00:57.535]但我岂能这么容易满足他们？
+[00:58.870]我现在一切安好 0负面新闻
 [01:00.190]我的生活如此多姿多彩
-[01:00.988]神父眷顾着�?百万票子滚滚�?
-[01:03.854]这丰厚财富触手可�?
+[01:00.988]神父眷顾着我 百万票子滚滚来
+[01:03.854]这丰厚财富触手可得
 [01:06.986]我岂能这么容易满足他们？
-[01:08.306]我现在一切安�?0负面新闻
+[01:08.306]我现在一切安好 0负面新闻
 [01:09.376]我的生活如此多姿多彩
-[01:10.700]不搞乱七八糟的炒�?每个人都爱慕着�?
-[01:13.558]和我们出街起�?我保证你不会无聊
+[01:10.700]不搞乱七八糟的炒作 每个人都爱慕着我
+[01:13.558]和我们出街起耍 我保证你不会无聊
 [01:17.272]
 [01:19.402]
 [01:21.783]
 [01:26.304]飞去加纳度过美好时光
-[01:28.959]你还未谙世事 就别装的很老成�?
-[01:31.614]你懂�?见过世面的女人不好惹
-[01:34.004]别把男人看太�?姐就是女王自信放光芒
+[01:28.959]你还未谙世事 就别装的很老成了
+[01:31.614]你懂得 见过世面的女人不好惹
+[01:34.004]别把男人看太重 姐就是女王自信放光芒
 [01:36.126]你永远夺不走我现在的成就
 [01:41.709]你数不清我的恩典
-[01:43.566]从不被规则禁�?我自成一�?
-[01:46.754]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能�?
-[01:49.943]向“钱”看�?一心扑在利润上
+[01:43.566]从不被规则禁锢 我自成一派
+[01:46.754]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能量
+[01:49.943]向“钱”看齐 一心扑在利润上
 [01:52.064]让你如同Poco Lee般翩翩起舞（Poco Lee：尼日利亚著名舞者）
-[01:54.455]花花绿绿的钞�?如同新鲜的西兰花
-[01:56.585]一步一个脚�?无视贱婢们在后面嚼舌�?
-[01:59.240]权当是我的幻想罢�?
+[01:54.455]花花绿绿的钞票 如同新鲜的西兰花
+[01:56.585]一步一个脚印 无视贱婢们在后面嚼舌根
+[01:59.240]权当是我的幻想罢了
 [02:01.634]他们都在等着看我出糗
-[02:04.822]但我岂能这么容易满足他们�?
-[02:05.881]我现在一切安�?0负面新闻 我的生活是如此多姿多�?
-[02:08.275]神父眷顾着�?百万票子滚滚�?
-[02:11.191]这丰厚财富触手可�?
+[02:04.822]但我岂能这么容易满足他们？
+[02:05.881]我现在一切安好 0负面新闻 我的生活是如此多姿多彩
+[02:08.275]神父眷顾着我 百万票子滚滚来
+[02:11.191]这丰厚财富触手可得
 [02:14.328]我岂能这么容易满足他们？
-[02:15.388]我现在一切安�?0负面新闻 我的生活是如此多姿多�?
-[02:17.778]不搞乱七八糟的炒�?每个人都爱慕着�?
-[02:20.697]和我们出街起�?我保证你不会无聊
+[02:15.388]我现在一切安好 0负面新闻 我的生活是如此多姿多彩
+[02:17.778]不搞乱七八糟的炒作 每个人都爱慕着我
+[02:20.697]和我们出街起耍 我保证你不会无聊
 [02:23.886]因为我岂能这么容易满足他们？
-[02:25.218]我现在一切安�?0负面新闻
-[02:26.276]我的生活是如此多姿多�?
-[02:27.339]神父眷顾着�?百万票子滚滚�?
-[02:30.266]这丰厚财富触手可�?
+[02:25.218]我现在一切安好 0负面新闻
+[02:26.276]我的生活是如此多姿多彩
+[02:27.339]神父眷顾着我 百万票子滚滚来
+[02:30.266]这丰厚财富触手可得
 [02:33.644]我岂能这么容易满足他们？
-[02:34.704]我现在一切安�?0负面新闻
-[02:36.833]不搞乱七八糟的炒�?每个人都爱慕着�?
-[02:40.025]和我们出街起�?我保证你不会无聊
+[02:34.704]我现在一切安好 0负面新闻
+[02:36.833]不搞乱七八糟的炒作 每个人都爱慕着我
+[02:40.025]和我们出街起耍 我保证你不会无聊
 `,
     '2025068890': `[00:00.000] 作曲 : Lee Sullivan
 [00:00.526] 编曲 : Jasmine Rodgers
@@ -1260,7 +1260,7 @@
 [00:00.00] 
 [01:36.17]给我一些crazy
 [01:38.47]I just wanna little bit lazy
-[01:40.77]有好多事情天注定 那也不一�?
+[01:40.77]有好多事情天注定 那也不一定
 [01:43.18]那我又何必去关心
 [01:46.03]I just like to study in my life
 [01:50.70]take it the crown you must be good
@@ -1271,9 +1271,9 @@
 [02:04.32]Someone kisses your crown
 [02:09.06]Someone who likes just the way you are
 [00:00.00]
-[02:13.82] 企划 : 邓泽�?
+[02:13.82] 企划 : 邓泽西
 [02:14.82] 营销 : Fendi / 阿油ayu
-[02:15.82] 出品�?: Dylan刘勇
+[02:15.82] 出品人 : Dylan刘勇
 `,
     '2093480642': `[00:00.000] 作曲 : Evan Miles/Dom Dias
 [00:11.232] The other side, yeah
@@ -1822,7 +1822,7 @@
 [01:33.003]Dead inside
 [01:35.259]I just wanna feel alive
 [01:36.538]With you, I'm alive
-[01:38.736]With you, I'm a�?
+[01:38.736]With you, I'm a—
 [01:39.710]Fell in love, but it left me lonely
 [01:42.869]Tried to trust, but it burned me slowly
 [01:46.813]I didn't know what I was looking for
@@ -1866,7 +1866,7 @@
 `,
     '3356494231': `[00:00.000] 作词 : Charlie Puth/BloodPop®/Hikaru Utada
 [00:01.000] 作曲 : Charlie Puth/BloodPop®/Hikaru Utada
-[00:02.000] 制作�?: Charlie Puth/BloodPop®
+[00:02.000] 制作人 : Charlie Puth/BloodPop®
 [00:05.960]Through the rose-colored lenses
 [00:08.510]And the white picket fences
 [00:10.980]No matter how good this is
@@ -1883,13 +1883,13 @@
 [00:50.220]It feels so cold without that soul (That soul)
 [00:53.260]You're the one who makes this house a home
 [00:58.660]
-[01:06.820]一人の時間も大�?
-[01:09.820]誰にも妥協せ�?
+[01:06.820]一人の時間も大切
+[01:09.820]誰にも妥協せず
 [01:12.300]私だけのお城を築いた
 [01:17.440]But it's you I was missing
-[01:19.960]君に毎日ただいまと言わせてくださ�?
-[01:27.670]行ってらしゃ�?
-[01:30.300]君がいないこの家は好きじゃな�?
+[01:19.960]君に毎日ただいまと言わせてください
+[01:27.670]行ってらしゃい
+[01:30.300]君がいないこの家は好きじゃない
 [01:37.110]Ooo, don't you know (Don't you know?)
 [01:41.390]That you're the one who makes this house a home (House a home)
 [01:46.660]And so, (And so) when you go (When you go)
@@ -1904,7 +1904,7 @@
 [02:15.350]Oh mmm-mmm oh
 [02:18.780]It ain't a mystery that every time you leave
 [02:23.830]That's when I feel the most alone, ooh
-[02:29.010]当たり前�?
+[02:29.010]当たり前に
 [02:31.620]なりそうな時
 [02:34.110]思い出してほしい
 [02:38.330]Ooo, don't you know (Don't you know?)
@@ -1922,37 +1922,37 @@
 [03:31.490]Who made this house a home
 [03:38.560]
 [03:39.946] 音频助理 : Eric Eylands
-[03:40.258] 音频工程�?: Ben Sedano
+[03:40.258] 音频工程师 : Ben Sedano
 [03:40.570] 吉他 : Curt Chambers
 [03:40.882] 键盘 : Charlie Puth
-[03:41.194] �?: Stanley Rudolph
+[03:41.194] 鼓 : Stanley Rudolph
 [03:41.506] 人声 : Charile Puth
-[03:41.818] 大提�?: Mia Barcia Colombo/Christopher Ahn/Ben Lash/Juan-Salvador Carrasco
-[03:42.130] 小提�?: Katie Sloan/Radu Pieptea/Kerenza Peacock/Maya Magub/Mark Robertson/Sara Parkins/Adam Millstein/Ji Young An/Misha Vayman/Michael Siess/Stephanie Yu
-[03:42.442] 中提�?: Emily Williams/Carolyn Riley/Corinne Sobolewski/Drew Forde
-[03:42.754] 打击�?: Leddie Garcia
+[03:41.818] 大提琴 : Mia Barcia Colombo/Christopher Ahn/Ben Lash/Juan-Salvador Carrasco
+[03:42.130] 小提琴 : Katie Sloan/Radu Pieptea/Kerenza Peacock/Maya Magub/Mark Robertson/Sara Parkins/Adam Millstein/Ji Young An/Misha Vayman/Michael Siess/Stephanie Yu
+[03:42.442] 中提琴 : Emily Williams/Carolyn Riley/Corinne Sobolewski/Drew Forde
+[03:42.754] 打击乐 : Leddie Garcia
 [03:43.066] 编程 : Charlie Puth/BloodPop®
 [03:43.378] 贝斯 : Pastor Funk/William Nathan Farrington
 [03:43.690] 混音助理 : Ramiro Fernandez-Seoane
-[03:44.002] 母带工程�?: Zach Pereyra
-[03:44.314] 人声录音工程�?: Yuya Saito
-[03:44.626] 混音�?: Charlie Puth/Manny Marroquin
+[03:44.002] 母带工程师 : Zach Pereyra
+[03:44.314] 人声录音工程师 : Yuya Saito
+[03:44.626] 混音师 : Charlie Puth/Manny Marroquin
 `
   };
 
   // ---- CSS ----
   var css = [
-    /* 右下角固定定�?*/
+    /* 右下角固定定位 */
     '#gmeek-player{position:fixed;right:24px;bottom:24px;z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
 
-    /* 播放器主�?*/
+    /* 播放器主体 */
     '#gmp-body{width:320px;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;transition:all 0.3s ease;display:none;}',
     '#gmp-body.show{display:block;}',
 
-    /* 顶部信息�?*/
+    /* 顶部信息区 */
     '#gmp-header{position:relative;padding:14px 14px 10px;background:#fff;cursor:pointer;}',
 
-    /* 封面�?*/
+    /* 封面图 */
     '#gmp-cover{position:absolute;left:14px;top:14px;width:46px;height:46px;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;}',
     '#gmp-cover.playing{animation:ap-cover-rotate 20s linear infinite;}',
     '@keyframes ap-cover-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}',
@@ -1983,14 +1983,14 @@
     '.gmp-lrc.active{color:#8fb3a9;font-weight:500;font-size:14px;}',
     '.gmp-lrc.passive{color:#ccc;}',
 
-    /* 进度条区�?*/
+    /* 进度条区域 */
     '#gmp-progress{padding:0 14px 8px;}',
     '#gmp-bar-wrap{height:2px;background:#eee;border-radius:1px;cursor:pointer;position:relative;}',
     '#gmp-bar{height:100%;background:#8fb3a9;border-radius:1px;width:0%;position:relative;}',
     '#gmp-bar::after{content:"";position:absolute;right:-6px;top:-5px;width:12px;height:12px;background:#8fb3a9;border-radius:50%;opacity:0;transition:opacity 0.2s;box-shadow:0 0 4px rgba(143,179,169,0.4);}',
     '#gmp-bar-wrap:hover #gmp-bar::after{opacity:1;}',
 
-    /* 控制�?*/
+    /* 控制区 */
     '#gmp-controls{display:flex;align-items:center;padding:0 14px 10px;background:#fff;}',
     '#gmp-time{color:#999;font-size:11px;font-variant-numeric:tabular-nums;min-width:40px;}',
     '#gmp-btns{display:flex;align-items:center;gap:8px;flex:1;justify-content:center;}',
@@ -2023,12 +2023,12 @@
     '.gmp-item-artist{color:#999;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
 
     /* Mini 切换按钮 */
-    '#gmp-mini{position:absolute;left:-38px;top:0px;transform:translateY(0);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
+    '#gmp-mini{position:absolute;left:-38px;top:0px;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 0 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
     '#gmp-mini:hover{box-shadow:-2px 0 12px rgba(143,179,169,0.6);transform:translateY(-50%) scale(1.05);}',
     '#gmp-mini svg{width:20px;height:20px;color:#fff;transition:transform 0.3s;}',
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
 
-    /* 移动端响�?*/
+    /* 移动端响应 */
     '@media(max-width:480px){#gmeek-player{right:8px;bottom:16px;}#gmp-body{width:calc(100vw - 52px);}}',
   ].join('');
 
@@ -2042,7 +2042,7 @@
   container.id = 'gmeek-player';
 
   container.innerHTML =
-    '<div id="gmp-mini" title="展开播放�?>' +
+    '<div id="gmp-mini" title="展开播放器">' +
       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>' +
     '</div>' +
     '<div id="gmp-body">' +
@@ -2051,7 +2051,7 @@
         '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
           '<div id="gmp-title">私人雷达</div>' +
-          '<div id="gmp-artist">35�?· 点击播放</div>' +
+          '<div id="gmp-artist">35首 · 点击播放</div>' +
         '</div>' +
         '<button id="gmp-list-btn" title="歌单">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>' +
@@ -2064,9 +2064,9 @@
       '<div id="gmp-controls">' +
         '<span id="gmp-time">0:00</span>' +
         '<div id="gmp-btns">' +
-          '<button class="gmp-btn" id="gmp-prev" title="上一�?><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6V6zm3.5 6 8.5 6V6l-8.5 6z"/></svg></button>' +
+          '<button class="gmp-btn" id="gmp-prev" title="上一首"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6V6zm3.5 6 8.5 6V6l-8.5 6z"/></svg></button>' +
           '<button class="gmp-btn play-btn" id="gmp-play" title="播放"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg></button>' +
-          '<button class="gmp-btn" id="gmp-next" title="下一�?><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-12v12l6.5-6L8 6zm8 0v12h2V6h-2z"/></svg></button>' +
+          '<button class="gmp-btn" id="gmp-next" title="下一首"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-12v12l6.5-6L8 6zm8 0v12h2V6h-2z"/></svg></button>' +
         '</div>' +
         '<div id="gmp-vol">' +
           '<span id="gmp-vol-icon" title="静音"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg></span>' +
@@ -2306,7 +2306,7 @@
     playerOpen = !playerOpen;
     bodyEl.classList.toggle('show', playerOpen);
     miniBtn.classList.toggle('collapsed', !playerOpen);
-    miniBtn.title = playerOpen ? '收起播放�? : '展开播放�?;
+    miniBtn.title = playerOpen ? '收起播放器' : '展开播放器';
   });
 
   // ---- Toggle floating lyrics ----
