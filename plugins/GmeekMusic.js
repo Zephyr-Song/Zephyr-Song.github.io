@@ -38,8 +38,8 @@
     { name: "今生戴花 世世漂亮", artist: "浅影阿", url: "https://music.163.com/song/media/outer/url?id=2144073361.mp3", cover: "http://p3.music.126.net/eTK0Mq_t-UGp19YtklTfmg==/109951171898301750.jpg", id: "2144073361" },
     { name: "荒漠上行走", artist: "亚森", url: "https://music.163.com/song/media/outer/url?id=2041212293.mp3", cover: "http://p3.music.126.net/oGRDfE2efqQPGCVFM9J__w==/109951168599981287.jpg", id: "2041212293" },
     { name: "浪漫爱", artist: "刘瑞琦", url: "https://music.163.com/song/media/outer/url?id=1475737616.mp3", cover: "http://p4.music.126.net/aVNSavZbTMw6OLzBn6lRlQ==/109951165284913239.jpg", id: "1475737616" },
-    { name: "小半", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=421423806.mp3", cover: "http://p1.music.126.net/HQxTggMCB7AHUXN-ZFEtmA==/1371091013186741.jpg", id: "421423806" },
-    { name: "虚拟", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=421423808.mp3", cover: "http://p1.music.126.net/HQxTggMCB7AHUXN-ZFEtmA==/1371091013186741.jpg", id: "421423808" },
+    { name: "小半", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=2147149307.mp3", cover: "http://p1.music.126.net/HQxTggMCB7AHUXN-ZFEtmA==/1371091013186741.jpg", id: "2147149307" },
+    { name: "虚拟", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=2150455088.mp3", cover: "http://p1.music.126.net/HQxTggMCB7AHUXN-ZFEtmA==/1371091013186741.jpg", id: "2150455088" },
     { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "http://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" }
   ];
 
@@ -1984,7 +1984,7 @@ var HARDCODED_LYRICS = {
 [04:40.62] 出品人/总策划 : 奚韬
 [04:40.93] © 版权所有，未经许可请勿使用
 `,
-    '421423806': `[00:00.360]不敢回看
+    '2147149307': `[00:00.360]不敢回看
 [00:01.960]左顾右盼不自然的暗自喜欢
 [00:06.340]偷偷搭讪总没完地坐立难安
 [00:10.530]试探说晚安 多空泛又心酸
@@ -2038,7 +2038,7 @@ var HARDCODED_LYRICS = {
 [04:15.950]不应该 舍弃了 死心了 放手了 断念了
 [04:21.470]无可奈何不耐烦
 `,
-    '421423808': `[00:15.11]固执押韵的排比
+    '2150455088': `[00:15.11]固执押韵的排比
 [00:18.86]固执幼稚的押韵
 [00:22.15]零零散散凑齐了阵营
 [00:29.66]固执美丽的意义
