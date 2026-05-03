@@ -1837,12 +1837,14 @@ var HARDCODED_LYRICS = {
     muted = false;
   });
 
-  // ---- Toggle player ----
+  // ---- Toggle player (only open, only X button can close) ----
   miniBtn.addEventListener('click', function () {
-    playerOpen = !playerOpen;
-    bodyEl.classList.toggle('show', playerOpen);
-    miniBtn.classList.toggle('collapsed', !playerOpen);
-    miniBtn.title = playerOpen ? '收起播放器' : '展开播放器';
+    if (!playerOpen) {
+      playerOpen = true;
+      bodyEl.classList.add('show');
+      miniBtn.classList.remove('collapsed');
+      miniBtn.title = '收起播放器';
+    }
   });
 
   // ---- Toggle floating lyrics ----
@@ -1862,17 +1864,7 @@ var HARDCODED_LYRICS = {
     listBtn.classList.toggle('active', listOpen);
   });
 
-  // ---- Click header (no longer toggles list) ----
-  document.getElementById('gmp-header').addEventListener('click', function (e) {
-    if (e.target.closest('#gmp-lyrics-btn') || e.target.closest('#gmp-list-btn')) return;
-    // 点击 header 收起播放器
-    playerOpen = false;
-    bodyEl.classList.remove('show');
-    miniBtn.classList.add('collapsed');
-    miniBtn.title = '展开播放器';
-  });
-
-  // ---- Close button ----
+  // ---- Header click removed: only X button closes player ----
   document.getElementById('gmp-close-btn').addEventListener('click', function (e) {
     e.stopPropagation();
     playerOpen = false;
