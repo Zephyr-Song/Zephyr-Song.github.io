@@ -31,8 +31,8 @@
     { name: "未完结的爱", artist: "Zkaaai", url: "https://music.163.com/song/media/outer/url?id=2695903727.mp3", cover: "http://p3.music.126.net/cDZnXGWvnGMZ00ub-USj0Q==/109951170731363312.jpg", id: "2695903727" },
     { name: "带我走", artist: "杨丞琳", url: "https://music.163.com/song/media/outer/url?id=5243408.mp3", cover: "http://p4.music.126.net/fGzZNQ6q5kfTqmIuSmr4UQ==/91259465122682.jpg", id: "5243408" },
     { name: "今生戴花 世世漂亮", artist: "浅影阿", url: "https://music.163.com/song/media/outer/url?id=2144073361.mp3", cover: "http://p3.music.126.net/eTK0Mq_t-UGp19YtklTfmg==/109951171898301750.jpg", id: "2144073361" },
-    { name: "黄昏", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=190072.mp3", cover: "http://p2.music.126.net/mFM2Ii6Kxktb_87b4q3TYQ==/109951167366664357.jpg", id: "190072" },
-    { name: "寂寞沙洲冷", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=189688.mp3", cover: "http://p1.music.126.net/Phcgzvm2I3aiTdKMX0mTzw==/109951169493340540.jpg", id: "189688" },
+    { name: "黄昏", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=5255640.mp3", cover: "http://p2.music.126.net/QoYAmdyE7FL_vc9rwNeS9w==/64871186055842.jpg", id: "5255640" },
+    { name: "寂寞沙洲冷", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=28196411.mp3", cover: "http://p1.music.126.net/nJxaeD0SF7mJSqt2Af0c1g==/2281486627683301.jpg", id: "28196411" },
     { name: "荒漠上行走", artist: "亚森", url: "https://music.163.com/song/media/outer/url?id=2041212293.mp3", cover: "http://p3.music.126.net/oGRDfE2efqQPGCVFM9J__w==/109951168599981287.jpg", id: "2041212293" },
     { name: "浪漫爱", artist: "刘瑞琦", url: "https://music.163.com/song/media/outer/url?id=1475737616.mp3", cover: "http://p4.music.126.net/aVNSavZbTMw6OLzBn6lRlQ==/109951165284913239.jpg", id: "1475737616" },
     { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "http://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" }
@@ -1619,7 +1619,7 @@ var HARDCODED_LYRICS = {
 [04:40.62] 出品人/总策划 : 奚韬
 [04:40.93] © 版权所有，未经许可请勿使用
 `,
-    '190072': `[00:00.00] 作词 : 陈信荣
+    '5255640': `[00:00.00] 作词 : 陈信荣
 [00:01.00] 作曲 : 周传雄
 [00:02.00] 编曲 : 周传雄
 [00:03.00] 制作人 : 周传雄
@@ -1700,7 +1700,7 @@ var HARDCODED_LYRICS = {
 [05:43.52] SP : Sony/ATV Music Publishing Taiwan
 [05:43.86] 录音室 : 强力/HASAYAKE/Atomic & Audioplex (Singapore)
 `,
-    '189688': `[00:00.000] 作词 : 陈信荣
+    '28196411': `[00:00.000] 作词 : 陈信荣
 [00:01.000] 作曲 : 周传雄
 [00:02.000] 编曲 : 周传雄/Terence Teo
 [00:03.000] 制作人 : 周传雄
