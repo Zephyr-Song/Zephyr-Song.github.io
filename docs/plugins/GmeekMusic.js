@@ -37,7 +37,8 @@
     { name: "安和桥", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646205.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646205" },
     { name: "董小姐", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646198.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646198" },
     { name: "郭源潮", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=477251491.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "477251491" },
-    { name: "阿拉斯加海湾", artist: "蓝心羽", url: "https://music.163.com/song/media/outer/url?id=1500569811.mp3", cover: "https://p1.music.126.net/j9P19hOTNbYxLZDJB9bJag==/109951169385715334.jpg", id: "1500569811" }
+    { name: "阿拉斯加海湾", artist: "蓝心羽", url: "https://music.163.com/song/media/outer/url?id=1500569811.mp3", cover: "https://p1.music.126.net/j9P19hOTNbYxLZDJB9bJag==/109951169385715334.jpg", id: "1500569811" },
+    { name: "关不上的窗", artist: "赵乃吉", url: "https://music.163.com/song/media/outer/url?id=2704506228.mp3", cover: "https://p1.music.126.net/-20KFXjwuncTjAKjxT3IZA==/109951170980079039.jpg", id: "2704506228" }
   ];
 
 var HARDCODED_LYRICS = {
