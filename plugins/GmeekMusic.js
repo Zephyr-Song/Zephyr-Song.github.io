@@ -9,11 +9,6 @@
   function initPlayer() {
 
   var HARDCODED_SONGS = [
-    { name: "崇拜", artist: "梁静茹", url: "https://music.163.com/song/media/outer/url?id=26214282.mp3", cover: "", id: "26214282" },
-    { name: "那些花儿", artist: "朴树", url: "https://music.163.com/song/media/outer/url?id=139392.mp3", cover: "", id: "139392" },
-    { name: "背影", artist: "赵雷", url: "https://music.163.com/song/media/outer/url?id=421423203.mp3", cover: "", id: "421423203" },
-    { name: "雪地之梦", artist: "赵凯", url: "https://music.163.com/song/media/outer/url?id=197850.mp3", cover: "", id: "197850" },
-    { name: "南方 南方", artist: "麦片消灭", url: "https://music.163.com/song/media/outer/url?id=1844442541.mp3", cover: "", id: "1844442541" },
     { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "http://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
     { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "http://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
     { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "http://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
