@@ -1763,7 +1763,7 @@ var HARDCODED_LYRICS = {
       '<div id="gmp-header">' +
         '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
-          '<div id="gmp-title">我的歌单</div>' +
+          '<div id="gmp-title">旧城的歌单</div>' +
           '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
         '<button id="gmp-list-btn" title="歌单">' +
