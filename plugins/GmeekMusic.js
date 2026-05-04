@@ -29,7 +29,7 @@
     { name: "未完结的爱", artist: "Zkaaai", url: "https://music.163.com/song/media/outer/url?id=2695903727.mp3", cover: "http://p3.music.126.net/cDZnXGWvnGMZ00ub-USj0Q==/109951170731363312.jpg", id: "2695903727" },
     { name: "带我走", artist: "杨丞琳", url: "https://music.163.com/song/media/outer/url?id=5243408.mp3", cover: "http://p4.music.126.net/fGzZNQ6q5kfTqmIuSmr4UQ==/91259465122682.jpg", id: "5243408" },
     { name: "今生戴花 世世漂亮", artist: "浅影阿", url: "https://music.163.com/song/media/outer/url?id=2144073361.mp3", cover: "http://p3.music.126.net/eTK0Mq_t-UGp19YtklTfmg==/109951171898301750.jpg", id: "2144073361" },
-    { name: "黄昏", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=5255640.mp3", cover: "https://bkimg.cdn.bcebos.com/smart/63d9f2d3572c11dfa9ec718e777b75d0f703918f6453-bkimg-process,v_1,rw_1857,rh_1846,maxl_507?x-bce-process=image/format,f_auto", id: "5255640" },
+    { name: "黄昏", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=5255640.mp3", cover: "https://p1.music.126.net/mFM2Ii6Kxktb_87b4q3TYQ==/109951167366664357.jpg", id: "5255640" },
     { name: "青花", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=2659346317.mp3", cover: "https://p1.music.126.net/prDyYpF9EsrLA4O13Tf5hw==/109951169874952327.jpg", id: "2659346317" },
     { name: "关不上的窗", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=530451320.mp3", cover: "https://p1.music.126.net/54xL9lTM0vG67qOShp7D3A==/109951169522460284.jpg", id: "530451320" },
     { name: "荒漠上行走", artist: "亚森", url: "https://music.163.com/song/media/outer/url?id=2041212293.mp3", cover: "http://p3.music.126.net/oGRDfE2efqQPGCVFM9J__w==/109951168599981287.jpg", id: "2041212293" },
