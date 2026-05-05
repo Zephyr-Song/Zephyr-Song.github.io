@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
   // Inject CSS
   var css = `
     ::-webkit-scrollbar{width:6px;height:6px}
