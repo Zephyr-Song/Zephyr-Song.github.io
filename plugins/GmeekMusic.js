@@ -12,10 +12,6 @@
     { name: "西界", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=26305536.mp3", cover: "https://p3.music.126.net/Pz4sEpA7nsiyIdIrswTx9A==/109951167894836691.jpg", id: "26305536" },
     { name: "认真的雪", artist: "薛之谦", url: "https://music.163.com/song/media/outer/url?id=5254815.mp3", cover: "https://p3.music.126.net/ukJi8SPQR0StMTHS31titg==/109951163449486613.jpg", id: "5254815" },
     { name: "年少有为", artist: "李荣浩", url: "https://music.163.com/song/media/outer/url?id=1468114204.mp3", cover: "https://p3.music.126.net/o0VyGUABowZl5BGWf8nBYg==/109951172341406695.jpg", id: "1468114204" },
-    { name: "可惜没如果(Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=399354373.mp3", cover: "https://p4.music.126.net/sF67FVEvm-TpP_-TA9I5vA==/3298534890576644.jpg", id: "399354373" },
-    { name: "不为谁而作的歌(Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=399353368.mp3", cover: "https://p4.music.126.net/sF67FVEvm-TpP_-TA9I5vA==/3298534890576644.jpg", id: "399353368" },
-    { name: "背对背拥抱 (Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=108298.mp3", cover: "https://p4.music.126.net/W5s8tYUTVjioG83ZAKWU8g==/109951171387078747.jpg", id: "108298" },
-    { name: "黑夜问白天 (Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=2751381348.mp3", cover: "https://p3.music.126.net/lEpbaWjrZnJcLn1bLiZJ9A==/109951172085778809.jpg", id: "2751381348" },
 
     { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "https://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
     { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "https://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
