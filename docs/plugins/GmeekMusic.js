@@ -13,7 +13,7 @@
     { name: "认真的雪", artist: "薛之谦", url: "https://music.163.com/song/media/outer/url?id=5254815.mp3", cover: "https://p3.music.126.net/ukJi8SPQR0StMTHS31titg==/109951163449486613.jpg", id: "5254815" },
     { name: "年少有为", artist: "李荣浩", url: "https://music.163.com/song/media/outer/url?id=1468114204.mp3", cover: "https://p3.music.126.net/o0VyGUABowZl5BGWf8nBYg==/109951172341406695.jpg", id: "1468114204" },
     { name: "屋顶", artist: "周杰伦", url: "https://music.163.com/song/media/outer/url?id=5257138.mp3", cover: "https://p4.music.126.net/81BsxxhomJ4aJZYvEbyPkw==/109951165671182684.jpg", id: "5257138" },
-    { name: "她的睫毛", artist: "周杰伦", url: "https://music.163.com/song/media/outer/url?id=186021.mp3", cover: "https://p2.music.126.net/ZGfiDQZrGj5s_hnR1CNbg==/109951165566379710.jpg", id: "186021" },
+    { name: "她的睫毛", artist: "周杰伦", url: "https://music.163.com/song/media/outer/url?id=186021.mp3", cover: "https://p2.music.126.net/ZGffiDQZrGj5s_hnR1CNbg==/109951165566379710.jpg", id: "186021" },
 
     { name: "不为谁而作的歌(Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=399353368.mp3", cover: "https://p4.music.126.net/sF67FVEvm-TpP_-TA9I5vA==/3298534890576644.jpg", id: "399353368" },
     { name: "背对背拥抱 (Live)", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=108298.mp3", cover: "https://p4.music.126.net/W5s8tYUTVjioG83ZAKWU8g==/109951171387078747.jpg", id: "108298" },
