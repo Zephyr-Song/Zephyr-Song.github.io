@@ -46,7 +46,8 @@
     { name: "挪威的森林", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5255631.mp3", cover: "https://p1.music.126.net/QoYAmdyE7FL_vc9rwNeS9w==/64871186055842.jpg", id: "5255631" },
     { name: "像我这样的人", artist: "毛不易", url: "https://music.163.com/song/media/outer/url?id=569213220.mp3", cover: "https://p1.music.126.net/vmCcDvD1H04e9gm97xsCqg==/109951163350929740.jpg", id: "569213220" },
     { name: "陪你度过漫长岁月", artist: "陈奕迅", url: "https://music.163.com/song/media/outer/url?id=35403523.mp3", cover: "https://p1.music.126.net/Nm5rwMYaH_20Zh61XhGn8Q==/109951166600775221.jpg", id: "35403523" },
-    { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" }
+    { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" },
+    { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" }
   ];
 
 var HARDCODED_LYRICS = {
