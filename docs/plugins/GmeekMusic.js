@@ -50,7 +50,7 @@
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
-    { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=156736.mp3", cover: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", id: "156736" }
+    { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5265278.mp3", cover: "https://p1.music.126.net/5f0GMV2lMV7lgPXvBU8QJQ==/125344325584416.jpg", id: "5265278" }
   ];
 
 var HARDCODED_LYRICS = {
@@ -2486,7 +2486,7 @@ var HARDCODED_LYRICS = {
 [03:29.00]梦中我痴痴牵挂
 [03:30.00]
 `,
-    '156736': `[00:00.00] 作词 : 伍佰
+    '5265278': `[00:00.00] 作词 : 伍佰
 [00:01.00] 作曲 : 伍佰
 [00:02.00] 编曲 : 伍佰 & China Blue
 [00:03.00] 制作人 : 伍佰
