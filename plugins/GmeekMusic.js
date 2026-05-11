@@ -49,7 +49,8 @@
     { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
-    { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" }
+    { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
+    { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=156736.mp3", cover: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", id: "156736" }
   ];
 
 var HARDCODED_LYRICS = {
@@ -2485,6 +2486,33 @@ var HARDCODED_LYRICS = {
 [03:29.00]梦中我痴痴牵挂
 [03:30.00]
 `,
+    '156736': `[00:00.00] 作词 : 伍佰
+[00:01.00] 作曲 : 伍佰
+[00:02.00] 编曲 : 伍佰 & China Blue
+[00:03.00] 制作人 : 伍佰
+[00:14.64] 无心过问你的心里我的吻
+[00:21.45] 厌倦 我的亏欠 代替你所爱的人
+[00:28.80] 这个时候 我心落花一样飘落下来
+[00:35.25] 顿时 我的视线 失去了色彩
+[00:43.88] 知道你也一样不善于表白
+[00:50.68] 想象 你的相爱 编织的谎言懈怠
+[00:57.98] 甜美镜头 竟也落花一样飘落下来
+[01:04.37] 从此 我的生命 变成了尘埃
+[01:11.72] 寂寞的人 总是习惯寂寞的安稳
+[01:18.14] 至少 我们直线 曾经交叉过
+[01:25.30] 就像站在烈日骄阳大桥上
+[01:31.94] 眼泪狂奔滴落在我的脸庞
+[02:16.64] 知道你也一样不善于表白
+[02:23.42] 想象 你的相爱 编织的谎言懈怠
+[02:30.75] 甜美镜头 竟也落花一样飘落下来
+[02:37.15] 从此 我的生命 变成了尘埃
+[02:44.49] 寂寞的人 总是习惯寂寞的安稳
+[02:50.92] 至少 我们直线 曾经交叉过
+[03:03.50] 就像站在烈日骄阳大桥上
+[03:09.83] 眼泪狂奔滴落在我的脸庞
+[03:16.65] La...
+[03:23.37] La...
+`
   };
 
 // ---- CSS ----
