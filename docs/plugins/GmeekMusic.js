@@ -52,8 +52,8 @@
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
     { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5265278.mp3", cover: "https://p1.music.126.net/5f0GMV2lMV7lgPXvBU8QJQ==/125344325584416.jpg", id: "5265278" },
     { name: "这一生关于你的风景", artist: "隔壁老樊", url: "https://music.163.com/song/media/outer/url?id=1383927243.mp3", cover: "https://p2.music.126.net/72pkxsrTN_zUscdzMk5mMA==/109951164289743850.jpg", id: "1383927243" },
-        { name: "致你·2025", artist: "yihuik苡慧", url: "https://music.163.com/song/media/outer/url?id=2701139665.mp3", cover: "https://p2.music.126.net/Er-ZI4N3WM0KluxjFLkgmw==/109951170940507603.jpg", id: "2701139665" }
-    { name: "把回忆拼好给你", artist: "王贰浪", url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3", cover: "https://p2.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg", id: "1403318151" }
+    { name: "致你·2025", artist: "yihuik苡慧", url: "https://music.163.com/song/media/outer/url?id=2701139665.mp3", cover: "https://p2.music.126.net/Er-ZI4N3WM0KluxjFLkgmw==/109951170940507603.jpg", id: "2701139665" },
+    { name: "把回忆拼好给你", artist: "王贰浪", url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3", cover: "https://p2.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg", id: "1403318151" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -2639,7 +2639,7 @@ var HARDCODED_LYRICS = {
 [03:57.360]猜你启封的表情
 [04:00.180]只敢写下开篇的
 [04:02.940]致你
-`
+`,
     '1403318151': `[00:00.000] 作词 : 童子-T/Shingo.S
 [00:04.000] 作曲 : 童子-T
 [00:07.000] 编曲 : 闫津
