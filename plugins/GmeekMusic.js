@@ -1,7 +1,7 @@
 /**
- * Gmeek Music Player v9 - 35首歌单 + 每首封面图
+ * Gmeek Music Player v10 - 华语私人雷达歌单
  * 纯 HTML5 Audio, 无 eval/new Function, 兼容 GitHub Pages CSP
- * 歌单: 网易云 2829816518 (私人雷达)
+ * 歌单: 网易云 2829883282 (华语私人雷达)
  */
 (function () {
   'use strict';
@@ -9,826 +9,2556 @@
   function initPlayer() {
 
   var HARDCODED_SONGS = [
-    { name: 'her (feat. Annika Wells)', artist: 'JVKE/Annika Wells', url: 'https://music.163.com/song/media/outer/url?id=3317235944.mp3', cover: 'https://p2.music.126.net/KJIXaBfUQv7nmnnJCSPiqA==/109951172273049443.jpg', id: '3317235944' },
-    { name: 'this is what forever feels like', artist: 'JVKE/Nick Jonas', url: 'https://music.163.com/song/media/outer/url?id=2626680545.mp3', cover: 'https://p2.music.126.net/eJA1NzXbOWokvs6yi2ttJg==/109951169956527578.jpg', id: '2626680545' },
-    { name: 'Rush', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1990208030.mp3', cover: 'https://p2.music.126.net/y6RIRDMrpKwekRF4CkfUGw==/109951167975291823.jpg', id: '1990208030' },
-    { name: "Won't Look Back", artist: 'Geowulf', url: 'https://music.163.com/song/media/outer/url?id=482386197.mp3', cover: 'https://p2.music.126.net/11ZxgSWVXuJLJOg3SlAAXg==/109951163409413347.jpg', id: '482386197' },
-    { name: 'Bloody Samaritan', artist: 'Ayra Starr', url: 'https://music.163.com/song/media/outer/url?id=1862884117.mp3', cover: 'https://p2.music.126.net/OrWPWJNAXCUNa79X0xD_Wg==/109951168618792235.jpg', id: '1862884117' },
-    { name: 'Other Side', artist: 'PLAZA', url: 'https://music.163.com/song/media/outer/url?id=2093480642.mp3', cover: 'https://p2.music.126.net/oUU_Tw9FTjZSMZ7HHu6_VQ==/109951169004973551.jpg', id: '2093480642' },
-    { name: 'Medieval', artist: 'FINNEAS', url: 'https://music.163.com/song/media/outer/url?id=1887215867.mp3', cover: 'https://p2.music.126.net/RFxgjunlII7caFc5XFCetQ==/109951167923009398.jpg', id: '1887215867' },
-    { name: 'Empire State Of Mind (Feat. Alicia Keys)', artist: 'JAY-Z', url: 'https://music.163.com/song/media/outer/url?id=5103610.mp3', cover: 'https://p2.music.126.net/iV2Fe8OfVFsDoxt82FXAUg==/2532175279105513.jpg', id: '5103610' },
-    { name: 'Billboard', artist: 'Jonas Blue/陈梓童', url: 'https://music.163.com/song/media/outer/url?id=1409157146.mp3', cover: 'https://p2.music.126.net/PaWg8EMJitPZzG9Dl54ljA==/109951164544621349.jpg', id: '1409157146' },
-    { name: 'Freak Me', artist: 'Silk', url: 'https://music.163.com/song/media/outer/url?id=406072619.mp3', cover: 'https://p2.music.126.net/DIit3NPDp9nkF-U2-KKaGg==/3276544661546205.jpg', id: '406072619' },
-    { name: 'What to Do', artist: 'Buddha Bar', url: 'https://music.163.com/song/media/outer/url?id=28798879.mp3', cover: 'https://p2.music.126.net/c10aknadyrJsk2PgKxXIwg==/5895581348442627.jpg', id: '28798879' },
-    { name: 'Real Fake (Remix)', artist: 'Migos', url: 'https://music.163.com/song/media/outer/url?id=3332143952.mp3', cover: 'https://p2.music.126.net/yuJYD00QUbWRxvYwN0eTNg==/109951172483717933.jpg', id: '3332143952' },
-    { name: 'Swept Away', artist: 'Buddha Bar/Anna Naklab', url: 'https://music.163.com/song/media/outer/url?id=28798881.mp3', cover: 'https://p2.music.126.net/c10aknadyrJsk2PgKxXIwg==/5895581348442627.jpg', id: '28798881' },
-    { name: 'control', artist: 'Shura', url: 'https://music.163.com/song/media/outer/url?id=1344609215.mp3', cover: 'https://p2.music.126.net/PrOe_0e8G4QJpUwkZU4beg==/109951164109253820.jpg', id: '1344609215' },
-    { name: 'Breath Away', artist: 'Duffy', url: 'https://music.163.com/song/media/outer/url?id=17368871.mp3', cover: 'https://p2.music.126.net/s4uKXpw8lcIDyFHxAsHLYg==/109951169237259283.jpg', id: '17368871' },
-    { name: "AKA... What a Life!", artist: "Noel Gallagher's High Flying Birds", url: 'https://music.163.com/song/media/outer/url?id=27971879.mp3', cover: 'https://p2.music.126.net/1vc2AYyYBjQ8BY78joBDMw==/6665239488611808.jpg', id: '27971879' },
-    { name: '云中加冕The Crown In The Clouds', artist: '江上青山JasonYama', url: 'https://music.163.com/song/media/outer/url?id=2084376965.mp3', cover: 'https://p2.music.126.net/Y2dAMDGKRFC4JGzDolJaGQ==/109951168933322029.jpg', id: '2084376965' },
-    { name: 'What Does It Mean to You', artist: 'Carpetman', url: 'https://music.163.com/song/media/outer/url?id=2643514137.mp3', cover: 'https://p2.music.126.net/IzACfhjYrFJC3IRz-7Cf0A==/109951170121359445.jpg', id: '2643514137' },
-    { name: 'Little Bit Better', artist: 'Caleb Hearn/ROSIE', url: 'https://music.163.com/song/media/outer/url?id=2122825009.mp3', cover: 'https://p2.music.126.net/-FbZQ3-XGtOR_gZTDlKE0w==/109951169315119570.jpg', id: '2122825009' },
-    { name: 'I Still Want Your Love (feat. Jinnie)', artist: 'Sam Ock/Jinnie', url: 'https://music.163.com/song/media/outer/url?id=1979192239.mp3', cover: 'https://p2.music.126.net/iWgsGVhmR9Xtoo64DnZiCA==/109951167852411976.jpg', id: '1979192239' },
-    { name: 'Every Summertime', artist: 'NIKI', url: 'https://music.163.com/song/media/outer/url?id=2149062755.mp3', cover: 'https://p2.music.126.net/pnxyZHscvnvycqaDcTz9SA==/109951169527798285.jpg', id: '2149062755' },
-    { name: 'airplane mode', artist: 'limbo', url: 'https://music.163.com/song/media/outer/url?id=1322132356.mp3', cover: 'https://p2.music.126.net/YcpeNdOncvCvcSrSbTL1lg==/109951163640131408.jpg', id: '1322132356' },
-    { name: 'Say Goodbye', artist: 'LODONI', url: 'https://music.163.com/song/media/outer/url?id=2059084604.mp3', cover: 'https://p2.music.126.net/iMlioJMh4guMubsXfFkEPg==/109951168701784147.jpg', id: '2059084604' },
-    { name: 'Home (feat. Hikaru Utada)', artist: 'Charlie Puth/宇多田ヒカル', url: 'https://music.163.com/song/media/outer/url?id=3356494231.mp3', cover: 'https://p2.music.126.net/c2G0FTms0rBDSOhwgVR_DA==/109951172848276304.jpg', id: '3356494231' },
-    { name: 'Nope your too late i already died', artist: 'wifiskeleton', url: 'https://music.163.com/song/media/outer/url?id=2638616976.mp3', cover: 'https://p2.music.126.net/AGu0IzFGYtOl4FyClLr8zQ==/109951170064566307.jpg', id: '2638616976' },
-    { name: 'The Other Side Of Paradise', artist: 'Glass Animals', url: 'https://music.163.com/song/media/outer/url?id=2668934341.mp3', cover: 'https://p2.music.126.net/d4p6xGUMSD5nHkCOoQWR1Q==/109951170419210505.jpg', id: '2668934341' },
-    { name: 'Paris in the Rain', artist: 'Lauv', url: 'https://music.163.com/song/media/outer/url?id=518904648.mp3', cover: 'https://p2.music.126.net/4Xf4fRbDc2N30rShLT_irQ==/18251893021647481.jpg', id: '518904648' },
-    { name: '2 soon', artist: 'keshi', url: 'https://music.163.com/song/media/outer/url?id=1303019276.mp3', cover: 'https://p2.music.126.net/xB31iMXB9XwzStrPQzcrdw==/109951168789057630.jpg', id: '1303019276' },
-    { name: 'Nothing On You', artist: 'B.o.B/Bruno Mars', url: 'https://music.163.com/song/media/outer/url?id=5100769.mp3', cover: 'https://p2.music.126.net/LpNeJdD3VtiThH5uIi62Hg==/1698745464926789.jpg', id: '5100769' },
-    { name: 'phone kisses +', artist: 'suhmeduh', url: 'https://music.163.com/song/media/outer/url?id=3343637146.mp3', cover: 'https://p2.music.126.net/ZhY2QhNO3zY-9ID7Tfsfig==/109951172651476790.jpg', id: '3343637146' },
-    { name: 'Off The Hook', artist: 'Jeff Jarvis', url: 'https://music.163.com/song/media/outer/url?id=2673161004.mp3', cover: 'https://p2.music.126.net/4gbH3_RAl-QoImhVHanrVQ==/109951171332135140.jpg', id: '2673161004' },
-    { name: 'I Love You 3000', artist: 'Stephanie Poetri', url: 'https://music.163.com/song/media/outer/url?id=1374446646.mp3', cover: 'https://p2.music.126.net/9RNRp5dkqfgUu8CLEfEwlQ==/109951170496839853.jpg', id: '1374446646' },
-    { name: 'Duvet', artist: 'B\u00f4a', url: 'https://music.163.com/song/media/outer/url?id=2025068890.mp3', cover: 'https://p2.music.126.net/U2yOmD0b2obHE0FBpBWEbQ==/109951168400421481.jpg', id: '2025068890' },
-    { name: 'intentions', artist: 'Starfall', url: 'https://music.163.com/song/media/outer/url?id=2149780504.mp3', cover: 'https://p2.music.126.net/u8aU_s-CUvytJlgrkFwRLA==/109951169533927512.jpg', id: '2149780504' },
-    { name: 'Dark', artist: 'mixed matches', url: 'https://music.163.com/song/media/outer/url?id=1407789513.mp3', cover: 'https://p2.music.126.net/41cYmse7QDlb-G9_0aN4hA==/109951168881039362.jpg', id: '1407789513' },
-    { name: '把回忆拼好给你', artist: '王贰浪', url: 'https://music.163.com/song/media/outer/url?id=1403318151.mp3', cover: 'https://p2.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg', id: '1403318151' }
+    { name: "西界", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=26305536.mp3", cover: "https://p3.music.126.net/Pz4sEpA7nsiyIdIrswTx9A==/109951167894836691.jpg", id: "26305536" },
+    { name: "认真的雪", artist: "薛之谦", url: "https://music.163.com/song/media/outer/url?id=5254815.mp3", cover: "https://p3.music.126.net/ukJi8SPQR0StMTHS31titg==/109951163449486613.jpg", id: "5254815" },
+    { name: "年少有为", artist: "李荣浩", url: "https://music.163.com/song/media/outer/url?id=1468114204.mp3", cover: "https://p3.music.126.net/o0VyGUABowZl5BGWf8nBYg==/109951172341406695.jpg", id: "1468114204" },
+
+    { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "https://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
+    { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "https://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
+    { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "https://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
+    { name: "浪漫鬼", artist: "DANNY K/周夏影/FEEEleven/鼠尾草/EINK", url: "https://music.163.com/song/media/outer/url?id=2111060878.mp3", cover: "https://p3.music.126.net/B4BYcZRspbnXGbEEGqsgvw==/109951169200961924.jpg", id: "2111060878" },
+    { name: "红", artist: "罗言", url: "https://music.163.com/song/media/outer/url?id=1918576268.mp3", cover: "https://p2.music.126.net/G-inyKjA-jO5MuOuV3g7Pg==/109951167027986653.jpg", id: "1918576268" },
+    { name: "雪 Distance", artist: "Capper/罗言", url: "https://music.163.com/song/media/outer/url?id=2026224214.mp3", cover: "https://p2.music.126.net/cGTKkFl5qcXIDYPo7PrmDA==/109951168431655039.jpg", id: "2026224214" },
+    { name: "若把你", artist: "Kirsty刘瑾睿", url: "https://music.163.com/song/media/outer/url?id=865632948.mp3", cover: "https://p4.music.126.net/M877M2-VhWZiLPVFORf9iQ==/109951163401482434.jpg", id: "865632948" },
+    { name: "杀死那个石家庄人", artist: "万能青年旅店", url: "https://music.163.com/song/media/outer/url?id=386844.mp3", cover: "https://p1.music.126.net/W1kczDCB4-r-uNAznD1ljg==/108851651165850.jpg", id: "386844" },
+
+    { name: "总有一天你会出现在我身边", artist: "棱镜乐队", url: "https://music.163.com/song/media/outer/url?id=1303027499.mp3", cover: "https://p4.music.126.net/RfUHXkanpxImcaGqFNWBeA==/109951163598901405.jpg", id: "1303027499" },
+
+    { name: "吻你吻上太空", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2707033683.mp3", cover: "https://p4.music.126.net/p4U0-Y5rtkKfDmQegHXpVQ==/109951172068954764.jpg", id: "2707033683" },
+    { name: "阳光下的星星", artist: "金海心", url: "https://music.163.com/song/media/outer/url?id=1353159923.mp3", cover: "https://p4.music.126.net/Y1wKsh4KET4u8UD2A2CE5w==/109951163940418508.jpg", id: "1353159923" },
+    { name: "走马", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=2749430417.mp3", cover: "https://p1.music.126.net/jeWHIkiTkBglJKxte7p6JA==/109951172059186762.jpg", id: "2749430417" },
+    { name: "吹灭小山河", artist: "国风堂/司南", url: "https://music.163.com/song/media/outer/url?id=1412559986.mp3", cover: "https://p4.music.126.net/taWBQliW8wLh_pqXElAeww==/109951164923015271.jpg", id: "1412559986" },
+    { name: "五百二十赫兹", artist: "Capper", url: "https://music.163.com/song/media/outer/url?id=1948572170.mp3", cover: "https://p4.music.126.net/peHjsnZRas_ETuici04LwQ==/109951167437121908.jpg", id: "1948572170" },
+    { name: "未完结的爱", artist: "Zkaaai", url: "https://music.163.com/song/media/outer/url?id=2695903727.mp3", cover: "https://p3.music.126.net/cDZnXGWvnGMZ00ub-USj0Q==/109951170731363312.jpg", id: "2695903727" },
+    { name: "带我走", artist: "杨丞琳", url: "https://music.163.com/song/media/outer/url?id=5243408.mp3", cover: "https://p4.music.126.net/fGzZNQ6q5kfTqmIuSmr4UQ==/91259465122682.jpg", id: "5243408" },
+    { name: "今生戴花 世世漂亮", artist: "浅影阿", url: "https://music.163.com/song/media/outer/url?id=2144073361.mp3", cover: "https://p3.music.126.net/eTK0Mq_t-UGp19YtklTfmg==/109951171898301750.jpg", id: "2144073361" },
+    { name: "黄昏", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=5255640.mp3", cover: "https://p1.music.126.net/mFM2Ii6Kxktb_87b4q3TYQ==/109951167366664357.jpg", id: "5255640" },
+    { name: "青花", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=2659346317.mp3", cover: "https://p1.music.126.net/prDyYpF9EsrLA4O13Tf5hw==/109951169874952327.jpg", id: "2659346317" },
+    { name: "关不上的窗", artist: "周传雄", url: "https://music.163.com/song/media/outer/url?id=530451320.mp3", cover: "https://p1.music.126.net/54xL9lTM0vG67qOShp7D3A==/109951169522460284.jpg", id: "530451320" },
+    { name: "荒漠上行走", artist: "亚森", url: "https://music.163.com/song/media/outer/url?id=2041212293.mp3", cover: "https://p3.music.126.net/oGRDfE2efqQPGCVFM9J__w==/109951168599981287.jpg", id: "2041212293" },
+    { name: "浪漫爱", artist: "刘瑞琦", url: "https://music.163.com/song/media/outer/url?id=1475737616.mp3", cover: "https://p4.music.126.net/aVNSavZbTMw6OLzBn6lRlQ==/109951165284913239.jpg", id: "1475737616" },
+    { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "https://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" },
+    { name: "安和桥", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646205.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646205" },
+    { name: "董小姐", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646198.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646198" },
+    { name: "郭源潮", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=477251491.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "477251491" },
+    { name: "阿拉斯加海湾", artist: "蓝心羽", url: "https://music.163.com/song/media/outer/url?id=1500569811.mp3", cover: "https://p1.music.126.net/j9P19hOTNbYxLZDJB9bJag==/109951169385715334.jpg", id: "1500569811" },
+    { name: "千纸鹤", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=1366055392.mp3", cover: "https://p2.music.126.net/EO_mrK1Hft9DpC5fr9ROIw==/109951169897875877.jpg", id: "1366055392" },
+    { name: "挪威的森林", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5255631.mp3", cover: "https://p1.music.126.net/QoYAmdyE7FL_vc9rwNeS9w==/64871186055842.jpg", id: "5255631" },
+    { name: "像我这样的人", artist: "毛不易", url: "https://music.163.com/song/media/outer/url?id=569213220.mp3", cover: "https://p1.music.126.net/vmCcDvD1H04e9gm97xsCqg==/109951163350929740.jpg", id: "569213220" },
+    { name: "陪你度过漫长岁月", artist: "陈奕迅", url: "https://music.163.com/song/media/outer/url?id=35403523.mp3", cover: "https://p1.music.126.net/Nm5rwMYaH_20Zh61XhGn8Q==/109951166600775221.jpg", id: "35403523" },
+    { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" },
+    { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
+    { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
+    { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
+    { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5265278.mp3", cover: "https://p1.music.126.net/5f0GMV2lMV7lgPXvBU8QJQ==/125344325584416.jpg", id: "5265278" },
+    { name: "这一生关于你的风景", artist: "隔壁老樊", url: "https://music.163.com/song/media/outer/url?id=1383927243.mp3", cover: "https://p2.music.126.net/72pkxsrTN_zUscdzMk5mMA==/109951164289743850.jpg", id: "1383927243" },
+    { name: "把回忆拼好给你", artist: "王贰浪", url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3", cover: "https://p2.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg", id: "1403318151" }
   ];
 
-  var HARDCODED_LYRICS = {
-    '5100769': `[00:00.000] 作词 : B.o.B/Bruno Mars/Philip Lawrence/Avri Levine
-[00:01.000] 作曲 : Philip Lawrence/B.o.B/Bruno Mars/Ari Levine
-[00:05.440]Beautiful girls all over the world
-[00:09.990]I could be chasing but my time would be wasted
-[00:14.000]They got nothing on you baby
-[00:19.170]Nothing on you baby
-[00:23.950]They might say hi and I might say hey
-[00:28.240]But you shouldn't worry about what they say
-[00:32.410]Cause they got nothing on you baby
-[00:37.560]Nothing on you baby
-[00:39.380]Not not not nothing on you babe
-[00:41.630]Not not nothing on you
-[00:43.340]I know you feel where I'm coming from
-[00:45.130]Regardless of the things in my past that I've done
-[00:47.540]Most of it really was for the hell of the fun
-[00:49.830]On the carousel so around I spun (spun)
-[00:52.060]With no directions just tryna get some (some)
-[00:54.430]Tryna chase skirts, living in the summer sun (sun)
-[00:56.730]And so I lost more than I had ever won
-[00:58.930]And honestly I ended up with none
-[01:01.730]There's no much nonsense
-[01:02.730]It's on my conscience
-[01:03.880]I'm thinking baby I should get it out
-[01:05.720]And I don't wanna sound redundant
-[01:07.370]But I was wondering if there was something that you wanna know
-[01:09.880](that you wanna know)
-[01:10.750]But never mind that we should let it go (we should let it go)
-[01:12.990]Cause we don't wanna be a t.v episode (t.v episode)
-[01:15.080]And all the bad thoughts just let them go (go, go, go)
-[01:19.370]Beautiful girls all over the world
-[01:23.740]I could be chasing but my time would be wasted
-[01:27.780]They got nothing on you baby
-[01:32.820]Nothing on you baby
-[01:37.590]They might say hi and I might say hey
-[01:42.230]But you shouldn't worry about what they say
-[01:46.140]Cause they got nothing on you baby
-[01:51.560]Nothing on you baby
-[01:53.020]Not not not nothing on you babe
-[01:55.360]Not not nothing on you
-[01:57.230]Hands down there will never be another one
-[01:59.190]I been around and I never seen another one
-[02:01.540]Look at your style they ain't really got nothing on
-[02:03.970]And you out and you ain't got nothing on
-[02:06.340]Baby you the whole package plus you pay your taxes
-[02:08.810]And you keep it real while them other stay plastic
-[02:11.200]You're my wonder women call me mr. Fantastic
-[02:13.550]Stop.. Now think about it
-[02:15.450]I've been to london, I've been to paris
-[02:17.820]Even went out there to tokyo
-[02:19.510]Back home down in georgia to new orleans
-[02:22.580]But you always steal the show (steal the show)
-[02:24.430]And just like that girl you got me fro (got me fro)
-[02:26.790]Like a nintendo 64 (64)
-[02:28.820]If you never knew well now you know (know, know, know)
-[02:33.080]Beautiful girls all over the world
-[02:37.470]I could be chasing but my time would be wasted
-[02:41.580]They got nothing on you baby
-[02:46.830]Nothing on you baby
-[02:51.490]They might say hi and I might say hey
-[02:55.990]But you shouldn't worry about what they say
-[02:59.990]Cause they got nothing on you baby
-[03:05.440]Nothing on you baby
-[03:07.000]Not not not nothing on you babe
-[03:09.220]Not not nothing on you
-[03:12.380]Everywhere I go I'm always hearing your name (name, name)
-[03:16.640]And no matter where I'm at girl you make me wanna sing (sing)
-[03:21.270]Whether a bus or a plane or a car or a train
-[03:25.610]No other girls in my brain and you the one to blame
-[03:28.650]Beautiful girls all over the world
-[03:33.080]I could be chasing but my time would be wasted
-[03:37.040]They got nothing on you baby
-[03:42.310]Nothing on you baby
-[03:46.940]They might say hi and I might say hey
-[03:51.360]But you shouldn't worry about what they say
-[03:55.590]Cause they got nothing on you baby
-[04:00.840]Nothing on you baby
-[04:02.380]Not not not nothing on you babe
-[04:04.600]Not not nothing on you
-[04:07.800]Yeah and that's just how we do it
-[04:14.810]And I'ma let this ride
+var HARDCODED_LYRICS = {
+    '186021': `[00:00.00] 作词 : 方文山
+[00:01.00] 作曲 : 周杰伦
+[00:02.00] 编曲 : 周杰伦
+[00:19.51]亲爱的总有些事没办法教
+[00:23.07]表错情的感觉有一点糟
+[00:26.41]赖着不走会让人很感冒
+[00:29.39]以上这道理我全都了
+[00:32.53]我将不该犯的错都默背好
+[00:35.86]仔细观察她的喜好
+[00:39.26]而我紧绷的外表
+[00:40.75]像上紧后的发条
+[00:42.33]等她的答案揭晓
+[00:45.32]她的睫毛 弯的嘴角
+[00:48.49]无预警地对我笑
+[00:51.67]没有预兆出乎预料
+[00:54.83]竟然先对我示好
+[00:57.94]她的睫毛 弯的嘴角
+[01:01.16]用眼神对我拍照
+[01:04.31]我戒不掉她的微笑
+[01:07.42]洋溢着幸福的味道
+[01:35.84]她粉嫩清秀的外表
+[01:38.37]像是多汁的水蜜桃谁都想咬
+[01:42.20]她嘴上亮丽的唇膏
+[01:44.74]有一股自信的骄傲我看得到
+[01:48.52]她粉嫩清秀的外表
+[01:51.20]像是多汁的水蜜桃谁都想咬
+[01:54.86]她嘴上亮丽的唇膏
+[01:57.41]有一股自信的骄傲我看得到
+[02:51.58]她的睫毛 弯的嘴角
+[02:54.75]无预警地对我笑
+[02:57.88]没有预兆出乎预料
+[03:01.07]竟然先对我示好
+[03:04.21]她的睫毛 弯的嘴角
+[03:07.35]用眼神对我拍照
+[03:10.51]我戒不掉她的微笑
+[03:13.64]洋溢着幸福的味道
+[03:16.79]她的睫毛 弯的嘴角
+[03:18.49]无预警地对我笑
+[03:19.87]没有预兆出乎预料
+[03:21.31]竟然先对我示好
+[03:22.97]她的睫毛 弯的嘴角
+[03:24.75]用眼神对我拍照
+[03:26.16]我戒不掉她的微笑
+[03:27.75]洋溢着幸福的味道`,
+
+        '108298': `[00:00.00] 作词 : 林怡凤
+[00:00.74] 作曲 : 林俊杰
+[00:36.19]话总说不清楚
+[00:39.75]该怎么明了
+[00:43.62]一字一句像圈套
+[00:51.17]旧帐总翻不完
+[00:54.98]谁无理取闹
+[00:58.34]你的双手甩开
+[01:00.71]刚好的微妙
+[01:04.10]然后战火再燃烧
+[01:11.22]我们背对背拥抱
+[01:14.83]滥用沉默在咆哮
+[01:18.62]爱情来不及变老
+[01:21.65]葬送在烽火的玩笑
+[01:26.25]我们背对背拥抱
+[01:29.72]真话兜着圈子乱乱绕
+[01:34.08]只是想让我知道
+[01:37.80]只是想让你知道
+[01:41.41]爱的警告
+[01:45.71]
+[02:04.62]话总说不清楚
+[02:49.00]去我的心里走一走在多年以后
+[02:53.21]世间对错就好聚难收
+[02:57.78]我难过就听歌
+[02:59.39]醉着放烟火
+[03:01.24]没有人追究我
+[03:04.13]去我的心里走一走
+[03:07.14]在多年以后
+[03:09.22]虚构了一爱人一朋友
+[03:13.18]相投的定居了不合则散了
+[03:17.42]轰轰烈烈路过三三两两停停走走
 `,
-    '5103610': `[00:04.92]Yeah
-[00:10.63]Yeah  Imma  up  at  Brooklyn
-[00:13.41]Now  Im  down  in  Tribeca
-[00:14.21]Right  next  to  DeNiro
-[00:14.77]But  I'll  be  hood  forever
-[00:16.08]I'm  the  new  Sinatra
-[00:16.84]And  since  i  made  it  here
-[00:18.99]I  can  make  it  anywhere
-[00:19.86]Yeah  they  love  me  everywhere
-[00:20.99]I  used  to  cop  in  Harlem
-[00:22.93]All  of  my  dominicanos
-[00:23.73]Right  there  up  on  broadway
-[00:25.01]Brought  me  back  to  that  McDonalds
-[00:27.25]Took  it  to  my  stash  spot
-[00:28.40]Five  Sixty  Stage  street
-[00:29.07]Catch  me  in  the  kitchen  like  a  simmons  whipping  pastry
-[00:31.23]Cruising  down 8th  street
-[00:32.58]Off  white  lexus
-[00:33.32]Driving  so  slow  but  BK  is  from  Texas
-[00:35.92]Me  I'm  up  at  Bedsty
-[00:40.69]Home  of  that  boy  Biggie
-[00:41.66]Now  i  live  on  billboard
-[00:42.51]And  i  brought  my  boys  with  me
-[00:43.69]Say  wat  up  to  Ty  Ty  still  sipping  Malta
-[00:45.30]Sitting  courtside  Knicks  and  Nets  give  me  high  fives
-[00:46.75]N-gga  i  be  spiked  out  i  can  trip  a  referee
-[00:48.54]Tell  by  my  attitude  that  I  most  definitely  from …
-[00:55.19]（Alicia  Keys）
-[00:55.69]In New  York
-[00:56.12]concrete jungle  where  dreams  are  made  of
-[01:01.57]There's  nothing  you  can't  do
-[01:05.20]Now  you're  in  New  York
-[01:09.46]These  streets  will  make  you  feel  brand  new
-[01:12.98]The  lights  will  inspire  you
-[01:16.00]Let's  here  it  for  New  York  New  York  New  York
-[01:22.85]（Jay-Z）
-[01:23.05]I  made  you  hot  n-gga
-[01:24.55]Catch  me  at  the  X  with  OG  at  a  Yankee  game
-[01:26.79]Sh-t  i  made  the  yankee  hat  more  famous  than  a  yankee  can
-[01:31.72]You  should  know  I  bleed  Blue  but  I  aint  a  crip  tho
-[01:36.66]But  i  got  a  gang  of  n-ggas  walking  with  my  click  though
-[01:39.16]Welcome  to  the  melting  pot
-[01:40.15]Corners  where  we  selling  rocks
-[01:41.58]Afrika  bambaataa  sh-t
-[01:42.27]Home  of  the  hip  hop
-[01:43.21]Yellow  cap  gypsy  cap  dollar  cap  holla  back
-[01:44.74]For  foreigners  it  aint  fitted  they  forgot  how  to  act
-[01:47.03]8million  stories  out  there  and  their  naked
-[01:48.95]Cities  is  a  pity  half  of  y'all  won't  make  it
-[01:53.25]Me  i  gotta  plug  a  special  and  i  got  it  made
-[01:55.32]If  Jesus  payin  LeBron  I'm  paying  Dwayne  Wade
-[01:56.67]3dice  cee-lo
-[01:57.20]3card  marley
-[01:57.70]Labor  day  parade  rest  in  peace  Bob  Marley
-[01:59.75]Statue  of  Liberty  long  live  the  World  trade
-[02:01.73]Long  live  the  king  yo
-[02:06.86]I'm  from  the  empire  state  thats …
-[02:09.14]（Alicia  Keys）
-[02:09.77]In New  York
-[02:10.27]concrete jungle where  dreams  are  made  of
-[02:12.66]There's  nothing  you  can't  do
-[02:16.89]Now  you're  in  New  York
-[02:21.45]These  streets  will  make  you  feel  brand  new
-[02:24.93]The  lights  will  inspire  you
-[02:27.97]Let's  here  it  for  New  York  New  York  New  York
-[02:34.94]（Jay-Z）
-[02:35.21]Lights  is  blinding
-[02:35.85]Girls  need  blinders
-[02:37.63]So  they  can  step  out  of  bounds  quick
-[02:39.77]The  side  lines  is  blind  with  casualties
-[02:41.05]casually  then  gradually  become  worse
-[02:43.52]Don't  bite  the  apple  Eve
-[02:45.04]Caught  up  in  the  in  crowd
-[02:46.37]Now  your  in-style
-[02:47.95]And  in  the  winter  gets  cold  en  vogue  with  your  skin  out
-[02:50.92]The  city  of  sin  is  a  pity  of  win
-[02:54.05]Good  girls  gone  bad  the  cities  filled  with  them
-[02:55.88]Mommy  took  a  bus  trip  and  now  she  got  her  bust  out
-[02:59.96]Everybody  ride  her  just  like  a  bus  route
-[03:02.00]Hail  Mary  to  the  city  your  a  Virgin
-[03:05.36]And  Jesus  can't  save  you  like  starts  when  the  church  ends
-[03:07.69]Came  here  for  school  graduated  to  the  high  life
-[03:10.03]Ball  players  rap  stars  addicted  to  the  limelight
-[03:12.36]Empty  in  May  got  you  feeling  like  a  champion
-[03:16.16]The  city  never  sleeps  better  slip  you  a  Ambien
-[03:18.73]（Alicia  Keys）
-[03:19.57]In New  York
-[03:20.05]concrete jungle  where  dreams  are  made  of
-[03:25.84]There's  nothing  you  can't  do
-[03:28.82]Now  you're  in  New  York
-[03:33.31]These  streets  will  make  you  feel  brand  new
-[03:36.89]The  lights  will  inspire  you
-[03:39.94]Let's  here  it  for  New  York  New  York  New  York
-[03:43.85]（Alicia  Keys）
-[03:47.73]One  hand  in  the  air  for  the  big  city
-[03:50.09]Street  lights  big  dreams  all  looking  pretty
-[03:52.78]No  place  in  the  World  that  can  compare
-[03:55.51]Put  your  lighters  in  the  air  everybody  say  yeaaahh
-[04:00.67]Come  on  come
-[04:03.14]In New  York
-[04:06.18]concrete jungle  where  dreams  are  made  of
-[04:10.04]There's  nothing  you  can't  do
-[04:13.18]Now  you're  in  New  York
-[04:17.40]These  streets  will  make  you  feel  brand  new
-[04:21.12]The  lights  will  inspire  you
-[04:24.30]Let's  here  it  for  New  York  New  York  New  York
+    '5257138': `[00:00.00] 作曲 : 周杰伦
+[00:01.00] 作词 : 周杰伦
+[00:02.00] 编曲 : 屠颖
+[00:23.97]半夜睡不着觉把心情哼成歌
+[00:29.23]只好到屋顶找另一个梦境
+[00:39.99]睡梦中被敲醒我还是不确定
+[00:45.53]怎会有动人旋律在对面的屋顶
+[00:51.00]我悄悄关上门带着希望上去
+[00:56.43]原来是我梦里常出现的那个人
+[01:00.60]那个人不就是我梦里
+[01:03.67]那模糊的人
+[01:05.97]我们有同样的默契
+[01:11.56]用天线
+[01:12.86]用天线排成爱你的形状hoho
+[01:21.20]在屋顶唱着你的歌
+[01:23.95]在屋顶和我爱的人
+[01:26.56]让星星点缀成最浪漫的夜晚
+[01:32.55]拥抱这时刻这一分一秒全都停止
+[01:40.74]爱开始纠结
+[01:42.88]在屋顶唱着你的歌
+[01:45.67]在屋顶和我爱的人
+[01:48.40]将泛黄的夜献给最孤独的月
+[01:54.44]拥抱这时刻这一分一秒全都停止
+[02:02.50]爱开始纠结
+[02:05.00]梦有你而美
+[02:42.79]半夜睡不着觉把心情哼成歌
+[02:48.41]只好到屋顶找另一个梦境
+[02:59.21]睡梦中被敲醒我还是不确定
+[03:04.73]怎会有动人旋律在对面的屋顶
+[03:10.21]我悄悄关上门带着希望上去
+[03:15.65]原来是我梦里常出现的那个人
+[03:19.79]那个人不就是我梦里
+[03:23.15]那模糊的人
+[03:25.90]我们有同样的默契
+[03:30.59]用天线
+[03:31.99]用天线排成爱你的形状hoho
+[03:40.50]在屋顶唱着你的歌
+[03:42.97]在屋顶和我爱的人
+[03:45.67]让星星点缀成最浪漫的夜晚
+[03:51.70]拥抱这时刻这一分一秒全都停止
+[03:59.90]爱开始纠结
+[04:01.88]在屋顶唱着你的歌
+[04:04.77]在屋顶和我爱的人
+[04:07.51]将泛黄的夜献给最孤独的月
+[04:13.56]拥抱这时刻这一分一秒全都停止
+[04:21.83]爱开始纠结
+[04:24.15]梦有你而美
+[04:37.50]让我爱你是谁（是我）
+[04:40.20]让你爱我是谁（ 是你）
+[04:42.43]怎会有动人旋律环绕在我俩的身边
+[04:48.37]让我爱你是谁（是我）
+[04:51.15]让你爱我是谁（是你）
+[04:53.91]原来是这屋顶有美丽的邂逅
+[05:03.79]在屋顶唱着你的歌
+[05:07.10]在屋顶和我爱的人
 `,
-    '17368871': `[00:19.02]Child's play
-[00:22.80]I was silly with your heart that day
-[00:27.37]I enjoyed tearing you apart
-[00:32.55]Now it's me who cries
-[00:36.99]Teenage games all I ever did was call you names
-[00:45.26]I got kicks from teasing you
-[00:50.28]Now it's me who cries
-[00:55.51]I have such regrets
-[01:00.45]It's you I can't forget
-[01:05.00]
-[01:06.15]Every time I see you go by
-[01:09.20]I break down and cry
-[01:11.63]You're taking my breath away
-[01:15.88]And every time I see you with her
-[01:19.17]Oh baby it hurts
-[01:21.74]You're taking my breath away
-[01:24.64]Breath away
-[01:29.16]
-[01:36.61]Now we've grown and I'm still here
-[01:41.74]On my own
-[01:44.76]I'll be tender with your foolish heart
-[01:49.70]Cause still it's me who cries
-[01:54.33]Now I'm old
-[01:57.54]Still I wish I had you to hold
-[02:02.64]I Don't suppose that you would come our way
-[02:07.61]Cause still it's me who cries
-[02:12.58]I have such regrets
-[02:18.04]It's you I can't forget
-[02:21.77]
-[02:22.43]Every time I see you go by
-[02:26.09]I break down and cry
-[02:28.74]You're taking my breath away
-[02:32.91]And every time I see you with her
-[02:36.29]Oh baby it hurts
-[02:38.97]You're taking my breath away
-[02:41.75]Breath away
-[02:46.22]
-[03:04.35]I have such regrets
-[03:09.55]It's you I can't forget
-[03:18.68]oh
-[03:20.29]Every time I see you go by
-[03:23.79]I break down and cry
-[03:26.09]You're taking my breath away
-[03:30.21]And every time I see you with her
-[03:33.78]Oh baby it hurts
-[03:36.68]You're taking my breath away
-[03:39.34]Breath away
-[03:41.94]Breath away
-[03:44.36]Breath away
-[03:49.25]You take my breath away
-[03:52.81]Breath away
-[03:55.27]Breath away.
+    '399353368': `[00:00.00] 作词 : 林秋离
+[00:01.00] 作曲 : 林俊杰
+[00:06.76]原谅我这一首
+[00:10.50]不为谁而作的歌
+[00:13.75]感觉上仿佛窗外的夜色
+[00:20.45]曾经有那一刻
+[00:23.71]回头竟然认不得
+[00:27.42]需要从记忆再摸索的人
+[00:34.48]和他们关心的 的地方
+[00:40.90]和那些走过的请等一等
+[00:50.09]梦为努力浇了水
+[00:53.58]爱在背后往前推
+[00:56.94]当我抬起头才发觉
+[01:00.78]我是不是忘了谁
+[01:03.23]累到整夜不能睡
+[01:06.76]夜色哪里都是美
+[01:10.24]一定有个人
+[01:12.08]她躲过避过闪过
+[01:15.05]她是谁
+[01:21.22]她是谁
+[01:29.99]原谅我这一首
+[01:33.31]不为谁而作的歌
+[01:36.78]感觉上仿佛窗外的夜色
+[01:43.16]曾经有那一刻回头
+[01:47.13]竟然认不得
+[01:50.34]需要从记忆再摸索的人
+[01:57.07]和他们关心的 的地方
+[02:03.77]和那些走过的
+[02:09.60]梦为努力浇了水
+[02:13.00]爱在背后往前推
+[02:16.31]当我抬起头才发觉
+[02:20.13]我是不是忘了谁
+[02:22.73]累到整夜不能睡
+[02:26.15]夜色哪里都是美
+[02:29.65]一定有个人她
+[02:31.89]躲过避过闪过瞒过
+[02:34.49]她是谁
+[02:40.56]她是谁
+[02:49.07]也许在真实面对自己才不顾一切
+[02:55.69]去探究当初我害怕面对
+[03:03.96]梦为努力浇了水
+[03:07.69]爱在背后往前推
+[03:10.91]当我抬起头才发觉
+[03:14.89]我是不是忘了谁
+[03:17.60]累到整夜不能睡
+[03:20.92]夜色哪里都是美
+[03:24.17]一定有个她
+[03:26.49]躲过避过闪过瞒过
+[03:29.09]她是谁
+[03:35.45]她是谁
 `,
-    '27971879': `[00:21.87]Someday you might find your hero
-[00:26.79]
-[00:28.66]Some say you might lose your mind
-[00:34.84]
-[00:35.84]I'm keeping my head down now for the summer
-[00:39.71]I'm outta my mind  let me pull the other
-[00:43.79]I'm gonna take that tiger outside for a ride
-[00:50.46]
-[00:52.33]What a life
-[00:56.34]
-[01:00.08]What a life
-[01:07.07]
-[01:14.59]Keep on chasing down that rainbow
-[01:19.08]
-[01:21.19]You'll never know what you might find
-[01:26.94]
-[01:28.44]Over the sunset on the horizon
-[01:32.15]Maybe you dream but it tastes like poison
-[01:36.23]I'm gonna take that tiger outside for a ride
-[01:43.09]
-[01:44.40]What a life
-[01:52.51]What a life
-[02:00.45]What a life
-[02:07.12]
-[02:08.69]What a life
-[02:16.20]
-[02:49.29]What a life
-[02:54.92]
-[02:56.93]What a life
-[03:03.35]
-[03:04.98]What a life
-[03:11.03]
-[03:13.13]What a life
-[03:19.15]
-[03:26.35]Someday you might find your hero
-[03:34.40]Some say you might lose your mind
-[03:40.11]
-[03:41.99]Woo hoo
+    '2751381348': `[00:00.24]黑夜问白天 (Live) - 林俊杰/胡彦斌
+[00:02.12]词：易家扬
+[00:02.87]曲：林俊杰
+[00:16.35]半天上的秃鹰那张脸
+[00:23.30]半生中的记忆在盘旋
+[00:30.48]第五十三天后的日夜线
+[00:40.35]等黑夜问白天
+[00:42.32]能不能赦免 灰色的人间
+[00:47.44]别交换吧日夜
+[00:49.42]冰封的眼泪 一滴就很咸
+[00:54.66]来自暮光的 明信片
+[00:58.86]它无声无色无言
+[01:02.71]翻过山巅跟我扮鬼脸
+[01:09.00]但黑夜恨白天
+[01:10.90]拼命的往前 听不到救援
+[01:16.61]命运太疯癫 每一眨眼 都很玄
+[01:23.79]那对逆光中的黑雁
+[01:27.35]也飞过去老远
+[01:31.37]等再见不如说一次再见 挑一天
+[02:09.00]皮肤之下的瘀青渗着血
+[02:16.00]细胞之中的绝望在喊冤
+[02:23.16]被五十三天的孤单抽一鞭
+[02:29.60]等黑夜问白天
+[02:31.38]能不能赦免 灰色的人间
+[02:36.50]别交换吧日夜
+[02:38.40]冰封的眼泪 一滴就很咸
+[02:43.75]来自暮光的 明信片
+[02:47.73]它无声无色无言
+[02:51.61]翻过山巅跟我扮鬼脸
+[02:57.85]喊黑夜吻白天
+[02:59.71]谢谢了时间 弄红了双眼
+[03:05.49]往事的光圈 每一瞬间 都很绝
+[03:12.60]那跑过去的昼夜 是孤独的修炼
+[03:19.80]说再见不如忘掉能再见
+[03:26.28]在半空中真好 不会吵 人少
+[03:33.50]却看得到那些近在天边的风暴
+[03:40.69]黑夜吻白天
+[03:42.52]谢谢了时间 弄红了双眼
+[03:48.21]往事的光圈 每一瞬间 都很绝
+[03:55.34]那跑过去的昼夜 是孤独的修炼
+[04:02.53]说再见不如忘掉能再见
+[04:17.40]今天
 `,
-    '28798881': `[00:17]You are on with your life
-[00:19]Not behind
-[00:21]Behind the scenes on the street
-[00:29]This shadow is broken
-[00:30]Swept away
-[00:31]Swept away
-[00:33]Swept away
-[02:23]You are on with your life
-[02:25]Not behind
-[02:27]Behind the scenes on the street
-[02:30]This shadow is broken
-[02:54]Downstairs, the animals are dancing
-[04:04]You are on with your life
-[04:06]Not behind
-[04:09]Behind the scenes on the street
-[04:17]This shadow is broken
-[04:19]Swept away
-[04:19]Swept away
-[04:21]Swept away
-[04:27]Inviting some people
-[04:31]Cheap trick
-[04:35]Aligning your back
-[04:37]It's all to, to see
-[04:43]Trust your body and your head
+    '26305536': `[00:00.00] 作词 : 林秋离
+[00:01.00] 作曲 : 林俊杰
+[00:02.00] 编曲 : 蔡政勋/陈建玮
+[00:03.00] 制作人 : 林俊杰/许环良
+[00:29.09]阳光越过窗沿 我在阴影里面
+[00:38.46]才过正午十三点 就漆黑一片
+[00:43.63]没有人看得见
+[00:48.65]我心深处的阴暗面
+[00:54.60]只能眺望东边 你的世界太远
+[01:03.79]撑到想象的极限 幸福有多甜
+[01:08.97]可黑夜已吞噬我
+[01:13.97]就是拉不到你的手
+[01:21.13]因为我活在西边
+[01:23.55]只拥有半个白天
+[01:26.77]一到午后夜色就蔓延
+[01:31.44]虽然和你面对面
+[01:34.12]却看不到我的脸
+[01:37.22]感觉到你不安的视线
+[01:41.44]在西界的那一边
+[01:44.02]只能有半个白天
+[01:47.25]暗自祈祷上天的垂怜
+[01:51.79]在长夜的边缘
+[01:54.44]给我一丝光线
+[01:57.38]让你能多看我一眼
+[02:00.03]
+[02:23.93]
+[02:26.34]只能眺望东边 你的世界太远
+[02:35.68]撑到想象的极限 幸福有多甜
+[02:40.97]可黑夜已吞噬我
+[02:45.94]就是拉不到你的手
+[02:52.94]因为我活在西边
+[02:55.65]只拥有半个白天
+[02:58.74]一到午后夜色就蔓延
+[03:03.43]虽然和你面对面
+[03:06.06]却看不到我的脸
+[03:09.10]感觉到你不安的视线
+[03:13.36]在西界的那一边
+[03:15.97]只能有半个白天
+[03:19.07]暗自祈祷上天的垂怜
+[03:23.81]在长夜的边缘
+[03:26.36]给我一丝光线
+[03:29.36]让你能多看我一眼
+[03:37.67]哦~哦~
+[03:41.68]因为我活在西边
+[03:43.94]只拥有半个白天
+[03:47.28]一到午后夜色就蔓延
+[03:51.85]虽然和你面对面
+[03:54.80]看不到我的脸
+[03:57.66]感觉到你不安的视线
+[04:03.00]哦~~哦~~
+[04:07.88]暗自祈祷上天的垂怜
+[04:12.43]在长夜的边缘
+[04:14.84]给我一丝光线
+[04:17.83]让你能多看我一眼
+[04:26.40]`,
+    '5254815': `[00:00.000] 编曲 : 彭程
+[00:00.346] 作词 : 薛之谦
+[00:00.692] 作曲 : 薛之谦
+[00:01.040]雪下地那么深 下得那么认真
+[00:06.290]倒映出我躺在雪中的伤痕
+[00:10.240]
+[00:23.750]夜深人静 那是爱情
+[00:33.040]偷偷地控制着我的心
+[00:36.020]提醒我 爱你要随时待命
+[00:40.010]
+[00:42.220]音乐安静 还是爱情啊
+[00:51.160]一步一步吞噬着我的心
+[00:54.500]爱上你 我失去了我自己
+[00:58.920]
+[01:00.170]爱得那么认真 爱得那么认真
+[01:05.600]可还是听见了你说不可能
+[01:09.610]已经十几年没下雪的上海
+[01:13.010]突然飘雪
+[01:14.810]就在你说了分手的瞬间
+[01:18.510]雪下得那么深 下得那么认真
+[01:23.880]倒映出我躺在雪中的伤痕
+[01:28.460]我并不在乎自己
+[01:30.380]究竟多伤痕累累
+[01:33.070]可我在乎今后你有谁陪
+[01:37.840]
+[02:04.490]音乐安静 还是爱情啊
+[02:13.370]一步一步吞噬着我的心
+[02:16.660]爱上你 我失去了我自己
+[02:21.330]
+[02:22.440]爱得那么认真 爱得那么认真
+[02:27.860]可还是听见了你说不可能
+[02:31.880]已经十几年没下雪的上海
+[02:35.290]突然飘雪
+[02:37.060]就在你说了分手的瞬间
+[02:40.770]雪下得那么深 下得那么认真
+[02:46.160]倒映出我躺在雪中的伤痕
+[02:50.740]我并不在乎自己
+[02:52.610]究竟多伤痕累累
+[02:55.390]可我在乎今后你有谁陪
+[03:00.440]
+[03:01.490]爱得那么深 爱得那么认真
+[03:06.780]可还是听见了你说不可能
+[03:10.730]已经十几年没下雪的上海
+[03:14.100]突然飘雪
+[03:15.930]就在你说了分手的瞬间
+[03:19.480]雪下得那么深 下得那么认真
+[03:25.000]倒映出我躺在雪中的伤痕
+[03:29.590]我并不在乎自己
+[03:31.490]究竟多伤痕累累
+[03:34.210]可我在乎今后你有谁陪
+[03:39.080]
+[03:40.540]爱得那么深 比谁都认真
+[03:45.480]可最后还是只剩我一个人
+[03:50.110]漫天风雪请别再把我的眼泪擦去
+[03:54.850]毕竟那是我最爱的女人
+[04:00.130]毕竟我曾是她深爱的人
+[04:10.260]`,
+    '1468114204': `[00:00.00] 作词 : 李荣浩
+[00:01.00] 作曲 : 李荣浩
+[00:30.15]电视一直闪
+[00:33.66]联络方式都还没删
+[00:37.65]你待我的好
+[00:41.20]我却错手毁掉
+[00:44.66]也曾一起想
+[00:48.31]有个地方睡觉吃饭
+[00:52.40]可怎么去熬 日夜颠倒连头款也凑不到
+[00:59.66]墙板 被我砸烂 到现在还没修
+[01:06.50]一碗热的粥 你怕我没够 都留一半带走
+[01:13.24]给你形容 美好今后你常常眼睛会红
+[01:21.23]原来心疼我 我那时候不懂
+[01:27.67]假如我年少有为不自卑
+[01:32.15]懂得什么是珍贵
+[01:34.65]那些美梦
+[01:38.33]没给你 我一生有愧
+[01:42.31]假如我年少有为 知进退
+[01:46.00]才不会让你替我受罪
+[01:50.15]婚礼上 多喝几杯
+[01:53.65]和你现在那位
+[02:00.17]
+[02:27.20]也曾一起想
+[02:30.33]有个地方睡觉吃饭
+[02:33.68]可怎么去熬 日夜颠倒连头款也凑不到
+[02:41.32]墙板 被我砸烂 到现在还没修
+[02:48.32]一碗热的粥 你怕我没够 都留一半带走
+[02:54.66]给你形容 美好今后你常常眼睛会红
+[03:02.66]原来心疼我 我那时候不懂
+[03:09.17]假如我年少有为不自卑
+[03:13.87]懂得什么是珍贵
+[03:16.20]那些美梦
+[03:20.24]没给你 我一生有愧
+[03:24.31]假如我年少有为 知进退
+[03:28.14]才不会让你替我受罪
+[03:32.42]婚礼上 多喝几杯
+[03:35.44]和你现在那位
+[03:42.31]假如我年少有为不自卑
+[03:46.77]尝过后悔的滋味
+[03:49.11]金钱地位
+[03:52.68]搏到了却好想退回
+[03:56.66]假如我年少有为 知进退
+[04:01.09]才不会让你替我受罪
+[04:04.69]婚礼上 多喝几杯
+[04:08.23]和你现在那位
+[04:15.10]在婚礼上 多喝几杯
+[04:19.00]祝我年少 有为
+[04:28.33]
+[04:34.19] 人声 : Ronghao Li`,
+    '2079429439': `[00:00.00] 作词 : 艾热 AIR/黄旭
+[00:00.05] 作曲 : 艾热 AIR/黄旭
+[00:00.10] 编曲 : 也是福
+[00:00.15] 制作人 : 也是福
+[00:00.21]
+[00:00.24]黄旭：
+[00:00.39]
+[00:00.42]好像是糊里糊涂坐上远航的飞机
+[00:03.57]也不知道哪一站会落地
+[00:06.15]这样继续漫无目的没有归期
+[00:08.40]身边消失的朋友也不绝络绎
+[00:11.13]我见识过鼎盛的繁华沦为废墟
+[00:13.65]空虚的昼夜交替只留恋醉意
+[00:16.26]人一次又一次被欲望利用威逼
+[00:18.57]和追求最简单的快乐保持对立
+[00:23.31]
+[00:35.67]I got loyalty loyalty 但不来自DNA
+[00:38.37]已经记不清陪客人喝的第几杯
+[00:40.92]这里乌烟瘴气来了就为买个醉
+[00:43.20]老板给我涨了工资客人大方给小费
+[00:45.75]
+[00:45.78]已经第十三个年头在酒吧驻唱
+[00:48.24]来这儿讨生活的属我来事嗓门最亮
+[00:50.73]眼看三十要出头了也想讨个婆娘
+[00:53.22]身边几个哥们穷 日子过的多像
+[00:55.77]
+[00:55.98]空闲了一起躲在十几平的出租屋
+[00:58.62]龙敲beat我作曲布布卷本大的书
+[01:01.14]人穷志不短 过的悠哉悠哉
+[01:03.33]我们早晚走得起别墅旁有山有海
+[01:05.76]
+[01:05.97]I got loyalty loyalty 特别是对她
+[01:08.43]我用一个月的工资送她长裙碎花
+[01:10.83]她哄睡酒醉后的我扫干净玻璃碎渣
+[01:13.47]只要有她陪的地方地下室也像家
+[01:15.69]
+[01:15.75]艾热AIR：
+[01:15.90]
+[01:15.96]我像个旅行家
+[01:17.52]天南地北到处飞
+[01:19.50]听遍言不由衷的话
+[01:21.99]明天会更好吗
+[01:23.52]我也不知道但至少暂时还能表达
+[01:26.79]半山腰快过了我们快登顶
+[01:29.16]笑谈自大的我们装云淡风轻
+[01:31.80]可能受够了 总是紧绷咬牙
+[01:34.89]所以现在只要…
+[01:36.00]
+[01:36.03]黄旭：
+[01:36.18]
+[01:36.27]酒醉激励豪言壮志发了许多誓
+[01:38.61]酒醒现状落差太大抱怨许多次
+[01:41.10]我说是 朋友劝我别再搞作词
+[01:43.68]奶奶发着高烧 在冬夜里过世
+[01:46.17]
+[01:46.20]她的最后一滴泪 对我打击太大
+[01:48.78]想到摇篮里的笑 安慰且有点害怕
+[01:51.36]如果天使降临是恩赐是实属意外
+[01:53.88]继续rap会让我翻身还是继续负债
+[01:56.31]
+[01:56.40]暂时我也无能为力
+[01:58.68]打开微博看看哪些平台最近办比赛
+[02:01.50]混不出头没脸回去
+[02:03.42]一起玩的朋友上电视，我混得像乞丐
+[02:06.45]火起来的都是bullsh*t
+[02:08.64]又羡慕又酸小屁孩爱听的歌真奇怪
+[02:11.61]背上包又去狩猎
+[02:13.50]为了她和她的生活费又漂泊几礼拜
+[02:16.53]
+[02:20.82]艾热AIR：
+[02:21.00]
+[02:26.55]我像个旅行家
+[02:28.29]天南地北到处飞
+[02:30.27]听遍言不由衷的话
+[02:32.76]明天会更好吗
+[02:34.29]我也不知道但至少暂时还能表达
+[02:37.20]半山腰快过了我们快登顶
+[02:39.96]笑谈自大的我们装云淡风轻
+[02:42.54]可能受够了 总是紧绷咬牙
+[02:45.57]现在一步一个脚丫
+[02:47.04]
+[02:47.07]黄旭：
+[02:47.22]
+[02:47.28]我擅长文字堆叠
+[02:48.87]垒起来的高度
+[02:50.40]像在徒手爬高山
+[02:51.90]时来运转像飞碟
+[02:53.94]过去称兄道弟的如今笑着说不敢高攀
+[02:57.09]我当他们谈吐诙谐
+[02:58.86]小小选秀歌手又不是什么权贵高官
+[03:02.10]那些苦日子刚终结
+[03:04.35]52层落地窗边 私教陪我练高翻
+[03:07.05]
+[03:07.08]跑不完的媒体通告假笑到麻木
+[03:09.66]陌生城市香水味和酒都不明来路
+[03:12.21]最近远亲旧友总找我讲生活难处
+[03:14.76]偶遇“赞助山”旁落满灰的匡威帆布
+[03:17.07]
+[03:17.13]我看了好久 像曾经对她目不转晴
+[03:19.71]阔别了好久 除了“数字”外久违的暖心
+[03:22.20]我像个伞兵 被新高度压迫的好晕
+[03:24.87]于是我把Loyal刻在新的现场返听
+[03:27.33]
+[03:31.35]当故事刚到一半
+[03:33.09]当故事刚写一半
+[03:41.43]当故事刚读一半
+[03:46.50]别着急着说遗憾
+[03:48.15]
+[03:49.15] 人声编辑 : 顺德@亿万虎力
+[03:49.52] 混音 : 顺德@亿万虎力/也是福
+[03:49.90] 母带 : 顺德@亿万虎力
+[03:50.28] 贝斯 : 孟宇
+[03:50.65] 吉他 : 张津瑞
+[03:51.03] 女声和声 : 喜辰晨
+[03:51.41] 人声采样 : 蛋堡《关于小熊》
 `,
-    '406072619': `[00:00.00] 作词 : Keith Sweat/Anthony Johnson/Royce Murray
-[00:00.00] 作曲 : Keith Sweat/Anthony Johnson/Roy Murray/Royce Murray
-[00:00.00]Another Level - Freak Me
-[00:10.56]
-[00:14.56]Let me lick you up and down till you say stop
-[00:21.31]Let me play with your body baby make you real hot
-[00:28.33]Let me do all the things you want me to do
-[00:36.65]Cause tonight baby I wanna get freaky with you
-[00:42.49]
-[00:43.30]Baby don't you understand I wanna be your nasty man?
-[00:50.12]I wanna make your body scream,
-[00:53.67]then you will know just what I mean
-[00:57.22]24 carat gold I want the night to grow cold
-[01:03.03]
-[01:04.21]I wanna lick you up and down
-[01:07.52]and then I wanna lay you down come on sexy
-[01:10.58]Let me lick you up and down till you say stop
-[01:17.32]Let me play with your body baby make you real hot
-[01:24.35]Let me do all the things you want me to do
-[01:32.61]Cause tonight baby I wanna get freaky with you
-[01:38.42]
-[01:39.12]I love the taste of whipped cream
-[01:42.67]spread it on the top of me
-[01:46.06]You know I can't resist you girl
-[01:49.58]I'll fly you all around the world
-[01:53.10]I wanna see your body drip come on let me take a sip
-[02:00.07]To calm what you cherish most
-[02:03.51]Cause we're not about to brag and boast
-[03:02.35][02:06.22]Let me lick you up and down till you say stop
-[03:09.30][02:13.26]Let me play with your body baby make you real hot
-[03:16.24][02:20.26]Let me do all the things you want me to do
-[03:24.51][02:28.57]Cause tonight baby I wanna get freaky with you
-[02:34.26]
-[02:57.33]Cause tonight baby I wanna get freaky with you
-[03:30.35]
+    '1982964017': `[00:00.00] 作词 : 艾福杰尼
+[00:01.00] 作曲 : 艾福杰尼
+[00:02.00] 编曲 : Maxime RAMANANJANAHARY
+[00:22.20]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请收好它）
+[00:32.68]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
+[00:43.56]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请珍惜它）
+[00:54.45]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
+[01:05.16]如果要放弃就请一起放弃彻底
+[01:07.68]理解有上亿种方法看是什么目的
+[01:10.32]让我们肉体剥离去放肆也算保护你
+[01:13.06]也说过怕我被骗当我们在一起沐浴
+[01:15.80]抱怨声音太大盖过兑现
+[01:18.48]本能的去顾虑不知道危险
+[01:21.18]Girl你明明爱的就很明显
+[01:23.96]谎言是善意还是你会演
+[01:27.04]你说过太多时间维护野心从没考虑你
+[01:29.76]日以继夜银行卡里只是那些破数据
+[01:32.44]我们都是某种蝼蚁维护着某种默契
+[01:35.20]也尽量不去过度关注你也习惯了过滤
+[01:37.90]这束光若隐又若现而我又拖延又拖延
+[01:40.49]感受到失去耐心的你慢慢对我的冷眼
+[01:43.35]可每首歌都有你影子我亲手来设计
+[01:46.11]Baby我最大野心是你其他没意义
+[01:48.69]Will I go easy will I go hard（我不知道到那时会轻松释然还是会难以割舍）
+[01:51.21]I think we both should keep the best part（但我认为我们至少应该留下对彼此最好的回忆）
+[01:53.92]如何被你吸引
+[01:55.57]How we getting started（如何与你相爱）
+[01:56.68]Love is so strong so strong（这份爱实在太浓烈）
+[01:59.39]Will I go easy will I go hard（我不知道到那时会轻松释然还是会难以割舍）
+[02:02.13]I think we both should keep the best part（但我认为我们至少应该留下对彼此最好的回忆）
+[02:04.88]如何被你吸引
+[02:06.26]How we getting started（如何与你相爱）
+[02:07.56]I thought we were go along go along（又是如何幻想与你长相厮守）
+[02:11.04]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请珍惜它）
+[02:21.61]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
+[02:32.86]Saturday night is cold outside（周六晚上，外面很冷）
+[02:35.30]人们都是彼此 新欢与旧爱
+[02:38.24]杂乱无章交织或者空白
+[02:40.68]这就是种游戏还可以重来
+[02:43.67]Saturday night is cold outside（认识你的那个周六晚上，外面很冷）
+[02:46.32]也许那边火热也许灯没开
+[02:48.92]也许都有想过一切都回来
+[02:51.59]这就是种游戏还可以重来
+[02:54.54]Saturday night is cold outside（和你分开的那个周六晚上，外面很冷）
+[02:57.28]It’s cold outside
+[03:02.83]It’s cold outside
+[03:05.51]Saturday night is cold outside（周六晚上，外面很冷）
+[03:10.94]It’s cold outside
+[03:13.67]It’s cold outside
+[03:19.09]Journey makes you cry
+[03:23.57]Journey makes you cry
+[03:27.48]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请你抱紧它）
+[03:37.80] 录音：福气世纪
+[03:38.80] 混音：顺德
+[03:39.80] 母带：顺德
 `,
-    '482386197': `[00:00.00] 作词 : Star Kendrick, Toma Banjanin
-[00:01.00] 作曲 : Toma Banjanin/Star Kendrick
-[00:39.25]Time on my own I used to love
-[00:50.86]Kept it like a teenage secret crush
-[01:03.16]Now time alone's my living hell
-[01:14.43]Claimed it as if it was yours to own
-[01:23.38]Throw the water on the fire
-[01:26.84]This time, I'm too tired
-[01:29.52]Draw the horse before the cart
-[01:32.70]Took back my broken heart
-[01:35.40]Finally found your bottom line
-[01:38.69]You always change your mind
-[01:41.39]Find some peace in your parade
-[01:44.35]Kindly let me walk away
-[01:51.27]I won't look back
-[02:02.39]My restless sleep was once my own
-[02:13.52]Somehow you've been cast the major role
-[02:26.05]Can't help the tears that come at dawn
-[02:37.20]This time they won't stop me from movin' on
-[02:46.46]Throw the water on the fire
-[02:49.83]This time, I'm too tired
-[02:52.54]Draw the horse before the cart
-[02:55.81]Took back my broken heart
-[02:58.47]Finally found your bottom line
-[03:01.73]You always change your mind
-[03:04.33]Find some peace in your parade
-[03:07.23]Kindly let me walk away
-[03:14.31]I won't look back
-[03:25.66]I won't look back
-[03:33.06]My last relapse
-[03:39.23]I won't look back
-[03:44.82]My last relapse
-[03:50.69]I won't look back
-[03:56.51]My last relapse
-[04:02.83]I won't look back
-[04:08.21]My last relapse
-[04:14.26]I won't look back
-[04:19.46]I won't look back
+    '2712645752': `[00:00.00] 作词/作曲 : 彭磊
+[00:01.00] 制作人/编曲 : 彭磊/旅行团乐队
+[00:02.00] 主唱 : 彭磊/孔一蝉
+[00:03.00] 吉他/贝斯 : 黄子君
+[00:04.00] 鼓 : 徐彪
+[00:05.00] 键盘 : 韦伟
+[00:06.00] 录音 : 李越/祝薇
+[00:07.00] 混音/母带 : 小武
+[00:08.00] 录音棚 : 野火春风
+[00:09.00] 混音棚 : Sync Studio
+[00:10.00] OP : 硬地加速（北京）文化科技有限公司
+[00:11.00] SP : 硬地加速（北京）文化科技有限公司
+[00:22.43]年轻的你 还在叹息 为何不向荒野走去
+[00:30.15]空空行囊 空的心灵 空时光怕无人同行
+[00:37.91]像一只郊外的狐狸 孤独中欢愉
+[00:44.78]走入深深 山谷 忽然下起 空山的灵雨
+[00:52.92]打湿的外衣 又开始想你
+[01:00.99]回想和你 在这城中陋室 倾听着风雨
+[01:08.46]人间在下雨 迷乱的诗意
+[01:34.83]年轻的你 还在叹息 为何不向荒野走去
+[01:41.86]空空行囊 空的心灵 空时光怕无人同行
+[01:49.81]像一只郊外的狐狸 孤独中欢愉
+[01:56.83]走入深深 山谷 忽然下起 空山的灵雨
+[02:04.61]打湿的外衣 又开始想你
+[02:12.59]回想和你 在这城中陋室 倾听着风雨
+[02:20.75]人间在下雨 迷乱的诗意
+[02:28.42]一直在下雨
+[02:37.24]一直在想你
+[02:41.00]不停的想你
 `,
-    '518904648': `[00:00.000] 作词 : Ari Leff/Michael Ross Pollack/Michael Matosic
-[00:01.000] 作曲 : hye sung lim
-[00:13.347]All I know is (ooh ooh ooh)
-[00:16.388]We could go anywhere we could do
-[00:18.945]Anything girl whatever the mood we're in
-[00:24.112]All I know is (ooh ooh ooh)
-[00:26.984]Getting lost late at night under stars
-[00:29.731]Finding love standing right where we are your lips
-[00:34.013]They pull me in the moment
-[00:37.094]You and I alone and
-[00:39.694]People may be watching I don't mind ‘cause
-[00:46.478]Anywhere with you feels right
-[00:49.163]Anywhere with you feels like
-[00:51.952]Paris in the rain
-[00:54.469]Paris in the rain
-[00:57.295]We don't need a fancy town
-[00:59.744]Or bottles that we can't pronounce
-[01:02.403]Cause anywhere babe
-[01:04.766]Is like Paris in the rain
-[01:07.846]When I’m with you
-[01:10.515]When I’m with you
-[01:13.730]Paris in the rain
-[01:16.274]Paris in the rain
-[01:19.326]I look at you now and I want this forever
-[01:22.040]I might not deserve it but there's nothing better
-[01:24.154]Don't know how I ever did it all without you
-[01:27.532]My heart is about to about to jump out of my chest
-[01:30.865]Feelings they come and they go that they do
-[01:33.589]Feelings they come and they go not with you
-[01:36.198]The late nights
-[01:36.887]And the street lights
-[01:37.365]And the people
-[01:38.355]Look at me girl
-[01:39.156]And the whole world could stop
-[01:41.080]Anywhere with you feels right
-[01:43.637]Anywhere with you feels like
-[01:46.330]Paris in the rain
-[01:49.015]Paris in the rain
-[01:51.849]We don't need a fancy town
-[01:54.235]Or bottles that we can't pronounce
-[01:57.013]Cause anywhere babe
-[01:59.700]Is like Paris in the rain
-[02:02.132]When I'm with you
-[02:04.893]When I’m with you
-[02:08.275]Paris in the rain
-[02:10.847]Paris in the rain
-[02:19.262]Girl when I'm not with you
-[02:21.992]All I do is miss you
-[02:30.199]Come and set the mood right
-[02:32.903]Underneath the moonlight
-[02:36.336](Days in Paris
-[02:38.977]Nights in Paris)
-[02:41.143]Paint you with my eyes closed
-[02:43.803]Wonder where the time goes
-[02:47.777](Yeah, Isn't it obvious
-[02:51.264]Isn't it obvious)
-[02:52.078]Come and set the mood right
-[02:54.661]Underneath the moonlight
-[02:57.429]Anywhere with you feels right
-[03:00.227]Anywhere with you feels like
-[03:03.093]Paris in the rain
-[03:05.713]Paris in the rain
-[03:08.936]Walking down an empty street
-[03:11.837]Puddles underneath our feet
+    '2111060878': `[00:00.00] 作词 : DANNY K/周夏影/FEEEleven/鼠尾草/EINK
+[00:01.00] 作曲 : DANNY K/周夏影/FEEEleven/鼠尾草/EINK
+[00:02.00] 编曲 : DiESi
+[00:03.00] 制作人 : 法老
+[00:05.52] DANNY K:
+[00:05.70]别理所应当从得到你的微信号
+[00:07.92]到请你喝一杯再慢慢开始对我笑
+[00:10.56]无法戒掉你就像那些 rapper要吃药
+[00:12.84]你的笑容温暖得像太阳直射在赤道
+[00:15.57]突然想起你我的念头应该想到哪里
+[00:18.09]如果我是富翁 take my love don’ t take my money
+[00:20.58]但我像个游荡的鬼魂 so kiss me honey
+[00:22.89]没能抓住你的灵魂只能算我粗心大意
+[00:25.56]周夏影 Sino:
+[00:26.04] Don’ t be afraid anymore
+[00:26.94]再聊下去就不浪漫了
+[00:29.91]马路上的街灯闪了下
+[00:31.56]就能吓到她
+[00:32.88]停电的夜我不想回家
+[00:35.37] Don’ t be afraid anymore
+[00:36.87]再聊下去就到夜半了
+[00:39.87]风摇树陌生的号码
+[00:41.55]不停的拨打
+[00:42.60]停电的夜她不想回家
+[00:44.88] FEEEleven：
+[00:45.09]过着你看不见也融不进的 life style
+[00:47.13]别以为鬼只会出现在没路灯的拐角
+[00:49.98]让雨停住是我为你披的“外套”
+[00:52.11]当你穿上你姐的高跟偷偷去逛 live house
+[00:55.02]丢你一个人过七夕你的 man no patience
+[00:57.45]喝到妆花了我能给你变出镜子
+[00:59.85]如果你注意到了我 plz show me some love
+[01:02.49]不要恐惧 like we always live in the dark
+[01:04.89]鼠尾草：
+[01:05.10]可你看不见我
+[01:06.00]我只不过是串电波
+[01:07.38]别再去研究照片
+[01:08.55]我们前世早就见过
+[01:09.84]1936年在西班牙你给了我一次回眸
+[01:12.57]来到2023那就换我把你护在背后
+[01:15.12]我随手为你点燃魔仙堡的烛火
+[01:17.34]把森林修成爱你的形状我不是胡说
+[01:19.86]每一个最阴间的夜晚我都陪着你去度过
+[01:22.56]快点打开收音机浪漫鬼有情话诉说
+[01:25.50]今天是我100岁生日
+[01:27.39]你是这场派对的特别来宾
+[01:29.61]我有吃不完的面包虫
+[01:31.23]孟婆汤无限量供应
+[01:33.18]一起干杯普天同庆
+[01:35.34]或许我有些丑陋
+[01:36.48]但我可以为你卖命（兄弟你都死了你都死了噻）
+[01:40.32]我有一千万冥币
+[01:41.43]来满足你的拜金
+[01:42.84]我是一个坚定的唯物主义者
+[01:44.88]没人能主宰我的爱情
+[01:45.72]周夏影 Sino：
+[01:46.05] Girl u be my lover
+[01:46.53]最漂浮的舞步
+[01:47.79]是我在你身边反复踢踏行走
+[01:51.48]你就像你回家的巴士上播的 love song
+[01:54.39]我没听够
+[01:56.52]电视机里画面总是在闪
+[01:59.58]是我的情书变成电波
+[02:02.19]漆黑的夜伤感巷子的尽头
+[02:04.71]浪漫鬼 inside
+[02:05.34] EINK:
+[02:05.43]微风抚过你的眉宇顺着鼻梁滑向侧脸
+[02:07.65]我们把这一段时间称作夏天
+[02:09.87]我想要带你把那漫山遍野踏遍
+[02:12.24]尽管苦难难以下咽
+[02:13.68]但还是不难发现
+[02:14.82]我们的故事能够诠释什么是爱
+[02:17.04]你的笔触含羞但我的表达直白
+[02:19.41]太关心不分昼夜
+[02:20.94]欢欣还是抽噎
+[02:22.20]我在脑海已经陪你到老有乐队在奏乐
+[02:42.49] 混音 : 杨秋儒
+[02:43.49] 录音 : SOUNDWAVE STUDIO
+[02:44.49] 出品公司 : 合则恒文化
+[02:45.49] 封面设计 : 加菲
 `,
-    '1303019276': `[00:00.000] 作词 : Casey Luong
-[00:01.000] 作曲 : Casey Luong
-[00:24.950]Drank too much
-[00:26.400]Got the sickness
-[00:27.860]Pray to god and his son for forgiveness
-[00:30.540]Same crew but
-[00:31.880]Another mistress
-[00:33.260]Every day every night getting wasted
-[00:36.100]But i miss you
-[00:37.270]What did i do
-[00:38.880]**** it up, laugh it off and i lost you
-[00:41.620]If i pull through
-[00:42.850]Is it too soon
-[00:44.400]Turn it up, close my eyes, and i'm with you
-[00:47.240]Yo Marvin
-[00:48.320]Stop calling
-[00:49.810]Sad Iverson is ballin
-[00:52.460]In the corner of a room by himself
-[00:55.450]You are nothing but an empty shell
-[00:58.030]Every night he going down to hell
-[01:00.820]Fake love in a ****ed up hotel
-[01:03.610]Can't believe how far he fell
-[01:06.340]You weak on the floor so you call her cell
-[01:09.130]“How you been”
-[01:10.460]“How you doing”
-[01:11.940]You been good
-[01:13.340]I been drinking
-[01:14.530]Way too much
-[01:15.820]You think that i'd be
-[01:17.450]Over you over you over you
-[01:20.370]8 calls, all you
-[01:23.010]But i think about it everyday
-[01:25.810]Yeah i never missed her anyways
-[01:28.380]Yeah i never missed her anyways
-[01:31.250]Drank too much
-[01:32.710]Got the sickness
-[01:34.010]Pray to god and his son for forgiveness
-[01:36.720]Same crew but
-[01:38.100]Another mistress
-[01:39.500]Every day every night getting wasted
-[01:42.340]But i miss you
-[01:43.650]What did i do
-[01:45.010]**** it up, laugh it off and i lost you
-[01:47.790]If i pull through
-[01:49.260]Is it too soon
-[01:50.480]Turn it up, close my eyes, and i'm with you
-[01:53.140]Call me up
-[01:56.870]Stay over and we’ll call it love
-[02:02.210]Don’t matter if it ****s me up
-[02:07.760]The alcohol is not enough
-[02:15.330]**** pride
-[02:16.750]And the other guy
-[02:18.190]I cried
-[02:19.530]I don't remember why
-[02:20.910]Tonight
-[02:22.400]I'm try to hide
-[02:23.660]No slide
-[02:25.020]Get frostbite
-[02:26.390]8 calls, all you
-[02:29.230]8 ball, all you
-[02:31.980]Yeah i never missed her anyways
-[02:34.680]Yeah i never missed her anyways
-[02:37.470]Drank too much
-[02:38.820]Got the sickness
-[02:40.220]Pray to god and his son for forgiveness
-[02:42.970]Same crew but
-[02:44.250]Another mistress
-[02:45.650]Every day every night getting wasted
-[02:48.260]But i miss you
-[02:49.830]What did i do
-[02:51.220]**** it up, laugh it off and i lost you
-[02:54.000]If i pull through
-[02:55.350]Is it too soon
-[02:56.770]Turn it up, close my eyes, and i'm with you
-[02:59.570]Drank too much
-[03:00.910]Got the sickness
-[03:02.320]Pray to god and his son for forgiveness
-[03:05.040]Same crew but
-[03:06.330]Another mistress
-[03:07.790]Every day every night getting wasted
-[03:10.480]But i miss you
-[03:11.870]What did i do
-[03:13.270]**** it up, laugh it off and i lost you
-[03:16.110]If i pull through
-[03:17.370]Is it too soon
-[03:18.840]Turn it up, close my eyes, and i'm with you
+    '1918576268': `[00:00.00] 作词 : 罗言
+[00:01.00] 作曲 : 罗言
+[00:15.63] 出品：网易飓风
+[00:15.63] 营销：网易飓风
+[00:15.63] OP：唯迹文化
+[00:15.63] 爱上了一个人眼睛不说谎
+[00:18.89] 眼泪总偷偷的躲在眼眶
+[00:22.90] 感情是珍惜 其实名为互相
+[00:26.40] 中途离场就会独自悲伤
+[00:29.66] 我好像做到了我想要的样子
+[00:35.67] 但却不能够再为你唱一首歌
+[00:39.17] 唉 无休止的黄昏
+[00:46.18] 想起我的时候你总会说
+[00:49.93] 我们一起去海边走走
+[00:54.43] 粉色的天配软绵绵的云朵
+[00:57.68] 几千公里也不算太颠簸
+[01:01.18] For tonight
+[01:03.95] 你也想我了但是你不说
+[01:09.20] 悲伤海
+[01:12.71] 就像颗流星从这夜空划过
+[01:16.47] just for tonight
+[01:20.73] 我不懂你的心思不想去猜
+[01:24.23] 而现在
+[01:28.50] 我做的一切好像都是应该
+[01:32.51] 破镜如果不能被重圆治好
+[01:36.77] 感情就会从裂缝中溜掉
+[01:40.27] 分开时用最恶毒的话争吵
+[01:45.53] 爱她下雪也宁愿光着脚
+[02:03.65] 在这座城市里 我们的记忆
+[02:07.67] 不停变换扮演不同角色
+[02:11.43] 那些猛烈的情绪 盘踞在我心底
+[02:15.43] 在我脑海上演不同坎坷
+[02:20.19] just for tonight
+[02:22.95] 我不懂你的心思不想去猜
+[02:26.95] Just for tonight
+[02:31.21] 我做的一切好像都是应该
 `,
-    '1322132356': `[00:16.31]I need to not pick up my phone
-[00:18.41]I'll go straight to airplane mode
-[00:20.24]Find something to do I know
-[00:22.21]I can be a little bit cold
-[00:24.23]But my third eye is going blind
-[00:26.26]I'm unaligned with my body and mind
-[00:28.30]It's playing tricks, I say I'm fine
-[00:29.98]But really, it's hurting me deep inside
-[00:32.02]Cause I been dreaming about you, oooh
-[00:35.97]I've been wishing that I was next to you, oooh
-[00:39.98]I've been dreaming of us, oh
-[00:43.99]I've been thinking that this is not a need or a must, but
-[00:48.08]Love has driven me so, so wrong
-[00:49.95]This year all I've got to show are songs
-[00:51.95]And I want to be super duper true to you
-[00:54.20]But God, I don't know what to do
-[00:55.97]Cause last year I was just 22
-[00:58.31]Feels like it up and flew
-[01:00.01]So far away, and out of view
-[01:02.14]But 23 seems like me and you
-[01:03.99]Cause I been dreaming about you, oooh
-[01:07.86]I've been wishing I was next to you, oooh
-[01:11.91]I've been dreaming of us, oh
-[01:15.97]I've been thinking that this is not a need or a must, but
-[01:20.08]I know sometimes I make you feel insane
-[01:22.12]Sorry that's just how I play this stupid game
-[01:23.94]I can't act like a child and disobey
-[01:25.81]All that you want from me and that you say
-[01:27.70]I'm sorry, baby, please, puppy
-[01:31.98]I'm trying to be ultra mega happy
-[01:35.62]And show you my smile, and send you my feelings
-[01:39.63]And ****, it is so hard being so damn far
-[01:43.68]I guess I'll just stay here and stay singing in my car
-[01:50.64]I'll sing in my car
-[01:51.86]I've been dreaming about you, oooh
-[01:55.99]I've been wishing I was next to you, oooh
-[02:00.05]I've been dreaming of us, oh
-[02:03.89]I've been thinking this is not a need or a must, but
-[02:07.91]I've been waiting on you, oooh
-[02:11.85]I've been waiting for you to tell me those three words too
-[02:16.01]Cause I been hoping it's true, oooh
-[02:20.32]That one day I'll feel like I am something real for you
-[02:23.42](I've been dreamin' of us)
-[02:24.57]Somethin' real for you, somethin' real for you...
-[02:28.08]
+    '2026224214': `[00:00.00] 作词 : Capper/罗言
+[00:01.00] 作曲 : Capper/罗言
+[00:02.00] 编曲 : IOF
+[00:03.00] 混音 : 刘城函
+[00:04.00] 母带 : 张步若 @RSS
+[00:11.21]
+[00:18.63]你说我自以为是
+[00:20.84]可怜像扑火飞蛾
+[00:23.18]任凭无用的勇敢将我淹没
+[00:27.96]这漩涡深不见底
+[00:30.33]蜕去勉强的外壳
+[00:32.83]你充满防备的样子不像我
+[00:36.81]
+[00:37.30]会不会太久
+[00:39.38]久到这结果
+[00:41.55]明明我想要却不敢对你说
+[00:46.92]我好想放手
+[00:49.00]却幻想太多
+[00:51.57]悲叹你不是世上另一个我
+[00:57.24]
+[00:57.57]我愿把胸膛解剖
+[00:59.33]公开脆弱的结构
+[01:01.55]有在跳动的血肉
+[01:03.93]别再只丢我骨头
+[01:06.36]
+[01:09.08]在这么冷的天
+[01:11.21]别离我那么远
+[01:13.90]再靠近我一点
+[01:15.65]
+[01:16.44]可是雪啊 飘进双眼
+[01:19.23]看不见你皎白的谎言
+[01:21.56]心甘情愿囚禁在深渊
+[01:24.06]舔舐着伤口和刀尖
+[01:26.18]
+[01:26.49]可是雪啊 飘进双眼
+[01:28.73]看不见你皎白的谎言
+[01:31.35]心甘情愿囚禁在深渊
+[01:33.55]烧一捧雪花做硝烟
+[01:35.67]
+[01:36.03]为什么抿下嘴唇尝起来像铁锈
+[01:39.94]神经的恐慌和不安哪个会先走
+[01:44.75]我怕这沼泽死水就要将我淹没
+[01:49.66]求你能拉住我 就算只有几分钟
+[01:54.08]
+[01:54.59]快要变成玩偶
+[01:56.71]可以随意玩弄
+[01:59.25]别管我感受
+[02:01.71]想要和你联手
+[02:04.22]
+[02:04.56]我愿把胸膛解剖
+[02:06.53]公开脆弱的结构
+[02:08.63]有在跳动的血肉
+[02:11.34]别再只丢我骨头
+[02:13.47]
+[02:15.86]在这么冷的天
+[02:18.67]别离我那么远
+[02:20.94]再靠近我一点
+[02:23.04]
+[02:23.56]可是雪啊 飘进双眼
+[02:26.25]看不见你皎白的谎言
+[02:28.76]心甘情愿囚禁在深渊
+[02:31.04]舔舐着伤口和刀尖
+[02:33.23]
+[02:33.67]可是雪啊 飘进双眼
+[02:35.90]看不见你皎白的谎言
+[02:38.38]心甘情愿囚禁在深渊
+[02:40.79]烧一捧雪花做硝烟
 `,
-    '1344609215': `[00:00.00] 作词 : Alexandra Lilah Denton/Joel Laslett Pott
-[00:01.00] 作曲 : Alexandra Lilah Denton/Joel Laslett Pott
-[00:22.81]I got my friend to teach me French
-[00:27.11]So I could speak true to you
-[00:32.64]Goodnight, sweet dreams, bonne nuit
-[00:37.02]Funny that I tried
-[00:40.55]I don't need a seatbelt
-[00:45.96]I don't need the lights turned low
-[00:49.20]Baby we can keep it
-[00:51.29]Or baby we can take it off
-[00:54.35]Wanna go everywhere with my got to be girl
-[00:58.56]Though there's gonna be turbulence
-[01:03.72]When I'm with you
-[01:06.32]I want you to be the remote
-[01:12.35]Cause you're out of control
-[01:17.71]You can get whatever you want from me cause
-[01:23.97]You be the pilot
-[01:27.60]I'll let you fly it
-[01:29.88]All night long
-[01:32.56](All night long)
-[01:35.30]Look at our clothes
-[01:39.34]They wrap around
-[01:41.06]Each other like lovers do
-[01:47.41]My jeans around your
-[01:50.44]Polo polo polo neck
-[01:55.50]Polo neck
-[01:57.75]I don't need a seatbelt
-[02:00.76]I don't need the lights turned low
-[02:03.49]Baby we can keep it
-[02:05.67]Or baby we can take it off
-[02:08.80]Wanna go everywhere with my got to be girl
-[02:13.28]Though there's gonna be turbulence
-[02:18.45]When I'm with you
-[02:20.97]I want you to be the remote
-[02:27.35]Cause you're out of control
-[02:31.94]You can get whatever you want from me cause
-[02:38.64]You be the pilot
-[02:41.92]I'll let you fly it
-[02:44.52]All night long
-[02:47.41](All night long)
-[02:49.97]You be the pilot
-[02:52.53]I'll let you fly it
-[02:55.18]All night long
-[02:58.19](All night long)
-[03:00.65]When I'm with you
-[03:24.94]I want you to be the remote
-[03:32.14]Cause you're out of control
-[03:36.02]You can get whatever you want from me cause
-[03:43.26]You be the pilot
-[03:45.93]I'll let you fly it
-[03:48.54]All night long
-[03:51.26](All night long)
-[03:53.88]You be the pilot
-[03:56.52]I'll let you fly it
-[03:59.08]All night long
-[04:01.96](All night long)
-[04:04.56]You be the pilot
-[04:07.20]I'll let you fly it
-[04:09.92]All night long
-[04:12.55](All night long)
-[04:17.32]
-[04:27.12]The bird is flying low over the lake
-[04:30.43]And you told me that you were mine
-[04:33.25]And now I'm flying like the bird
-[04:35.39](Summer in December)
-[04:37.82]Upside down
-[04:42.16]Upside down
-[04:46.72]
+    '865632948': `[00:00.000] 作词 : Kirsty刘瑾睿
+[00:01.000] 作曲 : Kirsty刘瑾睿
+[00:06.840]出品：网易音乐人 X 网易青云LAB
+[00:18.840]落叶无归根 单丝不成线
+[00:27.710]无所寄托 亦无心流浪
+[00:36.570]你把红豆赠我不如写我一首歌
+[00:44.240]落款你的名字 工整又好看
+[00:52.470]若把你比作歌
+[00:57.530]你便是那高山流水
+[01:02.150]佳人伴舞 天地伴舞
+[01:07.150]绝弦的美
+[01:10.190]若把你比作歌
+[01:15.280]歌写的我缠绵悱恻
+[01:19.920]恒顺众生 迁走我魂
+[01:24.770]绝弦的美
+[01:47.660]落叶无归根 单丝不成线
+[01:56.540]有嘴无心 亦有才无命
+[02:05.410]不一起看星星 星星它亮有什么用
+[02:13.240]你我矢志不渝 举案又齐眉
+[02:21.360]若把你比作歌
+[02:26.420]你便是那高山流水
+[02:31.000]佳人伴舞 天地伴舞
+[02:35.990]绝弦的美
+[02:39.210]若把你比作歌
+[02:43.960]歌写的我缠绵悱恻
+[02:48.700]恒顺众生 迁走我魂
+[02:53.820]绝弦的美
+[02:57.740]恒顺众生 迁走我魂
+[03:02.700]绝弦的美
+[03:05.500]编曲:周成
+[03:05.900]吉他:周成
+[03:06.300]录音/混音:周成@1019Studio
+[03:06.700]统筹：陈莹
+[03:07.100]营销推广：牛雪吟/罗旭/黄嘉慧
+[03:07.500]推广协力：朱烨琳/郭莹/黄清钦
+[03:07.900]出品人：唐晶晶
 `,
-    '1374446646': `[by:琬锥]
-[00:02.31]亲爱的，请牵住我
-[00:04.32]请你成为我一生的伴侣
-[00:07.33]因为你是我的那位钢铁侠
-[00:09.59]因为我可以爱你三千遍，永不停下
-[00:12.85]亲爱的，请抓住机会
-[00:14.85]因为我不想再止步于此了
-[00:18.37]我要我们像好莱坞电影里演的那样
-[00:23.38]我看见你站在那
-[00:26.47]披着绿巨人浩克的外衣
-[00:28.73]但我能想到的却是
-[00:31.74]你能把要给我的戒指藏��哪里
-[00:34.01]毕竟我猜你是想向我开口的
-[00:36.52]我虽然害怕那个瞬间转瞬就不见
-[00:39.28]但从你眼里我看到了不会消逝的一切
-[00:41.79]那就让我惊喜吧
-[00:44.58]身边的朋友都告诉我他们知道
-[00:49.59]你在计划着向我单膝跪地的那一天
-[00:55.11]但我希望那一天的到来是出乎意料的
-[01:00.38]所以请你确保我不会找到任何线索
-[01:04.39]在那一天到来之前
-[01:05.88]亲爱的，就牵起我的手
-[01:08.14]我想要一生都有你陪伴
-[01:11.40]因为你就是我的钢铁侠
-[01:13.40]因为我爱你，远不止三千遍
-[01:16.67]亲爱的，就抓住这个机会
-[01:18.92]让一切变得不同
-[01:22.18]让好莱坞电影里的剧情成真
-[01:27.40]此刻我们正吃着晚餐
-[01:29.92]我想说你赢得了我陪你吃一辈子晚餐的机会
-[01:32.42]从你的笑容中我看出
-[01:35.18]你在思考，在怎样的走道上等待我缓缓向你走去
-[01:37.94]你的手伸向了口袋
-[01:40.70]我就快控制不住自己了
-[01:43.21]假设你现在就要开口
-[01:45.72]那我的点头应允一定来得更快
-[01:48.79]现在我的朋友们都在告诉我
-[01:53.80]你在计划着向我求婚了
-[01:58.57]所以我再也按捺不住想你，想这件事
-[02:04.34]想所有所有可能有关的线索
-[02:08.60]于是，现在我想问
-[02:10.36]亲爱的，你愿意牵起我的手吗
-[02:12.37]我想要你成为我的丈夫
-[02:15.24]因为你就是为我开辟宇宙的钢铁侠
-[02:17.38]而我将爱你直至宇宙终结
-[02:20.90]亲爱的，你愿意抓住这次机会吗
-[02:22.90]让我这一次梦想实现
-[02:26.16]让我成为好莱坞电影里属于你的女主角
-[02:33.44]请不要有任何意外出现啊
-[02:38.66]我不希望有任何意外出现
-[02:42.17]亲爱的，这次你牵住我了
-[02:44.43]我想让你成为我相伴一生的伴侣
-[02:47.44]因为你是我的英雄
-[02:49.44]我会一直爱你，与你一同守护我们的世界
-[02:52.70]亲爱的，这次你抓住我了
-[02:54.71]等着我们的就是崭新的生活了
-[02:58.22]一切都将从好莱坞电影的银幕上落下，于现实里展开
-[03:05.27]请别有任何压力
-[03:10.54]什么都不用担心
-[03:15.81]无论将会发生什么
-[03:21.38]我一直都在，直到宇宙毁灭又重来
+    '386844': `[00:00.000] 编曲 : 万能青年旅店
+[00:01.000] 作词 : 姬赓
+[00:02.000] 作曲 : 董亚千/万能青年旅店
+[00:03.000] 制作人 : 董亚千
+[00:46.290]傍晚6点下班 换掉药厂的衣裳
+[00:55.880]妻子在熬粥 我去喝几瓶啤酒
+[01:05.698]如此生活30年 直到大厦崩塌
+[01:15.988]云层深处的黑暗啊 淹没心底的景观
+[01:26.280]
+[01:50.390]在八角柜台 疯狂的人民商场
+[01:58.590]用一张假钞 买一把假枪
+[02:08.400]保卫她的生活 直到大厦崩塌
+[02:19.590]夜幕覆盖华北平原 忧伤浸透她的脸
+[02:28.590]
+[02:51.999]河北师大附中 乒乓少年背向我
+[02:59.528]沉默的注视 无法离开的教室
+[03:10.990]生活在经验里 直到大厦崩塌
+[03:20.600]一万匹脱缰的马 在他脑海中奔跑
+[03:30.800]
+[04:13.190]如此生活30年 直到大厦崩塌
+[04:22.590]一万匹脱缰的马 在他脑海中奔跑
+[04:32.969]如此生活30年 直到大厦崩塌
+[04:42.958]云层深处的黑暗啊 淹没心底的景观
+[04:52.899]`,
+    '1303027499': `[00:00.00] 编曲 : 高原/陈恒冠
+[00:00.70] 作词 : 高原/陈恒冠
+[00:01.40] 作曲 : 陈恒冠
+[00:02.10]编曲：陈恒冠
+[00:06.97]
+[00:13.58]从前我的另一边
+[00:18.14]通往凌晨的街
+[00:21.44]空无一人的世界
+[00:26.89]行影匆匆这些年
+[00:31.23]期望从未破灭
+[00:34.69]默不作响的时间
+[00:40.73]最好的人注定会到身边
+[00:47.23]孤注一掷的执念
+[00:53.84]我终将看到你身影逆光 出现
+[01:06.64]等这一切 都被你了解 十指错落相牵
+[01:20.29]跨越时间 再没有分别 携手走过明天
+[01:45.78]雨后路人化鱼鲔
+[01:50.29]欢愉游跃摇曳
+[01:52.89]灿烂一抱的世界
+[01:59.62]光芒捧起你的脸
+[02:03.33]我飞在云层间
+[02:06.63]狂奔向你不停歇
+[02:12.78]你说最好的人会到身边
+[02:19.33]此刻我也这样想
+[02:25.94]你终将看到我最美模样 出现
+[02:38.89]等这一切 都被你了解 十指错落相牵
+[02:52.19]跨越时间 再没有分别 携手走过明天
+[03:05.35]总会有些 幸运会出现 我等待这一天
+[03:18.59]总有艰险 哪怕是谎言 我等待你出现
+[03:31.73]等这一切 都被你了解 十指错落相牵
+[03:44.88]跨越时间 再没有分别 携手走过明天
+[03:57.70]等这一切 都被你了解 十指错落相牵
+[04:11.25]跨越时间 总会有一天 你出现我身边
+[04:12.25]
+[04:13.25]混音：陈恒家
+[04:14.25]封面：水吉
+[04:15.25]监制：1991与她
 `,
-    '1407789513': `[00:00.00] 作词 : Ed Barrios
-[00:01.00] 作曲 : Ed Barrios
-[00:11.35] I really wanna say sorry
-[00:13.64] For what I did
-[00:15.15] Cause it doesn't make me
-[00:18.27] And I want to
-[00:19.76] Just tell you
-[00:21.28] But you won't face me
-[00:23.80]
-[00:24.06] Cause I think you're quick to just say your regard
-[00:26.94] And I think you won't
-[00:28.64] Leave a thread or a mark
-[00:30.05] And whether the time
-[00:31.31] Seems to faze me
-[00:33.18] I'll remember everything
-[00:35.84]
-[00:36.17] Cause i could depend on what i know
-[00:39.16] And i could have had a shot at hope
-[00:42.40] And whether it's all you try
-[00:44.65] And you know what's next
-[00:45.96] Well I don't want to and I don't want this
-[00:47.86]
-[00:48.16] And you could hang on this
-[00:52.10] And watch from beneath
-[00:55.06] As I lose grip
-[00:58.22] And lose me
-[01:00.88]
-[01:01.19] Cause you got a lot
-[01:02.90] Into me
-[01:04.47] And I'll
-[01:05.51] Say between
-[01:07.34] The place
-[01:08.98] That I'm at
-[01:10.45] It's dark
-[01:12.06] For me
-[01:13.32]
-[01:13.84] And your trying to tell me
-[01:16.31] That you're already past it
-[01:19.45] When you say I'm a bastard
-[01:22.43] Maybe I already know
-[01:24.60]
-[01:25.30] Whether it all comes from me I think
-[01:29.24] That you could be here in the end
-[01:32.23] That I could be what you want
-[01:35.38] But that's not how it was yet
-[01:37.70]
-[01:37.97] What do you want
-[01:39.32] I want to feel home
-[01:40.83] And where I fall
-[01:42.42] It's better shown
-[01:43.95] That I could try my best to be clear
-[01:47.04] But I don't want to be here
-[01:49.57]
-[01:49.90] Cause i could depend on what i know
-[01:53.15] And i could have had a shot at hope
-[01:56.22] And whether it's all you try
-[01:58.43] And you know what's next
-[01:59.86] Well I don't want to and I don't want this
-[02:02.57]
-[02:02.91] And you could hang on this
-[02:05.74] And watch from beneath
-[02:08.87] As I lose grip
-[02:11.93] And lose me
-[02:14.65]
-[02:15.95] Cause you got a lot
-[02:17.53] Into me
-[02:18.13] And I'll
-[02:20.43] Say between
-[02:21.33] The place
-[02:22.95] That I'm at
-[02:24.44] It's dark
-[02:26.05] For me
+    '2707033683': `[00:00.00] 作曲 : Hayden Robert Hubers/Micah Premnath
+[00:01.00] 作词 : 林月花/陈羽章
+[00:02.00] 制作 : Joker Liu
+[00:03.00] 制作人 : 夫耶 by Foye the Second
+[00:04.00] 配唱制作人 : 刘天鸿
+[00:13.38]回忆美好 怀念昨天虚耗
+[00:17.70]浪漫 能漠视命运衰老
+[00:24.05]放心拥抱
+[00:25.77]太空仿佛心太空 未懂苦恼
+[00:30.05]坠入良夜 极漫长轨道
+[00:35.25]恒星再未碰到
+[00:42.41]于对岸共舞 单人舞
+[00:46.02]航海家说 风浪爱得浮躁
+[00:50.45]转转角度
+[00:52.95]我吻你吻上太空
+[00:56.83]逃离人间的黑洞
+[01:01.52]摇摇头 别说话
+[01:03.81]抬头望 十字星 发个梦
+[01:09.18]陪你再放弃太空
+[01:13.36]迎沿途风吹草动
+[01:17.59]来寻回落单的心
+[01:19.96]和幻想声音
+[01:21.42]随回忆再动容
+[01:25.82]凭回忆治剧痛
+[01:32.06]谁都知 年月日在出错
+[01:35.30]但至少你也讲
+[01:37.28]从未遗憾这趟
+[01:44.45]来讲 只要讲 在想我
+[01:47.41]便能将最初记忆
+[01:49.77]尽情地释放
+[01:53.85]童话世界撞破
+[02:01.18]于对岸共舞 单人舞
+[02:04.48]航海家说 风浪爱得浮躁
+[02:08.86]转转角度
+[02:11.52]我吻你吻上太空
+[02:15.41]逃离人间的黑洞
+[02:20.03]摇摇头 别说话
+[02:22.48]抬头望 十字星 发个梦
+[02:27.83]陪你再放弃太空
+[02:32.01]迎沿途风吹草动
+[02:36.11]来寻回落单的心
+[02:38.73]和幻想声音
+[02:40.23]随回忆再动容
+[02:44.39]凭回忆治剧痛
+[02:46.62]灯塔上 共你双人舞
+[02:54.21]航海家说 风浪眷恋怀抱
+[03:02.24] 编曲 : 陈宸江
+[03:02.55] 人声编辑 : 刘天鸿
+[03:02.86] 混音/母带 : 刘天鸿
+[03:03.17] 音乐企划 : 王梦菲
+[03:03.48] 制作统筹 : 魏昊然
+[03:03.80] 版权统筹 : M MATHEW DANIEL/马骏/顾史远
+[03:04.11] 文案 : 泓溪
+[03:04.42] 音乐营销 : 欧阳慧琳/廖铭彤
+[03:04.73] 宣发团队 : 栗子/咖喱/60
+[03:05.04] 出品人 : 夫耶 by Foye the Second
+[03:05.36] 总监制 : 黄俊
+[03:05.67] 总策划 : 曾舜晞
+[03:05.98] 监制 : 镜子
+[03:06.29] 特别企划 : Studio JOSEPH x Foye the Second x 网易·云上工作室
+[03:06.60] 制作&宣发公司 : 嬉耳恭听 x 网易·云上工作室
+[03:06.92] 联合出品 : 嬉耳恭听 x 网易·云上工作室
+`,
+    '1353159923': `[00:00.00] 作曲 : 金海心
+[00:00.02] 编曲 : 金海心/孟军
+[00:09.65]制作：joyce
+[00:13.78]暖暖阳光懒懒爬进窗
+[00:20.14]幽幽微醺淡淡咖啡香
+[00:26.37]恍然你又在身旁
+[00:29.82]笑容星一样明亮
+[00:33.22]打开故事书翻到下一页
+[00:39.75]你说云落泪了风会吹干她
+[00:46.17]我问风叹息又怎么安慰呢
+[00:52.68]你只笑笑不回答
+[00:55.90]说小姑娘别犯傻
+[00:59.19]oh 窗外天空晴朗
+[01:04.21]oh yeah~
+[01:06.07]只想抱着你的背脊不想放
+[01:12.27]为何美的东西总叫人感伤
+[01:18.99]只怕你每次转身
+[01:22.35] hai yeah~
+[01:25.76]我会以为看见明天的艳阳
+[01:30.47] oh~
+[01:33.17]暖暖阳光懒懒爬进窗
+[01:38.95]幽幽微醺淡淡咖啡香
+[01:45.17]恍然你又在身旁
+[01:48.48]笑容星一样明亮
+[01:51.86]打开故事书翻到下一页
+[01:58.49]你说云落泪了风会吹干她
+[02:04.95]我问风叹息又怎么安慰呢
+[02:11.43]你只笑笑不回答
+[02:14.69]说小姑娘别犯傻
+[02:17.91]oh 窗外天空晴朗
+[02:22.95]oh yeah~
+[02:24.72]也许云落泪了风会吹干她
+[02:31.17]可是风叹息又怎么安慰呢
+[02:37.74]你说就随她去吧
+[02:41.19]yeah~
+[02:44.80]叫我如何放得下
+[02:49.07] oh~
+[02:51.74]候鸟会不会停留
+[02:55.40]一生算不算太久
+[02:58.48]未来有没有尽头
+[03:01.54]够不够带我走
+[03:05.10]候鸟该不该停留
+[03:08.43]未来它有没有尽头
+[03:11.57] oh~
+[03:13.07]嗒……
+[03:17.20]如果爱上你只是一个梦境
+[03:22.30] oh yeah~
+[03:24.01]醒来后又该如何重新睡去
+[03:28.61] oh~
+[03:30.71]如果失去记忆
+[03:33.97] oh~
+[03:37.37]能否再一见钟情
+[03:44.01]能否再一见钟情
+[03:48.63]oh~
+[03:56.49]能否再一见钟情
+[00:00.05]
+`,
+    '2749430424': `[00:16.92]让我占有你
+[00:18.93]让我占有你在你最好的年纪
+[00:22.59]趁一切还崭新
+[00:25.17]让我占有你占有你干净的心
+[00:29.25]温柔的声音
+[00:30.78]和完美柔软你的身体
+[00:35.58]身体里我全部的曾经
+[00:41.07]曾经
+[00:50.28]让我占有你
+[00:52.23]撕碎你然后像风握在我手里
+[00:56.10]抱着我像空气
+[00:58.56]想把你收集
+[01:00.48]泡你在福尔马林盯着你意淫
+[01:04.23]下半生的每个夜里
+[01:09.00]夜里你湿润赤裸
+[01:11.67]你眼睛吞了我
+[01:23.52]山海的浩瀚
+[01:25.47]宇宙的浪漫
+[01:27.15]都在我内心翻腾
+[01:29.46]在推着我前进
+[01:31.74]移动的森林
+[01:33.60]伴着我行
+[01:34.98]对我眨眼睛
+[01:40.02]要陪你上岸
+[01:41.94]别的都不管
+[01:43.86]我要逆世界而行
+[01:46.11]我要化成灰烬
+[01:48.18]把你的路铺平
+[02:30.48]我只属于你
+[02:32.46]我只属于你在这短暂的生命
+[02:36.09]随你自由来去
+[02:38.79]我只属于你
+[02:40.80]我大脑我的身体都要你住进
+[02:44.37]要你把我灵魂榨取
+[02:49.17]我的浪漫和极端都拿去
+[02:54.72]慢慢品
+[03:03.87]我只属于你
+[03:05.85]赞美你包容你都是我的使命
+[03:09.69]用一生去执行
+[03:12.12]想现在死去
+[03:14.19]时光记住我此刻坚决和笃定
+[03:17.94]让你永远觉得安心
+[03:22.50]世界纵然不会为此而停
+[03:28.14]但增添你美丽
+[03:36.84]山海的浩瀚
+[03:38.79]宇宙的浪漫
+[03:40.68]都在我内心翻腾
+[03:43.11]在推着我前进
+[03:45.30]移动的森林
+[03:47.13]伴着我行
+[03:48.48]对我眨眼睛
+[03:53.46]要陪你上岸
+[03:55.50]别的都不管
+[03:57.39]我要逆世界而行
+[03:59.73]我要化成灰烬
+[04:01.77]把你的路铺平
+[04:44.66] 作词Lyrics by : 陈粒
+[04:44.97] 作曲Composed by : 陈粒
+[04:45.29] 制作人Produced &Music Arranged by：the band
+[04:45.60] 统筹制作人Coordinating Producer：黄子健
+[04:45.91] 鼓Drums by：景帅
+[04:46.22] 吉他Guitars by：Nick曾令伟
+[04:46.53] 贝斯Bass by：花椰菜
+[04:46.85] 键盘Keyboard by：段柏翥 
+[04:47.16] 人声录音Vocals Recorded by：陈粒@A26录音棚
+[04:47.47] 器乐录音Instruments Recorded by：刘芒/马艺珊@DBZ1987.BEIJING 
+[04:47.78] 音频编辑Audio Edited by：刘璋/马艺珊
+[04:48.09] 混音制作Mixed by：杨尚衡/刘璋
+[04:48.41] 母带工程Mastered by：刘明生@Miaosound Studio
+[04:48.72] OP/SP/出品：北京有此山文化传媒有限公司
+[04:49.03] 出品人/总策划：奚韬
+[04:49.34] © 版权所有，未经许可请勿使用
+`,
+    '1412559986': `[00:00.00] 作词 : 季知拙
+[00:01.00] 作曲 : WH宇恒
+[00:02.00] 编曲 : WH宇恒
+[00:05.78]幼年时，贺今朝和黎复照约法三章，逢春便到云深处，夏聚秋游，冬令则整日不出。如今已是第十四个年头。
+[00:09.78]——【竹马篇】
+[00:15.28]曾羡慕闲云野鹤 作客人间
+[00:18.28]寄情于天地有灵 草木无邪
+[00:22.28]此生不做万人杰
+[00:24.88]赴一株水仙白头约
+[00:28.28]当如愿往来山川 出入云烟
+[00:32.28]萦怀却朝寡夕淡 悲欢难辨
+[00:35.88]贪过了新鲜 便无聊
+[00:38.28]倒头梦大千
+[00:42.08]始忆 依稀烂醉间
+[00:44.28]想开怀抱明月
+[00:46.28]却潦倒他一身缠绵
+[00:49.08]少年 轻狂都散尽
+[00:51.28]笑敢与他换名姓 发誓言
+[00:57.28]这天下 风情千万般
+[00:59.78]值得觊觎一眼
+[01:01.78]桃花醒自然
+[01:03.18]星斗睡河汉
+[01:04.78]不必再舍近求远
+[01:06.58]就在他山眉海目间 寻风月
+[01:11.08]何须问生平长短
+[01:13.58]应问何人相伴
+[01:15.38]千万人赴宴
+[01:16.78]千万人退却
+[01:18.78]独他极力上前
+[01:20.28]争得你一席并肩
+[01:25.78]
+[01:26.78]编曲：WH宇恒
+[01:27.78]和声：司南
+[01:28.78]和声编写：WH宇恒/司南
+[01:29.78]二胡：辰小弦
+[01:30.78]混音：幺唠
+[01:31.78]策划：上河Lin/顾如愿/小扯扯
+[01:31.98]统筹：李喆渊
+[01:32.78]监制：妖扬
+[01:33.78]制作人：WH宇恒
+[01:34.78]故事/设计：顾如愿
+[01:35.78]出品：观风月
+[01:36.78]
+[01:38.78]待重逢秉烛游夜 一种悠闲
+[01:41.78]人间是万象横看 竖成诗篇
+[01:45.58]好风比酒还讨人醉
+[01:48.58]欠它两碗钱
+[01:51.78]手上正挈的灯盏
+[01:54.58]他绘海纳百川
+[01:56.28]随烛火苗乍明乍现
+[01:58.78]任你挑灯看河山
+[02:01.58]随手指得哪一座 改日看
+[02:06.58]这天下 风情千万般
+[02:09.58]值得觊觎一眼
+[02:11.58]桃花醒自然
+[02:12.78]星斗睡河汉
+[02:14.58]不必再舍近求远
+[02:16.58]就在他山眉海目间 寻风月
+[02:20.78]何须问生平长短
+[02:23.00]应问何人相伴
+[02:25.38]千万人赴宴
+[02:26.38]千万人退却
+[02:28.38]独他极力上前
+[02:30.38]争得你一席并肩
+[02:33.78]此心也曾渴慕千山
+[02:36.88]如今爱等风闲
+[02:38.88]临窗听雨夜
+[02:39.88]笔忆话梦谈
+[02:41.58]当年万里觅风月 夜航船
+[02:44.58]如今江南也不眼馋
+[02:47.88]在他山眉海目间
+[02:50.38]寻到风花雪月
+[02:52.38]温柔而凛冽
+[02:53.58]在心上撒野
+[02:54.88]覆盖了所有的
+[02:57.58]山河岁月天地远
+[03:03.58]
+[03:04.58]- “观风月”·竹马篇系列作品 -
+`,
+    '1948572170': `[00:00.00] 作词 : Capper
+[00:01.00] 作曲 : Capper
+[00:02.00] 编曲 : DiESi
+[00:03.00] 制作人 : 刘俊坚
+[00:14.38]出品：网易·云上
+[00:21.47]喜欢和她见面
+[00:23.53]可距离给的感觉
+[00:24.71]是忽明又忽灭
+[00:26.53]她谜底总是留着悬念
+[00:27.94]我甚至感到厌倦
+[00:29.09]被掐灭的香烟
+[00:30.87]雾锁云埋
+[00:32.60]总是在答案边徘徊
+[00:35.27]不想醒来
+[00:36.88]像一杯美式没冰块
+[00:39.42]好奇她的房间
+[00:40.93]坐在她的窗边
+[00:41.95]等她眼睛睁开
+[00:43.81]下雨还是晴天
+[00:45.07]依偎在我身边
+[00:46.24]调昏暗的光线
+[00:48.22]别再怀念 有些人不值得 没必要留恋
+[00:52.35]别再冬眠 去热烈的夏天
+[00:55.89]Shawty like melody in my head
+[00:58.07]Replay iffy in my head
+[01:00.40]我想留住的画面
+[01:02.47]把心动拍成胶片
+[01:04.49]Shawty like melody in my head
+[01:06.87]Replay iffy in my head
+[01:09.02]是最熟悉的音乐
+[01:11.26]我却不熟练表演
+[01:13.55]Ouu-ouuu-ouu-ou
+[01:17.07]猜不透你的活动心理
+[01:19.51]软禁在你发的短信
+[01:21.77]like youu-ouu-ouu
+[01:25.62]读不懂你的所有神情
+[01:28.14]会牵动我神经
+[01:29.85]沉浸在落日晚风中的意外
+[01:32.69]树莓般的晚霞对你透着溺爱
+[01:35.94]在提醒我小心
+[01:36.88]因为一不小心我就会爱上你
+[01:40.40]Maybe we should link
+[01:41.40]我录下你的声音放进采样集
+[01:44.62]伴随着我的心跳 在扑通扑通
+[01:46.76]扑到海浪里
+[01:48.72]这动人的情节 就像收到幸运的请帖
+[01:53.01]浓度很高 倒杯不流的DQ暴风雪
+[01:57.67]其他我看不见 一起走到终点
+[02:01.65]数一年又一年 用音乐装时间
+[02:05.97]像关了禁闭
+[02:07.27]心动的感觉总在掩饰下藏匿
+[02:09.46]像是深海里的宝箱里面装满金币
+[02:11.61]骇浪也因此骤停 可你却不求名利
+[02:14.97]短暂的心悸
+[02:16.06]我还没看到你笑我怎么放弃
+[02:17.93]你要相信这段感情一定百无禁忌
+[02:20.20]下次见到你 我想要
+[02:22.63]hold you body like this
+[02:25.06]hold you body like this
+[02:26.67]这部言情电影
+[02:29.21]还没公映
+[02:30.48]I wanna
+[02:31.14]hold you body like this
+[02:33.64]hold you body like this
+[02:35.50]这部言情电影
+[02:37.98]还没公映
+[02:39.86]Shawty like melody in my head
+[02:41.84]Replay iffy in my head
+[02:44.09]我想留住的画面
+[02:46.27]把心动拍成胶片
+[02:48.21]Shawty like melody in my head
+[02:50.47]Replay iffy in my head
+[02:52.91]是最熟悉的音乐
+[02:55.16]我却不熟练表演
+[03:01.07] 和音：Capper
+[03:01.63] 制作助理：晨晨 马明烨
+[03:02.18] 混音工程师：刘城函
+[03:02.74] 母带工程师：刘城函
+[03:03.29] 策划：史洪乙/牛睿婷
+[03:03.85] 企划：回凤超/王梦菲
+[03:04.40] A&R：王梦菲
+[03:04.96] 推广：李彤/高鹏霞
+[03:05.51] 统筹：孙源
+`,
+    '2695903727': `[00:00.00] 作词 : Zkaaai
+[00:01.00] 作曲 : Zkaaai
+[00:02.00] 编曲 : 安洛贤/小越
+[00:03.00] 制作人 : 安洛贤/蔡书发
+[00:04.00] 出品 : 网易音乐人X青云LAB
+[00:16.95]离开你的每个夜里
+[00:21.81]回忆清晰困我在这里
+[00:31.68]或许在平行时空里
+[00:37.02]我们才能拥有完美的结局
+[00:44.82]总是翻来覆去
+[00:47.19]爱很透明却找不出问题
+[00:52.20]怎么走到这里
+[00:54.42]谁又能说清
+[00:58.41]忘不掉你带给我的吻
+[01:01.41]给我的安稳
+[01:03.78]带给我的恨
+[01:06.51]也许我爱得太沉
+[01:09.24]太过天真
+[01:11.07]换不得永恒
+[01:13.65]曾经的你多坦诚
+[01:16.23]美梦没成真
+[01:18.48]现在多残忍
+[01:21.00]回忆里的我
+[01:22.86]围城中的我
+[01:24.93]没有资格再多说
+[01:27.60]再奢求你的什么
+[01:47.55]总是翻来覆去
+[01:49.92]爱很透明却找不出问题
+[01:54.93]怎么走到这里
+[01:57.18]谁又能说清
+[02:01.23]忘不掉你带给我的吻
+[02:04.20]给我的安稳
+[02:06.54]带给我的恨
+[02:09.30]也许我爱得太沉
+[02:12.03]太过天真
+[02:13.83]换不得永恒
+[02:16.47]曾经的你多坦诚
+[02:18.99]美梦没成真
+[02:21.21]现在多残忍
+[02:23.79]回忆里的我
+[02:25.56]围城中的我
+[02:27.72]没有资格再多说
+[02:30.51]再奢求你的
+[02:34.44]忘不掉你带给我的吻
+[02:37.47]给我的安稳
+[02:39.78]带给我的恨
+[02:42.51]也许我爱得太沉
+[02:45.24]太过天真
+[02:47.13]换不得永恒
+[02:49.68]曾经的你多坦诚
+[02:52.23]美梦没成真
+[02:54.45]现在多残忍
+[02:57.06]回忆里的我
+[02:58.86]围城中的我
+[03:00.93]没有资格再多说
+[03:03.75]再奢求你的什么
+[03:36.75] 吉他/贝斯 : 张小越
+[03:37.20] 混音母带工程师 : 安洛贤/黄玟喻@AMS
+[03:37.65] 录音师 : Oldtwo
+[03:38.11] 录音棚 : 太原Old2music录音棚
+[03:38.56] 项目支持 : 安洛贤
+[03:39.02] 制作公司 : 亦谦音乐
+[03:39.47] 监制 : 蔡书发
+[03:39.92] 统筹 : 姜晨宇/舒丽园/周翔
+[03:40.38] 营销推广 : 面包
+[03:40.83] 总营销 : 施沛洋/欧阳慧琳
+[03:41.29] 出品人 : 赵宗/唐晶晶
+`,
+    '5243408': `[00:00.000] 编曲 : 于京延
+[00:01.000] 制作人 : 薛忠铭
+[00:02.000] 作词 : 吴青峰
+[00:03.000] 作曲 : 吴青峰
+[00:17.000]
+[00:17.180]每次我总 一个人走
+[00:22.630]交叉路口 自己生活
+[00:30.960]这次你却 说带我走
+[00:36.130]某个角落 就你和我
+[00:42.700]
+[00:44.230]像土壤抓紧花的迷惑
+[00:50.770]像天空缠绵雨的汹涌
+[00:56.080]在你的身后 计算的步伐
+[01:00.150]每个背影 每个场景
+[01:03.700]都有发过的梦
+[01:10.370]
+[01:10.810]带我走 到遥远的以后
+[01:17.040]带走我 一个人自转的寂寞
+[01:24.010]带我走 就算我的爱 你的自由 都将成为泡沫
+[01:32.650]我不怕 带我走
+[01:37.300]
+[01:49.440]每次我总 独自远走
+[01:54.170]保持缄默 不皱眉头
+[02:01.690]这次你却 说一起走
+[02:07.640]彼此温柔 从此以后
+[02:13.560]
+[02:15.190]像土壤抓紧花的迷惑
+[02:22.140]像天空缠绵雨的汹涌
+[02:27.440]在你的身后 计算的步伐
+[02:31.400]每个背影 每个场景
+[02:35.150]都有发过的梦
+[02:41.170]
+[02:42.130]带我走 到遥远的以后
+[02:48.720]带走我 一个人自转的寂寞
+[02:55.290]带我走 就算我的爱 你的自由 都将成为泡沫
+[03:03.520]我不怕 带我走
+[03:08.630]
+[03:10.420]白马溜过漆黑尽头
+[03:13.730]潮汐袭来浪花颤动
+[03:17.220]凝在海岸结成了墨
+[03:22.250]
+[03:23.400]蔷薇朝向草原气球
+[03:27.390]邮差传来一地彩虹
+[03:30.510]刻在心中拍打着脉搏
+[03:38.720]
+[03:39.440]带我走 到遥远的以后
+[03:46.050]带走我 一个人自转的寂寞
+[03:52.690]带我走 就算我的爱 你的自由 都将成为泡沫
+[04:00.910]我不怕 带我走
+[04:06.390]带我走 就算我的爱 你的自由 都将成为泡沫
+[04:19.670]带我走
+[04:23.550]
+[04:45.960] 吉他 : 小威(动静音乐)
+[04:46.414] 弦乐编写 : 阿滚(动静音乐)
+[04:46.868] 小提琴 : 阿滚(动静音乐)
+[04:47.322] 合声编写 : 马毓芬
+[04:47.776] 合声 : 马毓芬
+[04:48.230] 录音工程师 : 林世龙/阿滚/小威
+[04:48.684] 录音工程室 : PUSH STUDIO/动静音乐录音室
+[04:49.138] 混音工程师 : 林世龙
+[04:49.592] 混音工程室 : PUSH STUDIO
+[04:50.046] OP : 林暐哲音乐社
+[04:50.500] SP : Universal Ms Publ Ltd Taiwan
+`,
+    '2144073361': `[00:00.00] 作词 : 向羽
+[00:00.42] 作曲 : 李哲
+[00:00.84] 制作人 : G.I.R
+[00:01.26] 出品 : 网易子弹
+[00:01.68]今生戴花世世漂亮
+[00:04.80]你簪一朵春天一世无忧伤
+[00:08.40]马面裙花衬衣
+[00:11.58]永远清澈模样
+[00:16.86]倒挂的福字还残留着墨香
+[00:23.28]尝过春卷就走进下个春天
+[00:31.17]在风筝上写下我们的愿望
+[00:37.62]放得高高的给天上神仙看
+[00:45.48]妈祖庙的香火弥漫过弄堂
+[00:52.26]簪花阿婆坐着板凳晒太阳
+[00:59.76]巧手串起一缕白兰花清香
+[01:06.60]将这芬芳戴在你发上
+[01:12.27]我为你唱
+[01:14.28]今生戴花世世漂亮
+[01:18.18]你簪一朵春天一世无忧伤
+[01:21.87]马面裙花衬衣
+[01:24.96]永远清澈模样
+[01:28.53]今生戴花世世漂亮
+[01:32.49]我铭记在心上你微笑脸庞
+[01:36.15]把相思藏进送你的香囊
+[01:58.92]妈祖庙的香火弥漫过弄堂
+[02:05.67]簪花阿婆坐着板凳晒太阳
+[02:13.23]巧手串起一缕白兰花清香
+[02:20.01]将这芬芳戴在你发上
+[02:24.06]我为你唱
+[02:26.40]今生戴花世世漂亮
+[02:29.82]你簪一朵春天一世无忧伤
+[02:33.45]马面裙花衬衣
+[02:36.63]永远清澈模样
+[02:40.17]今生戴花世世漂亮
+[02:44.16]我铭记在心上你微笑脸庞
+[02:47.76]把相思藏进送你的香囊
+[03:03.50] 编曲 : 骆亚新
+[03:04.06] 企划 : 向羽
+[03:04.61] 词曲统筹 : 江珂/镜千/陈亦心
+[03:05.17] 推广 : 叶增辉/梦圆
+[03:05.72] 监制 : 于山川
+[03:06.28] 吉他 : 徐楠
+[03:06.83] 和声 : 白荼
+[03:07.39] 混音 : 赵卓鹏
+[03:07.94] 出品人 : 如风
+`,
+    '2041212293': `[00:00.00] 作词 : John刘江
+[00:01.00] 作曲 : John刘江
+[00:02.00] 编曲 : 闫泽欢
+[00:03.00] 制作人 : 闫泽欢
+[00:04.00] 出品人 : 徐怀超/周启武
+[00:15.57]
+[00:16.48]松开你的手了
+[00:18.40]在下个路口
+[00:19.79]你向左我向右
+[00:22.22]破碎了的梦谁也别想逗留
+[00:25.97]谁也别回头
+[00:31.65]就一无所有
+[00:33.57]就一无所求
+[00:34.85]就算挤破了头
+[00:37.44]就算我还是没有
+[00:46.46]我猜你连哭泣都在骗自己
+[00:51.71]哪怕有一次去珍惜
+[00:57.25]又一次去逃避
+[01:01.09]荒漠上行走
+[01:03.10]我被现实撞得快头破血流
+[01:09.60]想一个人一支烟一直走到夕阳落在我的身后
+[01:16.20]松开你的手
+[01:18.28]这次我绝不说亲爱的别走
+[01:25.01]这是我
+[01:25.88]这是我
+[01:26.88]能选择的自由
+[01:47.83]就一无所有
+[01:49.80]就一无所求
+[01:51.16]就算挤破了头
+[01:53.64]就算我还是没有
+[02:02.62]我猜你连哭泣都在骗自己
+[02:07.88]哪怕有一次去珍惜
+[02:13.43]又一次去逃避
+[02:17.24]荒漠上行走
+[02:19.29]我被现实撞得快头破血流
+[02:25.84]想一个人一支烟一直走到夕阳落在我的身后
+[02:32.42]松开你的手
+[02:34.53]这次我绝不说亲爱的别走
+[02:41.17]这是我
+[02:42.07]这是我
+[02:43.05]能选择的自由
+[02:59.18]荒漠上行走
+[03:01.17]我被现实撞得快头破血流
+[03:07.66]想一个人一支烟一直走到夕阳落在我的身后
+[03:14.29]松开你的手
+[03:16.47]这次我绝不说亲爱的别走
+[03:23.10]这是我
+[03:24.01]这是我
+[03:24.95]能选择的自由
+[03:48.47] 合成器 : 闫泽欢
+[03:48.76] 钢琴 : 闫泽欢
+[03:49.06] 木吉他 : 闫泽欢
+[03:49.35] 吉他 : 刘磊
+[03:49.65] 贝斯 : 闫津浩
+[03:49.94] 鼓 : 闫津浩
+[03:50.23] 和声 : 任菲菲@DPS
+[03:50.53] 混音 : 张锦亮
+[03:50.82] 母带 : 张锦亮
+[03:51.12] 配唱制作人 : 闫泽欢
+[03:51.41] 制作团队 : DPS
+[03:51.70] 人声编辑 : 洪士诚
+[03:52.00] 录音室 : 录顶技
+[03:52.29] 录音师 : 洪士诚
+[03:52.59] 监制 : 徐怀超
+[03:52.88] 宣传发行 : 老虎
+[03:53.17] OP/SP : 潮音悦动
+`,
+    '1475737616': `[00:00.00] 作词 : 潘玮柏
+[00:00.61] 作曲 : 周杰伦
+[00:01.22] 编曲 : 张少波
+[00:01.83] 制作人 : 张少波
+[00:02.45]原唱：江语晨
+[00:03.48]
+[00:06.10]耳机里的情歌装听不懂
+[00:10.31]知道你会一直为我点播
+[00:14.95]任性的要求你从没烦过
+[00:19.51]谢谢你我一直说不出口
+[00:23.90]请太阳就停在这片草地
+[00:28.39]让我的幸福发芽到云里
+[00:32.98]要长久就不能腻在一起
+[00:37.58]这是谁说的鬼道理
+[00:41.39]
+[00:41.74]就爱这样的你
+[00:43.69]不用太多道理
+[00:45.94]牵着我的手一起到黎明
+[00:50.42]傻傻的看着我
+[00:53.68]说你有多爱我
+[00:55.13]这感觉已足够
+[00:59.70]
+[00:59.88]牵我的手
+[01:01.77]我知道你会带着我向前走
+[01:06.34]我不需要天长地久的承诺
+[01:09.07]只要你每天都想着我
+[01:14.16]一遍两遍三遍四遍
+[01:16.50]不嫌太多
+[01:17.87]
+[01:18.12]跟着我走
+[01:19.73]双脚踩在沙滩上迎着感动
+[01:22.66]我不需要海枯石烂的温柔
+[01:27.24]只要你每天都属于我
+[01:32.22]顺心呵护我保护着爱你的我
+[01:38.16]
+[01:54.35]请太阳就停在这片草地
+[01:59.01]让我的幸福发芽到云里
+[02:03.48]要长久就不能腻在一起
+[02:07.86]这是谁说的鬼道理
+[02:11.52]
+[02:11.89]就爱这样的你
+[02:14.04]不用太多道理
+[02:16.41]牵着我的手一起到黎明
+[02:20.83]傻傻的看着我
+[02:23.17]说你有多爱我
+[02:25.57]这感觉已足够
+[02:29.58]
+[02:30.24]牵我的手
+[02:32.03]我知道你会带着我向前走
+[02:36.59]我不需要天长地久的承诺
+[02:41.03]只要你每天都想着我
+[02:44.56]一遍两遍三遍四遍
+[02:47.04]不嫌太多
+[02:48.20]
+[02:48.44]跟着我走
+[02:50.14]双脚踩在沙滩上迎着感动
+[02:54.72]我不需要海枯石烂的温柔
+[02:59.20]只要你每天都属于我
+[03:02.72]顺心呵护我保护着爱你的我
+[03:07.87]
+[03:08.28]就爱这样的你
+[03:09.31]不用太多道理
+[03:09.94]牵着我的手一起到黎明
+[03:11.71]傻傻看着我
+[03:12.94]说你有多爱我
+[03:13.58]这感觉已足够
+[03:14.58]牵我的手
+[03:16.20]我知道你会带着我向前走
+[03:18.37]我不需要天长地久的承诺
+[03:20.73]只要你每天都想着我
+[03:22.16]一遍两遍三遍四遍
+[03:23.44]不嫌太多
+[03:24.29]
+[03:24.80]跟着我
+[03:25.83]跟着我走
+[03:27.48]双脚踩在沙滩上迎着感动
+[03:32.00]我不需要海枯石烂的温柔
+[03:35.15]只要你每天都属于我
+[03:40.34]顺心呵护我保护着爱你的我
+[03:46.35]
+[03:48.71]监制：唐晶晶
+[03:48.96]特别企划：网易云音乐「复刻」
+[03:50.00]OP：Huang Ban Yia Ent. Co. Ltd. / JVR Music Int. Ltd.
+[03:50.14]SP：环球音乐版权
+[03:51.14] 吉他 : 牛子健
+[03:52.14] 和声编写 : 张少波/刘瑞琦
+[03:53.14] 和声 : 刘瑞琦
+[03:54.14] 录音 : 张少波 @ A HIDDEN STUDIO
+[03:55.14] 混音 : 赵靖
+[03:56.14] 母带 : 赵靖
+[03:57.14] 企划 : 陈尚禔/潘俊
+[03:58.14] 封面 : tintindesign 汀町设计
+[03:59.14] 策划 : 陈莹
+`,
+    '407435011': `[00:00.00] 作词 : 余佳运
+[00:00.00] 作曲 : 余佳运
+[00:00.00] 编曲 : 余佳运
+[00:00.00]我想要带你去所有的地方
+[00:06.72]把全部幸福都藏在你身上
+[00:13.18]我想你能就这样靠在我身旁
+[00:26.21]我想要带你去所有的地方
+[00:32.47]把所有美好都撒在你脸上
+[00:39.09]我想把你的世界全部都照亮
+[00:45.75]填满在你最灿烂美好的时光
+[00:52.22]Leo Style
+[01:19.54]一生总会遇到许多过客
+[01:25.96]错过一次就真的错过了（错过一次就错过了）
+[01:32.58]曾经你也是那人海之中的一个
+[01:39.37]我想我做了最好的选择
+[01:45.84]写过许多关于爱情的歌
+[01:52.30]谢谢你尊重了我的选择
+[01:58.77]我想着你就写了这首歌 简单的 oh no..
+[02:05.24]想着想着就这样睡着了
+[02:10.15]我想要带你去所有的地方
+[02:16.12]把全部幸福都藏在你身上
+[02:22.59]我想你能就这样靠在我身旁
+[02:29.80]看着那太阳东起西落又天亮
+[02:35.78]我想要带你去所有的地方
+[02:41.95]把所有美好都撒在你脸上
+[02:48.40]我想把你的世界全部都照亮
+[02:55.37]填满在你最灿烂美好的时光
+[03:01.68]
+[03:31.08]我想要带你去所有的地方
+[03:37.50]把全部幸福都藏在你身上
+[03:44.07]我想你能就这样靠在我身旁
+[03:54.15]看着那太阳东起西落又天亮
+`,
+    '2749430417': `[00:16.65]窗外雨都停了
+[00:18.42]屋里灯还黑着
+[00:20.25]数着你的冷漠
+[00:22.11]把玩着寂寞
+[00:24.06]电话还没拨已经口渴
+[00:27.30]为你熬的夜都冷了
+[00:29.40]数的羊都跑了
+[00:31.50]一个两个
+[00:33.09]嘲笑我
+[00:34.56]笑我耳朵失灵的
+[00:37.56]笑我放你走了走了走了
+[00:42.00]走了
+[00:46.11]路人穿街过河
+[00:47.91]好景只有片刻
+[00:49.86]森林都会凋落
+[00:51.63]风吹走云朵
+[00:53.64]你留给我的迷离扑朔
+[00:56.79]岁月风干我的执着
+[00:58.86]我还是把回忆紧握
+[01:01.89]太多都散落
+[01:04.08]散落太多好难过
+[01:07.44]难过时你走了走了走了
+[01:11.55]走了
+[01:15.75]过了很久终于我愿抬头看
+[01:19.23]你就在对岸走得好慢
+[01:22.65]任由我独自在假寐与现实之间两难
+[01:30.48]过了很久终于我愿抬头看
+[01:33.93]你就在对岸等我勇敢
+[01:37.23]你还是我的我的我的
+[01:41.04]你看
+[02:14.70]浪漫无处消磨
+[02:16.53]无聊伴着生活
+[02:18.51]空荡荡的自我
+[02:20.22]莫名地焦灼
+[02:22.17]世界孤立我
+[02:23.58]任它奚落
+[02:25.62]我只保持我的沉默
+[02:27.51]明白什么才是好的坏的
+[02:31.50]都散了
+[02:32.70]散了太多无关的
+[02:35.76]散了后我醒了醒了醒了
+[02:40.11]醒了
+[02:44.40]过了很久终于我愿抬头看
+[02:47.82]你就在对岸走得好慢
+[02:51.30]任由我独自在假寐与现实之间两难
+[02:59.19]过了很久终于我愿抬头看
+[03:02.58]你就在对岸等我勇敢
+[03:05.88]你还是我的我的我的
+[03:09.66]你看
+[03:13.92]过了很久终于我愿抬头看
+[03:17.28]你就在对岸走得好慢
+[03:20.85]任由我独自在假寐与现实之间两难
+[03:28.68]过了很久终于我愿抬头看
+[03:32.10]你就在对岸等我勇敢
+[03:35.40]你还是我的我的我的
+[03:39.27]你看
+[03:58.08]浪漫无处消磨
+[03:59.94]无聊伴着生活
+[04:01.86]空荡荡的自我
+[04:03.63]莫名地焦灼
+[04:05.52]世界孤立我
+[04:06.96]任它奚落
+[04:08.91]我只保持我的沉默
+[04:10.89]明白什么才是好的坏的
+[04:14.79]都散了
+[04:16.08]散了太多无关的
+[04:19.44]散了后我醒了醒了醒了
+[04:24.48]醒了
+[04:36.25] 作词Lyrics by : 陈粒
+[04:36.56] 作曲Composed by : 陈粒
+[04:36.87] 制作人Produced by : 于杨悠然
+[04:37.19] 统筹制作人Coordinating Producer : 黄子健
+[04:37.50] 编曲Music Arranged by : 于杨悠然/杨猛
+[04:37.81] 鼓Drums by : 景帅
+[04:38.12] 吉他Guitars by : 杨奕
+[04:38.43] 贝斯Bass by : 王晨淮
+[04:38.75] 人声录音Vocals Recorded by : 陈粒@A26录音棚
+[04:39.06] 器乐录音Instruments Recorded by : 刘芒/马艺珊@DBZ1987.BEIJING
+[04:39.37] 音频编辑Audio Edited by : 陈挚航/马艺珊
+[04:39.68] 混音制作Mixed by : 陈挚航@Mielody Studio咩声唱片
+[04:39.99] 母带工程 Mastered by : 刘明生@Miaosound Studio
+[04:40.31] OP/SP/出品 : 北京有此山文化传媒有限公司
+[04:40.62] 出品人/总策划 : 奚韬
+[04:40.93] © 版权所有，未经许可请勿使用
+`,
+    '5255640': `[00:00.00] 作词 : 陈信荣
+[00:01.00] 作曲 : 周传雄
+[00:02.00] 编曲 : 周传雄
+[00:03.00] 制作人 : 周传雄
+[00:31.86]
+[00:35.19]过完整个夏天忧伤并没有好一些
+[00:38.43]
+[00:41.29]开车行驶在公路无际无边
+[00:47.38]有离开自己的感觉
+[00:50.91]
+[00:53.64]唱不完一首歌
+[00:57.07]
+[00:59.75]疲倦还剩下黑眼圈
+[01:03.12]
+[01:05.92]感情的世界伤害在所难免
+[01:12.03]黄昏再美终要黑夜
+[01:15.65]
+[01:18.64]依然记得从你口中
+[01:21.69]说出再见坚决如铁
+[01:25.16]昏暗中有种烈日灼身的错觉
+[01:30.48]黄昏的地平线
+[01:33.53]划出一句离别
+[01:36.65]爱情进入永夜
+[01:40.30]
+[01:43.23]依然记得从你眼中
+[01:46.22]滑落的泪伤心欲绝
+[01:49.67]混乱中有种热泪烧伤的错觉
+[01:55.10]黄昏的地平线
+[01:58.17]割断幸福喜悦
+[02:01.34]相爱已经幻灭
+[02:05.48]
+[02:19.87]唱不完一首歌
+[02:22.96]
+[02:25.89]疲倦还剩下黑眼圈
+[02:29.39]
+[02:32.11]感情的世界伤害在所难免
+[02:38.14]黄昏再美终要黑夜
+[02:42.39]
+[02:44.73]依然记得从你口中
+[02:47.79]说出再见坚决如铁
+[02:51.26]昏暗中有种烈日灼身的错觉
+[02:56.65]黄昏的地平线
+[02:59.72]划出一句离别
+[03:02.79]爱情进入永夜
+[03:06.38]
+[03:09.46]依然记得从你眼中
+[03:12.38]滑落的泪伤心欲绝
+[03:15.83]混乱中有种热泪烧伤的错觉
+[03:21.26]黄昏的地平线
+[03:24.34]割断幸福喜悦
+[03:27.42]相爱已经幻灭
+[03:31.49]
+[03:58.73]依然记得从你口中
+[04:01.60]说出再见坚决如铁
+[04:05.18]昏暗中有种烈日灼身的错觉
+[04:10.49]黄昏的地平线
+[04:13.56]划出一句离别
+[04:16.64]爱情进入永夜
+[04:20.10]
+[04:23.44]依然记得从你眼中
+[04:26.26]滑落的泪伤心欲绝
+[04:29.71]混乱中有种热泪烧伤的错觉
+[04:35.10]黄昏的地平线
+[04:38.17]割断幸福喜悦
+[04:41.23]相爱已经幻灭
+[05:39.20] 钢琴 : 周传雄
+[05:39.53] OP : Sony/ATV Music Publishing Taiwan/哈萨雅琪有限公司
+[05:39.86] 弦乐 : 孔朝晖/顾文丽/隋晶晶/梁中枢/尹淑占/王言/关旗
+[05:40.19] 贝斯 : Andy Peterson
+[05:40.53] 混音师 : 王晋溢
+[05:40.86] 吉他 : 许华强
+[05:41.19] 混音室 : 白金
+[05:41.53] 和声编写 : 周传雄
+[05:41.86] 和声 : 周传雄
+[05:42.19] 录音师 : 林世龙/沈文钏/Geoffrey Lee
+[05:42.53] 鼓 : Gary Gideon
+[05:42.86] 弦乐编写 : 吴庆隆
+[05:43.19] 配唱编写 : 吴佳明
+[05:43.52] SP : Sony/ATV Music Publishing Taiwan
+[05:43.86] 录音室 : 强力/HASAYAKE/Atomic & Audioplex (Singapore)
+`,
+    '2659346317': `[00:00.00] 作词 : 陈信荣
+[00:01.00] 作曲 : 周传雄
+[00:02.00] 编曲 : 周传雄
+[00:03.00] 制作人 : 周传雄
+[00:01.50]青花
+[00:05.50]演唱：周传雄
+[00:19.50]
+[00:28.86]三月走过 柳絮散落 恋人们匆匆
+[00:35.13]我的爱情 闻风不动
+[00:41.21]翻阅昨日 仍有温度 蒙尘的心事
+[00:48.12]恍恍惚惚 已经隔世
+[00:52.49]
+[00:54.13]遗憾无法说 惊觉心一缩
+[01:06.49]
+[01:06.90]紧紧握着 青花信物 信守着承诺
+[01:13.02]离别总在 失意中度过
+[01:19.26]记忆油膏 反复涂抹 无法愈合的伤口
+[01:25.66]你的回头 划伤了沉默
+[01:30.61]
+[01:44.71]那夜重逢 停止漂泊 你曾回来过
+[01:50.96]相濡相忘 都是疼痛
+[01:57.18]只因昨日 善良固执 委屈着彼此
+[02:03.68]打碎信物 取消来世
+[02:08.46]
+[02:09.86]遗憾无法说 惊觉心一缩
+[02:22.01]
+[02:22.58]紧紧握着 青花信物 信守着承诺
+[02:28.82]离别总在 失意中度过
+[02:35.05]记忆油膏 反复涂抹 无法愈合的伤口
+[02:41.41]你的回头 划伤了沉默
+[02:46.42]
+[02:47.82]紧紧握着 青花信物 雕刻着寂寞
+[02:54.01]就好像我 无主的魂魄
+[03:00.37]纠缠过往 无端神伤 摔碎谁也带不走
+[03:06.73]你我一场 唤不醒的梦
+[03:38.40]紧紧握着 青花信物 信守着承诺
+[03:44.56]离别总在 失意中度过
+[03:50.89]记忆油膏 反复涂抹 无法愈合的伤口
+[03:57.24]你的回头 划伤了沉默
+[04:02.03]
+[04:03.55]紧紧握着 青花信物 雕刻着寂寞
+[04:09.88]就好像我 无主的魂魄
+[04:16.15]纠缠过往 无端神伤 摔碎谁也带不走
+[04:22.52]你我一场 唤不醒的梦
+[04:27.76]
+[04:30.00] 钢琴 : 周传雄
+[04:30.33] 弦乐 : 温奕哲
+[04:30.66] 吉他 : 倪方来
+[04:30.99] 贝斯 : Andy Peterson
+[04:31.33] 鼓 : Gary Gideon
+[04:31.66] 和声 : 周传雄
+[04:31.99] OP : HMC
+[04:32.33] SP : Sony/ATV Music Publishing Taiwan
+    `,
+    '421423808': `[00:15.11]固执押韵的排比
+[00:18.86]固执幼稚的押韵
+[00:22.15]零零散散凑齐了阵营
+[00:29.66]固执美丽的意义
+[00:33.54]固执空洞的美丽
+[00:37.08]飘飘然然空中遇见你
+[00:43.83]你是我未曾拥有无法捕捉的亲昵
+[00:47.59]我却有你的吻你的魂你的心
+[00:51.34]载着我飞呀飞呀飞 越过了意义
+[00:58.59]你是我朝夕相伴触手可及的虚拟
+[01:02.34]陪着我像纸笔像自己像雨滴
+[01:06.09]看着我坠啊坠啊坠落到云里
+[01:21.63]固执有趣的零星
+[01:24.87]固执无聊的有趣
+[01:28.88]平平淡淡管住了情绪
+[01:36.14]固执声音的意义
+[01:39.89]固执空洞的声音
+[01:43.38]摇摇晃晃情绪却满溢
+[01:50.43]你是我未曾拥有无法捕捉的亲昵
+[01:54.18]我却有你的吻你的魂你的心
+[01:57.94]载着我飞呀飞呀飞 越过了意义
+[02:05.25]你是我朝夕相伴触手可及的虚拟
+[02:08.74]陪着我像纸笔像自己像雨滴
+[02:12.49]看着我坠啊坠啊坠落到云里
+[02:56.98]你是我未曾拥有无法捕捉的亲昵
+[03:00.52]我却有你的吻你的魂你的心
+[03:04.02]载着我飞呀飞呀飞 越过了意义
+[03:11.28]你是我朝夕相伴触手可及的虚拟
+[03:15.29]陪着我像纸笔像自己像雨滴
+[03:18.79]看着我坠啊坠啊坠落到云里
+`,
+    '27646205': `[00:00.000] 作词 : 宋冬野
+[00:01.000] 作曲 : 宋冬野
+[00:02.000] 编曲 : 韦伟
+[00:03.000] 制作人 : 宋冬野
+[00:37.196]让我再看你一遍
+[00:39.294]从南到北
+[00:44.176]像是被五环路蒙住的双眼
+[00:52.359]请你再讲一遍
+[00:54.196]关于那天
+[00:58.196]抱着盒子的姑娘
+[01:02.700]和擦汗的男人
+[01:06.480]我知道 那些夏天
+[01:09.480]就像青春一样回不来
+[01:13.060]代替梦想的也只能是勉为其难
+[01:20.378]我知道 吹过的牛逼
+[01:23.878]也会随青春一笑了之
+[01:28.179]让我困在城市里
+[01:31.468]纪念你
+[01:36.069]让我再尝一口
+[01:38.900]秋天的酒
+[01:43.584]一直往南方开
+[01:45.816]不会太久
+[01:51.468]让我再听一遍
+[01:53.194]最美的那一句
+[01:57.498]你回家了
+[02:00.477]我在等你呢
+[02:34.997]我知道 那些夏天
+[02:38.151]就像青春一样回不来
+[02:41.872]代替梦想的也只能是勉为其难
+[02:49.747]我知道 吹过的牛逼
+[02:52.697]也会随青春一笑了之
+[02:58.997]让我困在城市里 纪念你
+[03:03.575]我知道 那些夏天
+[03:07.646]就像你一样回不来
+[03:11.284]我已不会再对谁满怀期待
+[03:18.895]我知道 这个世界
+[03:22.598]每天都有太多遗憾
+[03:26.153]所以你好 再见
+`,
+    '27646198': `[00:00.000] 作词 : 宋冬野
+[00:01.000] 作曲 : 宋冬野
+[00:02.000] 编曲 : 宋冬野
+[00:17.450]董小姐你从没忘记你的微笑
+[00:24.000]就算你和我一样 渴望着衰老
+[00:33.740]董小姐你嘴角向下的时候很美
+[00:41.010]就像安和桥下 清澈的水
+[00:46.560]
+[00:50.990]董小姐我也是个复杂的动物
+[00:57.920]嘴上一句带过心里却一直重复
+[01:07.660]董小姐鼓楼的夜晚时间匆匆
+[01:14.520]陌生的人请给我一支兰州
+[01:22.820]
+[01:24.010]所以那些可能都不是真的董小姐
+[01:31.810]你才不是一个没有故事的女同学
+[01:40.480]爱上一匹野马可我的家里没有草原
+[01:48.090]这让我感到绝望 董小姐
+[01:54.270]
+[02:32.030]董小姐你熄灭了烟说起从前
+[02:39.020]你说前半生就这样吧 还有明天
+[02:46.750]
+[02:49.000]董小姐你可知道我说够了再见
+[02:55.929]在五月的早晨终于丢失了睡眠
+[03:02.600]
+[03:05.040]所以那些可能都会是真的董小姐
+[03:12.840]
+[03:13.530]谁会不厌其烦的安慰那无知的少年
+[03:20.320]
+[03:21.640]爱上一匹野马可我的家里没有草原
+[03:28.940]这让我感到绝望 董小姐
+[03:35.050]
+[03:38.730]所以那些可能都会是真的董小姐
+[03:45.530]
+[03:46.220]谁会不厌其烦的安慰那无知的少年
+[03:53.090]
+[03:55.390]我想和你一样 不顾那些所以
+[04:02.880]跟我走吧 董小姐
+[04:08.310]
+[04:11.490]躁起来吧 董小姐
+`,
+    '530451320': `[00:00.000] 作词 : 陈信荣
+[00:01.000] 作曲 : 周传雄
+[00:19.947] 我听见寒风扰乱了叶落
+[00:54.949] 在寂寞阴暗长居住的巷弄
+[01:04.189] 我听见孤单在隐忍的夜晚
+[01:13.202] 是被爱刺痛哭泣着的胸膛
+[01:22.441] 我是心门上了锁的一扇窗
+[01:26.940] 任寒风来来去去关不上
+[01:31.444] 这些年无法修补的风霜
+[01:35.691] 看来格外的凄凉
+[01:40.701] 风来时撩拨过往的忧伤
+[01:45.200] 像整个季节廉价的狂欢
+[01:49.886] 让我们从头来吧如梦如花
+[01:58.888] 我听见拒绝又嘲笑了黑夜
+[02:08.139] 我只是寒冬向着西北的窗
+[02:36.142] 我听见孤单在隐忍的夜晚
+[02:47.136] 是被爱刺痛哭泣着的胸膛
+[02:55.891] 我是心门上了锁的一扇窗
+[03:00.387] 任寒风来来去去关不上
+[03:05.132] 这些年无法修补的风霜
+[03:09.148] 看来格外的凄凉
+[03:14.383] 风来时撩拨过往的忧伤
+[03:18.890] 像整个季节廉价的狂欢
+[03:23.392] 让我们从头来吧如梦如花
+[03:32.144] 我是心门上了锁的一扇窗
+[03:36.896] 任寒风来来去去关不上
+[03:41.642] 这些年无法修补的风霜
+[03:45.647] 看来格外的凄凉
+[03:50.631] 风来时撩拨过往的忧伤
+[03:55.150] 像整个季节廉价的狂欢
+[03:59.649] 让我们从头来吧如梦如花
+[04:09.097] 我听见拒绝又嘲笑了黑夜
+[04:17.863] 我只是寒冬向着西北的窗
+[04:26.858] 我只是寒冬向着西北的窗
+`,
+    '477251491': `[00:00.000] 作词 : 宋冬野
+[00:00.616] 作曲 : 宋冬野
+[00:01.232] 编曲 : 宋冬野/闫津
+[00:24.260]你说你知道他们的世界
+[00:30.320]悲歌三首买一切
+[00:35.790]买昆仑落脚 蓬莱放思想
+[00:41.530]买人们的争执酿酒汤
+[00:48.290]买公主坟的乌鸦
+[00:53.710]事发之木和东窗之麻
+[00:59.910]买胭脂河里船行渔歌
+[01:05.930]黄金世界中万物法则
+[01:12.740]你我都一样 将被遗忘 郭源潮
+[01:23.410]你的病也和我的一样 风月难扯 离合不骚
+[01:33.850]层楼终究误少年 自由早晚乱余生
+[01:45.730]你我山前没相见 山后别相逢
+[03:32.360]买石灰街车站的海鸥
+[03:39.370]山水禽兽和年少一梦
+[03:46.230]买太平湖底陈年水墨
+[03:52.480]哥本哈根的童年传说
+[03:58.340]其实你我都一样 终将被遗忘 郭源潮
+[04:10.420]你的病也和我的一样 风月难扯 离合不骚
+[04:21.090]层楼终究误少年 自由早晚乱余生
+[04:32.900]你我山前没相见 山后别相逢
+[04:45.170]其实你我都一样 终将被遗忘 郭源潮
+[04:57.460]你的病也和我的一样 风月难扯 离合不骚
+[05:07.800]层楼终究误少年 自由早晚乱余生
+[05:19.860]你我山前没相见 山后别相逢
+[05:31.320]你我山前没相见 山后别相逢
+[05:42.810]你我山前没相见 山后别相逢
+`,
+    '1500569811': `[00:00.00] 作词 : 菲道尔/李康宁
+[00:00.00] 作曲 : 菲道尔
+[00:00.00] 编曲 : 于山川
+[00:22.05]上天啊
+[00:25.20]难道你看不出我很爱她
+[00:29.31]怎么明明相爱的两个人
+[00:32.73]你要拆散他们啊
+[00:38.82]上天啊
+[00:41.85]你千万不要偷偷告诉她
+[00:46.05]在无数夜深人静的夜晚
+[00:49.68]有个人在想她
+[00:54.90]以后的日子你要好好照顾她
+[01:03.24]我不在她身旁你不能欺负她
+[01:11.61]别再让人走进她心里
+[01:15.72]最后却又离开她
+[01:20.76]因为我不愿再看她流泪啦
+[01:41.55]上天啊
+[01:44.46]你是不是在偷偷看笑话
+[01:48.66]明知我还没能力保护她
+[01:52.26]让我们相遇啊
+[01:58.17]上天啊
+[02:01.17]她最近是否不再失眠啦
+[02:05.37]愿世间温情化作一缕风
+[02:09.03]代替我拥抱她
+[02:14.28]以后的日子你要好好照顾她
+[02:22.56]我不在她身旁你不能欺负她
+[02:30.93]别再让人走进她心里
+[02:35.01]最后却又离开她
+[02:40.08]因为我不愿再看她流泪啦
+[02:47.73]希望我的努力能够赶上她
+[02:55.98]有天我能给她完整的一个家
+[03:04.35]可若你安排了别人给她
+[03:09.24]我会祝福她
+[03:13.17]上天你别管我先让她幸福吧
+[03:21.57]上天啊
+[03:24.63]这些晚上我对你说的话
+[03:28.80]你别不小心漏嘴告诉她
+[03:32.43]我怕会吵醒她
+[03:38.58]上天啊
+[03:41.55]你千万不要偷偷告诉她
+[03:45.72]在无数夜深人静的夜晚
+[03:49.44]我依旧在想她
+`,
+    '1366055392': `[00:00.00] 作词 : 方文山
+[00:00.00] 作曲 : 方大同
+[00:00.00] 编曲 : 方大同
+[00:13.92]咖啡 再续杯
+[00:16.99]回想 这一切
+[00:20.35]好多 的细节
+[00:23.55]譬如你嘟嘴
+[00:25.78]微笑的离别
+[00:27.41]窗外 的世界
+[00:30.39]霓虹 在交汇
+[00:33.96]缤纷 整条街
+[00:36.97]我安静了解
+[00:39.02]没你的感觉
+[00:40.79]纸鹤 你温柔对折
+[00:43.98]如爵士乐般随性的快乐
+[00:47.34]此刻 水清澈
+[00:50.45]远方的麦田金 黄色
+[00:53.54]千纸鹤 故事还温热
+[00:56.76]随性的 我们唱起歌
+[00:59.81]我走过 牧笛声吹着
+[01:03.49]那爱情走到这 微笑不见了
+[01:07.28]OH 山水 泼墨的感觉
+[01:10.44]一页 彩蝶 前世的感觉
+[01:13.39]一页 红尘 今世的轮回
+[01:16.57]在写 今生 缘分还是倾斜
+[01:21.43]时间 若倒退
+[01:24.59]再次 给机会
+[01:27.91]理由 怎么给
+[01:31.30]你一句不爱了
+[01:33.21]以为就解决
+[01:34.92]空了 的香水
+[01:38.02]干掉 的玫瑰
+[01:41.35]问了 一整夜
+[01:44.79]你慵懒撒野
+[01:46.58]说解释很累
+[01:48.43]纸鹤 你温柔对折
+[01:51.74]如爵士乐般随性的快乐
+[01:55.09]或许让你离去
+[01:58.13]只是换个方式爱你
+[02:01.08]千纸鹤 故事还温热
+[02:04.40]随性的 我们唱起歌
+[02:07.67]我走过 牧笛声吹着
+[02:11.14]那爱情走到这 微笑不见了
+[02:14.80]OH 山水 泼墨的感觉
+[02:17.04]一页 彩蝶 前世的感觉
+[02:20.85]一页 红尘 今世的轮回
+[02:24.19]在写 今生 缘分还是倾斜
+[02:29.75]你的美又走在 两个世代
+[02:31.68]两个不同美学那种年代 在不在
+[02:35.12]两种不同期待 我终于明白
+[02:38.49]你爱不爱都意外
+[02:40.18]不应该等待 等你不爱
+[02:42.32]就是离开 就是不回来
+[02:44.63]台阶上整遍青苔蔓延到了斑驳的古墙
+[02:48.66]太阳西晒 你在等水面上的芙蓉花开
+[02:51.87]而我偏爱我们就处在这安静的状态
+[02:56.93]千纸鹤 故事还温热
+[03:01.08]千纸鹤 是你给的
+[03:04.37]你做了选择 爱情停格
+[03:07.60]我也决定割舍
+[03:09.90]千纸鹤 故事还温热
+[03:11.96]随性的 我们唱起歌
+[03:15.36]我走过 牧笛声轻吹着
+[03:18.87]那爱情走到这 微笑不见了
+[03:22.62]OH 山水 泼墨的感觉
+[03:24.99]一页 彩蝶 前世的感觉
+[03:28.23]一页 红尘 今世的轮回
+[03:31.27]在写 今生 缘分还是倾斜
+`,
+    '5255631': `[00:00.00] 作词 : 伍佰
+[00:00.00] 作曲 : 伍佰
+[00:00.00] 编曲 : 伍佰 & China Blue
+[00:35.30]让我将你心儿摘下
+[00:38.30]试着将它慢慢溶化
+[00:42.30]看我在你心中是否仍完美无瑕
+[00:48.30]是否依然为我丝丝牵挂
+[00:52.30]依然爱我无法自拔
+[00:55.30]心中是否有我未曾到过的地方啊
+[01:02.30]那里湖面总是澄清
+[01:05.30]那里空气充满宁静
+[01:09.30]雪白明月照在大地
+[01:12.30]藏着你不愿提起的回忆
+[01:18.30]你说真心总是可以从头
+[01:22.30]真爱总是可以长久
+[01:26.30]为何你的眼神还有孤独时的落寞
+[01:32.30]是否我只是你一种寄托
+[01:36.30]填满你感情的缺口
+[01:40.30]心中那片森林何时能让我停留
+[01:46.30]那里湖面总是澄清
+[01:49.30]那里空气充满宁静
+[01:53.30]雪白明月照在大地
+[01:57.30]藏着你最深处的秘密
+[02:01.30]或许我 不该问
+[02:05.30]让你平静的心再起涟漪
+[02:09.30]只是爱你的心超出了界限
+[02:12.30]我想拥有你所有一切
+[02:16.30]应该是 我不该问
+[02:19.30]不该让你再将往事重提
+[02:23.30]只是心中枷锁该如何才能解脱
+[02:28.30]
+[03:03.30]让我将你心儿摘下
+[03:07.30]试着将它慢慢溶化
+[03:11.30]看我在你心中是否仍完美无瑕
+[03:17.30]是否依然为我丝丝牵挂
+[03:21.30]依然爱我无法自拔
+[03:25.30]心中是否有我未曾到过的地方啊
+[03:31.30]那里湖面总是澄清
+[03:35.30]那里空气充满宁静
+[03:38.30]雪白明月照在大地
+[03:42.30]藏着你最深处的秘密
+[03:46.30]
+[03:57.30]或许我 不该问
+[04:01.30]让你平静的心再起涟漪
+[04:05.30]只是爱你的心超出了界限
+[04:08.30]我想拥有你所有一切
+[04:12.30]应该是 我不该问
+[04:15.30]不该让你再将往事重提
+[04:19.30]只是心中枷锁该如何才能解脱
+[04:24.30]或许我 不该问
+[04:29.30]让你平静的心再起涟漪
+[04:33.30]只是爱你的心超出了界限
+[04:37.30]我想拥有你所有一切
+[04:40.30]应该是 我不该问
+[04:43.30]不该让你再将往事重提
+[04:47.30]只是心中枷锁该如何才能解脱
+`,
+    '569213220': `[00:00.00] 作词 : 毛不易
+[00:00.00] 作曲 : 毛不易
+[00:00.00] 编曲 : 赵兆/宋涛
+[00:15.00]像我这样优秀的人
+[00:18.77]本该灿烂过一生
+[00:22.62]怎么二十多年到头来
+[00:26.70]还在人海里浮沉
+[00:30.35]像我这样聪明的人
+[00:34.50]早就告别了单纯
+[00:38.38]怎么还是用了一段情
+[00:42.36]去换一身伤痕
+[00:46.15]像我这样迷茫的人
+[00:49.84]像我这样寻找的人
+[00:53.80]像我这样碌碌无为的人
+[00:57.59]你还见过多少人
+[01:18.64]像我这样庸俗的人
+[01:22.83]从不喜欢装深沉
+[01:26.54]怎么偶尔听到老歌时
+[01:30.62]忽然也晃了神
+[01:34.38]像我这样懦弱的人
+[01:38.24]凡事都要留几分
+[01:42.20]怎么曾经也会为了谁
+[01:45.95]想过奋不顾身
+[01:49.87]像我这样迷茫的人
+[01:53.77]像我这样寻找的人
+[01:57.49]像我这样碌碌无为的人
+[02:01.45]你还见过多少人
+[02:05.46]像我这样孤单的人
+[02:09.20]像我这样傻的人
+[02:13.26]像我这样不甘平凡的人
+[02:16.99]世界上有多少人
+[02:26.76]像我这样迷茫的人
+[02:30.51]像我这样寻找的人
+[02:34.37]像我这样碌碌无为的人
+[02:38.23]你还见过多少人
+[02:42.00]像我这样孤单的人
+[02:46.10]像我这样傻的人
+[02:49.97]像我这样不甘平凡的人
+[02:53.65]世界上有多少人
+[02:59.63]像我这样莫名其妙的人
+[03:05.43]会不会有人心疼
+`,
+    '35403523': `[00:00.00] 作词 : 葛大为
+[00:00.00] 作曲 : 谢国维/黎晓阳
+[00:10.61]走过了人来人往
+[00:15.31]不喜欢也得欣赏
+[00:20.00]我是沉默的存在
+[00:25.15]不当你的世界 只作你肩膀
+[00:29.68]拒绝成长到成长
+[00:34.53]变成想要的模样
+[00:39.34]在举手投降以前
+[00:42.85]让我再陪你一段
+[00:49.02]陪你把沿路感想活出了答案
+[00:53.65]陪你把独自孤单变成了勇敢
+[00:59.04]一次次失去又重来 我没离开
+[01:03.92]陪伴是 最长情的告白
+[01:08.17]陪你把想念的酸 拥抱成温暖
+[01:12.83]陪你把彷徨 写出情节来
+[01:18.10]未来多漫长 再漫长 还有期待
+[01:23.10]陪伴你 一直到 故事给说完
+[01:46.77]让我们静静分享
+[01:51.36]此刻难得的坦白
+[01:56.11]只是无声地交谈
+[01:59.51]感觉幸福 感觉不孤单
+[02:05.63]陪你把沿路感想 活出了答案
+[02:10.51]陪你把独自孤单 变成了勇敢
+[02:15.71]一次次失去 又重来 我没离开
+[02:20.93]陪伴是 最长情的告白
+[02:25.06]陪你把想念的酸 拥抱成温暖
+[02:29.67]陪你把彷徨 写出情节来
+[02:34.91]未来多漫长 再漫长 还有期待
+[02:39.87]陪伴你 一直到 故事给说完
+[03:03.54]陪你把沿路感想 活出了答案
+[03:08.07]陪你把独自孤单 变成了勇敢
+[03:13.26]一次次失去 又重来 我没离开
+[03:18.39]陪伴是 最长情的告白
+[03:22.51]陪你把想念的酸 拥抱成温暖
+[03:27.35]陪你把彷徨 写出情节来
+[03:32.51]未来多漫长 再漫长 还有期待
+[03:37.42]陪伴你 一直到 这故事说完
+`,
+    '1359356908': `[00:00.00] 作词 : 陈志杰
+[00:00.00] 作曲 : 陈志杰
+[00:00.00] 编曲 : 关天天
+[00:21.45]窗挡住月色 贪恋的交集
+[00:25.93]在浮语虚词中交映
+[00:30.35]忙碌的身影 慢慢的长夜
+[00:34.89]去匆匆地留下感情
+[00:39.45]声色太慌张 你眼神逃避
+[00:43.70]却如此地令人着迷
+[00:48.11]为何总留恋这种 暧昧的迷离
+[00:57.00]曾经多少个牵肠拉扯不舍夜晚
+[01:01.30]到现在热情褪成陌路的感叹
+[01:06.38]何必拿真心与寂寞去纠缠
+[01:14.26]几人份的畅谈 道三两句晚安
+[01:18.54]惹多情的遐想 却轻易地走散
+[01:23.77]情意绵绵总与见异思迁为难
+[01:31.93]总是不能抵抗你信手的晚安
+[01:36.31]执迷与你忽远忽近烂桥段
+[01:41.07]迂回一句晚安 多情人却自找难堪
+[02:08.40]声色太慌张 你眼神逃避
+[02:12.62]却如此地令人着迷
+[02:16.88]为何总留恋这种 暧昧的迷离
+[02:25.76]曾经多少个牵肠拉扯不舍夜晚
+[02:30.15]到现在热情褪成陌路的感叹
+[02:35.28]何必拿真心与寂寞去纠缠
+[02:43.11]几人份的畅谈 道三两句晚安
+[02:47.40]惹多情的遐想 却轻易地走散
+[02:52.79]情意绵绵总与见异思迁为难
+[03:00.87]总是不能抵抗你信手的晚安
+[03:05.16]执迷与你忽远忽近烂桥段
+[03:09.81]迂回一句晚安 多情人却自找难堪
+[03:36.49]几人份的畅谈 道三两句晚安
+[03:40.72]惹多情的遐想 却轻易地走散
+[03:46.12]情意绵绵总与见异思迁为难
+[03:54.21]总是不能抵抗你信手的晚安
+[03:58.53]执迷与你忽远忽近烂桥段
+[04:03.20]迂回一句晚安 多情人却自找难堪
+[04:12.36]迂回一句晚安 多情的人始终难堪
+`,
+    '29436904': `[00:00.00]南山南
+[00:00.00]作词：马頔
+[00:00.00]作曲：马頔
+[00:00.00]演唱：马頔
+[00:00.00]
+[00:00.60]你在南方的艳阳里大雪纷飞
+[00:08.31]我在北方的寒夜里四季如春
+[00:14.74]如果天黑之前来得及
+[00:18.38]我要忘了你的眼睛
+[00:22.19]穷极一生做不完一场梦
+[00:29.02]
+[00:29.90]他不再和谁谈论相逢的孤岛
+[00:36.94]因为心里早已荒芜人烟
+[00:44.40]他的心里再装不下一个家
+[00:51.60]做一个只对自己说谎的哑巴
+[00:58.64]他说
+[00:59.17]你任何为人称道的美丽
+[01:02.60]不及他第一次遇见你
+[01:07.32]时光苟延残喘无可奈何
+[01:13.80]如果所有土地连在一起
+[01:17.39]走上一生只为去拥抱你
+[01:21.17]喝醉了他的梦，晚安
+[01:27.78]
+[02:13.31]他听见有人唱着古老的歌
+[02:20.27]唱着今天还在远方发生的
+[02:27.99]像在她眼睛里看到的孤岛
+[02:35.15]没有悲伤但也没有花朵
+[02:41.43]
+[02:43.03]你在南方的艳阳里大雪纷飞
+[02:50.72]我在北方的寒夜里四季如春
+[02:57.36]如果天黑之前来得及
+[03:00.79]我要忘了你的眼睛
+[03:04.42]穷极一生做不完一场梦
+[03:09.89]
+[03:12.30]你在南方的艳阳里大雪纷飞
+[03:20.12]我在北方的寒夜里四季如春
+[03:26.81]如果天黑之前来得及
+[03:30.31]我要忘了你的眼睛
+[03:34.00]穷极一生做不完一场梦
+[03:40.04]
+[03:41.72]大梦初醒荒唐了这一生
+[03:47.35]
+[03:49.45]南山南，北秋悲
+[03:56.62]南山有谷堆
+[04:04.07]南风喃，北海北
+[04:11.45]北海有墓碑
+[04:18.48]
+[04:19.04]南山南，北秋悲
+[04:26.01]南山有谷堆
+[04:33.74]南风喃，北海北
+[04:41.03]北海有墓碑
+[04:48.48]
+[04:48.75]北海有墓碑
+[04:54.87]`,
+    '28059417': `[00:02.00]他不懂
+[00:04.00]作曲：唐湘智
+[00:06.00]作词：周振霆，代岳东
+[00:08.00]演唱：张杰
+[00:14.00]
+[00:20.01]他留给你是背影
+[00:25.66]关于爱情只字不提
+[00:30.45]害你哭红了眼睛
+[00:35.38]他把谎言说的竟然那么动听
+[00:41.35]他不止一次骗了你
+[00:45.31]不值得你再为他伤心
+[00:49.58]他不懂你的心假装冷静
+[00:53.48]他不懂爱情把它当游戏
+[00:57.37]他不懂表明相爱这件事
+[01:01.26]除了对不起就只剩叹息
+[01:05.26]他不懂你的心为何哭泣
+[01:09.25]窒息到快要不能呼吸
+[01:17.30]喔喔
+[01:19.78]他不懂你的心
+[01:28.03]
+[01:38.65]他把回忆留给你
+[01:44.24]连同忧伤强加给你
+[01:49.20]对你说来不公平
+[01:54.31]他的谎言句句说的那么动听
+[01:59.95]他不止一次骗了你
+[02:03.94]不值得你再为他伤心
+[02:08.28]他不懂你的心假装冷静
+[02:12.18]他不懂爱情把它当游戏
+[02:16.02]他不懂表明相爱这件事
+[02:19.93]除了对不起就只剩叹息
+[02:23.96]他不懂你的心为何哭泣
+[02:27.97]窒息到快要不能呼吸
+[02:36.07]喔喔
+[02:38.33]他不懂你的心
+[02:47.87]
+[02:55.65]他不懂你的心假装冷静
+[02:59.39]他不懂爱情把它当游戏
+[03:03.26]他不懂表明相爱这件事
+[03:07.12]除了对不起就只剩叹息
+[03:10.97]他不懂你的心为何哭泣
+[03:15.04]窒息到快要不能呼吸
+[03:23.20]喔喔
+[03:25.72]他不懂你的心
+[03:42.02]
+`,
+    '191254': `[00:00.00]天下 - 张杰
+[00:00.00]作词：周毅
+[00:00.00]作曲：刘吉宁
+[00:00.00]
+[00:28.90]烽烟起寻爱似浪淘沙
+[00:35.80]遇见她如春水映梨花
+[00:42.50]挥剑断天涯相思轻放下
+[00:49.00]梦中我痴痴牵挂
+[00:56.00]顾不顾将相王侯
+[00:57.90]管不管万世千秋
+[00:59.90]求只求爱化解
+[01:01.00]这万丈红尘纷乱永无休
+[01:03.50]爱更爱天长地久
+[01:04.90]要更要似水温柔
+[01:06.90]谁在乎谁主春秋
+[01:09.00]一生有爱何惧风飞沙
+[01:12.20]悲白发留不住芳华
+[01:16.00]抛去江山如画换她笑面如花
+[01:19.20]抵过这一生空牵挂
+[01:22.20]心若无怨爱恨也随他
+[01:25.40]天地大情路永无涯
+[01:29.20]只为她袖手天下
+[01:35.00]
+[02:03.00]顾不顾将相王侯
+[02:04.80]管不管万世千秋
+[02:06.00]求只求爱化解
+[02:07.90]这万丈红尘纷乱永无休
+[02:10.00]爱更爱天长地久
+[02:12.00]要更要似水温柔
+[02:13.90]谁在乎谁主春秋
+[02:15.50]一生有爱何惧风飞沙
+[02:18.80]悲白发留不住芳华
+[02:23.00]抛去江山如画换她笑面如花
+[02:26.70]抵过这一生空牵挂
+[02:29.00]心若无怨爱恨也随他
+[02:32.80]天地大情路永无涯
+[02:36.00]只为她袖手天下
+[02:42.00]
+[02:42.40]一生有爱何惧风飞沙
+[02:45.80]悲白发留不住芳华
+[02:49.50]抛去江山如画换她笑面如花
+[02:53.00]抵过这一生空牵挂
+[02:56.00]心若无怨爱恨也随他
+[02:59.00]天地大情路永无涯
+[03:02.00]只为她袖手天下
+[03:08.00]
+[03:09.00]烽烟起寻爱似浪淘沙
+[03:15.40]遇见她如春水映梨花
+[03:22.20]挥剑断天涯相思轻放下
+[03:29.00]梦中我痴痴牵挂
+[03:30.00]
+`,
+    '5265278': `[00:00.00] 作词 : 伍佰
+[00:01.00] 作曲 : 伍佰
+[00:02.00] 编曲 : 伍佰 & China Blue
+[00:03.00] 制作人 : 伍佰
+[00:14.64] 无心过问你的心里我的吻
+[00:21.45] 厌倦 我的亏欠 代替你所爱的人
+[00:28.80] 这个时候 我心落花一样飘落下来
+[00:35.25] 顿时 我的视线 失去了色彩
+[00:43.88] 知道你也一样不善于表白
+[00:50.68] 想象 你的相爱 编织的谎言懈怠
+[00:57.98] 甜美镜头 竟也落花一样飘落下来
+[01:04.37] 从此 我的生命 变成了尘埃
+[01:11.72] 寂寞的人 总是习惯寂寞的安稳
+[01:18.14] 至少 我们直线 曾经交叉过
+[01:25.30] 就像站在烈日骄阳大桥上
+[01:31.94] 眼泪狂奔滴落在我的脸庞
+[02:16.64] 知道你也一样不善于表白
+[02:23.42] 想象 你的相爱 编织的谎言懈怠
+[02:30.75] 甜美镜头 竟也落花一样飘落下来
+[02:37.15] 从此 我的生命 变成了尘埃
+[02:44.49] 寂寞的人 总是习惯寂寞的安稳
+[02:50.92] 至少 我们直线 曾经交叉过
+[03:03.50] 就像站在烈日骄阳大桥上
+[03:09.83] 眼泪狂奔滴落在我的脸庞
+[03:16.65] La...
+[03:23.37] La...
+`,
+    '1383927243': `[00:00.00] 作词 : 枯木逢春
+[00:01.00] 作曲 : 枯木逢春
+[00:24.55] 远方灯火闪亮着光
+[00:30.34] 你一人低头在路上
+[00:36.46] 这城市越大越让人心慌
+[00:41.26] 多向往多漫长
+[00:48.53] 这一路经历太多伤
+[00:54.23] 把最初笑容都淡忘
+[01:00.13] 时光让我们变得
+[01:02.82] 脆弱且坚强
+[01:04.94] 让我再来轻轻对你唱
+[01:11.12] 我多想能多陪你一场
+[01:16.66] 把前半生的风景对你讲
+[01:22.61] 在每个寂静的夜里我会想
+[01:28.93] 那些关于你的爱恨情长
+[01:34.98] 我也想能够把你照亮
+[01:40.66] 在你的生命中留下阳光
+[01:47.18] 陪你走过那山高水长
+[01:53.03] 陪你一起生长
+[02:24.22] 远方灯火闪亮着光
+[02:30.00] 你一人低头在路上
+[02:36.14] 这城市越大越让人心慌
+[02:41.04] 多向往多漫长
+[02:48.24] 这一路经历太多伤
+[02:54.21] 把最初笑容都淡忘
+[03:00.14] 时光让我们变得
+[03:02.91] 脆弱且坚强
+[03:04.96] 让我再来轻轻对你唱
+[03:10.90] 我多想能多陪你一场
+[03:16.63] 把前半生的风景对你讲
+[03:22.75] 在每个寂静的夜里我会想
+[03:29.29] 那些关于你的爱恨情长
+[03:34.73] 我也想能够把你照亮
+[03:40.70] 在你的生命中留下阳光
+[03:47.11] 陪你走过那山高水长
+[03:53.00] 陪你一起生长
+[03:59.46] 这一生在你的风景里
+[04:05.25] 我是谁
 `,
     '1403318151': `[00:00.000] 作词 : 童子-T/Shingo.S
 [00:04.000] 作曲 : 童子-T
@@ -922,1122 +2652,13 @@
 [06:14.000] 但我仍愿意感谢你给过我爱情
 [06:18.000] 每一场风景都是我们爱的证明
 [06:22.000] 就算如今 天各一方 把回忆拼好给你
-`,
-    '1409157146': `[00:00.000] 作词 : 陈梓童/黄子源/Guy James Robin/Madison Love/Samuel Roman
-[00:01.000] 作曲 : Madison Love/Guy James Robin/Samuel Roman
-[00:02.000] 编曲 : Jonas Blue
-[00:03.000] 制作人 : Jonas Blue/Dark Heart
-[00:09.868]你向世界宣告
-[00:11.937]我们多好
-[00:14.280]又让我挂上假笑
-[00:16.510]每张合照
-[00:18.262]
-[00:18.806]你却像一场感冒
-[00:21.037]太难治好
-[00:23.335]越来越甩不掉
-[00:25.648]越抓越牢
-[00:27.597]
-[00:28.182]我拜托你快走开 别来烦我
-[00:30.384]不要再消费彼此暧昧过
-[00:32.682]停止你不得安宁的放送
-[00:36.083]It's so weird
-[00:37.148]
-[00:37.448]I see you like a billboard, painted in the sky
-[00:41.623]You're everywhere tonight
-[00:44.096]You light up like Shanghai at night
-[00:46.553]I see you like a billboard, stranger in the night
-[00:50.929]Something that reminds me
-[00:53.395]You're still living here in my mind
-[00:56.125]
-[00:56.575]My mind, my mind
-[00:58.639]My mind, my mind
-[01:00.390]My mind, my mind
-[01:02.950]You're still living here in my mind
-[01:05.328]
-[01:05.517]我们曾经约定过
-[01:07.174]让彼此快乐
-[01:09.555]你得到你想要的
-[01:11.844]却忽略了我
-[01:14.176]
-[01:14.357]你说你不想要走
-[01:16.417]你还在乎我
-[01:18.699]如果只是怕寂寞
-[01:21.200]不要一错再错
-[01:22.843]
-[01:23.117]我拜托你快走开 别来烦我
-[01:25.808]不要再消费彼此暧昧过
-[01:28.039]停止你不得安宁的放送
-[01:31.474]It's so weird
-[01:32.407]
-[01:32.670]I see you like a billboard, painted in the sky
-[01:37.037]You're everywhere tonight
-[01:39.411]You light up like Shanghai at night
-[01:41.848]I see you like a billboard, stranger in the night
-[01:46.327]Something that reminds me
-[01:48.604]You're still living here in my mind
-[01:51.351]
-[01:51.654]My mind, my mind
-[01:53.453]My mind, my mind
-[01:55.664]My mind, my mind
-[01:58.157]You're still living here in my mind
-[02:00.490]
-[02:00.692]I see you like a billboard, painted in the sky
-[02:04.794]You're everywhere tonight
-[02:07.449]You light up like Shanghai at night
-[02:09.698]I see you like a billboard, stranger in the night
-[02:13.979]Something that reminds me
-[02:16.643]You're still living here in my mind
-[02:18.939]
-[02:19.099]I see you like a billboard, painted in the sky
-[02:23.251]You're everywhere tonight
-[02:25.864]You light up like Shanghai at night
-[02:27.987]I see you like a billboard, stranger in the night
-[02:32.596]Something that reminds me
-[02:34.873]You're still living here in my mind
-[02:37.855]My mind, my mind
-[02:39.561]My mind, my mind
-[02:41.900]My mind, my mind
-[02:44.323]You're still living here in my mind
-[02:47.733] 混音 : Dark Heart
-[02:48.447] 母带 : Mike Marsh at The Exchange Mike Marsh Mastering/Devon/England
-[02:49.161] 主唱/和声配唱制作人Lead and backing vocal producer: Ruth Ling
-[02:49.875] 
-[02:50.589] 主唱录音Vocal engineer: Ruth Ling
-[02:51.303] 
-[02:52.017] Vocals mixed by: Cameron Gower Poole for YMU Group
-`,
-    '1862884117': `[00:00.000] 作词 : Oluwadamilare Aderibigbe/Prince Omoferi
-[00:01.000] 作曲 : Oluwadamilare Aderibigbe/Prince Omoferi
-[00:14.180]London (London)
-[00:18.685]I'm feelin' vibes on vibes
-[00:20.939]I'm a tickin' dynamite
-[00:23.436]I'll blow your candle light
-[00:25.686]You know I'm just that type
-[00:27.429]No, dem fit kill my vibe (no, no)
-[00:30.436]Dem no fit kill my vibe
-[00:32.686]Dem fit no fit kill
-[00:33.685]Dem fit no fit kill
-[00:34.929]Dem no fit kill my
-[00:36.181]A wise man said "follow the stars"
-[00:38.436]There you shall find a piece of advice
-[00:40.687]If you hate your enemies, enemies shine
-[00:42.940]If you're not a friend of me, enter the light
-[00:45.179]'Cause you can never kill my vibe
-[00:47.686]Got here with no sacrifices
-[00:49.684]Everythin' once takеn, still had to make it
-[00:52.436]Vibe killer, mе I no go take shit (ayy)
-[00:54.632]Vibe killer, bloody Samaritan
-[00:56.887]Protect my energy from your bad aura
-[00:59.136]Na my pastor say I be my healer
-[01:01.134]Everythin' I desire, I go receive
-[01:03.886]My rhythm flow like a river
-[01:05.884]If you get yawa, come on, go and sit down
-[01:08.134]I go just para
-[01:09.386]Comot my jigga
-[01:10.388]I go just dey
-[01:11.640]Follow my dreams
-[01:13.637]I'm feelin' vibes on vibes (I'm feelin' vibes)
-[01:15.891]I'm a tickin' dynamite (I'm a tickin' dyn')
-[01:18.142]I'll blow your candle light (I'll blow your can')
-[01:20.639]You know I'm just that type
-[01:22.393]No, dem fit kill my vibe
-[01:25.143]Dem no fit kill my vibe
-[01:27.385]You no fit kill
-[01:28.637]You no fit kill
-[01:29.636]You no fit kill my vibe
-[01:31.890]I see you watchin' my stories
-[01:34.141]I see you gaugin' my lifestyle
-[01:36.391]I see you watchin' my movements
-[01:38.633]This bad b***h bad everyday
-[01:41.387]I no dey look your face
-[01:43.384]Bad man bad everyday
-[01:45.888]Get on your knees and pray
-[01:48.142]'Til you regain your faith
-[02:07.893]Vibe killer, bloody Samaritan
-[02:09.890]Protect my energy from your bad aura
-[02:12.140]Na my pastor say I be my healer
-[02:14.137]Everythin' I desire, I go receive
-[02:17.132]My rhythm flow like a river
-[02:18.883]If you get yawa, come on, go and sit down
-[02:21.138]I go just para
-[02:22.382]Comot my jigga
-[02:23.634]I go just dey
-[02:24.886]Follow my dreams
-[02:26.883]I'm feelin' vibes on vibes (I'm feelin' vibes)
-[02:29.138]I'm a tickin' dynamite (I'm a tickin' dyn')
-[02:31.388]I'll blow your candle light (I'll blow your can')
-[02:33.642]You know I'm just that type
-[02:35.385]No, dem fit kill my vibe
-[02:38.388]Dem no fit kill my vibe
-[02:40.642]You no fit kill
-[02:41.883]You no fit kill
-[02:42.885]You no fit kill my vibe
-`,
-    '1887215867': `[00:00.000] 作词 : FINNEAS
-[00:00.011] 作曲 : FINNEAS
-[00:00.022]It feels a little medieval if you ask me
-[00:04.283]Like I'm watchin' a sequel I've already seen
-[00:08.459]I could tell you what happens to the new king
-[00:12.704]When he goes out of fashion
-[00:15.255]
-[00:16.740]I want my money back now-ow
-[00:21.001]I've been in the wrong crowd-owd
-[00:24.940]I'd never say it out loud-oud
-[00:29.175]But I've hated every word that comes out of your mouth
-[00:33.249]What should we fight about this time?
-[00:37.383]What will you write about this time?
-[00:41.555]What does it matter if you're not fine?
-[00:45.696]You should've kept that shit offline
-[00:49.188]
-[00:49.908]It feels a little medieval if you ask me
-[00:54.423]Like I'm watchin' a sequel I've already seen
-[00:58.415]I could tell you what happens to the new king
-[01:02.694]When he goes out of fashion
-[01:06.683]It feels a little medieval kissin' the ring
-[01:10.966]In a gothic cathedral, have you ever seen
-[01:15.499]What really happens to people like me
-[01:19.413]When we go out of fashion?
-[01:22.490]
-[01:23.391]They're gonna tear you from your pedestal, it's almost inevitable
-[01:28.441]I'm not bein' cynical, it's so unoriginal
-[01:32.322]If you get political, they'll make you a criminal
-[01:36.490]It's all a bit biblical
-[01:40.058]Don't put your camera down
-[01:44.144]You don't go to heaven in a crown
-[01:48.222]It's not worth the money bringin' me back from the dead
-[01:56.742]I never said it would be any fun
-[02:01.084]You never should've trusted anyone
-[02:06.106]They'll love you til' they know you're done
-[02:09.449]And then it's off with his head
-[02:13.331]
-[02:13.484]It feels a little medieval if you ask me
-[02:17.895]Like I'm watchin' a sequel I've already seen
-[02:21.880]I could tell you what happens to the new king
-[02:26.203]When he goes out of fashion
-[02:30.051]It feels a little medieval kissin' the ring
-[02:34.446]In a gothic cathedral, have you ever seen
-[02:39.004]What really happens to people like me
-[02:42.830]When we go out of fashion?
-`,
-    '1979192239': `[00:00.000] 作词 : Samuel Ock
-[00:00.005] 作曲 : Samuel Ock
-[00:00.010] You don't have to do anything
-[00:07.386] I still want your love
-[00:15.719] You don't have to be anything
-[00:22.262] Just your love is enough
-[00:31.213] You don't have to do anything
-[00:37.704] I'm still gonna love you
-[00:46.190] And you don't have to be anyone
-[00:53.213] I'm still gonna want you
-[00:58.366]
-[01:32.342] I just want
-[01:36.312] I just want
-[01:40.130] I just want
-[01:43.841] I just want you
-[01:47.848]
-[01:47.851] I just want
-[01:51.432] I just want
-[01:55.352] I just want
-[01:59.249] I just want you
-[02:02.564]
-[02:03.123] You don't have to do anything
-[02:09.985] I still want your love
-[02:18.531] You don't have to be anyone
-[02:25.170] You are all you're enough
-[02:33.987] We don't have to do anything
-[02:41.165] I'm still gonna love you
-[02:49.128] And we don't have to go anywhere
-[02:56.001] I'm just glad that I'm with you
-[03:01.143] (With you)
-[03:04.622]
-[03:04.642] I just want
-[03:08.328] I just want
-[03:12.061] I just want
-[03:15.939] I just want you
-[03:19.141]
-[03:19.932] I just want (I just want)
-[03:23.706] I just want (I just want)
-[03:27.802] I just want (I just want)
-[03:31.418] I just want you
-[03:35.418]
-[03:35.461] I just want (I just want)
-[03:39.184] I just want (I just want)
-[03:42.967] I just want (I just want)
-[03:46.763] I just want you
-[03:49.788]
-[03:50.641] I just want (I just want)
-[03:54.274] I just want (I just want)
-[03:58.296] I just want (I just want)
-[04:02.066] I just want you
-[04:05.441]
-[04:06.053] You don't have to do anything
-[04:13.338] You don't have to do anything
-[04:21.376] You don't have to do anything
-[04:28.858] You are enough
-[04:36.872] You don't have to be anyone
-[04:44.586] You don't have to go anywhere
-[04:48.744] Nowhere
-[04:52.115] You don't have to do anything
-[04:59.265] You are enough
-`,
-    '1990208030': `[by:SKT_FlockaFlame]
-[00:08.716]Andrevibez 制作
-[00:10.309]
-[00:12.166]
-[00:14.560]
-[00:20.079]我是懂她的 她从不多言语
-[00:22.742]但她体内的那股野性正渐渐苏醒
-[00:24.863]闺蜜们也不喜欢早出晚归的生活啊
-[00:27.254]但为了能生活得更好点 我们别无选择
-[00:29.909]这事儿还没完呢 他们还想找我们茬
-[00:32.039]就算他们加足马力 依旧追不上火力全开的我
-[00:34.421]我不会把自己装成白莲圣母
-[00:36.812]你也没必要���装去爱慕我们
-[00:40.004]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能量
-[00:42.656]向“钱”看齐 一心扑在利润上
-[00:44.789]让你如同Poco Lee般翩翩起舞（Poco Lee：尼日利亚著名舞者）
-[00:47.179]花花绿绿的钞票 如同新鲜的西兰花
-[00:49.297]一步一个脚印 无视贱婢们在后面嚼舌根
-[00:52.228]权当是我的幻想罢了
-[00:54.346]他们都在等着看我出糗
-[00:57.535]但我岂能这么容易满足他们？
-[00:58.870]我现在一切安好 0负面新闻
-[01:00.190]我的生活如此多姿多彩
-[01:00.988]神父眷顾着我 百万票子滚滚来
-[01:03.854]这丰厚财富触手可得
-[01:06.986]我岂能这么容易满足他们？
-[01:08.306]我现在一切安好 0负面新闻
-[01:09.376]我的生活如此多姿多彩
-[01:10.700]不搞乱七八糟的炒作 每个人都爱慕着我
-[01:13.558]和我们出街起耍 我保证你不会无聊
-[01:17.272]
-[01:19.402]
-[01:21.783]
-[01:26.304]飞去加纳度过美好时光
-[01:28.959]你还未谙世事 就别装的很老成了
-[01:31.614]你懂得 见过世面的女人不好惹
-[01:34.004]别把男人看太重 姐就是女王自信放光芒
-[01:36.126]你永远夺不走我现在的成就
-[01:41.709]你数不清我的恩典
-[01:43.566]从不被规则禁锢 我自成一派
-[01:46.754]我可没时间跟黑粉纠缠 也没时间在社媒上散发负能量
-[01:49.943]向“钱”看齐 一心扑在利润上
-[01:52.064]让你如同Poco Lee般翩翩起舞（Poco Lee：尼日利亚著名舞者）
-[01:54.455]花花绿绿的钞票 如同新鲜的西兰花
-[01:56.585]一步一个脚印 无视贱婢们在后面嚼舌根
-[01:59.240]权当是我的幻想罢了
-[02:01.634]他们都在等着看我出糗
-[02:04.822]但我岂能这么容易满足他们？
-[02:05.881]我现在一切安好 0负面新闻 我的生活是如此多姿多彩
-[02:08.275]神父眷顾着我 百万票子滚滚来
-[02:11.191]这丰厚财富触手可得
-[02:14.328]我岂能这么容易满足他们？
-[02:15.388]我现在一切安好 0负面新闻 我的生活是如此多姿多彩
-[02:17.778]不搞乱七八糟的炒作 每个人都爱慕着我
-[02:20.697]和我们出街起耍 我保证你不会无聊
-[02:23.886]因为我岂能这么容易满足他们？
-[02:25.218]我现在一切安好 0负面新闻
-[02:26.276]我的生活是如此多姿多彩
-[02:27.339]神父眷顾着我 百万票子滚滚来
-[02:30.266]这丰厚财富触手可得
-[02:33.644]我岂能这么容易满足他们？
-[02:34.704]我现在一切安好 0负面新闻
-[02:36.833]不搞乱七八糟的炒作 每个人都爱慕着我
-[02:40.025]和我们出街起耍 我保证你不会无聊
-`,
-    '2025068890': `[00:00.000] 作曲 : Lee Sullivan
-[00:00.526] 编曲 : Jasmine Rodgers
-[00:01.052]And you don't seem to understand
-[00:06.074]A shame you seemed an honest man
-[00:11.097]And all the fears you hold so dear
-[00:16.372]Will turn to whisper in your ear
-[00:21.395]And you know what they say might hurt you
-[00:23.906]And you know that it means so much
-[00:26.669]And you don't even feel a thing
-[00:31.941]I am falling, I am fading
-[00:37.346]I have lost it all
-[00:42.340]And you don't seem the lying kind
-[00:47.360]A shame then I can read your mind
-[00:52.382]And all the things that I read there
-[00:57.652]Candle lit smile that we both share
-[01:02.674]And you know I don't mean to hurt you
-[01:05.436]But you know that it means so much
-[01:07.946]And you don't even feel a thing
-[01:12.970]I am falling, I am fading
-[01:18.307]I am drowning
-[01:21.044]Help me to breathe
-[01:23.556]I am hurting,I have lost it all
-[01:28.583]I am losing
-[01:31.341]Help me to breathe
-[02:15.103]I am falling, I am fading
-[02:20.376]I am drowning
-[02:23.138]Help me to breathe
-[02:25.146]I am hurting,I have lost it all
-[02:30.689]I am losing
-[02:33.178]Help me to breathe
-[02:56.531]I am falling, I am fading
-[03:01.557]I am drowning
-[03:04.321]Help me to breathe
-[03:06.836]I am hurting,I have lost it all
-[03:11.861]I am losing
-[03:14.371]Help me to breathe
-`,
-    '2059084604': `[00:00.000] 作词 : Lorenzo Spadoni
-[00:00.000] 作曲 : Lorenzo Spadoni
-[00:00.000][Chorus]
-[00:00.017]Please don’t say goodbye, goodbye, goodbye
-[00:04.365]And my heart keeps coming back
-[00:08.973]I don’t wanna cry, no cry, no cry
-[00:15.162]I don’t wanna say goodbye
-[00:19.271]Woah oh, woah oh, woah oh
-[00:19.622]
-[00:20.224][Verse]
-[00:21.380]Said goodbye but she’s much too late
-[00:24.708]Got a girl now and I’m finally straight
-[00:27.160]Gotta go, don’t run up on my way
-[00:29.896]Nothing down low, I was down so strange
-[00:32.661]Don’t ever go, I wanna give you all my world
-[00:36.956]I wanna give everything that I meant to provide
-[00:43.943]Toodoodoo
-[00:44.290]This girl goes down, goes down
-[00:45.913]Goes down, down, down
-[00:47.316]Goes down
-[00:50.098]Oh, ooh
-[00:52.005]No good, bae
-[00:54.255]Good baby, bae
-[00:56.473]Good bae
-[00:58.678]Yeah, yeah, yeah
-[01:00.084]Woah oh, woah oh oh
-[01:03.098]Danananana
-[01:05.880]Nanana
-[01:06.724]Allowed to say goodbye if I’m gonna cry
-[01:08.958]But I know-
-[01:09.959]But I know that I should go
-[01:11.130]But I know that I should go
-[01:12.239]I maybe finding that [?]
-[01:13.974]I’ll maybe find another [?]
-[01:15.113]Just wanna go inside my home
-[01:17.584]And I got a good house like Jerome
-[01:20.561]And I don’t wanna show out like a [?]
-[01:22.991]And I don’t know but slow how I wanna go
-[01:25.504]I wanna go, girl, I wanna go, go, go
-[01:27.958]I wanna toodoodoodoo
-[01:30.927]Toodoodoodoo
-[01:31.519]Toodoodoo
-[01:32.428]Ramanama
-[01:34.895]Tadada
-[01:35.490]Tada dadada
-[01:38.786]Tada dada
-[01:40.741]Tada dadada
-[01:44.051]Tada dada
-`,
-    '2084376965': `[00:00.00] 作词 : 江上青山JasonYama
-[00:00.00] 作曲 : 江上青山JasonYama
-[00:00.00] 编曲 : 江上青山JasonYama
-[00:00.00] 出品 : 网易电波
-[00:01.76]The Crown In The Clouds
-[00:00.00] 
-[00:40.04]You just walk like a king
-[00:42.58]You just move like a king
-[00:44.67]You just talk like a king
-[00:46.96]Take it ！！your crown
-[00:00.00] 
-[00:49.53]You just eat like a king
-[00:51.91]You just sleep like a king
-[00:54.25]You just dance like a king
-[00:56.58]Treasure your crown
-[00:00.00] 
-[00:58.43]Someone kisses your crown
-[01:03.14]Someone who likes just the way you are
-[01:07.42]Someone kisses your crown
-[01:12.56]Someone who likes just the way you are
-[00:00.00] 
-[01:36.17]给我一些crazy
-[01:38.47]I just wanna little bit lazy
-[01:40.77]有好多事情天注定 那也不一定
-[01:43.18]那我又何必去关心
-[01:46.03]I just like to study in my life
-[01:50.70]take it the crown you must be good
-[01:53.14]take it the crown you must be cool
-[00:00.00]
-[01:55.49]Someone kisses your crown
-[01:59.97]Someone who likes just the way you are
-[02:04.32]Someone kisses your crown
-[02:09.06]Someone who likes just the way you are
-[00:00.00]
-[02:13.82] 企划 : 邓泽西
-[02:14.82] 营销 : Fendi / 阿油ayu
-[02:15.82] 出品人 : Dylan刘勇
-`,
-    '2093480642': `[00:00.000] 作曲 : Evan Miles/Dom Dias
-[00:11.232] The other side, yeah
-[00:19.864] Oh yeah, let's go
-[00:24.396]
-[00:25.476] They always told me I should leave her alone
-[00:31.516] The type of woman use your love and be gone
-[00:37.476] Word on the street is that she’s heard about me
-[00:43.496] They said I'll see
-[00:46.247]
-[00:46.456] Whatever she wants
-[00:49.736] She can get
-[00:52.247] If you don't believe me
-[00:55.697] You haven’t met her yet
-[00:58.257] Started with one look
-[01:02.219] In her deep brown eyes
-[01:05.429] Woulda lived a thousand livеs
-[01:09.152] Just to get
-[01:10.891]
-[01:11.071] My hands on you
-[01:17.011] I fell into
-[01:23.195] This spell you do
-[01:29.067] Girl I'm right bеhind
-[01:31.770] See what's on the other side
-[01:37.345]
-[01:37.734] She looked at me like I was nothing but prey
-[01:43.565] My mind said leave her but my body betrayed
-[01:49.494] To think my baby's all alone in our bed
-[01:54.465] I said I was wrong, I know
-[01:58.196]
-[01:58.356] Whatever she wants
-[02:01.896] She can get
-[02:04.196] If you don't believe me
-[02:07.807] You haven't met her yet
-[02:10.208] Started with one look
-[02:14.208] In her deep brown eyes
-[02:17.370] By the time I realized
-[02:21.206] Girl I had
-[02:23.056]
-[02:23.216] My hands on you
-[02:27.319] (I don't care what they say)
-[02:29.107] I fell into
-[02:33.120] (I would risk it all tonight)
-[02:35.036] This spell you do
-[02:39.321] (Somethin' about ya)
-[02:40.906] Girl I’m right behind
-[02:43.766] Don’t care if I don't survive
-[02:48.029]
-[02:48.218] Give it up, all to me
-[02:50.240] Give it up, give it all, all to me (Give it up)
-[02:54.006] And we touch and we ****, all to me (That’s right)
-[02:56.629] Give it up, get it down, all (Oh, yeah)
-[03:00.209] Beat it up, over me
-[03:02.751] Beat it up, let it cum, over me
-[03:05.141] Girl I'm right behind
-[03:07.611] See what's on the other side
-`,
-    '2122825009': `[00:00.000] 作曲 : Alex Borel/Caleb Hearn/Rosaileen Scher
-[00:03.787]Ooo ooo
-[00:10.696]Ooo ooo
-[00:15.993]I met somebody, selfless and kind
-[00:19.484]She’s got a smile even when she isn't fine
-[00:22.975]She can be hurting but she's got enough love to fill up Tennessee
-[00:29.956]I met somebody, stays up at night
-[00:33.486]I see her worry and she sees all of mine
-[00:36.973]I met somebody, she really loves me, says I’m all she needs
-[00:44.698]And I grew up thinking I would have to
-[00:51.841]Fight all of this alone
-[00:59.693]But now you hold me in the darkness
-[01:02.379]Hold me ’til it hurts less you
-[01:07.592]Tell me that I’m alright
-[01:09.355]Show me where the light shines through
-[01:14.622]Please stay love me through the weather
-[01:18.112]Please say this will be forever
-[01:21.643]Hold me in the darkness
-[01:23.411]Even when it’s hard with you
-[01:26.463]It’s a little bit, little bit better
-[01:34.865]I met somebody, gentle and smart
-[01:38.315]He underestimates the size of his heart
-[01:41.808]He can be laughing but he’s got enough pain to fill up New York City
-[01:48.831]I met somebody, so full of scars
-[01:52.285]The worlds on his shoulders but he won’t fall apart
-[01:55.778]I met somebody, he really loves me, says I'm all he needs
-[02:03.648]And I grew up thinking I would have to
-[02:10.667]Fight all of this alone
-[02:18.622]But now you hold me in the darkness
-[02:21.232]Hold me ’til it hurts less you
-[02:26.489]Tell me that I’m alright
-[02:28.260]Show me where the light shines through
-[02:33.472]Please stay, love me through the weather
-[02:36.962]Please say this will be forever
-[02:40.494]Hold me in the darkness
-[02:42.225]Even when it’s hard with you
-[02:45.356]It’s a little bit, little bit better
-[02:48.485]Ooo ooo(a little bit, little bit)
-[02:55.423]Ooo ooo
-[03:01.646]And I grew up thinking I would have to
-[03:08.506]Fight all of this alone
-[03:16.404]But now you hold me in the darkness
-[03:19.052]Hold me ’til it hurts less you
-[03:24.269]Tell me that I’m alright
-[03:26.034]Show me where the light shines through
-[03:31.298]Please stay love me through the weather
-[03:34.754]Please say this will be forever
-[03:38.290]Hold me in the darkness
-[03:40.052]Even when it’s hard with you
-[03:43.110]It’s a little bit, little bit better
-`,
-    '2149062755': `[00:00.000] 作词 : Jacob Ray/Nicole Chng
-[00:01.000] 作曲 : Jacob Ray/Nicole Chng
-[00:13.034] Eighteen, we were undergrads
-[00:15.418] Stayed out late, never made it to class, uh
-[00:18.966] Outer Richmond in a taxi cab
-[00:21.576] You were sweatin' bullets on the way to my Dad's
-[00:24.527] And oh, you said, "Baby, think we're movin' too fast!"
-[00:31.427]
-[00:37.328] And I swear the magnolias flashed a smile (Flashed a smile)
-[00:48.529] And that's when I caught me hopin' you'd stay a while (Stay a while)
-[01:01.278]
-[01:01.428] Baby, I'd give up anything to travel inside your mind
-[01:07.258] Baby, I fall in love again come every summertime
-[01:13.118] My daddy taught me to choose 'em wisely but you don't have to try
-[01:19.450] 'Cause, baby, I fall in lovе every summertimе
-[01:24.679]
-[01:25.835] Twenty-five, man we're missin' church
-[01:28.346] Laugh 'bout everyone we're hatin' at work
-[01:31.481] Dinner with your sister and the jokes kinda hurt
-[01:34.296] Cry the way home and you're puttin' me first, oh
-[01:40.872] Yeah, you just always know what to say
-[01:46.207]
-[01:50.373] We're strolling down the boulevard, and dancing under streetlights (Oh, the lights)
-[02:02.611] Every year we get older and I'm still on your side (Oh, I)
-[02:13.984]
-[02:14.184] Baby, I'd give up anything to travel inside your mind
-[02:20.016] Baby, I fall in love again come every summertime
-[02:26.043] My daddy taught me to choose 'em wisely but you don't have to try
-[02:32.114] 'Cause, baby, I fall in love every summertime
-[02:38.574]
-[02:38.733] Every day is summertime
-[02:41.333] Every day is summertime
-[02:44.324] Every day is summertime with you
-[02:50.325] Every day is summertime
-[02:53.344] Every day is summertime
-[02:56.405] Every day is summertime with you
-`,
-    '2149780504': `[00:00.000] 作词 : Christian Blair/Richard Okamoto/bradley au/Stephen Carlier
-[00:00.953] 作曲 : Christian Blair/Richard Okamoto/bradley au/Stephen Carlier
-[00:01.907]intentions - Starfall
-[00:15.363]What's your intentions, baby?
-[00:17.589]Do I drive you crazy?
-[00:19.516]Have you been honest lately?
-[00:21.478]Do you mind me sayin' "I don't know how to feel?"
-[00:25.576]Is this love even real? I don't know
-[00:30.554]No, I don't want to be alone, it's making me sentimental
-[00:35.039]The feelings I can't control, it always just ****s with my mental
-[00:39.083]It's only you that knows, I guess that you're somebody special
-[00:43.595]But I don't know, girl, I don't know-ooh-woah
-[00:48.320]Lately, I feel like I'm too attached, we're stuck in the moment
-[00:52.321]Not thinking 'bout how we move too fast
-[00:55.030]But I kinda like it this way
-[00:57.040]Who gives a **** what they say?
-[00:59.504]It's you and me right now, baby (No-woah)
-[01:04.227]Can't even think, I've been losing track, I'm stuck in the middle
-[01:08.195]Start thinking 'bout how you do me like that
-[01:11.070]But I kinda like it this way
-[01:13.025]Who gives a **** what they say?
-[01:15.478]It's you and me right now, baby, uh-huh
-[01:20.620]What you doing? (What you doing?)
-[01:22.423]And where you've been? (Where you've been?)
-[01:24.335]Did I miss a text back? Are you with your friends?
-[01:27.877]Could you tell me where you are? Don't stay too far
-[01:31.989]You know that I won't trip 'bout the time-ime
-[01:36.007]Close to nine, oh, please, don't dim the lights
-[01:39.337]Can we just talk about it over at my place?
-[01:43.348]And baby, stay the night, oh, let me make it right
-[01:47.410]And let me tell you what I wanted from that day, yeah, yeah
-[01:52.334]Lately, I feel like I'm too attached, we're stuck in the moment (Ooh-ooh)
-[01:56.334]Not thinking 'bout how we move too fast (Oh, oh-oh)
-[01:58.918]But I kinda like it this way (Yeah)
-[02:01.100]Who gives a **** what they say? (Yeah, yeah)
-[02:03.495]It's you and me right now, baby (No-woah)
-[02:08.264]Can't even think, I've been losing track, I'm stuck in the middle (Uh-huh)
-[02:12.251]Start thinking 'bout how you do me like that
-[02:15.009]But I kinda like it this way (Ooh)
-[02:17.061]Who gives a **** what they say?
-[02:19.474]It's you and me right now, baby (Ooh)
-[02:22.432]So, baby, tell me, would you know?
-[02:24.582](Would you notice me if I fell apart?)
-[02:27.381]Oh, would you know?
-[02:28.407](Would you notice me if I fell apart?)
-[02:31.457]I might be over it all, oh, could you look at me?
-[02:34.993]Think I might be getting withdrawals, why can't you look at me?
-[02:38.651]So, baby, tell me, would you know?
-[02:40.491](Would you notice me if I fell apart?)
-[02:42.557]I can't get enough, oh, would you know?
-[02:44.470](Would you notice me if I fell apart?)
-[02:46.028]I can't get enough of you
-[02:47.614]I might be over it all, oh, could you look at me?
-[02:50.980]Think I might be getting withdrawals, why can't you look at me, baby?
-[02:56.280]Lately, I feel like I'm too attached, we're stuck in the moment
-[03:00.298]Not thinking 'bout how we move too fast
-[03:02.859]But I kinda like it this way
-[03:05.011]Who gives a **** what they say?
-[03:07.452]It's you and me right now, baby (Yeah, yeah)
-[03:10.527]('Cause you're still on my mind)
-[03:12.338]Can't even think, I've been losing track, I'm stuck in the middle
-[03:16.244]Start thinking 'bout how you do me like that
-[03:18.949]But I kinda like it this way
-[03:21.044]Who gives a **** what they say?
-[03:23.456]It's you and me right now, baby, uh-huh
-`,
-    '2626680545': `[00:00.000] 作词 : ZVC/Nick Jonas/JVKE/Andrew Fortier/Kevin Jonas/Joe Jonas
-[00:01.000] 作曲 : ZVC/Nick Jonas/JVKE/Andrew Fortier/Kevin Jonas/Joe Jonas
-[00:04.022] Seventeen
-[00:05.993] I had my first heartbreak and it was terrible
-[00:08.519] And I pray that it won’t happen again
-[00:10.448] But then again I hope it does
-[00:12.215] Because I wanna fall in love
-[00:13.800] Without the part where we give up
-[00:15.530] I wonder if this still exists
-[00:17.183] I hope it does
-[00:18.296]
-[00:18.330] I wonder what it’s like
-[00:20.714] How it feels to be loved by someone who’ll never leave
-[00:24.344] I wanna know if you wanna be growing old with me
-[00:27.690]
-[00:27.713] Until were
-[00:28.796] Seventy
-[00:32.202] Dancing with me
-[00:35.049] Just passing the time
-[00:37.865] With you right by my side
-[00:41.357] Just stay with me
-[00:44.238] Promise you’ll never leave
-[00:48.176] I wanna love you for the rest of my life
-[00:53.526] Until were seventy
-[00:57.118]
-[01:03.654] Baby I’m so into you
-[01:05.416] I’ve lived a thousand lives
-[01:07.034] Can’t go a single night
-[01:08.619] Without you
-[01:09.855] You’re more than a feeling
-[01:12.584] I think I’m ready for the real thing, yeah
-[01:15.737] And I want that love
-[01:17.025] That typa love
-[01:18.091] That’s steady
-[01:18.988] Them kitchen hugs
-[01:20.183] Sentimental stuff
-[01:21.346] You get me
-[01:22.083] Everything I want and need (Everything I want and need)
-[01:25.165] I find it here with you and me, yeah
-[01:28.629]
-[01:29.214] I wonder what it’s like
-[01:31.397] How it feels to be loved by someone who’ll never leave
-[01:35.220] I wanna know if you wanna be growing old with me
-[01:38.460]
-[01:38.624] Until were
-[01:39.558] Seventy
-[01:43.059] Dancing with me
-[01:45.923] Just passing the time
-[01:48.613] With you right by my side
-[01:52.204] Just stay with me
-[01:55.126] Promise you’ll never leave
-[01:59.082] I wanna love you for the rest of my life
-[02:04.468] Until were seventy, oooh
-[02:11.943]
-[02:12.182] I wanna love you for the rest of my life
-[02:17.228] Until were seventy
-[02:20.989] Promise you’ll never leave
-[02:24.976] I wanna love you for the rest of my life
-[02:30.111] Until were seventy
-`,
-    '2638616976': `[00:00.000] 作词 : wifi skeleton
-[00:00.349] 作曲 : wifi skeleton
-[00:00.698]I'm not tryna ruin your fun
-[00:02.645]You're just a little bit late, I guess you're already done
-[00:07.317]There's this feeling I can't shake 'cause I'm too dumb
-[00:10.813]I'm never doing the right thing so I'm so stuck
-[00:15.188]If you see me in America I might say "Hi"
-[00:18.749]But if you meet me out in Europe I'm a talkative guy
-[00:23.142]Maybe we'll talk over scones around lunch some time
-[00:27.173]And I've never been to France so it might be nice
-[00:31.212]But I can't take this paparazzi, geez
-[00:34.829]It's like the camera's always out and always starin' at me
-[00:38.897]And if I say the wrong thing, they'll cut my tongue 'til it bleeds
-[00:42.950]Always whippin' out their pitchforks when you try to speak
-[00:47.264]But that couldn't be me
-[00:49.008]Next day I'm walkin' the road
-[00:50.751]Kickin' rocks, it's my fault
-[00:52.651]My life's the worst story told, I'll be this way 'til I'm old
-[00:56.754]I rip a page out the book, I'm just so misunderstood
-[01:00.651]I always think about her, and when my life felt good
-[01:04.781]I smoked a cig on the porch
-[01:06.806]It doesn't help me at all, I wonder, what's it all for?
-[01:10.812]Is this the girl I adored and I know I can't afford
-[01:14.748]Watchin' her walk out the door so I keep it to myself, and keep my feet on the floor
-`,
-    '2643514137': `[00:00.000] 作词 : Carpetman
-[00:01.000] 作曲 : Carpetman
-[00:02.128]oh～oh～oh
-[00:06.927]oh～oh～oh
-[00:15.708]what if I gonna say
-[00:17.464]that you were wrong
-[00:19.224]about yourself and who are you at all
-[00:22.539]Perhaps you'll say that
-[00:24.050]"I AM" outta my mind
-[00:26.308]But then you will think about it all night
-[00:30.321]What if I'm gonna say
-[00:31.826]We are the same
-[00:33.837]But just forgot how we get into this game
-[00:37.601]What if I'm gonna say that
-[00:39.377]You were fooled
-[00:41.196]But let me ask
-[00:42.738]What does it mean to you?
-[00:57.787]...doesn't mean to you?
-[01:05.313]Diggity boom
-[01:12.377]What does it mean to you?
-[01:20.154]Wakey - Wakey
-[01:26.678]The biggest joke is
-[01:27.455]What it means to you
-[01:42.287]This circle is endless, amigo
-[01:46.048]Tell it tell to your lying friend
-[01:47.556]Whose name is "Your Ego"
-[01:49.354]We're able to create a hell
-[01:51.434]And destroy it as well
-[01:52.938]When I've been talking to myself
-[01:55.520]...learned The Spell
-[01:57.024]How do you know if you're dreaming?
-[01:58.532]So many answers have been hidden
-[02:00.317]It might shoot whith a God damn feeling
-[02:02.072]But this knowledge is forbidden
-[02:04.329]Cause there's no profit in the freedom
-[02:05.835]Of slaves for the "leader"
-[02:07.842]So the shadow of delusion
-[02:09.598]Only gets bigger
-[02:11.608]What if there's no "me"?
-[02:13.666]And there's no "you"
-[02:15.424]My kingdom's empty and free
-[02:16.929]But I've been blind too
-[02:18.688]What if there's no "me"?
-[02:20.694]Aah too many words
-[02:22.703]Are going through...
-[02:23.766]But I'm curious, Human
-[02:25.606]So could you tell me
-[02:26.609]What it means to you?
-[02:41.171]Hahahaha
-[02:48.870]Diggity boom
-[02:55.645]What does it mean to you?
-[03:03.670]Wakey - Wakey
-[03:09.951]The biggest joke is
-[03:10.698]What it means to you
-[03:12.472]Oh~ oh~ oh
-[03:24.766]The biggest joke is
-[03:25.521]What it means to you
-`,
-    '2668934341': `[00:00.000] 作词 : Dave Bayley
-[00:01.000] 作曲 : Dave Bayley
-[00:31.225] When I was young and stupid
-[00:33.934] My love left to be a rock and roll star
-[00:39.183] He told me, "Please don't worry"
-[00:42.294] Wise little smile that spoke so safely
-[00:46.645] He booked a one-way ticket
-[00:50.389] Out west, that's where they make it
-[00:54.114] Six kids stuck in a bedsit
-[00:57.803] To sunswept poolside riches
-[01:08.655] He met a girl who wore Versace
-[01:12.474] Pink feather coats and jumbo jewelry
-[01:16.609] Gonna be a hoop phenomenon
-[01:19.950] He's gonna be Hakeem Olajuwon
-[01:24.162] He's got a gold Camaro
-[01:27.825] He said over the payphone
-[01:31.662] I try and keep my cool but
-[01:35.444] My life turns in slow motion
-[01:38.629] Bye-bye, baby blue
-[01:41.530] I wish you could see the wicked truth
-[01:45.228] Caught up in a rush, it's killing you
-[01:48.802] Screaming at the sun you blow into
-[01:52.612] Curled up in a grip when we were us
-[01:56.497] Fingers in a fist like you might run
-[02:00.000] I settle for a ghost I never knew
-[02:03.968] Super paradise I held on to
-[02:07.343] But I settle for a ghost
-[02:16.119] Where I was from, in NOLA
-[02:18.909] No one left to be a rock and roll star
-[02:24.227] He'd stay and treat his lady
-[02:27.451] Give everything to his new baby
-[02:31.678] I miss him, don't you blame me?
-[02:35.375] That boy went stone cold crazy
-[02:39.089] Caught up in camera lust, he's
-[02:42.888] Chasing that pappy pipe dream
-[03:16.625] I know you don't, but I
-[03:20.397] I know you don't, but I still try
-[03:24.191] My thunder shook him down
-[03:27.903] My thunder came and shook him down
-[03:31.687] That girl is gone, but I
-[03:35.419] That girl is gone, but I still try
-[03:39.221] I think it's over now
-[03:42.925] The bullet hit but maybe not
-[03:46.703] I feel so ****ing numb
-[03:50.431] It hits my head and I feel numb
-[03:54.152] My body's looking wrong
-[03:57.798] My body's looking wrong
-[04:01.591] My body's looking wrong
-[04:04.891] Bye-bye, baby blue
-[04:07.723] I wish you could see the wicked truth
-[04:11.440] Caught up in a rush, it's killing you
-[04:15.124] Screaming at the sun you blow into
-[04:18.961] Curled up in a grip when we were us
-[04:22.727] Fingers in a fist like you might run
-[04:26.261] I settle for a ghost I never knew
-[04:30.136] Super paradise I held on to
-[04:33.567] But I settle for a ghost
-`,
-    '2673161004': `[00:00.000] 作词 : Jeff Jarvis
-[00:01.000] 作曲 : Jeff Jarvis
-[00:09.268]Would you be my girl
-[00:10.835]Would you be my girl
-[00:12.849]The ring upon your finger's worth a fortune
-[00:14.751]But it doesn't matter
-[00:16.317]He don't love you
-[00:17.884]He don't love you
-[00:19.059]And I know you went to Paris
-[00:20.234]When he asked for your hand but
-[00:22.583]He don't love you
-[00:24.378]He don't love you
-[00:25.774]I will give you something that no other man could
-[00:28.474]When love is for real you know it feels so good
-[00:31.860]It's hard to walk away now
-[00:33.381]But it's gonna get worse
-[00:35.057]Just cancel the wedding and come with me
-[00:37.752]Sweet baby
-[00:40.367]Understand me
-[00:41.935]I feel the pressure to
-[00:43.224]Let the man marry me
-[00:44.790]But deep down in my heart
-[00:47.167]It's you I want
-[00:49.396]It's you I want
-[00:51.022]You keep on driving me crazy
-[00:54.304]Girl let me off the hook tell me
-[00:57.436]Said you need time
-[00:58.743]But I wanna know now
-[01:00.962]Would you be my girl
-[01:02.528]Would you be my girl
-[01:03.311]I am so mad about you boy
-[01:06.117]It's hard to be your friend when I want more
-[01:09.485]I think about it seven and twenty-four
-[01:12.731]It's what I want
-[01:13.493]Would you be my girl
-[01:15.060]Would you be my girl
-[01:18.976](yeah~yeah~oh yeah~~)
-[01:28.375]Come on
-[01:29.158]I fell in love the second that I laid my hands on you I said
-[01:33.074]Let me love you
-[01:34.581]Let me love you
-[01:35.816]But everybody told me I was wasting my time that
-[01:39.387]I shouldn't love you
-[01:41.155]I shouldn't love you
-[01:42.663]But I will give you something that no other man could
-[01:45.598]When love is for real you know it feels so good
-[01:48.772]It's hard to walk away now
-[01:50.134]But it's gonna get worse
-[01:51.754]Just cancel the wedding and come with me
-[01:55.396]Sweet baby
-[01:57.288]Understand me
-[01:58.635]I feel the pressure to
-[02:00.053]Let the man marry me
-[02:01.455]But deep down in my heart
-[02:03.989]It's you that I want
-[02:06.424]It's you that I want
-[02:07.963]You keep on driving me crazy
-[02:11.061]Girl let me off the hook tell me
-[02:14.297]Said you need time
-[02:15.566]But I wanna know now
-[02:17.327]Would you be my girl
-[02:19.145]Would you be my girl
-[02:20.655]I am so mad about you boy
-[02:22.695]It's hard to be your friend when I want more
-[02:26.228]I think about it seven and twenty-four
-[02:29.061]It's what I want
-[02:30.591]Would you be my girl
-[02:32.180]Would you be my girl
-[02:33.642]It's hard to be in between
-[02:36.427]Love can hurt so easily
-[02:39.625]You're all I want
-[02:41.441]And all I need
-[02:42.939]Girl I need you to be mine
-[02:46.307]You keep on driving me crazy
-[02:49.451]Girl let me off the hook tell me
-[02:52.720]Said you need time
-[02:54.316]But I wanna know now
-[02:56.097]Would you be my girl
-[02:57.181]Would you be my girl
-[02:58.447]I am so mad about you boy
-[03:01.355]It's hard to be your friend when I want more
-[03:04.414]I think about it seven and twenty-four
-[03:07.303]It's what I want
-[03:09.073]Would you be my girl
-[03:10.386]Would you be my girl
-[03:11.788]You keep on driving me crazy
-[03:15.198]Girl let me off the hook tell me
-[03:18.273]Said you need time
-[03:19.594]But I wanna know now
-[03:21.629](Someone you know now)Would you be my girl
-[03:23.119]Would you be my girl
-[03:24.293]I am so mad about you boy
-[03:27.220]It's hard to be your friend when I want more
-[03:29.947]I think about it seven and twenty-four
-[03:33.155]It's what I want
-[03:35.022]Would you be my girl
-[03:35.917]Would you be my girl
-[03:37.591](you you woo~would you be my girl~on yeah~)
-`,
-    '3317235944': `[00:00.000] 作词 : JVKE/ZVC
-[00:01.000] 作曲 : JVKE/ZVC
-[00:06.296]Hold me close
-[00:08.445]Look me dead in my eyes
-[00:09.711]Dead in my eyes
-[00:11.742]Till the day that I die
-[00:13.228]Dead inside
-[00:15.162]I just wanna feel alive
-[00:16.371]With you, I'm alive
-[00:18.479]With you, I'm alive
-[00:19.654]Fell in love, but it left me lonely
-[00:22.891]Tried to trust, but it burned me slowly
-[00:26.826]I didn't know what I was looking for
-[00:30.325]Till I found her
-[00:38.026]I found her
-[00:44.876]Without her
-[00:46.924]I'm a mess, there was nothing 'bout that love that made sense, I was stressed
-[00:51.219]Till I found her
-[00:56.387]
-[00:59.734]Found me lonely, lost, and only
-[01:03.046]One step away from just giving up slowly
-[01:06.411]I was a mess, I was afraid
-[01:07.825]I'd be the girl who just put up her walls no one could break
-[01:12.120]Till I found him
-[01:13.637]Running through the wild with 1/2 of a heart
-[01:16.265]Made me a whole one out of the parts
-[01:19.629]Suddenly, it's like I'm healed
-[01:21.227]Didn't know the love was real
-[01:23.078]Until I could
-[01:26.218]
-[01:26.370]Hold you close (Hold me close)
-[01:28.512]Look me dead in my eyes
-[01:29.646]Dead in my
-[01:31.952]Till the day that I die
-[01:33.003]Dead inside
-[01:35.259]I just wanna feel alive
-[01:36.538]With you, I'm alive
-[01:38.736]With you, I'm a—
-[01:39.710]Fell in love, but it left me lonely
-[01:42.869]Tried to trust, but it burned me slowly
-[01:46.813]I didn't know what I was looking for
-[01:50.363]Till I found her
-[01:57.983]I found her
-[02:04.498]Without her
-[02:06.790]I'm a mess, there was nothing 'bout that love that made sense, I was stressed
-[02:11.024]Till I found her
-[02:17.147]
-[02:17.261]And without her
-[02:20.598]I'm a mess, there was nothing 'bout that love that made sense, I was stressed
-[02:24.300]Till I found her
-[02:30.710]Till I found her
-[02:38.165]Ooh
-`,
-    '3343637146': `[00:00.000] 作词 : suhmeduh
-[00:01.000] 作曲 : suhmeduh
-[00:02.000] 编曲 : suhmeduh
-[00:06.870]Six seven eight triple nine eight two one
-[00:12.270]two one two one
-[00:12.570]nine eight two one two one two one
-[00:14.760]nine eight two one
-[00:22.050]Hello, no one is available to take your call
-[00:34.830]please leave a message after the tone.
-[00:37.500]Six seven eight triple nine eight two one
-[01:41.370]Baby, you know that I miss you
-[01:46.170]I wanna get with you
-[01:46.770]TonightbutIcan't now baby girl
-[01:47.640]Andthat's the issue
-[01:47.820]Girl you know I miss you
-[01:51.510]I just wanna kiss you
-[01:52.170]ButIcan't right now so baby
-[01:53.370]Kiss me through the phone
-[01:53.760]Kiss me through the phone
-[01:54.150]I'll see you later on
-[01:54.660]Later on
-[01:54.870]Kiss me through the phone
-[01:55.560]Kiss me through the phone
-[01:55.950]See ya when I get home
-[02:03.120]When I get home
-`,
-    '3356494231': `[00:00.000] 作词 : Charlie Puth/BloodPop®/Hikaru Utada
-[00:01.000] 作曲 : Charlie Puth/BloodPop®/Hikaru Utada
-[00:02.000] 制作人 : Charlie Puth/BloodPop®
-[00:05.960]Through the rose-colored lenses
-[00:08.510]And the white picket fences
-[00:10.980]No matter how good this is
-[00:12.820]It could never satisfy
-[00:16.110]When it's you that I'm missing
-[00:18.660]Now I sit in the kitchen
-[00:21.240]Through the window pane
-[00:22.700]I watch the day, turn to night
-[00:26.310]It ain't a mystery that every time you leave
-[00:31.380]That's when I feel the most alone
-[00:35.070]Ooo, don't you know (Don't you know?)
-[00:40.180]That you're the one who makes this house a home (House a home)
-[00:45.340]And so, (And so) when you go (When you go)
-[00:50.220]It feels so cold without that soul (That soul)
-[00:53.260]You're the one who makes this house a home
-[00:58.660]
-[01:06.820]一人の時間も大切
-[01:09.820]誰にも妥協せず
-[01:12.300]私だけのお城を築いた
-[01:17.440]But it's you I was missing
-[01:19.960]君に毎日ただいまと言わせてください
-[01:27.670]行ってらしゃい
-[01:30.300]君がいないこの家は好きじゃない
-[01:37.110]Ooo, don't you know (Don't you know?)
-[01:41.390]That you're the one who makes this house a home (House a home)
-[01:46.660]And so, (And so) when you go (When you go)
-[01:51.340]夏でも凍えちゃいそう
-[01:54.640]君の温もりが home (Home)
-[01:59.700]Ooh-ooh-ooh
-[02:01.750]You're the one
-[02:02.940]You're the one, you're the one who makes this
-[02:07.000]House a home, house a home, house a home
-[02:10.890]Oh-oh-oh
-[02:11.940]You're the one, you're the one
-[02:15.350]Oh mmm-mmm oh
-[02:18.780]It ain't a mystery that every time you leave
-[02:23.830]That's when I feel the most alone, ooh
-[02:29.010]当たり前に
-[02:31.620]なりそうな時
-[02:34.110]思い出してほしい
-[02:38.330]Ooo, don't you know (Don't you know?)
-[02:42.540]That you're the one who makes this house a home (A home)
-[02:47.980]And so, when you go (When you go)
-[02:52.560]It feels so cold without that soul (That soul)
-[02:55.840]You're the one who makes this house a home
-[02:59.100]ある日楽園で目が覚めても
-[03:04.110]君がいなきゃ長居しないね
-[03:09.380]どんな豪邸手に入れたって
-[03:14.270]君がいなきゃハリボテ同然
-[03:22.200]
-[03:23.420]Ooh, ooh-ooh, ooh
-[03:27.500]You're the one who makes this house a home
-[03:31.490]Who made this house a home
-[03:38.560]
-[03:39.946] 音频助理 : Eric Eylands
-[03:40.258] 音频工程师 : Ben Sedano
-[03:40.570] 吉他 : Curt Chambers
-[03:40.882] 键盘 : Charlie Puth
-[03:41.194] 鼓 : Stanley Rudolph
-[03:41.506] 人声 : Charile Puth
-[03:41.818] 大提琴 : Mia Barcia Colombo/Christopher Ahn/Ben Lash/Juan-Salvador Carrasco
-[03:42.130] 小提琴 : Katie Sloan/Radu Pieptea/Kerenza Peacock/Maya Magub/Mark Robertson/Sara Parkins/Adam Millstein/Ji Young An/Misha Vayman/Michael Siess/Stephanie Yu
-[03:42.442] 中提琴 : Emily Williams/Carolyn Riley/Corinne Sobolewski/Drew Forde
-[03:42.754] 打击乐 : Leddie Garcia
-[03:43.066] 编程 : Charlie Puth/BloodPop®
-[03:43.378] 贝斯 : Pastor Funk/William Nathan Farrington
-[03:43.690] 混音助理 : Ramiro Fernandez-Seoane
-[03:44.002] 母带工程师 : Zach Pereyra
-[03:44.314] 人声录音工程师 : Yuya Saito
-[03:44.626] 混音师 : Charlie Puth/Manny Marroquin
 `
   };
 
-  // ---- CSS ----
+// ---- CSS ----
   var css = [
-    /* 右下角固定定位 */
-    '#gmeek-player{position:fixed;right:24px;bottom:24px;z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
+    /* 右侧固定定位（偏下） */
+    '#gmeek-player{position:fixed;right:24px;top:60%;transform:translateY(-50%);z-index:10004;font-family:Arial,Helvetica,sans-serif;}',
 
     /* 播放器主体 */
     '#gmp-body{width:320px;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;transition:all 0.3s ease;display:none;}',
@@ -2063,8 +2684,11 @@
     '#gmp-list-btn:hover,#gmp-lyrics-btn:hover{color:#8fb3a9;}',
     '#gmp-list-btn svg,#gmp-lyrics-btn svg{width:16px;height:16px;}',
     '#gmp-list-btn.active,#gmp-lyrics-btn.active{color:#8fb3a9;}',
-    '#gmp-list-btn{right:38px;}',
-    '#gmp-lyrics-btn{right:14px;}',
+    '#gmp-list-btn{right:90px;}',
+    '#gmp-lyrics-btn{right:52px;}',
+    '#gmp-close-btn{position:absolute;top:4px;right:14px;background:none;border:none;cursor:pointer;color:#999;padding:4px;transition:color 0.2s;}',
+    '#gmp-close-btn:hover{color:#666;}',
+    '#gmp-close-btn svg{width:16px;height:16px;}',
 
     /* 悬浮歌词面板 */
     '#gmp-lyrics-float{position:absolute;bottom:100%;left:0;right:0;margin-bottom:8px;background:rgba(255,255,255,0.97);border-radius:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.12);max-height:240px;overflow-y:auto;display:none;backdrop-filter:blur(8px);}',
@@ -2117,13 +2741,13 @@
     '.gmp-item-artist{color:#999;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}',
 
     /* Mini 切换按钮 */
-    '#gmp-mini{position:absolute;right:24px;top:24px;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 2px 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
+    '#gmp-mini{position:absolute;right:0px;top:0px;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8fb3a9,#7a9e96);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:-2px 2px 8px rgba(143,179,169,0.4);transition:all 0.2s;}',
     '#gmp-mini:hover{box-shadow:-2px 2px 12px rgba(143,179,169,0.6);transform:scale(1.05);}',
     '#gmp-mini svg{width:20px;height:20px;color:#fff;transition:transform 0.3s;}',
     '#gmp-mini.collapsed svg{transform:rotate(180deg);}',
 
     /* 移动端响应 */
-    '@media(max-width:480px){#gmeek-player{right:8px;bottom:16px;}#gmp-body{width:calc(100vw - 52px);}}',
+    '@media(max-width:480px){#gmeek-player{right:8px;top:60%;transform:translateY(-50%);}#gmp-body{width:calc(100vw - 52px);}}',
   ].join('');
 
   // ---- Inject Styles ----
@@ -2144,14 +2768,17 @@
       '<div id="gmp-header">' +
         '<div id="gmp-cover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>' +
         '<div id="gmp-info">' +
-          '<div id="gmp-title">私人雷达</div>' +
-          '<div id="gmp-artist">35首 · 点击播放</div>' +
+          '<div id="gmp-title">旧城的歌单</div>' +
+          '<div id="gmp-artist">点击播放</div>' +
         '</div>' +
         '<button id="gmp-list-btn" title="歌单">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>' +
         '</button>' +
         '<button id="gmp-lyrics-btn" title="歌词">' +
           '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>' +
+        '</button>' +
+        '<button id="gmp-close-btn" title="收起">' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
         '</button>' +
       '</div>' +
       '<div id="gmp-progress"><div id="gmp-bar-wrap"><div id="gmp-bar"></div></div></div>' +
@@ -2395,12 +3022,14 @@
     muted = false;
   });
 
-  // ---- Toggle player ----
+  // ---- Toggle player (only open, only X button can close) ----
   miniBtn.addEventListener('click', function () {
-    playerOpen = !playerOpen;
-    bodyEl.classList.toggle('show', playerOpen);
-    miniBtn.classList.toggle('collapsed', !playerOpen);
-    miniBtn.title = playerOpen ? '收起播放器' : '展开播放器';
+    if (!playerOpen) {
+      playerOpen = true;
+      bodyEl.classList.add('show');
+      miniBtn.classList.remove('collapsed');
+      miniBtn.title = '收起播放器';
+    }
   });
 
   // ---- Toggle floating lyrics ----
@@ -2420,9 +3049,13 @@
     listBtn.classList.toggle('active', listOpen);
   });
 
-  // ---- Click header (no longer toggles list) ----
-  document.getElementById('gmp-header').addEventListener('click', function (e) {
-    if (e.target.closest('#gmp-lyrics-btn') || e.target.closest('#gmp-list-btn')) return;
+  // ---- Header click removed: only X button closes player ----
+  document.getElementById('gmp-close-btn').addEventListener('click', function (e) {
+    e.stopPropagation();
+    playerOpen = false;
+    bodyEl.classList.remove('show');
+    miniBtn.classList.add('collapsed');
+    miniBtn.title = '展开播放器';
   });
 
   // ---- Init ----
