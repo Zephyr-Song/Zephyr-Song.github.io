@@ -57,6 +57,7 @@
     { name: "精卫", artist: "30年前，50年后", url: "https://music.163.com/song/media/outer/url?id=1951069525.mp3", cover: "https://p1.music.126.net/jSH_ikeooxveWl0BTc3Xkg==/109951166786983190.jpg", id: "1951069525" },
     { name: "往后余生", artist: "马良", url: "https://music.163.com/song/media/outer/url?id=557584888.mp3", cover: "https://p2.music.126.net/_QqIAZgDGKEimPQgzTCKGQ==/109951165325675186.jpg", id: "557584888" },
     { name: "你是人间四月天", artist: "邵帅", url: "https://music.163.com/song/media/outer/url?id=1344897943.mp3", cover: "https://p2.music.126.net/kQJQD58WkmQneTneOYe22A==/109951164252455813.jpg", id: "1344897943" },
+    { name: "The truth that you leave", artist: "Pianoboy高至豪", url: "https://music.163.com/song/media/outer/url?id=139774.mp3", cover: "https://p2.music.126.net/9idkdzbel_-lYBP7Dv_dVQ==/102254581395289.jpg", id: "139774" },
   ];
 
 var HARDCODED_LYRICS = {
