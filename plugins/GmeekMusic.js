@@ -40,7 +40,7 @@
     { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "https://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" },
     { name: "安和桥", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646205.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646205" },
     { name: "董小姐", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646198.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646198" },
-    { name: "郭源潮", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=477251491.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "477251491" },
+    { name: "郭源潮", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=477251491.mp3", cover: "https://p2.music.126.net/Pa-ZXouQlgx5h0xvUtfG0Q==/109951172945891036.jpg", id: "477251491" },
     { name: "阿拉斯加海湾", artist: "蓝心羽", url: "https://music.163.com/song/media/outer/url?id=1500569811.mp3", cover: "https://p1.music.126.net/j9P19hOTNbYxLZDJB9bJag==/109951169385715334.jpg", id: "1500569811" },
     { name: "千纸鹤", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=1366055392.mp3", cover: "https://p2.music.126.net/EO_mrK1Hft9DpC5fr9ROIw==/109951169897875877.jpg", id: "1366055392" },
     { name: "挪威的森林", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5255631.mp3", cover: "https://p1.music.126.net/QoYAmdyE7FL_vc9rwNeS9w==/64871186055842.jpg", id: "5255631" },
