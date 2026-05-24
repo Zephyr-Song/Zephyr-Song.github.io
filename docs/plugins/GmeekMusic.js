@@ -60,6 +60,7 @@
     { name: "The truth that you leave", artist: "Pianoboy高至豪", url: "https://music.163.com/song/media/outer/url?id=139774.mp3", cover: "https://p2.music.126.net/9idkdzbel_-lYBP7Dv_dVQ==/102254581395289.jpg", id: "139774" },
     { name: "世间美好与你环环相扣", artist: "柏松", url: "https://music.163.com/song/media/outer/url?id=1363948882.mp3", cover: "https://p2.music.126.net/DK1_4sP_339o5rowMdPXdw==/109951164071024476.jpg", id: "1363948882" },
     { name: "Melody(Live)", artist: "陶喆", url: "https://music.163.com/song/media/outer/url?id=150408.mp3", cover: "https://p2.music.126.net/K05FL1BmwrJXeoxctQILjA==/109951171530792491.jpg", id: "150408" },
+    { name: "7%", artist: "XMASwu(吴骜)", url: "https://music.163.com/song/media/outer/url?id=1423241987.mp3", cover: "https://p1.music.126.net/YsXfYs7s2-d0lJwRtp_klQ==/109951164700110582.jpg", id: "1423241987" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -2956,6 +2957,52 @@ var HARDCODED_LYRICS = {
 [04:24.256]无数动人音符在我生命
 [04:29.055]爱过你
 [04:33.223]失去后我才知道要珍惜你
+`,
+    '1423241987': `[00:00.000] 作词 : XMASwu(吴骜)
+[00:01.000] 作曲 : XMASwu(吴骜)
+[00:02.000] 编曲 : source music
+[00:03.000] 制作人 : XMASwu(吴骜)
+[00:04.000] 混音 : 圣雨轻纱
+[00:12.399]My baby my treasure I swear my forever
+[00:18.409]My baby my treasure I love you forever
+[00:23.782]My baby my treasure I really don't wanna leave 想和你在一起
+[00:29.543]Oh, gonna Forever be with you I'm here waiting for you
+[00:36.558]他们都说我还能谈几年
+[00:39.315]我尽量放手不去看以前
+[00:42.320]19年错过的画面 想每天陪在你身边
+[00:45.077]Toronto pure white snow
+[00:46.331]I know this road is gonna to be tough and strenuous
+[00:49.086]but I'm not afraid of it  cuz I want you baby
+[00:52.097]I wanna travel along the sea with you , to eat all the meat
+[00:55.854]Sunshine on the beach and let me feed you a piece of sweet
+[00:58.110]My baby my treasure I swear my forever
+[01:03.624]My baby my treasure I love you forever
+[01:09.641]My baby my treasure I really don't wanna leave 想和你在一起
+[01:16.407]Oh, gonna Forever be with you I'm here waiting for you
+[01:20.917]到底是吩咐还是丰富
+[01:23.423]前后鼻音是你没掌握的声部
+[01:26.178]搞不清红参 亦或是浑身
+[01:28.933]小孩子都知道的东西你不会区分
+[01:31.690]只知道缠着我 坚信我不会躲
+[01:36.452]摘下桃花结你说爱情终于轮到我
+[01:37.454]我说 上天的安排 命中就注定
+[01:40.464]你说 头发到斑白 爱我到任性
+[01:43.471]I need you happy every second
+[01:46.477]Never my Baby see you cry
+[01:49.234]我不会再让你流泪
+[01:52.238]我会和你遇见的 会遇见的
+[01:55.495]My baby my treasure I swear my forever
+[02:01.008]My baby my treasure I love you forever
+[02:06.523]My baby my treasure I really don't wanna leave 想和你在一起
+[02:12.536]Oh, gonna Forever be with you I'm here waiting for you
+[02:17.296]蓝紫色的天空 冰岛南极梦
+[02:20.553]780分钟      每天都心动
+[02:23.308]电话还能接通 对我就足够
+[02:26.316]你操纵我的时空 扑入我怀中
+[02:29.075]蓝紫色的天空 冰岛南极梦  my baby
+[02:32.085]780分钟      每天都心动  my treasure
+[02:34.844]电话还能接通 对我就足够 forever be with you
+[02:37.601]你操纵我的时空 扑入我怀中 I'm here waiting for you
 `
   };
 
