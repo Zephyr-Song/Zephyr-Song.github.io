@@ -46,7 +46,7 @@
     { name: "陪你度过漫长岁月", artist: "陈奕迅", url: "https://music.163.com/song/media/outer/url?id=35403523.mp3", cover: "https://p1.music.126.net/Nm5rwMYaH_20Zh61XhGn8Q==/109951166600775221.jpg", id: "35403523" },
     { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" },
     { name: "谁 (Live版)", artist: "廖俊涛", url: "https://music.163.com/song/media/outer/url?id=566436427.mp3", cover: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", id: "566436427" },
-    { name: "过", artist: "林俊杰/王嘉尔", url: "https://music.163.com/song/media/outer/url?id=1804879213.mp3", cover: "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/109951165545588869.jpg", id: "1804879213" },
+    { name: "过", artist: "林俊杰/王嘉尔", url: "https://music.163.com/song/media/outer/url?id=1804879213.mp3", cover: "https://p2.music.126.net/fwXShM46KdIj3hB8_lJ71g==/109951165545588869.jpg", id: "1804879213" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
