@@ -25,7 +25,6 @@
     { name: "总有一天你会出现在我身边", artist: "棱镜乐队", url: "https://music.163.com/song/media/outer/url?id=1303027499.mp3", cover: "https://p4.music.126.net/RfUHXkanpxImcaGqFNWBeA==/109951163598901405.jpg", id: "1303027499" },
 
     { name: "吻你吻上太空", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2707033683.mp3", cover: "https://p4.music.126.net/p4U0-Y5rtkKfDmQegHXpVQ==/109951172068954764.jpg", id: "2707033683" },
-    { name: "阳光下的星星", artist: "金海心", url: "https://music.163.com/song/media/outer/url?id=1353159923.mp3", cover: "https://p4.music.126.net/Y1wKsh4KET4u8UD2A2CE5w==/109951163940418508.jpg", id: "1353159923" },
     { name: "走马", artist: "陈粒", url: "https://music.163.com/song/media/outer/url?id=2749430417.mp3", cover: "https://p1.music.126.net/jeWHIkiTkBglJKxte7p6JA==/109951172059186762.jpg", id: "2749430417" },
     { name: "吹灭小山河", artist: "国风堂/司南", url: "https://music.163.com/song/media/outer/url?id=1412559986.mp3", cover: "https://p4.music.126.net/taWBQliW8wLh_pqXElAeww==/109951164923015271.jpg", id: "1412559986" },
     { name: "五百二十赫兹", artist: "Capper", url: "https://music.163.com/song/media/outer/url?id=1948572170.mp3", cover: "https://p4.music.126.net/peHjsnZRas_ETuici04LwQ==/109951167437121908.jpg", id: "1948572170" },
@@ -47,6 +46,7 @@
     { name: "陪你度过漫长岁月", artist: "陈奕迅", url: "https://music.163.com/song/media/outer/url?id=35403523.mp3", cover: "https://p1.music.126.net/Nm5rwMYaH_20Zh61XhGn8Q==/109951166600775221.jpg", id: "35403523" },
     { name: "晚安", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1359356908.mp3", cover: "https://p1.music.126.net/-rC55JsnmEWvafJQsAZaWw==/109951170473693123.jpg", id: "1359356908" },
     { name: "谁 (Live版)", artist: "廖俊涛", url: "https://music.163.com/song/media/outer/url?id=566436427.mp3", cover: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", id: "566436427" },
+    { name: "过", artist: "林俊杰/王嘉尔", url: "https://music.163.com/song/media/outer/url?id=1804879213.mp3", cover: "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/109951165545588869.jpg", id: "1804879213" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
@@ -1002,63 +1002,6 @@ var HARDCODED_LYRICS = {
 [03:06.29] 特别企划 : Studio JOSEPH x Foye the Second x 网易·云上工作室
 [03:06.60] 制作&宣发公司 : 嬉耳恭听 x 网易·云上工作室
 [03:06.92] 联合出品 : 嬉耳恭听 x 网易·云上工作室
-`,
-    '1353159923': `[00:00.00] 作曲 : 金海心
-[00:00.02] 编曲 : 金海心/孟军
-[00:09.65]制作：joyce
-[00:13.78]暖暖阳光懒懒爬进窗
-[00:20.14]幽幽微醺淡淡咖啡香
-[00:26.37]恍然你又在身旁
-[00:29.82]笑容星一样明亮
-[00:33.22]打开故事书翻到下一页
-[00:39.75]你说云落泪了风会吹干她
-[00:46.17]我问风叹息又怎么安慰呢
-[00:52.68]你只笑笑不回答
-[00:55.90]说小姑娘别犯傻
-[00:59.19]oh 窗外天空晴朗
-[01:04.21]oh yeah~
-[01:06.07]只想抱着你的背脊不想放
-[01:12.27]为何美的东西总叫人感伤
-[01:18.99]只怕你每次转身
-[01:22.35] hai yeah~
-[01:25.76]我会以为看见明天的艳阳
-[01:30.47] oh~
-[01:33.17]暖暖阳光懒懒爬进窗
-[01:38.95]幽幽微醺淡淡咖啡香
-[01:45.17]恍然你又在身旁
-[01:48.48]笑容星一样明亮
-[01:51.86]打开故事书翻到下一页
-[01:58.49]你说云落泪了风会吹干她
-[02:04.95]我问风叹息又怎么安慰呢
-[02:11.43]你只笑笑不回答
-[02:14.69]说小姑娘别犯傻
-[02:17.91]oh 窗外天空晴朗
-[02:22.95]oh yeah~
-[02:24.72]也许云落泪了风会吹干她
-[02:31.17]可是风叹息又怎么安慰呢
-[02:37.74]你说就随她去吧
-[02:41.19]yeah~
-[02:44.80]叫我如何放得下
-[02:49.07] oh~
-[02:51.74]候鸟会不会停留
-[02:55.40]一生算不算太久
-[02:58.48]未来有没有尽头
-[03:01.54]够不够带我走
-[03:05.10]候鸟该不该停留
-[03:08.43]未来它有没有尽头
-[03:11.57] oh~
-[03:13.07]嗒……
-[03:17.20]如果爱上你只是一个梦境
-[03:22.30] oh yeah~
-[03:24.01]醒来后又该如何重新睡去
-[03:28.61] oh~
-[03:30.71]如果失去记忆
-[03:33.97] oh~
-[03:37.37]能否再一见钟情
-[03:44.01]能否再一见钟情
-[03:48.63]oh~
-[03:56.49]能否再一见钟情
-[00:00.05]
 `,
     '2749430424': `[00:16.92]让我占有你
 [00:18.93]让我占有你在你最好的年纪
@@ -2332,6 +2275,57 @@ var HARDCODED_LYRICS = {
 [03:44.65]爱的多的人总先变虚伪
 [03:51.43]爱的多的人总先变虚伪
 [03:58.53]爱总让我掉虚伪的眼泪
+`,
+    '1804879213': `[00:00.000] 作词 : 林怡凤
+[00:01.000] 作曲 : 林俊杰/王嘉尔
+[00:02.000] 编曲 : Boytoy/林俊杰/王嘉尔
+[00:03.000] 制作人 : 林俊杰/王嘉尔/Boytoy
+[00:15.527]回不去的路口 Oh Oh
+[00:19.041]像过敏扎了根 Oh Oh
+[00:22.547]我想起某个人 Oh Oh
+[00:26.102]在我心中被淡化的人 Oh
+[00:30.443]我也有某个人逗留 Oh Oh
+[00:33.908]是无法根治的疼痛 Oh Oh
+[00:37.556]我以为只能这样了 Oh Oh
+[00:41.022]但回忆发作 思念难以负荷
+[00:45.132]爱情自带寂寞 Yeah
+[00:48.760]爱情各种错过 Oh Oh
+[00:52.471]却在多年以后
+[00:55.411]还想回头
+[00:59.009]Should've let go Mmm
+[01:03.890]不见天日的伤口
+[01:07.507]残留的快乐是无底漩涡
+[01:10.998]快把我淹没
+[01:13.965]Should've let go Hey
+[01:18.864]没有如果的结果
+[01:22.415]我来不及说的话在永远里沉没
+[01:29.911]Without you
+[01:32.781]I fall apart
+[01:36.596]Ooh I fall apart
+[01:41.366]Woah I fall apart
+[01:49.072]付出过 所以我念旧 Oh Oh
+[01:52.599]在遗憾里没有对错 Oh Oh
+[01:56.614]怎么我心还有点痛 Oh Oh
+[01:59.912]在这一刻 我想起某个人
+[02:03.644]不得不习惯来去匆匆
+[02:07.177]不得不隐藏心事重重
+[02:11.063]当世界越来越多不得不做的选择
+[02:14.951]能放手才能再次拥有
+[02:17.729]Should've let go Mmm
+[02:22.567]不见天日的伤口
+[02:26.012]残留的快乐是无底漩涡
+[02:29.497]早已经把我淹没
+[02:32.702]Should've let go Hey
+[02:37.544]没有如果的结果
+[02:41.143]我来不及说的话在永远里沉没
+[02:48.664]Without you
+[02:51.566]I fall apart
+[02:52.842]Mmm I fall apart
+[02:59.018]Fall apart
+[03:02.750]Fall apart
+[03:07.129]Mmm I fall apart
+[03:14.046]Fall apart
+[03:17.580]Fall apart
 `,
     '29436904': `[00:00.00]南山南
 [00:00.00]作词：马頔
