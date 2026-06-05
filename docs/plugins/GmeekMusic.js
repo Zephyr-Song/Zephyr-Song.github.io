@@ -37,7 +37,7 @@
     { name: "浪漫爱", artist: "刘瑞琦", url: "https://music.163.com/song/media/outer/url?id=1475737616.mp3", cover: "https://p4.music.126.net/aVNSavZbTMw6OLzBn6lRlQ==/109951165284913239.jpg", id: "1475737616" },
     { name: "我想", artist: "余佳运", url: "https://music.163.com/song/media/outer/url?id=407435011.mp3", cover: "https://p4.music.126.net/O6d7GYY3gp2uy8zehvcOjQ==/17699938184267410.jpg", id: "407435011" },
     { name: "安和桥", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646205.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646205" },
-    { name: "董小姐", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646198.mp3", cover: "https://p2.music.126.net/Ss7mkl2EK3Xl7Vv6iz-XAg==/109951172945820235.jpg", id: "27646198" },
+    { name: "董小姐", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=27646198.mp3", cover: "https://p1.music.126.net/WaGXswXdAVaRPsKBlyq3KQ==/109951172952768891.jpg", id: "27646198" },
     { name: "郭源潮", artist: "宋冬野", url: "https://music.163.com/song/media/outer/url?id=477251491.mp3", cover: "https://p2.music.126.net/Pa-ZXouQlgx5h0xvUtfG0Q==/109951172945891036.jpg", id: "477251491" },
     { name: "阿拉斯加海湾", artist: "蓝心羽", url: "https://music.163.com/song/media/outer/url?id=1500569811.mp3", cover: "https://p1.music.126.net/j9P19hOTNbYxLZDJB9bJag==/109951169385715334.jpg", id: "1500569811" },
     { name: "千纸鹤", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=1366055392.mp3", cover: "https://p2.music.126.net/EO_mrK1Hft9DpC5fr9ROIw==/109951169897875877.jpg", id: "1366055392" },
@@ -50,6 +50,7 @@
     { name: "暖一杯茶", artist: "邵帅", url: "https://music.163.com/song/media/outer/url?id=1371780785.mp3", cover: "https://p1.music.126.net/dAP3RXAs9dA73zNYz_3XSg==/109951164151547523.jpg", id: "1371780785" },
     { name: "嗜好", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1391891631.mp3", cover: "https://p1.music.126.net/J6HaJjtgv-yVVjyUm-h-AA==/109951164373633387.jpg", id: "1391891631" },
     { name: "有些", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1406649619.mp3", cover: "https://p1.music.126.net/8DkTnzi7jdjWGYl4qbwLCg==/109951164517295956.jpg", id: "1406649619" },
+    { name: "于是", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1303464858.mp3", cover: "https://p2.music.126.net/PEGvmO3OqgGOkx4m9qxAJA==/109951163478499713.jpg", id: "1303464858" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
@@ -2465,6 +2466,45 @@ var HARDCODED_LYRICS = {
 [03:11.947]你占据我世界 却不在 身边
 [03:18.497]我试着把抱歉 再说一遍
 [03:24.465]你 还是说了再见
+`,
+    '1303464858': `[00:00.000] 制作人 : 郑润泽
+[00:00.000] 作词 : 郑润泽
+[00:00.000] 作曲 : JD_Kwan/郑润泽
+[00:16.490]窗外下着雨 房间里依然很冷清
+[00:24.080]等着你出现 从来没改变
+[00:31.660]昨晚想到你 被寂寞包裹的恐惧
+[00:39.270]等待黎明 等待深爱的你
+[00:46.740]能不能留下来再陪着我数次星星
+[00:54.340]能不能别提起念念不忘的他
+[01:01.940]能不能告诉我你这次离开的各种原因
+[01:09.500]只能和孤独亲密 像小孩想要星星
+[01:17.090]忘不了你我互相的甜蜜
+[01:20.870]是你给我的最后的记忆
+[01:24.660]松开的手再抓不紧
+[01:28.450]等雨后等天晴
+[01:32.240]一起走的路都泥泞
+[01:36.020]沉睡向往的梦境
+[01:39.810]说来又说去还放不下你
+[01:43.590]最后再求你求你别离去
+[01:47.380]即便现实都已看清
+[01:51.170]镜子两面我破碎又织起
+[01:54.950]倔强的我最后过回了沉溺
+[01:58.730]渐渐两路模糊我视线
+[02:02.520]有一瞬间就将我冻结
+[02:06.310]重新连接的爱却又只能够妥协
+[02:10.100]于是我们又错过了时间
+[02:13.880]乌云密布了整个蓝天
+[02:17.660]忘不了你我互相的甜蜜
+[02:21.450]是你给我的最后的记忆
+[02:25.240]松开的手再抓不紧
+[02:29.020]等雨后等天晴
+[02:32.810]一起走的路都泥泞
+[02:36.590]沉睡向往的梦境
+[02:40.380]说来又说去还放不下你
+[02:44.170]最后再求你求你别离去
+[02:47.950]即便现实都已看清
+[02:51.740]镜子两面我破碎又织起
+[02:55.520]最后我会承认无法改变结局
 `,
     '29436904': `[00:00.00]南山南
 [00:00.00]作词：马頔
