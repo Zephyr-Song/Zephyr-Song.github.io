@@ -51,7 +51,7 @@
     { name: "嗜好", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1391891631.mp3", cover: "https://p1.music.126.net/J6HaJjtgv-yVVjyUm-h-AA==/109951164373633387.jpg", id: "1391891631" },
     { name: "有些", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1406649619.mp3", cover: "https://p1.music.126.net/8DkTnzi7jdjWGYl4qbwLCg==/109951164517295956.jpg", id: "1406649619" },
     { name: "于是", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1303464858.mp3", cover: "https://p2.music.126.net/PEGvmO3OqgGOkx4m9qxAJA==/109951163478499713.jpg", id: "1303464858" },
-    { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=108507.mp3", cover: "https://p1.music.126.net/m1Jv3k4Yl4kpBv62NPjGHQ==/109951172814148796.jpg", id: "108507" },
+    { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=5232648.mp3", cover: "https://p2.music.126.net/6gaCOkH65zYRop_ftmUN4g==/61572651168864.jpg", id: "523264" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
@@ -2507,7 +2507,7 @@ var HARDCODED_LYRICS = {
 [02:51.740]镜子两面我破碎又织起
 [02:55.520]最后我会承认无法改变结局
 `,
-    '108507': `[00:00.00] 作词 : 林俊杰
+    '5232648': `[00:00.00] 作词 : 林俊杰
 [00:01.00] 作曲 : 林俊杰
 [00:02.00] 编曲 : 陈建玮/蔡政勋
 [00:03.00] 制作人 : 林俊杰
