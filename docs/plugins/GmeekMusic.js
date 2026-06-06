@@ -51,6 +51,7 @@
     { name: "嗜好", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1391891631.mp3", cover: "https://p1.music.126.net/J6HaJjtgv-yVVjyUm-h-AA==/109951164373633387.jpg", id: "1391891631" },
     { name: "有些", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1406649619.mp3", cover: "https://p1.music.126.net/8DkTnzi7jdjWGYl4qbwLCg==/109951164517295956.jpg", id: "1406649619" },
     { name: "于是", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1303464858.mp3", cover: "https://p2.music.126.net/PEGvmO3OqgGOkx4m9qxAJA==/109951163478499713.jpg", id: "1303464858" },
+    { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=108507.mp3", cover: "https://p1.music.126.net/m1Jv3k4Yl4kpBv62NPjGHQ==/109951172814148796.jpg", id: "108507" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
@@ -2505,6 +2506,81 @@ var HARDCODED_LYRICS = {
 [02:47.950]即便现实都已看清
 [02:51.740]镜子两面我破碎又织起
 [02:55.520]最后我会承认无法改变结局
+`,
+    '108507': `[00:00.00] 作词 : 林俊杰
+[00:01.00] 作曲 : 林俊杰
+[00:02.00] 编曲 : 陈建玮/蔡政勋
+[00:03.00] 制作人 : 林俊杰
+[00:16.940]Cries in a distance
+[00:19.050]Can't stop the tremble
+[00:20.970]I'm just awaiting my turn
+[00:24.930]Hiding will never
+[00:26.980]Save me forever
+[00:28.830]The guns gonna get me for sure
+[00:33.000]Dear God I pray why won't you be my friend
+[00:37.030]Come to me and take my hand
+[00:41.020]Like mama would say
+[00:42.980]Everything will be okay
+[00:47.830]All I hear is 3 2 1
+[00:50.830]The scream from the guns
+[00:52.490]And then 1by1
+[00:54.610]No one gets to run
+[00:56.610]Someone's dad or mom
+[00:58.680]Sister, brother and son
+[01:01.480]No…no…
+[01:04.040]All I feel is 1 2 3
+[01:06.590]My tears start to bleed
+[01:08.600]Smell of roses on my feet
+[01:12.420]I feel sore…
+[01:14.380]I fall…
+[01:15.320]I call…
+[01:16.350]
+[01:21.040]Cries in a distance
+[01:23.060]Can't stop the tremble
+[01:24.970]I'm just awaiting my turn
+[01:28.990]Hiding will never
+[01:31.110]Save me forever
+[01:32.990]The guns gonna get me for sure
+[01:36.960]Dear God I pray why won't you be my friend
+[01:41.040]Come to me and take my hand
+[01:45.000]Like mama would say
+[01:46.930]Everything will be okay
+[01:51.910]All I hear is 3 2 1
+[01:54.850]The scream from the guns
+[01:56.640]And then 1by1
+[01:58.630]No one gets to run
+[02:00.630]Someone's dad or mom
+[02:02.610]Sister, brother and son
+[02:05.440]No…no…
+[02:07.420]
+[02:08.090]All I feel is 1 2 3
+[02:10.630]My tears start to bleed
+[02:12.650]Smell of roses on my feet
+[02:17.340]I feel sore…
+[02:18.370]I fall…
+[02:19.330]I call…
+[02:20.290]
+[02:22.540]
+[02:42.490]All I hear is 3 2 1
+[02:45.190]The scream from the guns
+[02:47.020]And then 1by1
+[02:49.010]No one gets to run
+[02:51.040]Someone's dad or mom
+[02:53.070]
+[02:56.810]
+[02:58.160]All I feel is 1 2 3
+[03:00.830]My tears start to bleed
+[03:02.710]Smell of roses on my feet
+[03:07.550]I feel sore…
+[03:08.570]I fall…
+[03:09.450]I call…
+[03:10.540]
+[03:12.610]
+[03:15.350]I feel sore…
+[03:16.360]I fall…
+[03:17.350]I call…
+[03:18.490]
+[03:21.320]
 `,
     '29436904': `[00:00.00]南山南
 [00:00.00]作词：马頔
