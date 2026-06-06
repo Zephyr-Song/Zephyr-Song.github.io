@@ -51,7 +51,7 @@
     { name: "嗜好", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1391891631.mp3", cover: "https://p1.music.126.net/J6HaJjtgv-yVVjyUm-h-AA==/109951164373633387.jpg", id: "1391891631" },
     { name: "有些", artist: "颜人中", url: "https://music.163.com/song/media/outer/url?id=1406649619.mp3", cover: "https://p1.music.126.net/8DkTnzi7jdjWGYl4qbwLCg==/109951164517295956.jpg", id: "1406649619" },
     { name: "于是", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1303464858.mp3", cover: "https://p2.music.126.net/PEGvmO3OqgGOkx4m9qxAJA==/109951163478499713.jpg", id: "1303464858" },
-    { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=5232648.mp3", cover: "https://p2.music.126.net/6gaCOkH65zYRop_ftmUN4g==/61572651168864.jpg", id: "523264" },
+    { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=5232648.mp3", cover: "https://p2.music.126.net/6gaCOkH65zYRop_ftmUN4g==/61572651168864.jpg", id: "5232648" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
