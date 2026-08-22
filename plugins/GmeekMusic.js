@@ -16,7 +16,6 @@
     { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "https://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
     { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "https://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
     { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "https://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
-    { name: "浪漫鬼", artist: "DANNY K/周夏影/FEEEleven/鼠尾草/EINK", url: "https://music.163.com/song/media/outer/url?id=2111060878.mp3", cover: "https://p3.music.126.net/B4BYcZRspbnXGbEEGqsgvw==/109951169200961924.jpg", id: "2111060878" },
     { name: "红", artist: "罗言", url: "https://music.163.com/song/media/outer/url?id=1918576268.mp3", cover: "https://p2.music.126.net/G-inyKjA-jO5MuOuV3g7Pg==/109951167027986653.jpg", id: "1918576268" },
     { name: "雪 Distance", artist: "Capper/罗言", url: "https://music.163.com/song/media/outer/url?id=2026224214.mp3", cover: "https://p2.music.126.net/cGTKkFl5qcXIDYPo7PrmDA==/109951168431655039.jpg", id: "2026224214" },
     { name: "若把你", artist: "Kirsty刘瑾睿", url: "https://music.163.com/song/media/outer/url?id=865632948.mp3", cover: "https://p4.music.126.net/M877M2-VhWZiLPVFORf9iQ==/109951163401482434.jpg", id: "865632948" },
@@ -53,13 +52,14 @@
     { name: "于是", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1303464858.mp3", cover: "https://p2.music.126.net/PEGvmO3OqgGOkx4m9qxAJA==/109951163478499713.jpg", id: "1303464858" },
     { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=5232648.mp3", cover: "https://p2.music.126.net/6gaCOkH65zYRop_ftmUN4g==/61572651168864.jpg", id: "5232648" },
     { name: "罗生门（Follow）", artist: "梨冻紧/Wiz_H张子豪", url: "https://music.163.com/song/media/outer/url?id=1456890009.mp3", cover: "https://p2.music.126.net/yN1ke1xYMJ718FiHaDWtYQ==/109951165076380471.jpg", id: "1456890009" },
+    { name: "Sacred Play Secret Place", artist: "Matryoshka", url: "https://music.163.com/song/media/outer/url?id=501468000.mp3", cover: "https://p1.music.126.net/NcB0KW6bKs83cmO-OTT1fw==/109951163013755204.jpg", id: "501468000" },
+    { name: "浆果", artist: "TINY7", url: "https://music.163.com/song/media/outer/url?id=2015896805.mp3", cover: "https://p1.music.126.net/BQAY8w9XzOj_j1wZgIsczQ==/109951168247366566.jpg", id: "2015896805" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
     { name: "泪桥", artist: "伍佰", url: "https://music.163.com/song/media/outer/url?id=5265278.mp3", cover: "https://p1.music.126.net/5f0GMV2lMV7lgPXvBU8QJQ==/125344325584416.jpg", id: "5265278" },
     { name: "这一生关于你的风景", artist: "隔壁老樊", url: "https://music.163.com/song/media/outer/url?id=1383927243.mp3", cover: "https://p2.music.126.net/72pkxsrTN_zUscdzMk5mMA==/109951164289743850.jpg", id: "1383927243" },
     { name: "致你", artist: "yihuik苡慧", url: "https://music.163.com/song/media/outer/url?id=1867217766.mp3", cover: "https://p2.music.126.net/VDmN2dNpIFu4gTv4bZe6KQ==/109951166254691365.jpg", id: "1867217766" },
-    { name: "玻璃", artist: "Gareth.T", url: "https://music.163.com/song/media/outer/url?id=3382908505.mp3", cover: "https://p2.music.126.net/MSKoQP60up7v3y1P1d3JIQ==/109951173234747322.jpg", id: "3382908505" },
     { name: "精卫", artist: "30年前，50年后", url: "https://music.163.com/song/media/outer/url?id=1951069525.mp3", cover: "https://p1.music.126.net/jSH_ikeooxveWl0BTc3Xkg==/109951166786983190.jpg", id: "1951069525" },
     { name: "往后余生", artist: "马良", url: "https://music.163.com/song/media/outer/url?id=557584888.mp3", cover: "https://p2.music.126.net/_QqIAZgDGKEimPQgzTCKGQ==/109951165325675186.jpg", id: "557584888" },
     { name: "你是人间四月天", artist: "邵帅", url: "https://music.163.com/song/media/outer/url?id=1344897943.mp3", cover: "https://p2.music.126.net/kQJQD58WkmQneTneOYe22A==/109951164252455813.jpg", id: "1344897943" },
@@ -660,87 +660,6 @@ var HARDCODED_LYRICS = {
 [02:28.42]一直在下雨
 [02:37.24]一直在想你
 [02:41.00]不停的想你
-`,
-    '2111060878': `[00:00.00] 作词 : DANNY K/周夏影/FEEEleven/鼠尾草/EINK
-[00:01.00] 作曲 : DANNY K/周夏影/FEEEleven/鼠尾草/EINK
-[00:02.00] 编曲 : DiESi
-[00:03.00] 制作人 : 法老
-[00:05.52] DANNY K:
-[00:05.70]别理所应当从得到你的微信号
-[00:07.92]到请你喝一杯再慢慢开始对我笑
-[00:10.56]无法戒掉你就像那些 rapper要吃药
-[00:12.84]你的笑容温暖得像太阳直射在赤道
-[00:15.57]突然想起你我的念头应该想到哪里
-[00:18.09]如果我是富翁 take my love don’ t take my money
-[00:20.58]但我像个游荡的鬼魂 so kiss me honey
-[00:22.89]没能抓住你的灵魂只能算我粗心大意
-[00:25.56]周夏影 Sino:
-[00:26.04] Don’ t be afraid anymore
-[00:26.94]再聊下去就不浪漫了
-[00:29.91]马路上的街灯闪了下
-[00:31.56]就能吓到她
-[00:32.88]停电的夜我不想回家
-[00:35.37] Don’ t be afraid anymore
-[00:36.87]再聊下去就到夜半了
-[00:39.87]风摇树陌生的号码
-[00:41.55]不停的拨打
-[00:42.60]停电的夜她不想回家
-[00:44.88] FEEEleven：
-[00:45.09]过着你看不见也融不进的 life style
-[00:47.13]别以为鬼只会出现在没路灯的拐角
-[00:49.98]让雨停住是我为你披的“外套”
-[00:52.11]当你穿上你姐的高跟偷偷去逛 live house
-[00:55.02]丢你一个人过七夕你的 man no patience
-[00:57.45]喝到妆花了我能给你变出镜子
-[00:59.85]如果你注意到了我 plz show me some love
-[01:02.49]不要恐惧 like we always live in the dark
-[01:04.89]鼠尾草：
-[01:05.10]可你看不见我
-[01:06.00]我只不过是串电波
-[01:07.38]别再去研究照片
-[01:08.55]我们前世早就见过
-[01:09.84]1936年在西班牙你给了我一次回眸
-[01:12.57]来到2023那就换我把你护在背后
-[01:15.12]我随手为你点燃魔仙堡的烛火
-[01:17.34]把森林修成爱你的形状我不是胡说
-[01:19.86]每一个最阴间的夜晚我都陪着你去度过
-[01:22.56]快点打开收音机浪漫鬼有情话诉说
-[01:25.50]今天是我100岁生日
-[01:27.39]你是这场派对的特别来宾
-[01:29.61]我有吃不完的面包虫
-[01:31.23]孟婆汤无限量供应
-[01:33.18]一起干杯普天同庆
-[01:35.34]或许我有些丑陋
-[01:36.48]但我可以为你卖命（兄弟你都死了你都死了噻）
-[01:40.32]我有一千万冥币
-[01:41.43]来满足你的拜金
-[01:42.84]我是一个坚定的唯物主义者
-[01:44.88]没人能主宰我的爱情
-[01:45.72]周夏影 Sino：
-[01:46.05] Girl u be my lover
-[01:46.53]最漂浮的舞步
-[01:47.79]是我在你身边反复踢踏行走
-[01:51.48]你就像你回家的巴士上播的 love song
-[01:54.39]我没听够
-[01:56.52]电视机里画面总是在闪
-[01:59.58]是我的情书变成电波
-[02:02.19]漆黑的夜伤感巷子的尽头
-[02:04.71]浪漫鬼 inside
-[02:05.34] EINK:
-[02:05.43]微风抚过你的眉宇顺着鼻梁滑向侧脸
-[02:07.65]我们把这一段时间称作夏天
-[02:09.87]我想要带你把那漫山遍野踏遍
-[02:12.24]尽管苦难难以下咽
-[02:13.68]但还是不难发现
-[02:14.82]我们的故事能够诠释什么是爱
-[02:17.04]你的笔触含羞但我的表达直白
-[02:19.41]太关心不分昼夜
-[02:20.94]欢欣还是抽噎
-[02:22.20]我在脑海已经陪你到老有乐队在奏乐
-[02:42.49] 混音 : 杨秋儒
-[02:43.49] 录音 : SOUNDWAVE STUDIO
-[02:44.49] 出品公司 : 合则恒文化
-[02:45.49] 封面设计 : 加菲
 `,
     '1918576268': `[00:00.00] 作词 : 罗言
 [00:01.00] 作曲 : 罗言
@@ -2681,6 +2600,92 @@ var HARDCODED_LYRICS = {
 [03:45.66] Wherever you go
 [03:46.17] Wherever you go
 `,
+    '501468000': `[00:00.00] 作曲 : SEN
+[00:30.00]Gracefully sneaking up on me
+[00:35.99]They just want to tear my feathers
+[00:44.33]The golden light of the setting sun
+[00:50.64]Let me be a hypocrite again
+[00:57.43]I will be gone before long
+[01:01.60]I know I'm wrong
+[01:05.16]No matter how far I go, they find me out
+[01:13.98]I wish the gusts took away my gloom
+[01:20.20]I can't help this vague feeling
+[01:26.90]I feel so good, but I'm worn out
+[01:34.00]We'll be all right, don't look so sad
+[01:41.49]Confess my sin, conceal them all
+[01:49.10]Night will come soon and swallow everything
+[01:58.52]
+[02:13.56]Quietly hiding in the grass
+[02:19.31]Hearing the leaves rustling
+[02:27.99]They're singing with a burning piano
+[02:34.01]It gives me cheap relief
+[02:40.69]I will be gone before long
+[02:45.00]I know I'm wrong
+[02:48.66]No matter how far I go, they find me out
+[02:57.98]I wish the gusts took away my gloom
+[03:03.73]I can't help this vague feeling
+[03:10.16]I feel so good, but I'm worn out
+[03:17.34]We'll be all right, don't look so sad
+[03:24.91]Confess my sin, conceal them all
+[03:32.73]Night will come soon and swallow everything
+[03:41.57]
+[04:09.29]I feel so good, but I'm worn out
+[04:16.61]We'll be all right, don't look so sad
+[04:24.09]Confess my sin, conceal them all
+[04:31.44]Night will come soon and swallow everything
+[04:39.17]I feel so good
+[04:46.00]We'll be all right
+[04:53.58]Then, I give all up
+`,
+    '2015896805': `[00:00.000] 作词 : TINY7
+[00:01.000] 作曲 : TINY7
+[00:20.050]Prod by Dan Darmawan
+[00:34.050]I'm looking out of the window
+[00:37.830]and waiting for u at dusk
+[00:41.880]Let time keep frozen
+[00:43.710]Hold on my temperature in your hand longer and longer
+[00:49.560]You always put my mind at ease
+[00:52.800]but I'm still nervous without you
+[00:55.680]but you say u don't believe
+[00:57.720]You love me and gave me everything
+[00:59.400]The dark room in the night will be especially bright with you
+[01:03.330]A piece of heart he flies out when she's gone
+[01:16.170]I just want you in my life
+[01:24.990]Having having you
+[01:25.350]Something is changed
+[01:25.740]My room became a cave
+[01:27.510]I'm just like a bat
+[01:28.740]Hide in the black hole
+[01:35.670]and stay alone
+[01:39.450]Wait for you
+[02:17.340]I'm done
+[02:19.320]I lost
+[02:19.470]Cause your love
+[02:22.530]has filled up my world
+[02:22.530]look
+[02:22.620]Keep doing
+[02:24.660]I wanna it forever
+[02:26.700]You set my heart on
+[02:27.480]fire
+[02:29.610]You always put my mind at ease
+[02:32.370]But I'm still nervous without you
+[02:35.670]But you say u don't believe
+[02:37.770]You love me and gave me everything
+[02:39.660]The dark room in the night will be especially bright with you
+[02:43.380]A piece of heart he flies out when she's gone
+[02:56.070]I just want you in my life
+[03:04.710]Having having you
+[03:05.070]Something is changed
+[03:05.460]My room became a cave
+[03:08.130]I'm just like a bat
+[03:12.570]Hide in the black hole
+[03:15.630]and stay alone
+[03:19.410]Wait for you
+[04:15.410]企划：SuchaDog/VICKY_BB
+[04:18.410]项目统筹：SuchaDog/艾嘉
+[04:21.410]推广：黄鲲
+[04:24.410]统筹协力：VICKY_BB/Kaka22am
+`,
     '29436904': `[00:00.00]南山南
 [00:00.00]作词：马頔
 [00:00.00]作曲：马頔
@@ -2976,88 +2981,6 @@ var HARDCODED_LYRICS = {
 [03:59.040]猜你启封的表情
 [04:01.560]只敢写下开篇的
 [04:03.210]致你
-`,
-    '3382908505': `[00:00.00] 作词 : Gareth.T
-[00:01.00] 作曲 : Gareth.T
-[00:02.00] 编曲 : Gab de Leon/Gareth.T/Patrick Yip/Teddy Fan
-[00:13.89] 我终于鼓起勇气
-[00:16.40] 说了我爱你
-[00:17.99] 这个秘密
-[00:19.67] 我想妳已知道
-[00:21.05] 藏在心底
-[00:22.94] 猜测我太过容易
-[00:25.10] 还是瞒不过你
-[00:26.74] 所以爱你
-[00:29.54] 我爱得很透明
-[00:31.26] 像是玻璃
-[00:32.71] 茫茫人海中
-[00:34.40] 还是选择你
-[00:35.82] 没人能代替
-[00:37.33] 放弃了逻辑
-[00:41.08] 玻璃窗外的雨滴
-[00:45.56] 衬托着渐入睡的你
-[00:48.55] 彻底陶醉于你的双眼
-[00:51.42] 我们怎样能谈到三点
-[00:54.85] 话题已到了终点
-[00:57.04] 但你却不想离线
-[00:58.69] 把手机放在耳边
-[01:00.42] 感觉沉默的温暖
-[01:02.13] 认识你之后的
-[01:03.87] 六百五十天
-[01:05.49] 我只是希望
-[01:06.80] 他们过得慢一点
-[01:08.70] 这样子的迷恋
-[01:10.35] 像电影画面
-[01:11.70] 请不要幻灭
-[01:13.34] 喜欢你的原因
-[01:14.97] 有数十个
-[01:15.82] 你青涩的回眸
-[01:17.75] 还令我忐忑
-[01:19.50] 我终于鼓起勇气
-[01:22.08] 说了我爱你
-[01:23.76] 这个秘密
-[01:25.41] 我想妳已知道
-[01:27.01] 藏在心底
-[01:28.58] 猜测我太过容易
-[01:30.71] 还是瞒不过你
-[01:32.59] 所以爱你
-[01:35.21] 我爱得很透明
-[01:36.88] 像是玻璃
-[01:38.40] 茫茫人海中
-[01:40.08] 还是选择你
-[01:41.58] 没人能代替
-[01:43.06] 放弃了逻辑
-[01:47.59] 玻璃窗外的雨滴
-[01:51.42] 衬托着渐入睡的
-[01:53.59] 你的双眼
-[01:54.73] 让我陶醉片刻
-[01:56.32] 你的温暖
-[01:57.94] 把我执着融化
-[01:59.74] 你的微笑
-[02:01.24] 还是最甜蜜的
-[02:03.17] 你的生日
-[02:04.54] 我会牢牢记着
-[02:06.79] 我承认
-[02:08.62] 我自私
-[02:10.47] 你的体温
-[02:11.49] 我只想我
-[02:12.45] 一人享受
-[02:14.80] 我希望妳懂
-[02:21.74] 我终于鼓起勇气
-[02:24.47] 说了我爱你
-[02:26.13] 这个秘密
-[02:27.69] 我想妳已知道
-[02:29.19] 藏在心底
-[02:31.00] 猜测我太过容易
-[02:33.05] 还是瞒不过你
-[02:35.55] 所以爱你
-[02:37.71] 我爱得很透明像是玻璃
-[02:40.78] 茫茫人海中
-[02:42.46] 还是选择你
-[02:44.13] 怎样还是你
-[02:45.61] 像个删不掉的印记
-[02:49.80] 这段情要刻骨铭心
-[02:53.30] 爱要像玻璃般的彻底
 `,
     '1951069525': `[00:00.000] 作词 : 30年前，50年后
 [00:01.000] 作曲 : 30年前，50年后
