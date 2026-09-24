@@ -79,6 +79,8 @@
     { name: "this is what winter feels like", artist: "JVKE", url: "https://music.163.com/song/media/outer/url?id=2116728806.mp3", cover: "https://p1.music.126.net/HS1ex7mUH4RIu7dpUZiOlQ==/109951173628390994.jpg", id: "2116728806" },
     { name: "golden hour", artist: "JVKE", url: "https://music.163.com/song/media/outer/url?id=1958557540.mp3", cover: "https://p2.music.126.net/Dvum_S3zEQHeeaMZVgqIeA==/109951173628349420.jpg", id: "1958557540" },
     { name: "pure imagination", artist: "Rook1e", url: "https://music.163.com/song/media/outer/url?id=494858498.mp3", cover: "https://p2.music.126.net/dDM3Emm_CXHy4NZHSdU0iQ==/19127104277054005.jpg", id: "494858498" },
+    { name: "Time Machine", artist: "bluesky", url: "https://music.163.com/song/media/outer/url?id=2686657278.mp3", cover: "https://p1.music.126.net/ytIxVYe2kGeX3o68irzQWw==/109951170630317792.jpg", id: "2686657278" },
+    { name: "Merry Christmas Mr. Lawrence", artist: "坂本龍一", url: "https://music.163.com/song/media/outer/url?id=492999917.mp3", cover: "https://p1.music.126.net/Jgil1KYoQG7FLZ6V8DtXcQ==/109951172071362685.jpg", id: "492999917" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -3792,6 +3794,38 @@ var HARDCODED_LYRICS = {
 [02:05.811]It's your golden hour
 [02:14.499]You slow down time
 [02:21.298]In your golden hour`,
+    '2686657278': `[00:00.000] 作词 : bluesky
+[00:01.000] 作曲 : bluesky
+[00:11.878]Staring at stars，
+[00:15.127]Watching the moon，
+[00:17.937]Hoping that one day they'll lead me to you，
+[00:23.856]Wait every night，
+[00:26.173]Cause if a star falls，
+[00:29.684]I'll wish to go back to the times that I loved，
+[00:36.104]Why do the stars shine so bright in the sky?
+[00:41.284]If most of the people are sleeping at night，
+[00:47.807]Why do we only have one chance at life?
+[00:53.710]I wish I could go back in time，
+[01:11.966]Pictures remind me of things I forgot，
+[01:17.594]But also of all of the things that I've lost，
+[01:23.370]Can't get them back they won't fall from above，
+[01:29.516]So I try to forget all the times that I loved，
+[01:35.979]Why do we remember beautiful lies?
+[01:41.629]We end up regretting them most of our lives，
+[01:48.088]Why do we only have one chance to try?
+[01:53.230]I wish I could go back in time，
+[01:57.733]Each time I fall asleep，
+[02:02.744]I always see you there in my dreams，
+[02:08.214]It's like going back in a time machine，
+[02:14.457]I know when I wake up your time with me will end，
+[02:22.277]So don't let me fall asleep，
+[02:26.591]I don't wanna meet you there in my dreams，
+[02:32.487]I know that we'll never build a time machine，
+[02:38.490]It's time for me to try and wake up again，
+[02:47.856]I fall asleep，
+[02:51.074]But honestly，
+[02:53.739]I wanna see you in my dreams，
+[03:05.971]I'm trying to wake up again，`,
   };
 
 // ---- CSS ----
