@@ -70,11 +70,11 @@
     { name: "写给黄淮", artist: "邵帅", url: "https://music.163.com/song/media/outer/url?id=1334295185.mp3", cover: "https://p1.music.126.net/CG8hLG4To_TZum0rIGk7WA==/109951163764772334.jpg", id: "1334295185" },
     { name: "Take My Hand", artist: "DAISHI DANCE/Cécile Corbel", url: "https://music.163.com/song/media/outer/url?id=2071452224.mp3", cover: "https://p2.music.126.net/q_ZSJmVQ_NlLXq7UNAYK3g==/109951168826077552.jpg", id: "2071452224" },
     { name: "诀别书", artist: "邓垚", url: "https://music.163.com/song/media/outer/url?id=2038191895.mp3", cover: "https://p2.music.126.net/wztA5smxFjIfv98u7-IrQQ==/109951168933355255.jpg", id: "2038191895" },
-    { name: "Daylight", artist: "Taylor Swift", url: "https://music.163.com/song/media/outer/url?id=1382781566.mp3", cover: "https://p1.music.126.net/6CB6Jsmb7k7qiJqfMY5Row==/109951164260234943.jpg", id: "1382781566" },
+    { name: "Daylight", artist: "Seredris", url: "https://music.163.com/song/media/outer/url?id=1372188635.mp3", cover: "https://p1.music.126.net/OjiWGpbpC80EbQgkxEayiA==/109951164152228527.jpg", id: "1372188635" },
     { name: "Off the hook", artist: "Jeff Jarvis", url: "https://music.163.com/song/media/outer/url?id=28692785.mp3", cover: "https://p1.music.126.net/uKoKIcrfH1nEPY3304pWTg==/109951171574129543.jpg", id: "28692785" },
-    { name: "爱爱爱", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=82453.mp3", cover: "https://p2.music.126.net/2UjnKgcM1IXxYxhHEXVa4Q==/109951168870794250.jpg", id: "82453" },
+    { name: "爱爱爱", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=5240523.mp3", cover: "https://p1.music.126.net/N5wXEFt3Kp4HSGxfVdnQgQ==/48378511634527.jpg", id: "5240523" },
     { name: "鲜花", artist: "回春丹", url: "https://music.163.com/song/media/outer/url?id=2086327879.mp3", cover: "https://p2.music.126.net/sOVQYvAwK8rGHrwd-wM1Og==/109951173409075892.jpg", id: "2086327879" },
-    { name: "Butterflies", artist: "MAX/Ali Gatie", url: "https://music.163.com/song/media/outer/url?id=1970893266.mp3", cover: "https://p1.music.126.net/XEGt7pKbIqj_doZHZoDoyQ==/109951167763937297.jpg", id: "1970893266" },
+    { name: "Butterflies", artist: "MAX/Ali Gatie", url: "https://music.163.com/song/media/outer/url?id=1861794010.mp3", cover: "https://p1.music.126.net/-p6LmF1UOVIJuqwIwf33Yw==/109951166185282325.jpg", id: "1861794010" },
     { name: "Nothin' on Me", artist: "Leah Marie Perez", url: "https://music.163.com/song/media/outer/url?id=2051548110.mp3", cover: "https://p2.music.126.net/2H7VyqBZLfkWqL0RrWfA5g==/109951172960943082.jpg", id: "2051548110" },
   ];
 
@@ -3353,69 +3353,20 @@ var HARDCODED_LYRICS = {
 [03:54.561]And you will see
 [03:56.530]There's a rainbow
 [03:58.284]For you and me`,
-    '1382781566': `[00:00.00] 作词 : Taylor Swift
-[00:00.02] 作曲 : Taylor Swift
-[00:00.05] 编曲 : Jack Antonoff
-[00:00.07] 制作人 : Taylor Swift/Jack Antonoff
-[00:00.10]My love was as cruel as the cities I lived in
-[00:07.29]Everyone looked worse in the light
-[00:12.40]There are so many lines that I've crossed unforgiven
-[00:19.82]I'll tell you the truth, but never goodbye
-[00:26.37]I don't wanna look at anything else now that I saw you
-[00:32.53]I don't wanna think of anything else now that I thought of you
-[00:38.97]I've been sleeping so long in a 20-year dark night
-[00:44.91]And now I see daylight, I only see daylight
-[00:51.47]Luck of the draw only draws the unlucky
-[00:58.27]And so I became the butt of the joke
-[01:04.36]I wounded the good and I trusted the wicked
-[01:10.98]Clearing the air, I breathed in the smoke
-[01:17.67]Maybe you ran with the wolves and refused to settle down
-[01:21.27]Maybe I've stormed out of every single room in this town
-[01:24.61]Threw out our cloaks and our daggers because it's morning now
-[01:27.62]It's brighter now, now
-[01:30.72]I don't wanna look at anything else now that I saw you
-[01:35.52](I can never look away)
-[01:37.20]I don't wanna think of anything else now that I thought of you
-[01:41.48](Things will never be the same)
-[01:43.54]I've been sleeping so long in a 20-year dark night
-[01:47.60](Now I'm wide awake)
-[01:49.31]And now I see daylight (Daylight), I only see daylight (Daylight)
-[01:55.69]I only see daylight, daylight, daylight, daylight
-[02:01.48]I only see daylight, daylight, daylight, daylight
-[02:07.98]And I can still see it all (In my mind)
-[02:12.79]All of you, all of me (Intertwined)
-[02:16.22]I once believed love would be (Black and white)
-[02:19.85]But it's golden (Golden)
-[02:22.58]And I can still see it all (In my head)
-[02:25.59]Back and forth from New York (Sneaking in your bed)
-[02:29.02]I once believed love would be (Burning red)
-[02:32.49]But it's golden
-[02:34.33]Like daylight, like daylight
-[02:39.35]Like daylight, daylight
-[02:46.94]I don't wanna look at anything else now that I saw you
-[02:51.88](I can never look away)
-[02:53.98]I don't wanna think of anything else now that I thought of you
-[02:58.52](Things will never be the same)
-[03:00.45]I've been sleeping so long in a 20-year dark night
-[03:04.57](Now I'm wide awake)
-[03:05.95]And now I see daylight (I see daylight), I only see daylight (Ah)
-[03:12.39]I only see daylight, daylight, daylight, daylight
-[03:18.45]I only see daylight, daylight, daylight, daylight (Ah)
-[03:25.46]I only see daylight, daylight, daylight, daylight
-[03:27.37](And I can still see it all, back and forth from New York)
-[03:30.52]I only see daylight, daylight, daylight, daylight
-[03:33.52](I once believed love would be burning red)
-[03:39.76]Like daylight
-[03:44.06]It's golden like daylight
-[03:50.70]You gotta step into the daylight and let it go
-[03:56.58]Just let it go, let it go
-[04:10.22]I wanna be defined by the things that I love
-[04:13.50]Not the things I hate
-[04:15.61]Not the things that I'm afraid of, I'm afraid of
-[04:18.68]Not the things that haunt me in the middle of the night
-[04:21.66]I, I just think that
-[04:27.04]You are what you love
-[04:29.71]`,
+    '1372188635': `[00:00.00] 作曲 : Seredris
+[00:01.00] 编曲 : Seredris
+[00:02.00] 制作人 : Seredris
+[02:13.61]Knowing that I was going to get better
+[02:15.96]And looking forward to a time that I would feel good again
+[02:18.90]Helped me to keep moving forward
+[02:21.30]And sometimes I had to be brave
+[02:23.95]And it wasn't always easy
+[02:25.90]Sometimes I faltered
+[02:27.57]I had bad days
+[02:29.3]But I realized that being brave isn't supposed to be easy
+[02:32.77]As for me
+[02:34.1]I feel it's the key way to keep moving forward
+[02:37.74] 出品：网易音乐人 X 网易青云LAB`,
     '28692785': `[00:00.000] 作词 : Jeff Jarvis
 [00:01.000] 作曲 : Jeff Jarvis
 [00:02.000] 制作人 : Jeff Jarvis
@@ -3513,48 +3464,51 @@ var HARDCODED_LYRICS = {
 [03:32.450]It's what I want
 [03:33.730]Would you be my girl
 [03:35.130]Would you be my girl`,
-    '82453': `[00:00.000] 作词 : 周耀辉
-[00:01.000] 作曲 : 方大同
-[00:02.000] 编曲 : 方大同
-[00:03.000] 制作人 : Charles Lee/Edward Chan/方大同
-[00:17.000]在哪里记载第一个桃花贼
-[00:22.769]谁在哪里典卖第一支紫玉钗
-[00:31.590]我在这里见怪更怪
-[00:36.429]见过电影里面人家的海
-[00:39.419]更想去看海
-[00:41.409]唱过人家的爱更想找爱
-[00:45.090]你哭起来我笑起来
-[00:48.099]都为了爱爱爱
-[00:51.459]有一天翻开辞海找不到爱
-[00:56.409]花不开树不摆还是更畅快
-[01:00.599]爱还是会期待
-[01:02.509]还是觉得孤单太失败
-[01:07.249]我爱故我在
-[01:29.890]找到爱幸福的人肯不肯躲起来
-[01:36.009]正在寂寞的人能不能站起来
-[01:43.590]我在这里陪你无奈
-[01:49.548]看过小说里面人家等待
-[01:52.559]更习惯等待
-[01:54.539]唱过人家的爱更想找爱
-[01:57.539]你喊出来我静下来
-[02:01.590]都为了爱爱爱
-[02:04.519]有一天翻开辞海找不到爱
-[02:09.529]花不开树不摆还是更畅快
-[02:13.159]爱还是会期待
-[02:15.719]还是觉得孤单太失败
-[02:20.930]我爱故我在
-[02:26.699]挥不去满天满地的尘埃
-[02:29.699]买不起满街口袋的品牌
-[02:33.789]你闷起来我傻起来可以爱
-[02:38.800]会不会整个时代只有一个告白
-[02:41.990]谁不爱过不存在
-[02:46.990]不明不白不分好歹
-[02:50.629]都为了爱爱爱
-[02:54.909]有一天翻开辞海找不到爱
-[02:59.080]花不开树不摆还是更畅快
-[03:02.610]爱还是会期待
-[03:05.050]还是觉得孤单太失败
-[03:08.470]我爱故我在`,
+    '5240523': `[00:00.00] 作词 : 周耀辉
+[00:01.00] 作曲 : 方大同
+[00:02.00] 制作人 : Charles Lee/Edward Chan/方大同
+[00:13.00]
+[00:16.98]在 哪里记载 第一个桃花贼
+[00:23.09]谁在 哪里典卖 第一支紫玉钗
+[00:30.32]我在 这里见怪更怪
+[00:36.64]见过电影里面人家的海
+[00:39.90]更想去看海
+[00:41.76]唱过人家的爱更想找爱
+[00:44.53]
+[00:44.83]你哭起来 我笑起来 都为了爱爱爱
+[00:51.67]有一天翻开辞海 找不到爱
+[00:56.78]花不开 树不摆 还是更畅快
+[01:00.42]爱 还是会期待
+[01:02.76]还是觉得孤单太失败
+[01:07.90]我爱故我在
+[01:24.92]
+[01:28.70]找到爱 幸福的人肯不肯躲起来
+[01:35.65]正在 寂寞的人能不能站起来
+[01:42.89]我在 这里陪你无奈
+[01:49.31]看过小说里面人家等待
+[01:52.31]更习惯等待
+[01:54.24]唱过人家的爱更想找爱
+[01:57.20]
+[01:57.57]你喊出来 我静下来 都为了爱爱爱
+[02:04.36]有一天翻开辞海 找不到爱
+[02:09.28]花不开 树不摆 还是更畅快
+[02:12.99]爱 还是会期待
+[02:15.20]还是觉得孤单太失败
+[02:20.21]我爱故我在
+[02:24.58]
+[02:25.30]挥不去满天满地的尘埃
+[02:28.71]买不起满街口袋的品牌
+[02:32.61]你闷起来 我傻起来 可以爱
+[02:37.59]会不会整个时代只有一个告白
+[02:41.15]谁不爱过不存在
+[02:44.52]
+[02:46.11]不明不白 不分好歹 都为了爱爱爱
+[02:53.19]有一天翻开辞海 找不到爱
+[02:58.09]花不开 树不摆 还是更畅快
+[03:01.75]爱 还是会期待
+[03:04.32]还是觉得孤单太失败
+[03:09.01]我爱故我在
+[03:16.20]`,
     '2086327879': `[00:00.00] 作词 : 回春丹
 [00:00.36] 作曲 : 回春丹
 [00:00.72] 编曲 : 回春丹
@@ -3657,67 +3611,6 @@ var HARDCODED_LYRICS = {
 [05:41.30]录音：王大治
 [05:41.38]童声监制：时萌
 [05:41.45]童声合唱：刘源溪 王瀚霆 张皓玮 王宇昊 许俊赫 李佳妍 李雨宸 刘思铄 赵星妍`,
-    '1970893266': `[00:00.000] 作词 : Maxwell Schneider/Ali Gatie/Johnny Simpson/Jake Torrey/Tia Scola
-[00:01.000] 作曲 : Maxwell Schneider/Ali Gatie/Johnny Simpson/Jake Torrey/Tia Scola
-[00:11.092] You could give me chills
-[00:12.358] On a summer day
-[00:16.250] When we're laying still
-[00:17.946] But you make my heart race
-[00:21.642] Gonna keep me young
-[00:23.176] When we're old and grey
-[00:27.164] I know that time moves on
-[00:29.776] But some things don't change
-[00:31.259]
-[00:32.779] I won't stop getting butterflies
-[00:36.898] I get 'em every time
-[00:39.422] I look into your eyes
-[00:43.472] You won't stop running through my mind
-[00:47.636] For the rest of both our lives
-[00:50.250] You give me butterflies
-[00:53.902] And I keep on getting
-[00:56.726] Butterflies
-[00:57.912]
-[00:59.648] I still fall in love with you
-[01:02.397] Every time I see your eyes
-[01:04.946] It takes me back to the first time
-[01:07.829] I saw you smile
-[01:10.606] They told us we were young and dumb
-[01:13.404] We didn't know about love
-[01:16.024] Now look at all the things we've become
-[01:19.347]
-[01:21.571] I won't stop getting butterflies
-[01:26.116] I get 'em every time
-[01:28.472] I look into your eyes
-[01:32.422] You won't stop running through my mind
-[01:36.635] For the rest of both our lives
-[01:39.214] You give me butterflies
-[01:42.886] I keep on getting (Keep on getting)
-[01:48.167] I keep on getting (Keep on getting)
-[01:50.679] Butterflies
-[01:53.478]
-[01:56.924] When you walk into the room
-[02:02.506] I'm as nervous as the day I met you
-[02:07.343] I've seen that dress on you before
-[02:11.047] But every time I do
-[02:12.318] I swear it only makes me love you more
-[02:14.657]
-[02:16.018] And I won't stop getting butterflies
-[02:20.636] I get 'em every time
-[02:24.509] Get 'em every time
-[02:25.934]
-[02:27.131] I won't stop getting butterflies
-[02:31.258] I get 'em every time
-[02:33.900] I look into your eyes
-[02:37.397] You won't stop running through my mind
-[02:41.970] For the rest of both our lives
-[02:44.840] You give me butterflies
-[02:47.576] I keep on getting (Keep on getting)
-[02:53.607] I keep on getting (Keep on getting)
-[02:56.478] Butterflies
-[02:58.201]
-[02:59.616] I keep on getting
-[03:02.396] Butterflies
-[03:06.250] 制作 : Johnny Simpson`,
     '2051548110': `[00:00.000] 作词 : Leah Marie Perez
 [00:00.297] 作曲 : Leah Marie Perez
 [00:00.594]Nothing on you baby
