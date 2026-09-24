@@ -12,7 +12,7 @@
     { name: "西界", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=26305536.mp3", cover: "https://p3.music.126.net/Pz4sEpA7nsiyIdIrswTx9A==/109951167894836691.jpg", id: "26305536" },
     { name: "认真的雪", artist: "薛之谦", url: "https://music.163.com/song/media/outer/url?id=5254815.mp3", cover: "https://p3.music.126.net/ukJi8SPQR0StMTHS31titg==/109951163449486613.jpg", id: "5254815" },
     { name: "年少有为", artist: "李荣浩", url: "https://music.163.com/song/media/outer/url?id=1468114204.mp3", cover: "https://p3.music.126.net/o0VyGUABowZl5BGWf8nBYg==/109951172341406695.jpg", id: "1468114204" },
-    { name: "周旋", artist: "王以太", url: "https://music.163.com/song/media/outer/url?id=3404238777.mp3", cover: "https://p2.music.126.net/rDv1qod6MDsYcEHKtxCdAA==/109951173532089932.jpg", id: "3404238777" },
+    { name: "周旋", artist: "王以太/艾热AIR", url: "https://music.163.com/song/media/outer/url?id=3404238777.mp3", cover: "https://p2.music.126.net/rDv1qod6MDsYcEHKtxCdAA==/109951173532089932.jpg", id: "3404238777" },
     { name: "再等冬天(Memories)", artist: "h3R3", url: "https://music.163.com/song/media/outer/url?id=1927693793.mp3", cover: "https://p1.music.126.net/JBe7AwcGkYHhleOfQvY2hg==/109951169798343077.jpg", id: "1927693793" },
     { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "https://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
     { name: "红", artist: "罗言", url: "https://music.163.com/song/media/outer/url?id=1918576268.mp3", cover: "https://p2.music.126.net/G-inyKjA-jO5MuOuV3g7Pg==/109951167027986653.jpg", id: "1918576268" },
