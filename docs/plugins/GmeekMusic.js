@@ -68,6 +68,14 @@
     { name: "Melody(Live)", artist: "陶喆", url: "https://music.163.com/song/media/outer/url?id=150408.mp3", cover: "https://p2.music.126.net/K05FL1BmwrJXeoxctQILjA==/109951171530792491.jpg", id: "150408" },
     { name: "7%", artist: "XMASwu(吴骜)", url: "https://music.163.com/song/media/outer/url?id=1423241987.mp3", cover: "https://p1.music.126.net/YsXfYs7s2-d0lJwRtp_klQ==/109951164700110582.jpg", id: "1423241987" },
     { name: "写给黄淮", artist: "邵帅", url: "https://music.163.com/song/media/outer/url?id=1334295185.mp3", cover: "https://p1.music.126.net/CG8hLG4To_TZum0rIGk7WA==/109951163764772334.jpg", id: "1334295185" },
+    { name: "Take My Hand", artist: "DAISHI DANCE/Cécile Corbel", url: "https://music.163.com/song/media/outer/url?id=2071452224.mp3", cover: "https://p2.music.126.net/q_ZSJmVQ_NlLXq7UNAYK3g==/109951168826077552.jpg", id: "2071452224" },
+    { name: "诀别书", artist: "邓垚", url: "https://music.163.com/song/media/outer/url?id=2038191895.mp3", cover: "https://p2.music.126.net/wztA5smxFjIfv98u7-IrQQ==/109951168933355255.jpg", id: "2038191895" },
+    { name: "Daylight", artist: "Taylor Swift", url: "https://music.163.com/song/media/outer/url?id=1382781566.mp3", cover: "https://p1.music.126.net/6CB6Jsmb7k7qiJqfMY5Row==/109951164260234943.jpg", id: "1382781566" },
+    { name: "Off the hook", artist: "Jeff Jarvis", url: "https://music.163.com/song/media/outer/url?id=28692785.mp3", cover: "https://p1.music.126.net/uKoKIcrfH1nEPY3304pWTg==/109951171574129543.jpg", id: "28692785" },
+    { name: "爱爱爱", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=82453.mp3", cover: "https://p2.music.126.net/2UjnKgcM1IXxYxhHEXVa4Q==/109951168870794250.jpg", id: "82453" },
+    { name: "鲜花", artist: "回春丹", url: "https://music.163.com/song/media/outer/url?id=2086327879.mp3", cover: "https://p2.music.126.net/sOVQYvAwK8rGHrwd-wM1Og==/109951173409075892.jpg", id: "2086327879" },
+    { name: "Butterflies", artist: "MAX/Ali Gatie", url: "https://music.163.com/song/media/outer/url?id=1970893266.mp3", cover: "https://p1.music.126.net/XEGt7pKbIqj_doZHZoDoyQ==/109951167763937297.jpg", id: "1970893266" },
+    { name: "Nothin' on Me", artist: "Leah Marie Perez", url: "https://music.163.com/song/media/outer/url?id=2051548110.mp3", cover: "https://p2.music.126.net/2H7VyqBZLfkWqL0RrWfA5g==/109951172960943082.jpg", id: "2051548110" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -3279,7 +3287,510 @@ var HARDCODED_LYRICS = {
 [02:52.88]当我在原地无助徘徊 你告诉我理想必须热爱
 [03:00.62]你要我坚持我的执着 你让我明白为谁而活
 [03:09.04]永恒不只是那一瞬间 我的未来谢谢你让我看见
-`
+`,
+    '2071452224': `[00:00.000] 作词 : Corbel Cecile Marie Helene
+[00:01.000] 作曲 : DAISHI DANCE
+[00:02.000] 编曲 : DAISHI DANCE
+[00:59.905]In my dreams
+[01:01.646]I feel your light
+[01:03.610]I feel love is born again
+[01:07.278]Fireflies
+[01:09.234]In the moonlight
+[01:10.996]Rising stars
+[01:14.991]Remember
+[01:17.096]The day
+[01:18.637]I fell in love with you
+[01:22.281]Darling won't you break
+[01:26.466]My heart
+[01:30.280]Take my hand now
+[01:32.140]Stay close to me
+[01:33.969]Be my lover
+[01:35.855]Won't you let me go
+[01:37.720]Close your eyes now
+[01:39.646]And you will see
+[01:41.608]There's a rainbow
+[01:43.409]For you and me
+[02:00.126]As I wake up
+[02:01.702]I see your face
+[02:03.876]I feel love is born again
+[02:07.459]Cherry blossom
+[02:09.435]Flying birds
+[02:11.271]In the sky
+[02:15.110]Can't you see
+[02:17.319]The sun
+[02:18.754]That is shining on the fields
+[02:22.530]Is it shining in
+[02:26.825]Your heart
+[02:30.441]Take my hand now
+[02:32.353]Stay close to me
+[02:34.491]Be my lover
+[02:36.375]Won't you let me go
+[02:38.063]Close your eyes now
+[02:39.712]And you will see
+[02:41.554]There's a rainbow
+[02:43.281]For you and me
+[03:00.226]And I dream of you
+[03:03.837]Every night
+[03:07.425]Cause there's only you
+[03:11.025]In my mind
+[03:14.867]Will you be
+[03:17.282]A stranger or a friend in my life
+[03:22.384]Darling won't you break
+[03:26.326]My heart
+[03:30.251]Take my hand now
+[03:32.020]Stay close to me
+[03:33.801]Be my lover
+[03:35.808]Won't you let me go
+[03:37.727]Close your eyes now
+[03:39.692]And you will see
+[03:41.555]There's a rainbow
+[03:43.346]For you and me
+[03:45.514]Take my hand now
+[03:47.395]Stay close to me
+[03:49.104]Be my lover
+[03:51.044]Won't you let me go
+[03:52.729]Close your eyes now
+[03:54.561]And you will see
+[03:56.530]There's a rainbow
+[03:58.284]For you and me`,
+    '1382781566': `[00:00.00] 作词 : Taylor Swift
+[00:00.02] 作曲 : Taylor Swift
+[00:00.05] 编曲 : Jack Antonoff
+[00:00.07] 制作人 : Taylor Swift/Jack Antonoff
+[00:00.10]My love was as cruel as the cities I lived in
+[00:07.29]Everyone looked worse in the light
+[00:12.40]There are so many lines that I've crossed unforgiven
+[00:19.82]I'll tell you the truth, but never goodbye
+[00:26.37]I don't wanna look at anything else now that I saw you
+[00:32.53]I don't wanna think of anything else now that I thought of you
+[00:38.97]I've been sleeping so long in a 20-year dark night
+[00:44.91]And now I see daylight, I only see daylight
+[00:51.47]Luck of the draw only draws the unlucky
+[00:58.27]And so I became the butt of the joke
+[01:04.36]I wounded the good and I trusted the wicked
+[01:10.98]Clearing the air, I breathed in the smoke
+[01:17.67]Maybe you ran with the wolves and refused to settle down
+[01:21.27]Maybe I've stormed out of every single room in this town
+[01:24.61]Threw out our cloaks and our daggers because it's morning now
+[01:27.62]It's brighter now, now
+[01:30.72]I don't wanna look at anything else now that I saw you
+[01:35.52](I can never look away)
+[01:37.20]I don't wanna think of anything else now that I thought of you
+[01:41.48](Things will never be the same)
+[01:43.54]I've been sleeping so long in a 20-year dark night
+[01:47.60](Now I'm wide awake)
+[01:49.31]And now I see daylight (Daylight), I only see daylight (Daylight)
+[01:55.69]I only see daylight, daylight, daylight, daylight
+[02:01.48]I only see daylight, daylight, daylight, daylight
+[02:07.98]And I can still see it all (In my mind)
+[02:12.79]All of you, all of me (Intertwined)
+[02:16.22]I once believed love would be (Black and white)
+[02:19.85]But it's golden (Golden)
+[02:22.58]And I can still see it all (In my head)
+[02:25.59]Back and forth from New York (Sneaking in your bed)
+[02:29.02]I once believed love would be (Burning red)
+[02:32.49]But it's golden
+[02:34.33]Like daylight, like daylight
+[02:39.35]Like daylight, daylight
+[02:46.94]I don't wanna look at anything else now that I saw you
+[02:51.88](I can never look away)
+[02:53.98]I don't wanna think of anything else now that I thought of you
+[02:58.52](Things will never be the same)
+[03:00.45]I've been sleeping so long in a 20-year dark night
+[03:04.57](Now I'm wide awake)
+[03:05.95]And now I see daylight (I see daylight), I only see daylight (Ah)
+[03:12.39]I only see daylight, daylight, daylight, daylight
+[03:18.45]I only see daylight, daylight, daylight, daylight (Ah)
+[03:25.46]I only see daylight, daylight, daylight, daylight
+[03:27.37](And I can still see it all, back and forth from New York)
+[03:30.52]I only see daylight, daylight, daylight, daylight
+[03:33.52](I once believed love would be burning red)
+[03:39.76]Like daylight
+[03:44.06]It's golden like daylight
+[03:50.70]You gotta step into the daylight and let it go
+[03:56.58]Just let it go, let it go
+[04:10.22]I wanna be defined by the things that I love
+[04:13.50]Not the things I hate
+[04:15.61]Not the things that I'm afraid of, I'm afraid of
+[04:18.68]Not the things that haunt me in the middle of the night
+[04:21.66]I, I just think that
+[04:27.04]You are what you love
+[04:29.71]`,
+    '28692785': `[00:00.000] 作词 : Jeff Jarvis
+[00:01.000] 作曲 : Jeff Jarvis
+[00:02.000] 制作人 : Jeff Jarvis
+[00:08.600]Would you be my girl
+[00:10.060]Would you be my girl
+[00:12.460]The ring upon your finger's worths a fortune
+[00:13.330]But it doesn't matter
+[00:15.420]He don't love you
+[00:16.940]He don't love you
+[00:18.290]And I know you went to paris
+[00:19.730]When he asked for your hand but
+[00:21.470]He don't love you
+[00:23.020]He don't love you
+[00:24.750]I will give you something that no other man could
+[00:27.700]When love is for real you know it feels so good
+[00:30.940]It's hard to walk away now
+[00:32.330]But it's gonna get worse
+[00:34.160]Just cancel the wedding and come with me
+[00:37.730]Sweet baby
+[00:39.480]Understand me
+[00:40.960]I feel the pressure to
+[00:42.390]Let the man marry me
+[00:44.010]But deep down in my heart
+[00:46.600]It's you I want
+[00:48.580]It's you I want
+[00:50.390]You keep on driving me crazy
+[00:53.580]Girl let me off the hook tell me
+[00:56.830]Said you need time
+[00:58.160]But I wanna know now
+[00:59.800]Would you be my girl
+[01:01.270]Would you be my girl
+[01:02.520]I am so mad about you boy
+[01:05.290]It's hard to be your friend when I want more
+[01:08.520]I think about it seven and twenty-four
+[01:11.600]It's what I want
+[01:12.970]Would you be my girl
+[01:14.370]Would you be my girl
+[01:18.070]Yeah Come on
+[01:28.460]I fell in love the second that I laid my hands on you I said
+[01:32.340]Let me love you
+[01:33.810]Let me love you
+[01:34.880]But everybody told me I was wasting my time that
+[01:38.470]I shouldn't love you
+[01:40.060]I shouldn't love you
+[01:41.610]But I will give you something that no other man could
+[01:44.450]When love is for real you know it feels so good
+[01:48.160]It's hard to walk away now
+[01:49.200]But it's gonna get worse
+[01:51.030]Just cancel the wedding and come with me
+[01:54.500]Sweet baby
+[01:56.270]Understand me
+[01:57.760]I feel the pressure to
+[01:59.130]Let the man marry me
+[02:00.800]But deep down in my heart
+[02:03.740]It's you that I want
+[02:05.590]It's you that I want
+[02:07.110]You keep on driving me crazy
+[02:10.300]Girl let me off the hook tell me
+[02:13.470]Said you need time
+[02:15.190]But I wanna know now
+[02:16.040]Would you be my girl
+[02:18.400]Would you be my girl
+[02:19.390]I am so mad about you boy
+[02:22.130]It's hard to be your friend when I want more
+[02:25.320]I think about it seven and twenty-four
+[02:28.320]It's what I want
+[02:30.210]Would you be my girl
+[02:31.350]Would you be my girl
+[02:32.910]It's hard to be in between
+[02:35.980]Love can hurt so easily
+[02:39.440]You're all I want
+[02:40.540]And all I need
+[02:42.140]Girl I need you to be mine
+[02:45.690]You keep on driving me crazy
+[02:48.780]Girl let me off the hook tell me
+[02:51.830]Said you need time
+[02:53.300]But I wanna know now
+[02:54.960]Would you be my girl
+[02:56.440]Would you be my girl
+[02:57.700]I am so mad about you boy
+[03:00.400]It's hard to be your friend when I want more
+[03:03.630]I think about it seven and twenty-four
+[03:06.850]It's what I want
+[03:08.110]Would you be my girl
+[03:09.360]Would you be my girl
+[03:11.180]You keep on driving me crazy
+[03:14.230]Girl let me off the hook tell me
+[03:17.450]Said you need time
+[03:18.800]But I wanna know now
+[03:20.510]Would you be my girl
+[03:22.050]Would you be my girl
+[03:23.250]I am so mad about you boy
+[03:26.060]It's hard to be your friend when I want more
+[03:29.300]I think about it seven and twenty-four
+[03:32.450]It's what I want
+[03:33.730]Would you be my girl
+[03:35.130]Would you be my girl`,
+    '82453': `[00:00.000] 作词 : 周耀辉
+[00:01.000] 作曲 : 方大同
+[00:02.000] 编曲 : 方大同
+[00:03.000] 制作人 : Charles Lee/Edward Chan/方大同
+[00:17.000]在哪里记载第一个桃花贼
+[00:22.769]谁在哪里典卖第一支紫玉钗
+[00:31.590]我在这里见怪更怪
+[00:36.429]见过电影里面人家的海
+[00:39.419]更想去看海
+[00:41.409]唱过人家的爱更想找爱
+[00:45.090]你哭起来我笑起来
+[00:48.099]都为了爱爱爱
+[00:51.459]有一天翻开辞海找不到爱
+[00:56.409]花不开树不摆还是更畅快
+[01:00.599]爱还是会期待
+[01:02.509]还是觉得孤单太失败
+[01:07.249]我爱故我在
+[01:29.890]找到爱幸福的人肯不肯躲起来
+[01:36.009]正在寂寞的人能不能站起来
+[01:43.590]我在这里陪你无奈
+[01:49.548]看过小说里面人家等待
+[01:52.559]更习惯等待
+[01:54.539]唱过人家的爱更想找爱
+[01:57.539]你喊出来我静下来
+[02:01.590]都为了爱爱爱
+[02:04.519]有一天翻开辞海找不到爱
+[02:09.529]花不开树不摆还是更畅快
+[02:13.159]爱还是会期待
+[02:15.719]还是觉得孤单太失败
+[02:20.930]我爱故我在
+[02:26.699]挥不去满天满地的尘埃
+[02:29.699]买不起满街口袋的品牌
+[02:33.789]你闷起来我傻起来可以爱
+[02:38.800]会不会整个时代只有一个告白
+[02:41.990]谁不爱过不存在
+[02:46.990]不明不白不分好歹
+[02:50.629]都为了爱爱爱
+[02:54.909]有一天翻开辞海找不到爱
+[02:59.080]花不开树不摆还是更畅快
+[03:02.610]爱还是会期待
+[03:05.050]还是觉得孤单太失败
+[03:08.470]我爱故我在`,
+    '2086327879': `[00:00.00] 作词 : 回春丹
+[00:00.36] 作曲 : 回春丹
+[00:00.72] 编曲 : 回春丹
+[00:01.08] 制作人 : 回春丹
+[00:01.44]作曲：刘西蒙
+[00:01.85]作词：刘西蒙
+[00:01.90]编曲：回春丹
+[00:02.10]
+[00:02.20]（童声）
+[00:03.81]我的心我的心
+[00:06.31]整栋出租
+[00:09.00]处处都给你
+[00:15.19]永远开满
+[00:18.07]永远开满
+[00:20.50]永远开满
+[00:25.65]
+[01:03.77]彩虹里面的人
+[01:07.62]你们好吗
+[01:11.96]你那快乐吗
+[01:14.36]我期待的吗
+[01:16.67]还记得歌唱
+[01:18.23]记得啦啦啦吗
+[01:22.37]
+[01:22.92]躲在屋檐的人
+[01:26.81]你们害怕吗
+[01:31.22]还记得笑吗
+[01:33.54]还记得我吗
+[01:35.89]还记得保持好奇的傻瓜
+[01:41.55]
+[01:42.05]我去到那里会不会一无所知
+[01:46.91]去到那里会不会一无所知
+[01:51.77]车子经过了桥
+[01:54.49]我记得在那便利店买的酒
+[01:58.64]可是我不敢一个人喝
+[02:04.07]车子又经过了山
+[02:08.87]我妄想开着我的烂摩托
+[02:13.25]去转一转
+[02:14.89]可是我可是我
+[02:17.29]可惜我把车卖了
+[02:19.89]
+[02:20.49]我的心我的心
+[02:25.28]整栋出租
+[02:28.23]处处都给你
+[02:34.96]种好的鲜花
+[02:40.84]
+[02:41.37]治愈你的白发
+[02:44.38]别害怕别害怕
+[02:47.13]有我在的地方
+[02:53.90]永远开满了鲜花
+[03:00.28]
+[03:02.45]治愈你的白发
+[03:07.40]别害怕
+[03:13.54]永远开满了鲜花
+[03:21.89]
+[03:22.26]治愈你的白发
+[03:27.73]永远开满
+[03:30.00]永远开满
+[03:32.58]永远开满
+[03:37.32]
+[04:15.93]我的心我的心
+[04:20.66]整栋出租
+[04:23.26]处处都给你
+[04:30.19]种好的鲜花
+[04:34.69]
+[04:36.56]治愈你的白发
+[04:39.60]别害怕别害怕
+[04:42.45]有我在的地方
+[04:49.39]永远开满了鲜花
+[04:55.61]
+[04:57.62]治愈你的白发
+[05:02.41]别害怕
+[05:08.52]永远开满了鲜花
+[05:15.77]
+[05:16.86]治愈你的白发
+[05:22.98]永远开满
+[05:25.11]永远开满
+[05:27.77]永远开满
+[05:33.85]
+[05:34.52]鲜花
+[05:36.40]主唱：刘西蒙
+[05:36.85]吉他：刘西蒙 / 韦高飞
+[05:37.22]贝斯：郭泽群
+[05:37.52]鼓：简丹
+[05:37.77]键盘：韦伟
+[05:38.01]和声：刘禹彤 / 简丹 / 韦高飞 / 张炜 / 莫皓
+[05:38.28]制作人：回春丹 / 韦伟
+[05:38.52]监制：杜文清
+[05:38.75]录音：张炜@33AW Recording studio
+[05:38.97]混音：王大治@时音唱片
+[05:39.21]母带：时俊峰
+[05:39.42]经纪人：杜文清
+[05:39.64]厂牌：池沼Chizhao
+[05:39.86]统筹：杜文清
+[05:40.05]统筹协力：吴海荣
+[05:40.26]宣传发行：盛柔嘉 / 牛佳钰 / 侯莹
+[05:40.48]助理：黎原子
+[05:40.89]OP/SP：瓦兹妙赞
+[05:41.08]封面设计：刘西蒙
+[05:41.26]童声录音棚：龙猫音乐录音棚
+[05:41.30]录音：王大治
+[05:41.38]童声监制：时萌
+[05:41.45]童声合唱：刘源溪 王瀚霆 张皓玮 王宇昊 许俊赫 李佳妍 李雨宸 刘思铄 赵星妍`,
+    '1970893266': `[00:00.000] 作词 : Maxwell Schneider/Ali Gatie/Johnny Simpson/Jake Torrey/Tia Scola
+[00:01.000] 作曲 : Maxwell Schneider/Ali Gatie/Johnny Simpson/Jake Torrey/Tia Scola
+[00:11.092] You could give me chills
+[00:12.358] On a summer day
+[00:16.250] When we're laying still
+[00:17.946] But you make my heart race
+[00:21.642] Gonna keep me young
+[00:23.176] When we're old and grey
+[00:27.164] I know that time moves on
+[00:29.776] But some things don't change
+[00:31.259]
+[00:32.779] I won't stop getting butterflies
+[00:36.898] I get 'em every time
+[00:39.422] I look into your eyes
+[00:43.472] You won't stop running through my mind
+[00:47.636] For the rest of both our lives
+[00:50.250] You give me butterflies
+[00:53.902] And I keep on getting
+[00:56.726] Butterflies
+[00:57.912]
+[00:59.648] I still fall in love with you
+[01:02.397] Every time I see your eyes
+[01:04.946] It takes me back to the first time
+[01:07.829] I saw you smile
+[01:10.606] They told us we were young and dumb
+[01:13.404] We didn't know about love
+[01:16.024] Now look at all the things we've become
+[01:19.347]
+[01:21.571] I won't stop getting butterflies
+[01:26.116] I get 'em every time
+[01:28.472] I look into your eyes
+[01:32.422] You won't stop running through my mind
+[01:36.635] For the rest of both our lives
+[01:39.214] You give me butterflies
+[01:42.886] I keep on getting (Keep on getting)
+[01:48.167] I keep on getting (Keep on getting)
+[01:50.679] Butterflies
+[01:53.478]
+[01:56.924] When you walk into the room
+[02:02.506] I'm as nervous as the day I met you
+[02:07.343] I've seen that dress on you before
+[02:11.047] But every time I do
+[02:12.318] I swear it only makes me love you more
+[02:14.657]
+[02:16.018] And I won't stop getting butterflies
+[02:20.636] I get 'em every time
+[02:24.509] Get 'em every time
+[02:25.934]
+[02:27.131] I won't stop getting butterflies
+[02:31.258] I get 'em every time
+[02:33.900] I look into your eyes
+[02:37.397] You won't stop running through my mind
+[02:41.970] For the rest of both our lives
+[02:44.840] You give me butterflies
+[02:47.576] I keep on getting (Keep on getting)
+[02:53.607] I keep on getting (Keep on getting)
+[02:56.478] Butterflies
+[02:58.201]
+[02:59.616] I keep on getting
+[03:02.396] Butterflies
+[03:06.250] 制作 : Johnny Simpson`,
+    '2051548110': `[00:00.000] 作词 : Leah Marie Perez
+[00:00.297] 作曲 : Leah Marie Perez
+[00:00.594]Nothing on you baby
+[00:05.353]They might say hi, and I might say hey
+[00:09.561]But you shouldn't worry about what they say
+[00:13.832]Cuz they got nothing on you baby
+[00:19.785]Nothing on you baby
+[00:24.488]Everybody's asking how we doing say we good
+[00:28.862]Don't need no one to tell me how to live just like they would
+[00:33.874]It ain't their business but they're in it
+[00:36.435]I don't know why
+[00:38.440]Revolved around my life after I found another guy
+[00:43.230]People get so caught up thinking
+[00:45.905]They know everything
+[00:48.057]But little do they know you wasn't just a summer fling
+[00:52.979]I really got them thinking this was all just fun and games
+[00:57.595]So caught up in the past
+[00:59.663]They're acting like a bunch of lames
+[01:02.580]Ain't got nothing on me
+[01:04.858]These people do not face me
+[01:07.407]Enjoying every moment
+[01:09.317]Ain't worry about who's in it
+[01:12.171]I'm growing everyday
+[01:14.008]Everything 's gon' be okay
+[01:16.895]As long I got my shit together
+[01:19.439]They gon' see me doing better
+[01:22.143]Ain't got nothing on me, on me, on me
+[01:26.688]Ain't got nothing on me, on me, on me
+[01:31.425]Ain't got nothing on me, on me, on me
+[01:36.514]Ain't got nothing
+[01:41.366]Beautiful girls all over the world
+[01:45.803]I could be chasing,
+[01:47.767]But my time would be wasted
+[01:50.153]They got nothing on you baby（they got nothing on me)
+[01:55.772]Nothing on you baby (they got nothing on me)
+[02:00.470]What's that saying
+[02:01.586]"Right person found at the wrong time"
+[02:04.914]In this case, glad I found you
+[02:07.089]Cuz I know that you were mine
+[02:09.667]I know it ain't official
+[02:11.664]But it's about to be soon
+[02:14.432]Show everyone we don't care
+[02:16.757]What they think about it too
+[02:19.377]I never thought that we would make it this far，
+[02:24.129]We were just vibing
+[02:25.766]Now look at where we are
+[02:28.880]Got so much potential
+[02:30.918]We got something so special
+[02:33.681]Like where this is going
+[02:36.331]Keep this thing flowing
+[02:38.669]Ain't got nothing on me
+[02:40.779]These people do not face me
+[02:43.399]Enjoying every moment
+[02:45.697]Ain't worry about who's in it
+[02:48.102]I'm growing everyday
+[02:50.128]Everything 's gon' be okay
+[02:52.898]As long I got my shit together
+[02:55.482]They gon' see me doing better
+[02:58.091]Ain't got nothing on me
+[02:59.979]These people do not face me
+[03:02.424]Enjoying every moment
+[03:04.927]Ain't worry about who's in it
+[03:07.356]I'm growing everyday
+[03:09.264]Everything 's gon' be okay
+[03:12.025]As long I got my shit together
+[03:14.637]They gon' see me doing better
+[03:17.258]Ain't got nothing on me, on me, on me
+[03:19.577]（beautiful girls all over the world)
+[03:21.946]Ain't got nothing on me, on me, on me
+[03:25.154](I could be chasing but my time would be wasted)
+[03:26.719]Ain't got nothing on me, on me, on me
+[03:29.998](they got nothing on you baby)
+[03:31.539]Nothing on me baby`,
   };
 
 // ---- CSS ----
