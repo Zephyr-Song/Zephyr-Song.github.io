@@ -14,7 +14,7 @@
     { name: "年少有为", artist: "李荣浩", url: "https://music.163.com/song/media/outer/url?id=1468114204.mp3", cover: "https://p3.music.126.net/o0VyGUABowZl5BGWf8nBYg==/109951172341406695.jpg", id: "1468114204" },
 
     { name: "旅行家的忠诚", artist: "黄旭/艾热 AIR", url: "https://music.163.com/song/media/outer/url?id=2079429439.mp3", cover: "https://p3.music.126.net/SCmkhEuQrtuNfhMI4yd2zw==/109951172952616050.jpg", id: "2079429439" },
-    { name: "外面冷 Coldest Night", artist: "艾福杰尼", url: "https://music.163.com/song/media/outer/url?id=1982964017.mp3", cover: "https://p3.music.126.net/Ys5vNDeYfrZpRXInlh3t5g==/109951167893726311.jpg", id: "1982964017" },
+    { name: "再等冬天(Memories)", artist: "h3R3", url: "https://music.163.com/song/media/outer/url?id=1927693793.mp3", cover: "https://p1.music.126.net/JBe7AwcGkYHhleOfQvY2hg==/109951169798343077.jpg", id: "1927693793" },
     { name: "空山灵雨 feat.旅行团", artist: "新裤子/旅行团乐队", url: "https://music.163.com/song/media/outer/url?id=2712645752.mp3", cover: "https://p3.music.126.net/arfLbEKWiZlHnSkC-FQacw==/109951172161804297.jpg", id: "2712645752" },
     { name: "红", artist: "罗言", url: "https://music.163.com/song/media/outer/url?id=1918576268.mp3", cover: "https://p2.music.126.net/G-inyKjA-jO5MuOuV3g7Pg==/109951167027986653.jpg", id: "1918576268" },
     { name: "雪 Distance", artist: "Capper/罗言", url: "https://music.163.com/song/media/outer/url?id=2026224214.mp3", cover: "https://p2.music.126.net/cGTKkFl5qcXIDYPo7PrmDA==/109951168431655039.jpg", id: "2026224214" },
@@ -74,8 +74,11 @@
     { name: "Off the hook", artist: "Jeff Jarvis", url: "https://music.163.com/song/media/outer/url?id=28692785.mp3", cover: "https://p1.music.126.net/uKoKIcrfH1nEPY3304pWTg==/109951171574129543.jpg", id: "28692785" },
     { name: "爱爱爱", artist: "方大同", url: "https://music.163.com/song/media/outer/url?id=5240523.mp3", cover: "https://p1.music.126.net/N5wXEFt3Kp4HSGxfVdnQgQ==/48378511634527.jpg", id: "5240523" },
     { name: "鲜花", artist: "回春丹", url: "https://music.163.com/song/media/outer/url?id=2086327879.mp3", cover: "https://p2.music.126.net/sOVQYvAwK8rGHrwd-wM1Og==/109951173409075892.jpg", id: "2086327879" },
-    { name: "Butterflies", artist: "MAX/Ali Gatie", url: "https://music.163.com/song/media/outer/url?id=1861794010.mp3", cover: "https://p1.music.126.net/-p6LmF1UOVIJuqwIwf33Yw==/109951166185282325.jpg", id: "1861794010" },
+    { name: "Butterflies", artist: "Nohidea", url: "https://music.163.com/song/media/outer/url?id=479219481.mp3", cover: "https://p2.music.126.net/qGZA9Po96JW1F6lkPUYi2Q==/109951165239367182.jpg", id: "479219481" },
     { name: "Nothin' on Me", artist: "Leah Marie Perez", url: "https://music.163.com/song/media/outer/url?id=2051548110.mp3", cover: "https://p2.music.126.net/2H7VyqBZLfkWqL0RrWfA5g==/109951172960943082.jpg", id: "2051548110" },
+    { name: "this is what winter feels like", artist: "JVKE", url: "https://music.163.com/song/media/outer/url?id=2116728806.mp3", cover: "https://p1.music.126.net/HS1ex7mUH4RIu7dpUZiOlQ==/109951173628390994.jpg", id: "2116728806" },
+    { name: "golden hour", artist: "JVKE", url: "https://music.163.com/song/media/outer/url?id=1958557540.mp3", cover: "https://p2.music.126.net/Dvum_S3zEQHeeaMZVgqIeA==/109951173628349420.jpg", id: "1958557540" },
+    { name: "pure imagination", artist: "Rook1e", url: "https://music.163.com/song/media/outer/url?id=494858498.mp3", cover: "https://p2.music.126.net/dDM3Emm_CXHy4NZHSdU0iQ==/19127104277054005.jpg", id: "494858498" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -583,62 +586,71 @@ var HARDCODED_LYRICS = {
 [03:51.03] 女声和声 : 喜辰晨
 [03:51.41] 人声采样 : 蛋堡《关于小熊》
 `,
-    '1982964017': `[00:00.00] 作词 : 艾福杰尼
-[00:01.00] 作曲 : 艾福杰尼
-[00:02.00] 编曲 : Maxime RAMANANJANAHARY
-[00:22.20]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请收好它）
-[00:32.68]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
-[00:43.56]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请珍惜它）
-[00:54.45]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
-[01:05.16]如果要放弃就请一起放弃彻底
-[01:07.68]理解有上亿种方法看是什么目的
-[01:10.32]让我们肉体剥离去放肆也算保护你
-[01:13.06]也说过怕我被骗当我们在一起沐浴
-[01:15.80]抱怨声音太大盖过兑现
-[01:18.48]本能的去顾虑不知道危险
-[01:21.18]Girl你明明爱的就很明显
-[01:23.96]谎言是善意还是你会演
-[01:27.04]你说过太多时间维护野心从没考虑你
-[01:29.76]日以继夜银行卡里只是那些破数据
-[01:32.44]我们都是某种蝼蚁维护着某种默契
-[01:35.20]也尽量不去过度关注你也习惯了过滤
-[01:37.90]这束光若隐又若现而我又拖延又拖延
-[01:40.49]感受到失去耐心的你慢慢对我的冷眼
-[01:43.35]可每首歌都有你影子我亲手来设计
-[01:46.11]Baby我最大野心是你其他没意义
-[01:48.69]Will I go easy will I go hard（我不知道到那时会轻松释然还是会难以割舍）
-[01:51.21]I think we both should keep the best part（但我认为我们至少应该留下对彼此最好的回忆）
-[01:53.92]如何被你吸引
-[01:55.57]How we getting started（如何与你相爱）
-[01:56.68]Love is so strong so strong（这份爱实在太浓烈）
-[01:59.39]Will I go easy will I go hard（我不知道到那时会轻松释然还是会难以割舍）
-[02:02.13]I think we both should keep the best part（但我认为我们至少应该留下对彼此最好的回忆）
-[02:04.88]如何被你吸引
-[02:06.26]How we getting started（如何与你相爱）
-[02:07.56]I thought we were go along go along（又是如何幻想与你长相厮守）
-[02:11.04]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请珍惜它）
-[02:21.61]If you lie to me babe I just might let a falling dice decide my whole life（但倘若你欺骗了我，那我可能就会让余生随风飘摇）
-[02:32.86]Saturday night is cold outside（周六晚上，外面很冷）
-[02:35.30]人们都是彼此 新欢与旧爱
-[02:38.24]杂乱无章交织或者空白
-[02:40.68]这就是种游戏还可以重来
-[02:43.67]Saturday night is cold outside（认识你的那个周六晚上，外面很冷）
-[02:46.32]也许那边火热也许灯没开
-[02:48.92]也许都有想过一切都回来
-[02:51.59]这就是种游戏还可以重来
-[02:54.54]Saturday night is cold outside（和你分开的那个周六晚上，外面很冷）
-[02:57.28]It’s cold outside
-[03:02.83]It’s cold outside
-[03:05.51]Saturday night is cold outside（周六晚上，外面很冷）
-[03:10.94]It’s cold outside
-[03:13.67]It’s cold outside
-[03:19.09]Journey makes you cry
-[03:23.57]Journey makes you cry
-[03:27.48]When I give you my broken heart in the coldest night please hold it tight（如果我在最冷的夜赠予你一颗支离破碎的心，请你抱紧它）
-[03:37.80] 录音：福气世纪
-[03:38.80] 混音：顺德
-[03:39.80] 母带：顺德
-`,
+    '1927693793': `[00:00.00] 作词 : h3R3
+[00:01.00] 作曲 : h3R3
+[00:02.00] 制作人 : h3R3
+[00:03.00] 编曲 : DiESi
+[00:15.65]让我捡起散落的片段
+[00:17.53]那些在我脑海错乱的片段
+[00:19.30]你出现的那刻时间在变慢
+[00:21.51]我承认我还是会因为你而心动
+[00:23.96]我输的太彻底
+[00:25.26]像是迷宫逃不出的Memories
+[00:27.13]没人教我怎么才能忘了你
+[00:29.19]你的每句抱歉都能将我彻底打碎
+[00:33.59]我和陌生人还有着什么差别
+[00:37.56]将我困住的全都是你的画面
+[00:41.65]谁又能代替你来将我麻醉
+[00:47.17]你给的思念在悄悄作痛
+[00:50.73]仅剩的执念在偷偷陨落
+[00:54.77]可笑的誓言还剩下什么
+[00:58.70]别让我那么狼狈
+[01:03.63]撕碎那些你给的Memory
+[01:05.70]将我彻底困住的Memory
+[01:07.64]那些让我上瘾的Memory
+[01:11.56]撕碎那些你给的Memory
+[01:13.71]将我彻底困住的Memory
+[01:15.65]那些让我上瘾的Memory
+[01:21.25]就当作是我把这段美好破坏
+[01:24.09]是我忽略掉你的依赖
+[01:25.96]是我以为你可以被替代
+[01:28.17]是我以为你还对我抱有期待
+[01:30.15]你转身离开留下的背影
+[01:32.07]是我最想删除的场景
+[01:34.04]用尽全力挽留不住的你
+[01:36.72]可明明最曾爱你的是我
+[01:40.70]明明最曾在意的是我
+[01:44.76]明明被遗落的是我
+[01:48.73]可是我偏又不舍得
+[01:57.30]明明我却又不舍得
+[02:01.59]可是我偏又不舍得
+[02:05.58]我却又不舍得
+[02:09.69]撕碎那些你给的Memory
+[02:11.72]将我彻底困住的Memory
+[02:13.64]那些让我上瘾的Memory
+[02:17.73]撕碎那些你给的Memory
+[02:19.67]将我彻底困住的Memory
+[02:21.67]那些让我上瘾的Memory
+[02:25.64]撕碎那些你给的Memory
+[02:27.65]将我彻底困住的Memory
+[02:29.65]那些让我上瘾的Memory
+[02:33.63]撕碎那些你给的Memory
+[02:35.69]将我彻底困住的Memory
+[02:37.71]那些让我上瘾的Memory
+[02:41.39]监制：h3R3刘清云
+[02:41.73]弦乐编写：胡静成/h3R3刘清云
+[02:42.20]弦乐监制：胡静成
+[02:42.55]弦乐：国际首席爱乐乐团
+[02:42.96]弦乐录音：王小四@金田录音棚
+[02:43.30]人声录音：Tim姜皓天@Studio21A
+[02:43.64]音乐制作助理：谭玉堂
+[02:43.98]和声编写：h3R3刘清云
+[02:44.30]和声：h3R3刘清云
+[02:44.66]音频编辑：h3R3刘清云
+[02:44.97]混音师：h3R3刘清云
+[02:45.29]母带工程师：h3R3刘清云
+[02:45.58]混音工作室：1337MUSIC
+[02:45.92]母带工作室：1337MUSIC`,
     '2712645752': `[00:00.00] 作词/作曲 : 彭磊
 [00:01.00] 制作人/编曲 : 彭磊/旅行团乐队
 [00:02.00] 主唱 : 彭磊/孔一蝉
@@ -3684,6 +3696,102 @@ var HARDCODED_LYRICS = {
 [03:26.719]Ain't got nothing on me, on me, on me
 [03:29.998](they got nothing on you baby)
 [03:31.539]Nothing on me baby`,
+    '2116728806': `[00:00.00] Lyrics by : JVKE/ZVC
+[00:01.00] Composed by : ZVC/Jake Lawson
+[00:17.18]I hope you leave and don't come back
+[00:21.09]Cuz I’m cold
+[00:29.70]Baby I'm cold
+[00:37.69]Baby I’m
+[00:40.05]Still cold
+[00:42.14]Cold like I’m seeing my breath
+[00:44.37]After the season you left
+[00:46.33]Baby I'm stuck in my ways
+[00:47.96]They say the coldest hearts are hardest to break
+[00:50.19]Thats probably how I ended up in this place
+[00:52.12]With no emotion left to process the pain
+[00:54.22]It's better this way
+[00:56.86]Too numb to feel the burn
+[01:00.93]Too numb to let it hurt
+[01:05.07]I stare at my reflection I don’t recognize myself
+[01:13.48]Too numb to feel the pain
+[01:17.66]Too numb to feel a thing
+[01:21.86]You watched me bleed
+[01:24.25]I hope you leave
+[01:26.19]And don’t come back
+[01:27.74]Cuz I’m cold
+[01:36.57]Baby I'm cold
+[01:40.71]I hope you leave
+[01:42.97]And don’t come back
+[01:44.64]Cuz I’m
+[01:47.91]Call me on the phone but I’m outta range
+[01:49.61]When I'm all up in the mountain ranges
+[01:50.89]And I know you won't put this on your playlist
+[01:53.38]Show your friends all mad I’m keeping you nameless
+[01:55.46]I was down bad for you from the jump
+[01:57.33]Thought you the one
+[01:58.38]Now I gotta regain my trust
+[01:59.90]Matter fact I don’t trust no one
+[02:01.68]Left me in the dust
+[02:02.87]Got me outta touch with emotions, yeah
+[02:05.89]Too numb to feel the pain
+[02:09.84]Too numb to feel a thing
+[02:14.04]You watched me bleed
+[02:16.34]I hope you leave
+[02:18.43]And don’t come back
+[02:20.08]Cuz I’m cold
+[02:24.44]I hope you leave
+[02:26.89]And don’t come back
+[02:28.46]Cuz I’m cold
+[02:32.86]You watched me freeze you turned your back on me
+[02:38.15]So don’t hit my line
+[02:40.37]Don't waste your time
+[02:42.52]I’m too far gone
+[02:45.04]Yeah I swear that I'm cold
+[02:49.58]I hope you leave
+[02:51.87]And don’t come back
+[02:53.52]Cuz I’m cold`,
+    '1958557540': `[00:00.000] 作曲 : ZVC/Jake Lawson
+[00:01.000] 编曲 : Zach Sekaran/Rykeyz Williamson
+[00:02.000] 制作人 : Zach Sekaran/Chris Gehringer
+[00:03.000] 作词 : JVKE
+[00:15.435]It was just two lovers
+[00:16.936]Sittin' in the car, listening to Blonde, fallin' for each other
+[00:20.974]Pink and orange skies, feelin' super childish, no Donald Glover
+[00:24.904]Missed call from my mother
+[00:26.738]Like, "Where you at tonight?"
+[00:27.873]Got no alibi, I was all alone
+[00:29.426]
+[00:30.132]With the love of my life
+[00:33.805]She's got glitter for skin
+[00:35.941]My radiant beam in the night
+[00:40.943]I don't need no light to see you
+[00:44.507]
+[00:45.957]Shine
+[00:50.213]It's your golden hour
+[00:58.521]You slow down time
+[01:04.745]In your golden hour
+[01:09.953]
+[01:15.910]We were just two lovers
+[01:18.086]Feet up on the dash, drivin' nowhere fast, burnin' through the summer
+[01:21.901]Radio on blast, make the moment last, she got solar power
+[01:25.958]Minutes feel like hours
+[01:27.982]She knew she was the baddest
+[01:28.930]Can you even imagine fallin' like I did?
+[01:30.115]
+[01:31.232]For the love of my life
+[01:34.666]She's got glow on her face
+[01:37.071]A glorious look in her eyes
+[01:42.112]My angel of light
+[01:44.105]
+[01:44.940]I was all alone with the love of my life
+[01:49.957]She's got glitter for skin
+[01:52.339]My radiant beam in the night
+[01:57.252]I don't need no light to see you
+[02:00.799]
+[02:02.157]Shine
+[02:05.811]It's your golden hour
+[02:14.499]You slow down time
+[02:21.298]In your golden hour`,
   };
 
 // ---- CSS ----
