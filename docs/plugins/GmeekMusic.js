@@ -52,7 +52,6 @@
     { name: "Cries in a Distance", artist: "林俊杰", url: "https://music.163.com/song/media/outer/url?id=5232648.mp3", cover: "https://p2.music.126.net/6gaCOkH65zYRop_ftmUN4g==/61572651168864.jpg", id: "5232648" },
     { name: "罗生门（Follow）", artist: "梨冻紧/Wiz_H张子豪", url: "https://music.163.com/song/media/outer/url?id=1456890009.mp3", cover: "https://p2.music.126.net/yN1ke1xYMJ718FiHaDWtYQ==/109951165076380471.jpg", id: "1456890009" },
     { name: "Sacred Play Secret Place", artist: "Matryoshka", url: "https://music.163.com/song/media/outer/url?id=501468000.mp3", cover: "https://p1.music.126.net/NcB0KW6bKs83cmO-OTT1fw==/109951163013755204.jpg", id: "501468000" },
-    { name: "浆果", artist: "TINY7", url: "https://music.163.com/song/media/outer/url?id=2015896805.mp3", cover: "https://p1.music.126.net/BQAY8w9XzOj_j1wZgIsczQ==/109951168247366566.jpg", id: "2015896805" },
     { name: "南山南", artist: "马頔", url: "https://music.163.com/song/media/outer/url?id=29436904.mp3", cover: "https://p1.music.126.net/WkzQgHTnH1Yf4BXQVgktOg==/6648746813825382.jpg", id: "29436904" },
     { name: "他不懂", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=28059417.mp3", cover: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg", id: "28059417" },
     { name: "天下", artist: "张杰", url: "https://music.163.com/song/media/outer/url?id=191254.mp3", cover: "https://p1.music.126.net/ixIs5kkukgNYMmeDsc35_g==/29686813955450.jpg", id: "191254" },
@@ -83,6 +82,7 @@
     { name: "男孩别哭", artist: "海龟先生", url: "https://music.163.com/song/media/outer/url?id=25731320.mp3", cover: "https://p1.music.126.net/2RK3M4OqTibOaqk1Ux6k6Q==/109951172945801102.jpg", id: "25731320" },
     { name: "magnolia", artist: "keshi", url: "https://music.163.com/song/media/outer/url?id=494642794.mp3", cover: "https://p1.music.126.net/51MhPlXdP3edwqML9SxbZA==/109951168789051293.jpg", id: "494642794" },
     { name: "2 soon", artist: "keshi", url: "https://music.163.com/song/media/outer/url?id=1303019276.mp3", cover: "https://p2.music.126.net/xB31iMXB9XwzStrPQzcrdw==/109951168789057630.jpg", id: "1303019276" },
+    { name: "My Heart Will Go On", artist: "Céline Dion", url: "https://music.163.com/song/media/outer/url?id=2308549.mp3", cover: "https://p1.music.126.net/fiNTK9Jvhg0V8QBJx0cXPg==/941181953423930.jpg", id: "2308549" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -2626,55 +2626,6 @@ var HARDCODED_LYRICS = {
 [04:46.00]We'll be all right
 [04:53.58]Then, I give all up
 `,
-    '2015896805': `[00:00.000] 作词 : TINY7
-[00:01.000] 作曲 : TINY7
-[00:20.050]Prod by Dan Darmawan
-[00:34.050]I'm looking out of the window
-[00:37.830]and waiting for u at dusk
-[00:41.880]Let time keep frozen
-[00:43.710]Hold on my temperature in your hand longer and longer
-[00:49.560]You always put my mind at ease
-[00:52.800]but I'm still nervous without you
-[00:55.680]but you say u don't believe
-[00:57.720]You love me and gave me everything
-[00:59.400]The dark room in the night will be especially bright with you
-[01:03.330]A piece of heart he flies out when she's gone
-[01:16.170]I just want you in my life
-[01:24.990]Having having you
-[01:25.350]Something is changed
-[01:25.740]My room became a cave
-[01:27.510]I'm just like a bat
-[01:28.740]Hide in the black hole
-[01:35.670]and stay alone
-[01:39.450]Wait for you
-[02:17.340]I'm done
-[02:19.320]I lost
-[02:19.470]Cause your love
-[02:22.530]has filled up my world
-[02:22.530]look
-[02:22.620]Keep doing
-[02:24.660]I wanna it forever
-[02:26.700]You set my heart on
-[02:27.480]fire
-[02:29.610]You always put my mind at ease
-[02:32.370]But I'm still nervous without you
-[02:35.670]But you say u don't believe
-[02:37.770]You love me and gave me everything
-[02:39.660]The dark room in the night will be especially bright with you
-[02:43.380]A piece of heart he flies out when she's gone
-[02:56.070]I just want you in my life
-[03:04.710]Having having you
-[03:05.070]Something is changed
-[03:05.460]My room became a cave
-[03:08.130]I'm just like a bat
-[03:12.570]Hide in the black hole
-[03:15.630]and stay alone
-[03:19.410]Wait for you
-[04:15.410]企划：SuchaDog/VICKY_BB
-[04:18.410]项目统筹：SuchaDog/艾嘉
-[04:21.410]推广：黄鲲
-[04:24.410]统筹协力：VICKY_BB/Kaka22am
-`,
     '29436904': `[00:00.00]南山南
 [00:00.00]作词：马頔
 [00:00.00]作曲：马頔
@@ -3995,6 +3946,31 @@ var HARDCODED_LYRICS = {
 [03:16.110]If i pull through
 [03:17.370]Is it too soon
 [03:18.840]Turn it up, close my eyes, and i'm with you`,
+    '2308549': `[00:00.000] 作词 : Will Jennings
+[00:01.000] 作曲 : James Horner
+[00:20.000]Every night in my dreams
+[00:24.000]I see you, I feel you
+[00:29.000]That is how I know you go on.
+[00:39.000]Far across the distance
+[00:43.000]and spaces between us
+[00:49.000]You have come to show you go on.
+[00:58.000]Near, far, wherever you are
+[01:07.000]I believe that the heart does go on
+[01:18.000]Once more, you opened the door
+[01:26.000]And you're here in my heart,
+[01:31.000]and my heart will go on and on.
+[01:47.000]Love can touch us one time
+[01:52.000]and last for a lifetime
+[01:56.000]And never let go till we're gone
+[02:07.000]Love was when I loved you,
+[02:11.400]One true time I hold to
+[02:16.500]In my life we'll always go on.
+[03:07.000]music
+[03:25.000]You're here, there's nothing I fear
+[03:33.000]And I know that my heart will go on.
+[03:44.000]We'll stay, forever this way
+[03:52.600]You are safe in my heart
+[03:58.000]and my heart will go on and on.`,
   };
 
 // ---- CSS ----
