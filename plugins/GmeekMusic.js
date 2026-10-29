@@ -84,6 +84,9 @@
     { name: "2 soon", artist: "keshi", url: "https://music.163.com/song/media/outer/url?id=1303019276.mp3", cover: "https://p2.music.126.net/xB31iMXB9XwzStrPQzcrdw==/109951168789057630.jpg", id: "1303019276" },
     { name: "My Heart Will Go On", artist: "Céline Dion", url: "https://music.163.com/song/media/outer/url?id=2308549.mp3", cover: "https://p1.music.126.net/fiNTK9Jvhg0V8QBJx0cXPg==/941181953423930.jpg", id: "2308549" },
     { name: "自由的你", artist: "G.E.M.邓紫棋", url: "https://music.163.com/song/media/outer/url?id=3436855494.mp3", cover: "https://p2.music.126.net/G4Vtk4Je9Sj8zB4KGlxprw==/109951174017350276.jpg", id: "3436855494" },
+    { name: "打上花火", artist: "Daoko/米津玄師", url: "https://music.163.com/song/media/outer/url?id=496869422.mp3", cover: "https://p1.music.126.net/ZUCE_1Tl_hkbtamKmSNXEg==/109951163009282836.jpg", id: "496869422" },
+    { name: "夜的钢琴曲五", artist: "石进", url: "https://music.163.com/song/media/outer/url?id=149297.mp3", cover: "https://p1.music.126.net/BUGjlj2O8qY0mmHmVuer6Q==/109951168892676402.jpg", id: "149297" },
+    { name: "Paris in the Rain", artist: "LAUV", url: "https://music.163.com/song/media/outer/url?id=518904648.mp3", cover: "https://p1.music.126.net/4Xf4fRbDc2N30rShLT_irQ==/18251893021647481.jpg", id: "518904648" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -4007,6 +4010,122 @@ var HARDCODED_LYRICS = {
 [04:51.90] 混音 : 李荣浩
 [04:52.90] 母带 : 周天澈
 [04:53.90] 版权所有，翻版必究。本专辑涉及的任何作品，包括但不限于词曲、录音、录像、视听、文字、摄影和美术等作品，未经权利人授权不得使用。未经著作权人许可，不得翻唱翻录重制或任何形式的使用，禁止用于任何人工智能（AI）的训练、模仿、学习、生成等相关活动。`,
+    '496869422': `[00:00.00] 作词 : 米津玄師
+[00:01.00] 作曲 : 米津玄師
+[00:02.00] 编曲 : 米津玄師/田中隼人
+[00:03.00] 制作人 : 米津玄師
+[00:19.64]あの日見渡した渚を
+[00:24.50]今も思い出すんだ
+[00:29.50]砂の上に刻んだ言葉
+[00:34.60]君の後ろ姿
+[00:39.64]寄り返す波が
+[00:42.86]足元をよぎり何かを攫う
+[00:49.58]夕凪の中
+[00:53.00]日暮れだけが通り過ぎて行く
+[00:59.33]パッと光って咲いた
+[01:02.30]花火を見ていた
+[01:04.54]きっとまだ 終わらない夏が
+[01:09.56]曖昧な心を 解かして繋いだ
+[01:14.50]この夜が 続いて欲しかった
+[01:19.86]
+[01:30.10]「あと何度君と同じ花火を
+[01:32.95]見られるかな」って
+[01:34.62]笑う顔に何ができるだろうか
+[01:39.89]傷つくこと 喜ぶこと
+[01:42.47]繰り返す波と情動
+[01:44.70]焦燥 最終列車の音
+[01:50.19]何度でも 言葉にして君を呼ぶよ
+[01:54.71]波間を選び もう一度...
+[02:00.26]もう二度と悲しまずに済むように
+[02:08.74]
+[02:17.17]はっと息を飲めば
+[02:19.43]消えちゃいそうな光が
+[02:22.10]きっとまだ 胸に住んでいた
+[02:27.30]手を伸ばせば触れた
+[02:29.47]あったかい未来は
+[02:31.99]ひそかに二人を見ていた
+[02:38.12]パッと花火が（パッと花火が）
+[02:40.56]夜に咲いた（夜に咲いた）
+[02:43.11]夜に咲いて（夜に咲いて）
+[02:45.62]静かに消えた（静かに消えた）
+[02:48.15]離さないで（離れないで）
+[02:50.70]もう少しだけ（もう少しだけ）
+[02:53.18]もう少しだけ
+[02:54.48]このままで
+[02:57.45]
+[03:07.18]あの日見渡した渚を
+[03:11.99]今も思い出すんだ
+[03:17.40]砂の上に刻んだ言葉
+[03:21.98]君の後ろ姿
+[03:27.15]パッと光って咲いた
+[03:29.43]花火を見ていた
+[03:32.27]きっとまだ 終わらない夏が
+[03:37.30]曖昧な心を 解かして繋いだ
+[03:41.94]この夜が 続いて欲しかった`,
+    '518904648': `[00:00.000] 作词 : Ari Leff/Michael Ross Pollack/Michael Matosic
+[00:01.000] 作曲 : hye sung lim
+[00:13.347]All I know is (ooh ooh ooh)
+[00:16.388]We could go anywhere we could do
+[00:18.945]Anything girl whatever the mood we're in
+[00:24.112]All I know is (ooh ooh ooh)
+[00:26.984]Getting lost late at night under stars
+[00:29.731]Finding love standing right where we are your lips
+[00:34.013]They pull me in the moment
+[00:37.094]You and I alone and
+[00:39.694]People may be watching I don't mind ‘cause
+[00:46.478]Anywhere with you feels right
+[00:49.163]Anywhere with you feels like
+[00:51.952]Paris in the rain
+[00:54.469]Paris in the rain
+[00:57.295]We don't need a fancy town
+[00:59.744]Or bottles that we can't pronounce
+[01:02.403]Cause anywhere babe
+[01:04.766]Is like Paris in the rain
+[01:07.846]When I’m with you
+[01:10.515]When I’m with you
+[01:13.730]Paris in the rain
+[01:16.274]Paris in the rain
+[01:19.326]I look at you now and I want this forever
+[01:22.040]I might not deserve it but there's nothing better
+[01:24.154]Don't know how I ever did it all without you
+[01:27.532]My heart is about to about to jump out of my chest
+[01:30.865]Feelings they come and they go that they do
+[01:33.589]Feelings they come and they go not with you
+[01:36.198]The late nights
+[01:36.887]And the street lights
+[01:37.365]And the people
+[01:38.355]Look at me girl
+[01:39.156]And the whole world could stop
+[01:41.080]Anywhere with you feels right
+[01:43.637]Anywhere with you feels like
+[01:46.330]Paris in the rain
+[01:49.015]Paris in the rain
+[01:51.849]We don't need a fancy town
+[01:54.235]Or bottles that we can't pronounce
+[01:57.013]Cause anywhere babe
+[01:59.700]Is like Paris in the rain
+[02:02.132]When I'm with you
+[02:04.893]When I’m with you
+[02:08.275]Paris in the rain
+[02:10.847]Paris in the rain
+[02:19.262]Girl when I'm not with you
+[02:21.992]All I do is miss you
+[02:30.199]Come and set the mood right
+[02:32.903]Underneath the moonlight
+[02:36.336](Days in Paris
+[02:38.977]Nights in Paris)
+[02:41.143]Paint you with my eyes closed
+[02:43.803]Wonder where the time goes
+[02:47.777](Yeah, Isn't it obvious
+[02:51.264]Isn't it obvious)
+[02:52.078]Come and set the mood right
+[02:54.661]Underneath the moonlight
+[02:57.429]Anywhere with you feels right
+[03:00.227]Anywhere with you feels like
+[03:03.093]Paris in the rain
+[03:05.713]Paris in the rain
+[03:08.936]Walking down an empty street
+[03:11.837]Puddles underneath our feet`,
   };
 
 // ---- CSS ----
