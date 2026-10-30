@@ -1,9 +1,11 @@
-/* Beige (米色) theme for zephyr-song.github.io
-   Warm off-white / paper tone — between white and beige, like zephyrsong.qzz.io.
-   Loaded on every page via config.json `script` + copied into docs/plugins by Gmeek build.
-   Applied unconditionally (no [data-color-mode] scoping) so it survives theme switching. */
+/* Warm off-white / paper beige for zephyr-song.github.io
+   Applied ONLY in light / auto mode so the built-in dark-mode toggle keeps working.
+   In light mode the whole screen (side margins + center reading area + book list)
+   is one uniform warm off-white (#F8F4EC) with no box border.
+   Dark mode is intentionally left untouched (Gmeek default). */
 
-:root {
+:root[data-color-mode="light"],
+:root[data-color-mode="auto"] {
   --color-canvas-default: #F8F4EC !important;
   --color-canvas-subtle: #F1E9D8 !important;
   --color-canvas-inset: #ECE2CD !important;
@@ -19,9 +21,12 @@
   --bgColor-emphasis: #B97C4B !important;
 }
 
-/* full-screen single warm off-white, no box border / shadow / frame */
-html { background-color: #F8F4EC !important; }
-body {
+/* side margins + center card: one uniform warm off-white, no box */
+html[data-color-mode="light"],
+html[data-color-mode="auto"] { background-color: #F8F4EC !important; }
+
+html[data-color-mode="light"] body,
+html[data-color-mode="auto"] body {
   background-color: #F8F4EC !important;
   color: #4B3F33 !important;
   box-shadow: none !important;
@@ -29,32 +34,61 @@ body {
 }
 
 /* Header */
-#header { border-bottom-color: #E6DCC6 !important; }
-a.blogTitle, .title-left a { color: #4B3F33 !important; }
-.avatar { border: 2px solid #E6DCC6; }
+html[data-color-mode="light"] #header,
+html[data-color-mode="auto"] #header { border-bottom-color: #E6DCC6 !important; }
+html[data-color-mode="light"] a.blogTitle,
+html[data-color-mode="auto"] a.blogTitle,
+html[data-color-mode="light"] .title-left a,
+html[data-color-mode="auto"] .title-left a { color: #4B3F33 !important; }
+html[data-color-mode="light"] .avatar,
+html[data-color-mode="auto"] .avatar { border: 2px solid #E6DCC6; }
 
-/* Book list (SideNav) — soft, blends into the warm off-white */
-.SideNav-item {
-  background-color: #F1E9D8 !important;
+/* Book list (SideNav) — same depth as the page, only a soft border defines it */
+html[data-color-mode="light"] .SideNav-item,
+html[data-color-mode="auto"] .SideNav-item {
+  background-color: #F8F4EC !important;
   border-color: #E6DCC6 !important;
   color: #4B3F33 !important;
 }
-.SideNav-item:hover { background-color: #ECE2CD !important; text-decoration: none; }
-.SideNav-item .listTitle { color: #4B3F33 !important; }
-.SideNav-item .LabelTime { color: #897868 !important; }
+html[data-color-mode="light"] .SideNav-item:hover,
+html[data-color-mode="auto"] .SideNav-item:hover { background-color: #F1E9D8 !important; text-decoration: none; }
+html[data-color-mode="light"] .SideNav-item .listTitle,
+html[data-color-mode="auto"] .SideNav-item .listTitle { color: #4B3F33 !important; }
+html[data-color-mode="light"] .SideNav-item .LabelTime,
+html[data-color-mode="auto"] .SideNav-item .LabelTime { color: #897868 !important; }
 
 /* Links + buttons */
-a { color: #A66A3C !important; }
-a:hover { color: #8A552E !important; }
-.btn { color: #4B3F33 !important; }
-.btn-invisible { color: #4B3F33 !important; }
+html[data-color-mode="light"] a,
+html[data-color-mode="auto"] a { color: #A66A3C !important; }
+html[data-color-mode="light"] a:hover,
+html[data-color-mode="auto"] a:hover { color: #8A552E !important; }
+html[data-color-mode="light"] .btn,
+html[data-color-mode="auto"] .btn,
+html[data-color-mode="light"] .btn-invisible,
+html[data-color-mode="auto"] .btn-invisible { color: #4B3F33 !important; }
 
 /* Footer */
-#footer { color: #897868 !important; border-top-color: #E6DCC6 !important; }
+html[data-color-mode="light"] #footer,
+html[data-color-mode="auto"] #footer { color: #897868 !important; border-top-color: #E6DCC6 !important; }
 
-/* Surfaces that Primer paints white -> blend into the warm off-white */
-#content, .Box, .Subhead, .UnderlineNav { background-color: transparent !important; }
-.markdown-body, .markdown-body table tr, .markdown-body table td, .markdown-body table th {
+/* Primer surfaces that would otherwise paint white -> blend into the off-white */
+html[data-color-mode="light"] #content,
+html[data-color-mode="auto"] #content,
+html[data-color-mode="light"] .Box,
+html[data-color-mode="auto"] .Box,
+html[data-color-mode="light"] .Subhead,
+html[data-color-mode="auto"] .Subhead,
+html[data-color-mode="light"] .UnderlineNav,
+html[data-color-mode="auto"] .UnderlineNav { background-color: transparent !important; }
+
+html[data-color-mode="light"] .markdown-body,
+html[data-color-mode="auto"] .markdown-body,
+html[data-color-mode="light"] .markdown-body table tr,
+html[data-color-mode="auto"] .markdown-body table tr,
+html[data-color-mode="light"] .markdown-body table td,
+html[data-color-mode="auto"] .markdown-body table td,
+html[data-color-mode="light"] .markdown-body table th,
+html[data-color-mode="auto"] .markdown-body table th {
   background-color: #F8F4EC !important;
   color: #4B3F33 !important;
   border-color: #E6DCC6 !important;
