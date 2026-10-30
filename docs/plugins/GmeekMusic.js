@@ -91,6 +91,7 @@
     { name: "隔岸", artist: "姚六一", url: "https://music.163.com/song/media/outer/url?id=1456443773.mp3", cover: "https://p1.music.126.net/5Dc4JMRNzyteRVsEGGZYiA==/109951165071456067.jpg", id: "1456443773" },
     { name: "丢了你", artist: "井胧", url: "https://music.163.com/song/media/outer/url?id=1442508316.mp3", cover: "https://p1.music.126.net/zYIadX_Prawn3nMTRA9tOQ==/109951164928052888.jpg", id: "1442508316" },
     { name: "删了吧", artist: "烟(许佳豪)", url: "https://music.163.com/song/media/outer/url?id=1891469546.mp3", cover: "https://p1.music.126.net/nNg4YjkcK1AwCX1FrN8VOQ==/109951166578333625.jpg", id: "1891469546" },
+    { name: "Say You Love Me feat. Tamala", artist: "西原健一郎", url: "https://music.163.com/song/media/outer/url?id=22778415.mp3", cover: "https://p1.music.126.net/YsuVlolkDq0gG7lYMFtvjQ==/109951170067997046.jpg", id: "22778415" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -4376,6 +4377,55 @@ var HARDCODED_LYRICS = {
 [03:22.81] 企划 : 何泽镔/大灰
 [03:23.52] 营销 : 余祖意/张程皓/张一乔
 [03:24.23] 统筹 : 尹文/王溯`,
+    '22778415': `[00:13.600]Don't you know that I want to be more than just your friend
+[00:20.493]Holdin' hands is fine, but I've got better things on my mind
+[00:27.333]You know it could happen, if you'd only see me in a different light
+[00:32.378]Baby when we finally get together, you will see that I was right
+[00:38.909]
+[00:39.906]Say you love me, you know that it could be nice
+[00:45.257]If you’d only say you love me, don't treat me like I was ice
+[00:53.771]Please love me, I'll be yours and you'll be mine
+[00:58.079]If you'd only say you love me baby, things would really work out fine
+[01:05.431]
+[01:05.825]Don't you know that I want to be more than just your friend
+[01:12.248]Holding hands is fine, but I've got better things on my mind
+[01:18.970]You know it could happen, if you'd only see me in a different light
+[01:24.087]Maybe when we finally get together, you will see that I was right
+[01:31.008]
+[01:31.654]Say you love me, you know that it could be nice
+[01:37.130]If you’d only say you love me, don't treat me like I was ice
+[01:45.366]Please love me, I'll be yours and you'll be mine
+[01:50.084]If you'd only say you love me baby, things would really work out fine
+[01:57.364]
+[01:57.779]Don't you know I love you baby?
+[02:00.707]Don't you know I need you baby?
+[02:03.946]Don't you know how much I really care for you, don’t you be mine?
+[02:10.329]Don't you know I love you baby?
+[02:13.492]Don't you know I need you baby?
+[02:16.788]Don't you know how much I really care for you, don’t you be mine?
+[02:23.624]
+[02:23.791]Say you love me, you know that it could be nice
+[02:28.954]If you’d only say you love me, don't treat me like I was ice
+[02:37.287]Please love me, I'll be yours and you'll be mine
+[02:41.960]If you'd only say you love me darlin', things would really work out fine
+[02:49.190]
+[03:13.820]Ooh baby won't you say you love me
+[03:21.016]Baby won't you say that you love me
+[03:28.836]Say that you love me
+[03:35.383]Say that you love me, love me, love me, love me, love me, yeah
+[03:41.158]
+[03:41.310]Don't you know I love you baby?
+[03:44.446]Don't you know I need you baby?
+[03:47.659]Don't you know how much I really care for you, don’t you be mine?
+[03:54.237]Don't you know I love you baby?
+[03:57.373]Don't you know I need you baby?
+[04:00.558]Don't you know how much I really care for you, would you be mine?
+[04:07.120]Don't you know I love you baby?
+[04:10.283]Don't you know I need you baby?
+[04:13.558]Don't you know how much I really care for you, don’t you be mine?
+[04:20.104]Don't you know I love you baby?
+[04:23.299]Don't you know I need you baby?
+[04:26.549]Don't you know how much I really care for you`,
   };
 
 // ---- CSS ----
