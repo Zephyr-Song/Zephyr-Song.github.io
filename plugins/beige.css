@@ -1,45 +1,45 @@
 /* Beige (米色) theme for zephyr-song.github.io
-   Full-screen unified beige, no box border, natural paper look.
+   Warm off-white / paper tone — between white and beige, like zephyrsong.qzz.io.
    Loaded on every page via config.json `script` + copied into docs/plugins by Gmeek build.
    Applied unconditionally (no [data-color-mode] scoping) so it survives theme switching. */
 
 :root {
-  --color-canvas-default: #F1E7D3 !important;
-  --color-canvas-subtle: #ECE0C8 !important;
-  --color-canvas-inset: #E7DBC2 !important;
+  --color-canvas-default: #F8F4EC !important;
+  --color-canvas-subtle: #F1E9D8 !important;
+  --color-canvas-inset: #ECE2CD !important;
   --color-fg-default: #4B3F33 !important;
   --color-fg-muted: #897868 !important;
-  --color-border-default: #E0D2B6 !important;
-  --color-border-muted: #E6D9BF !important;
+  --color-border-default: #E6DCC6 !important;
+  --color-border-muted: #EDE4D2 !important;
   --color-accent-fg: #A66A3C !important;
   --color-accent-emphasis: #B97C4B !important;
-  --bgColor-default: #F1E7D3 !important;
-  --bgColor-muted: #ECE0C8 !important;
-  --bgColor-inset: #E7DBC2 !important;
+  --bgColor-default: #F8F4EC !important;
+  --bgColor-muted: #F1E9D8 !important;
+  --bgColor-inset: #ECE2CD !important;
   --bgColor-emphasis: #B97C4B !important;
 }
 
-/* full-screen single beige, no box border / shadow / frame */
-html { background-color: #F1E7D3 !important; }
+/* full-screen single warm off-white, no box border / shadow / frame */
+html { background-color: #F8F4EC !important; }
 body {
-  background-color: #F1E7D3 !important;
+  background-color: #F8F4EC !important;
   color: #4B3F33 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
 }
 
 /* Header */
-#header { border-bottom-color: #E0D2B6 !important; }
+#header { border-bottom-color: #E6DCC6 !important; }
 a.blogTitle, .title-left a { color: #4B3F33 !important; }
-.avatar { border: 2px solid #E0D2B6; }
+.avatar { border: 2px solid #E6DCC6; }
 
-/* Book list (SideNav) — soft, blends into the beige */
+/* Book list (SideNav) — soft, blends into the warm off-white */
 .SideNav-item {
-  background-color: #ECE0C8 !important;
-  border-color: #E0D2B6 !important;
+  background-color: #F1E9D8 !important;
+  border-color: #E6DCC6 !important;
   color: #4B3F33 !important;
 }
-.SideNav-item:hover { background-color: #E4D7BE !important; text-decoration: none; }
+.SideNav-item:hover { background-color: #ECE2CD !important; text-decoration: none; }
 .SideNav-item .listTitle { color: #4B3F33 !important; }
 .SideNav-item .LabelTime { color: #897868 !important; }
 
@@ -50,12 +50,12 @@ a:hover { color: #8A552E !important; }
 .btn-invisible { color: #4B3F33 !important; }
 
 /* Footer */
-#footer { color: #897868 !important; border-top-color: #E0D2B6 !important; }
+#footer { color: #897868 !important; border-top-color: #E6DCC6 !important; }
 
-/* Surfaces that Primer paints white -> blend into the beige */
+/* Surfaces that Primer paints white -> blend into the warm off-white */
 #content, .Box, .Subhead, .UnderlineNav { background-color: transparent !important; }
 .markdown-body, .markdown-body table tr, .markdown-body table td, .markdown-body table th {
-  background-color: #F1E7D3 !important;
+  background-color: #F8F4EC !important;
   color: #4B3F33 !important;
-  border-color: #E0D2B6 !important;
+  border-color: #E6DCC6 !important;
 }
