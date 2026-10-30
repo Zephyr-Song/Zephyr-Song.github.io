@@ -1,13 +1,9 @@
 /* Beige (米色) theme for zephyr-song.github.io
-   Single unified beige across the whole screen, no box border, natural like a paper blog.
-   Loaded on every page via config.json `script` + copied into docs/plugins by Gmeek build. */
-html[data-color-mode="light"] {
-  background-color: #F1E7D3 !important;
-}
+   Full-screen unified beige, no box border, natural paper look.
+   Loaded on every page via config.json `script` + copied into docs/plugins by Gmeek build.
+   Applied unconditionally (no [data-color-mode] scoping) so it survives theme switching. */
 
-/* Override Primer github-light color variables with warm beige tones */
-[data-color-mode="light"][data-light-theme="github-light"],
-[data-color-mode="light"] {
+:root {
   --color-canvas-default: #F1E7D3 !important;
   --color-canvas-subtle: #ECE0C8 !important;
   --color-canvas-inset: #E7DBC2 !important;
@@ -17,10 +13,14 @@ html[data-color-mode="light"] {
   --color-border-muted: #E6D9BF !important;
   --color-accent-fg: #A66A3C !important;
   --color-accent-emphasis: #B97C4B !important;
-  --color-neutral-muted: rgba(224, 210, 182, 0.4) !important;
+  --bgColor-default: #F1E7D3 !important;
+  --bgColor-muted: #ECE0C8 !important;
+  --bgColor-inset: #E7DBC2 !important;
+  --bgColor-emphasis: #B97C4B !important;
 }
 
-/* Full-screen single beige, no box border / shadow / rounded frame */
+/* full-screen single beige, no box border / shadow / frame */
+html { background-color: #F1E7D3 !important; }
 body {
   background-color: #F1E7D3 !important;
   color: #4B3F33 !important;
@@ -33,7 +33,7 @@ body {
 a.blogTitle, .title-left a { color: #4B3F33 !important; }
 .avatar { border: 2px solid #E0D2B6; }
 
-/* Book list (SideNav) — soft, blends into the beige, no hard border */
+/* Book list (SideNav) — soft, blends into the beige */
 .SideNav-item {
   background-color: #ECE0C8 !important;
   border-color: #E0D2B6 !important;
