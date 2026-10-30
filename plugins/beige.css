@@ -1,0 +1,59 @@
+/* Beige (米色) theme for zephyr-song.github.io
+   Loaded on every page via config.json `script` + copied into docs/plugins by Gmeek build. */
+html[data-color-mode="light"] {
+  background-color: #E7DBC2 !important;
+}
+
+/* Override Primer github-light color variables with warm beige tones */
+[data-color-mode="light"][data-light-theme="github-light"],
+[data-color-mode="light"] {
+  --color-canvas-default: #FBF4E6 !important;
+  --color-canvas-subtle: #F4EBD8 !important;
+  --color-canvas-inset: #EFE6D2 !important;
+  --color-fg-default: #4B3F33 !important;
+  --color-fg-muted: #897868 !important;
+  --color-border-default: #D9C9AC !important;
+  --color-border-muted: #E5D9C1 !important;
+  --color-accent-fg: #A66A3C !important;
+  --color-accent-emphasis: #B97C4B !important;
+  --color-neutral-muted: rgba(217, 201, 172, 0.4) !important;
+}
+
+body {
+  background-color: #FBF4E6 !important;
+  color: #4B3F33 !important;
+  box-shadow: 0 0 0 1px #D9C9AC, 0 10px 36px rgba(120, 100, 70, 0.14) !important;
+  border-radius: 12px;
+}
+
+/* Header */
+#header { border-bottom-color: #D9C9AC !important; }
+a.blogTitle, .title-left a { color: #4B3F33 !important; }
+.avatar { border: 2px solid #D9C9AC; }
+
+/* Book list (SideNav) */
+.SideNav-item {
+  background-color: #F4EBD8 !important;
+  border-color: #D9C9AC !important;
+  color: #4B3F33 !important;
+}
+.SideNav-item:hover { background-color: #ECDFC4 !important; text-decoration: none; }
+.SideNav-item .listTitle { color: #4B3F33 !important; }
+.SideNav-item .LabelTime { color: #897868 !important; }
+
+/* Links + buttons */
+a { color: #A66A3C !important; }
+a:hover { color: #8A552E !important; }
+.btn { color: #4B3F33 !important; }
+.btn-invisible { color: #4B3F33 !important; }
+
+/* Footer */
+#footer { color: #897868 !important; border-top-color: #D9C9AC !important; }
+
+/* Search/tag/sidebar surfaces that Primer paints white */
+#content, .Box, .Subhead, .UnderlineNav { background-color: transparent !important; }
+.markdown-body, .markdown-body table tr, .markdown-body table td, .markdown-body table th {
+  background-color: #FBF4E6 !important;
+  color: #4B3F33 !important;
+  border-color: #D9C9AC !important;
+}
