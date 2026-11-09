@@ -94,6 +94,15 @@
     { name: "Dehors（中法合唱版）", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2607303573.mp3", cover: "https://p2.music.126.net/PwwgQoOeILQbWi4O2kqhJg==/109951169775041084.jpg", id: "2607303573" },
     { name: "断线", artist: "Shang", url: "https://music.163.com/song/media/outer/url?id=496370620.mp3", cover: "https://p2.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg", id: "496370620" },    { name: "Hong Kong (feat. 王菲季候风)", artist: "The Weeknd", url: "https://music.163.com/song/media/outer/url?id=3456047164.mp3", cover: "https://p1.music.126.net/12-Tl1d-BT-_AwXMl7-MzQ==/109951174206326909.jpg", id: "3456047164" },
 
+    { name: "I don't wanna see u anymore", artist: "NINEONE#乃万", url: "https://music.163.com/song/media/outer/url?id=528326686.mp3", cover: "https://p1.music.126.net/a_gJIqhD4ICAC30UttQIGg==/109951163100083686.jpg", id: "528326686" },
+    { name: "But U", artist: "NINEONE#乃万", url: "https://music.163.com/song/media/outer/url?id=1459232593.mp3", cover: "https://p2.music.126.net/li19i75jz6GGOT79IyAjYA==/109951165100592039.jpg", id: "1459232593" },
+    { name: "向云端", artist: "小霞/海洋Bo", url: "https://music.163.com/song/media/outer/url?id=2049512697.mp3", cover: "https://p1.music.126.net/TmOHxaGnFNlwNX8aPz66oA==/109951168638913915.jpg", id: "2049512697" },
+    { name: "浪漫主义", artist: "姜云升", url: "https://music.163.com/song/media/outer/url?id=1887917182.mp3", cover: "https://p1.music.126.net/lFFiY-jvO1ENHtK2bZ6eUw==/109951166531420475.jpg", id: "1887917182" },
+    { name: "My Heart Will Go On", artist: "满舒克", url: "https://music.163.com/song/media/outer/url?id=26524701.mp3", cover: "https://p1.music.126.net/vjmBbza1Msi3CSowzI9zhw==/4404643580873409.jpg", id: "26524701" },
+    { name: "如果呢", artist: "郑润泽", url: "https://music.163.com/song/media/outer/url?id=1842728629.mp3", cover: "https://p1.music.126.net/-xMsNLpquZTmMZlIztTgHg==/109951165953469081.jpg", id: "1842728629" },
+    { name: "再也没有", artist: "永彬Ryan.B/AY楊佬叁", url: "https://music.163.com/song/media/outer/url?id=480580003.mp3", cover: "https://p1.music.126.net/B7MRU9cieODaInnwzyLwYQ==/18771962022944662.jpg", id: "480580003" },
+    { name: "泡沫", artist: "Swang多雷", url: "https://music.163.com/song/media/outer/url?id=518682659.mp3", cover: "https://p1.music.126.net/IFk1HJuPAMkksz5FwgW5lA==/109951169294652175.jpg", id: "518682659" },
+
   ];
 
 var HARDCODED_LYRICS = {
