@@ -92,7 +92,8 @@
     { name: "熄灭", artist: "TC", url: "https://music.163.com/song/media/outer/url?id=2040015902.mp3", cover: "https://p2.music.126.net/sNOy5UAdfk_OYumV4qF-0g==/109951168551205771.jpg", id: "2040015902" },
     { name: "Leave Me Alone（寂寞作伴）", artist: "TC", url: "https://music.163.com/song/media/outer/url?id=1806634682.mp3", cover: "https://p1.music.126.net/ut3ej8hjxACnIzanHch1AQ==/109951165562501951.jpg", id: "1806634682" },
     { name: "Dehors（中法合唱版）", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2607303573.mp3", cover: "https://p2.music.126.net/PwwgQoOeILQbWi4O2kqhJg==/109951169775041084.jpg", id: "2607303573" },
-    { name: "断线", artist: "Shang", url: "https://music.163.com/song/media/outer/url?id=496370620.mp3", cover: "https://p2.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg", id: "496370620" },
+    { name: "断线", artist: "Shang", url: "https://music.163.com/song/media/outer/url?id=496370620.mp3", cover: "https://p2.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg", id: "496370620" },    { name: "Hong Kong (feat. 王菲季候风)", artist: "The Weeknd", url: "https://music.163.com/song/media/outer/url?id=3456047164.mp3", cover: "https://p1.music.126.net/12-Tl1d-BT-_AwXMl7-MzQ==/109951174206326909.jpg", id: "3456047164" },
+
   ];
 
 var HARDCODED_LYRICS = {
@@ -4576,7 +4577,42 @@ var HARDCODED_LYRICS = {
 [04:08.34]I just wanna heal my own brain
 [04:12.18]I just wanna heal my own brain
 [04:15.33]Prod. happy sad/Jurrivh
-[04:16.33] 发行 : 百纳娱乐`,
+[04:16.33] 发行 : 百纳娱乐`,    '3456047164': `[00:00.000] 作词 : Abel Tesfaye/杨立德/潘源良
+[00:01.000] 作曲 : Abel Tesfaye/陈小霞
+[00:15.332]There was something in the air
+[00:21.245]I knew that in that moment I would burn the world to keep you warm
+[00:29.305]But my life won't let me stay
+[00:34.989]So if we never speak again
+[00:38.678]At least we still have soul
+[00:42.764]
+[00:43.323]And only God could separate us
+[00:49.070]On my skin you left your mark the night
+[00:52.886]You held me close
+[00:57.165]And in the morning we turned to strangers
+[01:02.941]But don't you hesitate to call
+[01:06.623]I'm posted in Hong Kong
+[01:09.300]
+[01:09.301]这次季候风 吹得格外凶
+[01:16.171]仿佛世上一切 已经消失所踪
+[01:23.205]你似季候风 抵挡计划全也无用
+[01:30.150]然后是场空 加上不死的心痛
+[01:36.934]
+[01:52.829]Still remember when we met
+[01:58.584]We barely knew each other but that tension never left
+[02:06.706]Now you're sleeping in my bed
+[02:12.578]A thing that never started already comes to an end
+[02:21.057]And I know God would separate us
+[02:26.804]Anytime it felt this good it ends in tragic song
+[02:34.829]I'm so used to weathering changes
+[02:40.286]So if you ever change your mind
+[02:44.240]I'm waiting in Hong Kong
+[02:47.057]
+[02:47.058]这次季候风 吹得格外凶
+[02:53.815]仿佛世上一切 已经消失所踪
+[03:00.796]你似季候风 抵挡计划全也无用
+[03:07.681]然后是场空 加上不死的心痛
+`,
+
   };
 
 // ---- CSS ----
