@@ -90,6 +90,9 @@
     { name: "删了吧", artist: "烟(许佳豪)", url: "https://music.163.com/song/media/outer/url?id=1891469546.mp3", cover: "https://p1.music.126.net/nNg4YjkcK1AwCX1FrN8VOQ==/109951166578333625.jpg", id: "1891469546" },
     { name: "Say You Love Me feat. Tamala", artist: "西原健一郎", url: "https://music.163.com/song/media/outer/url?id=22778415.mp3", cover: "https://p1.music.126.net/YsuVlolkDq0gG7lYMFtvjQ==/109951170067997046.jpg", id: "22778415" },
     { name: "熄灭", artist: "TC", url: "https://music.163.com/song/media/outer/url?id=2040015902.mp3", cover: "https://p2.music.126.net/sNOy5UAdfk_OYumV4qF-0g==/109951168551205771.jpg", id: "2040015902" },
+    { name: "Leave Me Alone（寂寞作伴）", artist: "TC", url: "https://music.163.com/song/media/outer/url?id=1806634682.mp3", cover: "https://p1.music.126.net/ut3ej8hjxACnIzanHch1AQ==/109951165562501951.jpg", id: "1806634682" },
+    { name: "Dehors（中法合唱版）", artist: "曾舜晞", url: "https://music.163.com/song/media/outer/url?id=2607303573.mp3", cover: "https://p2.music.126.net/PwwgQoOeILQbWi4O2kqhJg==/109951169775041084.jpg", id: "2607303573" },
+    { name: "断线", artist: "Shang", url: "https://music.163.com/song/media/outer/url?id=496370620.mp3", cover: "https://p2.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg", id: "496370620" },
   ];
 
 var HARDCODED_LYRICS = {
@@ -4356,6 +4359,224 @@ var HARDCODED_LYRICS = {
 [01:57.83] 我说会一定是我离开世界那天
 [02:03.35] 可不知不觉你的心已越来越远
 [02:09.49] 我心中的烈火也熄灭`,
+    '1806634682': `[00:00.000] 作词 : TC
+[00:01.000] 作曲 : TC
+[00:04.700]编曲：MRZ
+[00:08.201]混音：TC
+[00:11.203]
+[00:12.203]黑夜里孤单肆意扩散
+[00:15.205]关掉手机和寂寞作伴
+[00:18.452]关于你的回忆忘不掉怎么办
+[00:23.951]
+[00:24.952]争吵着说你需要陪伴
+[00:27.955]说我给不了你安全感
+[00:31.452]放肆的让生活剥夺只剩黑白
+[00:38.955]
+[00:39.705]My bad
+[00:42.954]其实我早该明白
+[00:46.202]从你角度这不是爱
+[00:49.702]我的心冰得快要裂开
+[00:52.453]
+[00:52.955]My bad
+[00:55.952]我后悔没有离开
+[00:59.452]一切都来得太快
+[01:02.451]傻傻的原地发呆
+[01:04.954]
+[01:05.201]你随口一句话都让我崩坏
+[01:07.701]或许这一切是我活该
+[01:09.952]投入的太多抽不出身来
+[01:13.201]讽刺的是你转身就能轻松离开
+[01:20.952]
+[01:35.705]
+[01:42.704]黑夜里孤单肆意扩散
+[01:45.955]关掉手机和寂寞作伴
+[01:49.206]关于你的回忆忘不掉怎么办
+[01:55.452]
+[01:55.702]争吵着说你需要陪伴
+[01:58.955]说我给不了你安全感
+[02:02.206]放肆的让生活剥夺只剩黑白
+[02:08.456]
+[02:09.206]请不要再拨我的电话
+[02:15.456]我会很努力把你放下
+[02:23.453]just leave me alone
+[02:29.952]just leave me alone
+[02:34.203]
+[02:34.702]不会再无条件的对你好
+[02:37.957]不会再经过有你的街道
+[02:41.202]回忆大不了在梦里摧毁我大脑
+[02:47.955]
+[02:49.453]My bad
+[02:52.707]其实我早该明白
+[02:55.954]从你角度这不是爱
+[02:59.205]我的心冰得快要裂开
+[03:02.204]
+[03:02.453]My bad
+[03:05.703]我后悔没有离开
+[03:08.954]一切都来得太快
+[03:12.203]傻傻的原地发呆
+[03:15.204]
+[03:15.396]just leave me alone
+[03:21.897]just leave me alone`,
+    '2607303573': `[00:00.00] 作词 : Jordan Hébert/Marc-André Brunelle
+[00:01.00] 作曲 : Jordan Hébert/Marc-André Brunelle
+[00:02.00] 中文作词 : 林若宁
+[00:03.00] 编曲 : Jordan Hébert
+[00:04.00] 制作人 : Studio JOSEPH
+[00:11.89]曾舜晞：
+[00:13.14]全世界快乐  唯一于这一角
+[00:24.49]有隔膜  无意识的感觉
+[00:34.04]JORDANN：
+[00:35.71]C'est l'eau de vie dans la sève, la conscience qui s'achève
+[00:41.86]（这是烈酒上头的作用，是我即将终结的意识）
+[00:47.09]Témoin de ta vision, auditeur de ta prison
+[00:52.03]（我见证你的愿景，也倾听你的桎梏）
+[00:55.04]曾舜晞：
+[00:55.48]何妨如一颗星闪过
+[00:58.24]忘记缤纷的灯
+[01:01.11]随一本书解困
+[01:03.64]逃出心中斗争
+[01:05.89]JORDANN：
+[01:06.67]On partira à la nage
+[01:08.73]（我们会去海里游泳）
+[01:09.52]On aura la mer à boire
+[01:11.71]（大口喝下咸涩的海水）
+[01:12.47]Tu manques pas de courage
+[01:14.54]（你并不缺乏勇气）
+[01:15.16]Alors viens jouer dehors
+[01:17.02]（所以向外迈出那一步吧）
+[01:17.86]Alors viens jouer dehors
+[01:19.14]（所以向外迈出那一步吧）
+[01:30.38]曾舜晞：
+[01:32.12]无人发觉你寂寞
+[01:34.98]无需解释沮丧
+[01:43.44]无人烦扰的机舱
+[01:46.25]无风高低升降
+[01:53.76]JORDANN：
+[01:54.82]Ça t'empêche de rire, ça t'impose le pire
+[02:00.17]（它会阻止你奚落这世界，它会强迫你看到最坏的事）
+[02:06.04]Témoin de ta vision, auditeur de ta prison
+[02:13.23]（我见证你的愿景，也倾听你的桎梏）
+[02:13.86]曾舜晞：
+[02:14.34]何妨如一颗星闪过
+[02:17.31]忘记缤纷的灯
+[02:20.08]随一本书解困
+[02:22.61]逃出心中斗争
+[02:24.81]JORDANN：
+[02:25.66]On partira à la nage
+[02:27.79]（我们会去海里游泳）
+[02:28.64]On aura la mer à boire
+[02:30.51]（大口喝下咸涩的海水）
+[02:31.48]Tu manques pas de courage
+[02:33.76]（你并不缺乏勇气）
+[02:34.13]Alors viens jouer dehors
+[02:35.54]（所以向外迈出那一步吧）
+[02:36.63]曾舜晞：
+[02:36.91]何妨如一颗星闪过
+[02:39.88]忘记缤纷的灯
+[02:42.73]随一本书解困
+[02:45.19]逃出心中斗争
+[02:47.18]JORDANN：
+[02:47.94]On partira à la nage
+[02:50.29]（我们会去海里游泳）
+[02:51.15]On aura la mer à boire
+[02:53.23]（大口喝下咸涩的海水）
+[02:54.11]Tu manques pas de courage
+[02:56.18]（你并不缺乏勇气）
+[02:56.61]Alors viens jouer dehors
+[02:58.54]（所以向外迈出那一步吧）
+[02:59.52]Alors viens jouer dehors
+[03:01.22]（所以向外迈出那一步吧）
+[03:11.23] 配唱制作人：张格
+[03:12.06] 人声编辑：刘天鸿
+[03:12.90] 混音/母带：刘天鸿
+[03:13.73] 企划公司：Studio JOSEPH  x  嬉耳恭听
+[03:14.56] 制作&宣发公司：Studio JOSEPH  x  网易·云上
+[03:15.40] 联合出品：Studio JOSEPH  x  网易·云上`,
+    '496370620': `[00:00.00] 作词 : Shang
+[00:01.00] 作曲 : Jurrivh
+[00:18.93]I'm feeling really bad right now and um
+[00:21.66]I'm not sure if I'm gonna make it so
+[00:25.11]I guess it's goodbye
+[00:29.70]Baby I know I've done you wrong
+[00:35.58]I can hear it in your songs
+[00:38.97]I can see it on your face
+[00:41.79]Won't be long for I'm replaced
+[00:46.80]I'll miss the times we had
+[00:50.55]And I'll miss the laughs we shared
+[00:54.09]I'll miss staying up till midnight
+[00:56.73]Hey um
+[00:57.24]And the times when everything felt right
+[00:59.67]
+[01:00.15]我关于你的记忆
+[01:01.77]消失了一件又一件
+[01:03.90]午夜的未接来电
+[01:05.55]我拨打了一遍又一遍
+[01:07.65]我想要听我的脉搏心跳
+[01:09.84]却又断了线
+[01:11.40]睡梦中你的身影
+[01:13.14]复习了一面又一面
+[01:15.42]漫长的夜 开始分裂 昏暗的灯火也慢慢熄灭
+[01:19.23]不想了解 我的一切
+[01:21.09]酒后的真心话全都不屑
+[01:23.04]我不想再去怀念
+[01:24.69]走心的话我都留在心里面
+[01:27.51]我学着把冷漠
+[01:29.01]挂在嘴边白天到黑夜
+[01:30.87]
+[01:30.90]Baby I don't even need you
+[01:34.65]Baby I don't even miss you
+[01:38.22]Baby I don't know if it is true
+[01:41.91]Baby I just want to heal myself
+[01:45.36]Baby take it all away
+[01:50.91]
+[01:52.41]I don't wanna feel this pain
+[01:56.19]I don't wanna feel this way
+[02:00.39]I can see the stars in your eyes
+[02:07.41]I was trying to feel OK
+[02:11.34]I just wanna heal my own brain
+[02:14.91]
+[02:14.94]Baby I know I've done you wrong
+[02:21.36]I can hear it in your songs
+[02:24.75]I can see it on your face
+[02:27.90]Won't be long for I'm replaced
+[02:32.64]I'll miss the times we had
+[02:36.36]And I'll miss the laughs we shared
+[02:40.89]I'll miss staying up till midnight
+[02:43.05]And the times when everything felt right
+[02:45.72]
+[02:45.96]我要把所有关于
+[02:47.64]我们的记忆删个遍
+[02:49.89]像张白纸再也不会
+[02:51.90]为谁触了电
+[02:53.52]卑微的生活
+[02:54.69]还是毁灭全都随我便
+[02:57.27]我落魄的样子
+[02:58.47]谁也不能忍心看的见
+[03:01.29]配不配 对不对
+[03:03.18]你怎样我都无所谓
+[03:04.98]睡不睡 累不累
+[03:06.93]从来都不害怕浪费
+[03:08.73]你可千万不要嫌弃
+[03:10.32]我身上掩盖的烟酒味
+[03:12.60]难过的时候谁也不会
+[03:14.55]独自孤单掉着泪 Baby I don't even need you
+[03:17.70]
+[03:17.76]Baby I don't even miss you
+[03:24.06]Baby I don't know if it is true
+[03:27.75]Baby I just want to heal myself
+[03:31.17]Baby take it all away
+[03:36.66]
+[03:38.22]I don't wanna feel this pain
+[03:42.03]I don't wanna feel this way
+[03:46.20]I can see the stars in your eyes
+[03:53.22]I was trying to feel OK
+[03:57.12]I just wanna heal my own brain
+[04:00.90]I just wanna heal my own brain
+[04:04.56]I just wanna heal my own brain
+[04:08.34]I just wanna heal my own brain
+[04:12.18]I just wanna heal my own brain
+[04:15.33]Prod. happy sad/Jurrivh
+[04:16.33] 发行 : 百纳娱乐`,
   };
 
 // ---- CSS ----
