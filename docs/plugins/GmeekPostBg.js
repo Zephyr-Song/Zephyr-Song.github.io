@@ -15,6 +15,7 @@
     'yi-bang-qi-shi': 'yi-bang-qi-shi',
     'di-yi-ci-de-qin-mi-jie-chu': 'di-yi-ci-de-qin-mi-jie-chu',
     'wo-de-er-shi-liu-sui-nv-fang-ke': 'wo-de-er-shi-liu-sui-nv-fang-ke',
+    'tian-kong-de-cheng': 'tian-kong-de-cheng',
     'yong-yuan-de-hu-die': 'yong-yuan-de-hu-die',
     'shen-diao-xia-lv': 'shen-diao-xia-lv',
     'xiao-ao-jiang-hu': 'xiao-ao-jiang-hu',
