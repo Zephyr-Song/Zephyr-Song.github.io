@@ -1,4 +1,4 @@
-/* GmeekPostBg.js — 每篇文章的虚化书封背景
+/* GmeekPostBg.js — 每篇文章顶部展示对应书封（清晰、不模糊）
  * 仅在 /post/<slug>.html 生效；图片自托管于 /plugins/covers/。
  * 图片按文章 slug 映射，插画/封面均与书目对应。
  */
@@ -42,59 +42,34 @@
 
   function apply() {
     var css = [
-      /* 固定背景层：模糊书封 + 轻遮罩（[class] 提权压过 beige.css 的 !important） */
-      'html.gm-postbg[class]{background:transparent !important;}',
-      'html.gm-postbg[class] body{background:transparent !important;}',
-      'html.gm-postbg[class] .markdown-body{background:transparent !important;}',
-      /* 正文做成半透明磨砂卡片：黑字永远清晰，书封在四周与透出的微光中可见 */
-      'html.gm-postbg[class] #content,html.gm-postbg[class] .Box{'
-        + 'background:rgba(248,244,236,.88) !important;'
-        + 'backdrop-filter:blur(8px) saturate(1.05);-webkit-backdrop-filter:blur(8px) saturate(1.05);'
-        + 'box-shadow:0 10px 40px rgba(60,45,30,.20) !important;border-radius:14px !important;'
-        + 'border:1px solid rgba(230,220,198,.7) !important;}',
-
-      '#gm-postbg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;}',
-      '#gm-postbg .gm-img{position:absolute;inset:-12%;'
-        + 'background-position:center center;background-size:cover;background-repeat:no-repeat;'
-        + 'filter:blur(48px) saturate(1.35) brightness(1.04);transform:scale(1.15);opacity:.95;}',
-      '#gm-postbg .gm-veil{position:absolute;inset:0;'
-        + 'background:linear-gradient(180deg,rgba(248,244,236,.26) 0%,rgba(248,244,236,.40) 45%,rgba(248,244,236,.55) 100%);}',
-
-      /* 暗色模式 */
-      'html.gm-postbg[data-color-mode="dark"]{background:transparent !important;}',
-      'html.gm-postbg[data-color-mode="dark"] #content,html.gm-postbg[data-color-mode="dark"] .Box{'
-        + 'background:rgba(13,17,23,.88) !important;'
-        + 'backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);'
-        + 'box-shadow:0 10px 40px rgba(0,0,0,.45) !important;'
-        + 'border:1px solid rgba(255,255,255,.08) !important;}',
-      'html.gm-postbg[data-color-mode="dark"] #gm-postbg .gm-img{opacity:.8;'
-        + 'filter:blur(48px) saturate(1.2) brightness(.58);}',
-      'html.gm-postbg[data-color-mode="dark"] #gm-postbg .gm-veil{'
-        + 'background:linear-gradient(180deg,rgba(13,17,23,.30) 0%,rgba(13,17,23,.44) 45%,rgba(13,17,23,.58) 100%);}',
-
-      /* 移动端省性能 */
-      '@media (max-width:640px){#gm-postbg .gm-img{filter:blur(34px) saturate(1.25);}}'
+      /* 顶部书封：清晰、不模糊、居中、圆角带阴影 */
+      'html.gm-cover #postBody .gm-cover-hero{'
+        + 'margin:0 0 26px;display:flex;justify-content:center;}',
+      'html.gm-cover #postBody .gm-cover-hero img{'
+        + 'width:auto;max-width:260px;max-height:360px;height:auto;'
+        + 'border-radius:12px;display:block;background:#fff;'
+        + 'box-shadow:0 8px 28px rgba(60,45,30,.22);object-fit:contain;}',
+      '@media (max-width:640px){'
+        + 'html.gm-cover #postBody .gm-cover-hero img{max-width:200px;max-height:280px;}}'
     ].join('');
 
     var st = document.createElement('style');
-    st.id = 'gm-postbg-style';
+    st.id = 'gm-cover-style';
     st.textContent = css;
     document.head.appendChild(st);
 
-    var box = document.createElement('div');
-    box.id = 'gm-postbg';
+    var body = document.getElementById('postBody') || document.querySelector('.markdown-body');
+    if (!body) return;
 
-    var img = document.createElement('div');
-    img.className = 'gm-img';
-    img.style.backgroundImage = 'url("' + url + '")';
+    var hero = document.createElement('div');
+    hero.className = 'gm-cover-hero';
+    var img = document.createElement('img');
+    img.src = url;
+    img.alt = 'cover';
+    img.loading = 'lazy';
+    hero.appendChild(img);
+    body.insertBefore(hero, body.firstChild);
 
-    var veil = document.createElement('div');
-    veil.className = 'gm-veil';
-
-    box.appendChild(img);
-    box.appendChild(veil);
-    document.body.insertBefore(box, document.body.firstChild);
-
-    document.documentElement.classList.add('gm-postbg');
+    document.documentElement.classList.add('gm-cover');
   }
 })();
