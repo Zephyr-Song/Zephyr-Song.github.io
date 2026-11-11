@@ -48,9 +48,10 @@
       'html.gm-postbg[class] .markdown-body{background:transparent !important;}',
       /* 正文做成半透明磨砂卡片：黑字永远清晰，书封在四周与透出的微光中可见 */
       'html.gm-postbg[class] #content,html.gm-postbg[class] .Box{'
-        + 'background:rgba(248,244,236,.82) !important;'
-        + 'backdrop-filter:blur(7px) saturate(1.05);-webkit-backdrop-filter:blur(7px) saturate(1.05);'
-        + 'box-shadow:0 10px 40px rgba(60,45,30,.18) !important;border-radius:14px !important;}',
+        + 'background:rgba(248,244,236,.88) !important;'
+        + 'backdrop-filter:blur(8px) saturate(1.05);-webkit-backdrop-filter:blur(8px) saturate(1.05);'
+        + 'box-shadow:0 10px 40px rgba(60,45,30,.20) !important;border-radius:14px !important;'
+        + 'border:1px solid rgba(230,220,198,.7) !important;}',
 
       '#gm-postbg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;}',
       '#gm-postbg .gm-img{position:absolute;inset:-12%;'
@@ -62,9 +63,10 @@
       /* 暗色模式 */
       'html.gm-postbg[data-color-mode="dark"]{background:transparent !important;}',
       'html.gm-postbg[data-color-mode="dark"] #content,html.gm-postbg[data-color-mode="dark"] .Box{'
-        + 'background:rgba(13,17,23,.82) !important;'
-        + 'backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);'
-        + 'box-shadow:0 10px 40px rgba(0,0,0,.4) !important;}',
+        + 'background:rgba(13,17,23,.88) !important;'
+        + 'backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);'
+        + 'box-shadow:0 10px 40px rgba(0,0,0,.45) !important;'
+        + 'border:1px solid rgba(255,255,255,.08) !important;}',
       'html.gm-postbg[data-color-mode="dark"] #gm-postbg .gm-img{opacity:.8;'
         + 'filter:blur(48px) saturate(1.2) brightness(.58);}',
       'html.gm-postbg[data-color-mode="dark"] #gm-postbg .gm-veil{'
